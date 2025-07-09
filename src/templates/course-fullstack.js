@@ -212,6 +212,7 @@ const Program = ({ data, pageContext, yml }) => {
       {/* OVERLAPED CREAR EN EL YML*/}
       <Overlaped
         heading={yml.overlaped?.heading}
+        subtitle={yml.overlaped?.subtitle}
         content={yml.overlaped?.paragraph}
         button={yml.overlaped?.button}
         image={yml.overlaped?.image}
@@ -286,10 +287,12 @@ const Program = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
-      />
+      {pageContext.lang === "es" && (
+        <ScholarshipProjects
+          content={data.allScholarshipProjectsYaml.edges[0].node}
+          lang={pageContext.lang}
+        />
+      )}
 
       {/*<OurPartners images={hiring.partners.images} marquee/>*/}
 
@@ -483,6 +486,7 @@ export const query = graphql`
           }
           overlaped {
             heading
+            subtitle
             paragraph
             button {
               text

@@ -42,9 +42,9 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: GET HIRED IN TECH OR YOUR MONEY BACK
+  tagline: GET INTO TECH WITH OUR JOB GUARANTEE
   tagline_color: "#1c1c1c"
-  sub_heading: "Your success is our mission"
+  sub_heading: "Your success is our mission — Get hired within 9 months of graduation, or we’ll refund your tuition."
   form_styles:
     background: "#FFB718"
     color: "black"

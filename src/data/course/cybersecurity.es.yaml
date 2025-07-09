@@ -10,6 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
+  duration: "P14W"  # 14 weeks duration in ISO 8601 format
 
 apply_form:
   label: Profesional junior en Ciberseguridad
@@ -188,7 +189,7 @@ details:
         
       list:
         - label: "Duración"
-          content: "16 semanas"
+          content: "14 semanas"
           icon: "duration-icon"
         - label: "Clases"
           content: "3 clases semanales"

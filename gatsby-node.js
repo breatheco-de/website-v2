@@ -87,6 +87,22 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
         logger.error("Missing frontmatter on node: " + node.id);
       }
 
+      // Calculate wordCount for blog posts
+      if (node.rawMarkdownBody) {
+        // Remove URLs but keep markdown symbols
+        const textWithoutUrls = node.rawMarkdownBody.replace(
+          /https?:\/\/\S+/g,
+          ""
+        );
+        const wordCount = textWithoutUrls.trim().split(/\s+/).length;
+
+        createNodeField({
+          node,
+          name: "wordCount",
+          value: wordCount,
+        });
+      }
+
       const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
       url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
     } else url = createFilePath({ node, getNode });
@@ -108,6 +124,22 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
   }
 
   return node;
+};
+
+// Disable CookieBot on the /thumbnail page
+exports.onCreatePage = async ({ page, actions }) => {
+  const { deletePage, createPage } = actions;
+  if (page.path === "/thumbnail") {
+    // Remove CookieBot by setting a flag in context
+    deletePage(page);
+    createPage({
+      ...page,
+      context: {
+        ...page.context,
+        disableCookieBot: true,
+      },
+    });
+  }
 };
 
 // Create all the pages needed
@@ -683,6 +715,41 @@ const buildTranslations = ({ edges }) => {
     translations[meta.template][meta.lang] = meta.pagePath;
   });
   return translations;
+};
+
+// Add this new function to define custom fields
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  const typeDefs = `
+    type MarkdownRemarkFields implements Node {
+      wordCount: Int
+      lang: String
+      slug: String
+      file_name: String
+      defaultTemplate: String
+      type: String
+      pagePath: String
+      filePath: String
+      readingTime: ReadingTime
+    }
+    type ReadingTime {
+      text: String
+    }
+    type CourseYaml implements Node {
+      meta_info: MetaInfo
+    }
+    type MetaInfo {
+      duration: String
+      slug: String
+      title: String
+      description: String
+      template: String
+      visibility: String
+      redirects: [String]
+      related_clusters: [String]
+    }
+  `;
+  createTypes(typeDefs);
 };
 
 // This section was commented during the migration from GatsbyV2 to GatsbyV5

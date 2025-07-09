@@ -167,6 +167,7 @@ export default function Template(props) {
         type="post"
         seo={data.markdownRemark.frontmatter}
         context={pageContext}
+        wordCount={data.markdownRemark.fields.wordCount}
       >
         {/* Container */}
         <GridContainer

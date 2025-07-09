@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: true
   redirects: ["/us/applied-ai"]
   related_clusters: ["trends-and-tech"]
+  duration: "P6W"  # 6 weeks duration in ISO 8601 format
 
 apply_form:
   label: Applied AI for Professionals (no-code)

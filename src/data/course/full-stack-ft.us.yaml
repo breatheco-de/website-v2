@@ -20,6 +20,7 @@ meta_info:
     ]
   related_clusters: ["full-stack-developer","trends-and-tech"]
   template: "course-fullstack-ft"
+  duration: "P9W"  # 9 weeks duration in ISO 8601 format
   
 
 apply_form:

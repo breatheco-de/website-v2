@@ -1,0 +1,15 @@
+meta_info:
+  slug: ai-powered-learning
+  title: "AI Powered Learning: Harnessing Artificial Intelligence for Education"
+  visibility: "visible"
+  description: "Explore how artificial intelligence is transforming education and improving learning outcomes."
+  image: ""
+  keywords: "AI, Artificial Intelligence, Learning, Education, EdTech"
+  redirects: []
+
+seo_title: "Category Archives: AI Powered Learning"
+header:
+    title: AI Powered Learning - Blog
+    paragraph: "Dive into the world of AI-powered education. Learn how machine learning, natural language processing, and intelligent systems are reshaping the way we teach and learn. Stay updated with the latest trends, tools, and best practices in AI-driven education."
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "ai-powered-learning" 

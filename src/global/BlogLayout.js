@@ -10,7 +10,7 @@ import Footer from "../components/Footer";
 import GlobalStyle from "./GlobalStyle";
 import SEO from "./SEO";
 
-const BlogLayout = ({ children, seo, context }) => {
+const BlogLayout = ({ children, seo, context, wordCount }) => {
   // const {slug, title, description, image, keywords} = seo;
   const [editMode, setEditMode] = React.useState();
   const [showUpcoming, setShowUpcoming] = React.useState(true);
@@ -172,7 +172,7 @@ const BlogLayout = ({ children, seo, context }) => {
           </button>
         </div>
       )}
-      <SEO {...seo} context={{ ...context, locations: myLocations }} />
+      <SEO {...seo} context={{ ...context, locations: myLocations }} wordCount={wordCount} />
       {myNavbar && (
         <>
           <Navbar

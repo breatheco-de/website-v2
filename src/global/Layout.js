@@ -13,6 +13,7 @@ import CustomBar from "../components/CustomBar";
 
 import GlobalStyle from "./GlobalStyle";
 import SEO from "./SEO";
+import { Helmet } from "react-helmet";
 
 const Layout = ({ children, seo, context }) => {
   // const {slug, title, description, image, keywords} = seo;
@@ -191,7 +192,18 @@ const Layout = ({ children, seo, context }) => {
         lang={context.lang}
       />
       <GlobalStyle />
-      {/* <CookieBot domainGroupId={data.cookiebotYaml.domain_ID[0].id} /> */}
+      {/* Manually inject CookieBot script only if not disabled for this page */}
+      {!(context && context.disableCookieBot) && (
+        <Helmet>
+          <script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js?cbid=0dd80df5-30f5-4a4e-9410-55e586915d04"
+            data-cbid="0dd80df5-30f5-4a4e-9410-55e586915d04"
+            type="text/javascript"
+            async
+          />
+        </Helmet>
+      )}
       <>{children}</>
       <Footer yml={myFooter.node} />
     </>

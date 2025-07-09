@@ -10,6 +10,7 @@ meta_info:
   redirects: []
   related_clusters: [""]
   template: "course-fullstack-at-your-own"
+  duration: "P26W"  # 26 weeks duration in ISO 8601 format
 
 apply_form:
   label: Full Stack Developer Course at Your Own Pace

@@ -1,0 +1,91 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Rule: Cluster Generation
+
+**Purpose:**
+This rule standardizes how clusters are created and maintained in the project. It ensures consistency in naming, structure, translation, and integration with existing components. Link this file in the README or contributing guide for team visibility.
+
+---
+
+## How to Use This Rule
+- **Read before creating or updating any cluster.**
+- **Follow the structure and examples below.**
+- **Propose updates via pull request and get team approval.**
+- **All changes must pass `npm run test` to ensure nothing breaks.**
+
+---
+
+## 1. Purpose
+Standardize the creation, naming, and structure of clusters to ensure consistency, maintainability, and multilingual support across the project.
+
+---
+
+## 2. Scope
+- Affects all cluster data in `/src/data/cluster/`.
+- Affects any related components in `/src/components/` that use or display cluster data.
+
+---
+
+## 3. Guidelines
+
+### Naming
+- **Files:** Use kebab-case for all cluster YAML files (e.g., `software-engineer.us.yml`).
+- **Folders:** Use kebab-case for any folders related to clusters.
+- **Components:** Store each cluster-related component in its own folder, with the main file named `index.js` (e.g., `/src/components/ClusterCard/index.js`).
+- **Slugs:** The `slug` field must be unique across all cluster files. Spanish clusters should use a Spanish-language slug (e.g., `aprendizaje-potenciado-ia`).
+
+### Content
+- **Each cluster must have a YAML file in `/src/data/cluster/`.**
+- **YAML files must use `.us.yml` for English and `.es.yml` for Spanish.**
+- **Each YAML file should contain all relevant data for the cluster (e.g., title, description, tags).**
+- **The `description` field must be no more than 160 characters.**
+
+### Translations
+- **Required:** Most clusters must have both English and Spanish YAML files (e.g., `software-engineer.us.yml` and `software-engineer.es.yml`).
+- **Optional:** For clusters that are only relevant in one language, a single YAML file is allowed. Clearly state the exception in the file header.
+- **Keys:** Use the same keys in both language files when translations are required.
+
+### Integration
+- **Clusters must work with existing components and not break any features.**
+- **All changes must pass `npm run test`.**
+
+---
+
+## 4. Examples
+
+### Correct Usage
+- `/src/data/cluster/software-engineer.us.yml` (slug: software-engineer)
+- `/src/data/cluster/software-engineer.es.yml` (slug: ingeniero-de-software)
+- `/src/components/ClusterCard/index.js`
+
+### Incorrect Usage
+- `/src/data/cluster/softwareEngineer.yaml`
+- `/src/data/cluster/software-engineer-spanish.yml`
+- `/src/components/ClusterCard.js`
+- `/src/components/cluster-card/ClusterCard.js`
+- A `description` field longer than 160 characters.
+- Duplicate slugs across different language files.
+
+---
+
+## 5. Enforcement
+- **Tools:**
+    - Linters for file and folder naming.
+    - Custom scripts to check for required translations, key consistency, and unique slugs.
+    - Code review and CI checks.
+    - All changes must pass `npm run test`.
+
+---
+
+## 6. Versioning
+- **Version:** v1.2, July 2025
+- **Update the version and date when making changes to this rule.**
+
+---
+
+**Note:**
+- Link this file in the README or contributing guide for team visibility.
+- Review this rule regularly to keep it relevant and up to date.

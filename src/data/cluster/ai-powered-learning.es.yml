@@ -1,0 +1,15 @@
+meta_info:
+  slug: aprendizaje-potenciado-ia
+  title: "Aprendizaje Potenciado con IA: Aprovechando la Inteligencia Artificial en la Educación"
+  visibility: "visible"
+  description: "Descubre cómo la inteligencia artificial está transformando la educación y mejorando los resultados de aprendizaje."
+  image: ""
+  keywords: "IA, Inteligencia Artificial, Aprendizaje, Educación, EdTech"
+  redirects: []
+
+seo_title: "Categoría: Aprendizaje Potenciado con IA"
+header:
+    title: Aprendizaje Potenciado con IA - Blog
+    paragraph: "Sumérgete en el mundo de la educación potenciada por IA. Aprende cómo el aprendizaje automático, el procesamiento de lenguaje natural y los sistemas inteligentes están cambiando la forma en que enseñamos y aprendemos. Mantente al día con las últimas tendencias, herramientas y mejores prácticas en educación impulsada por IA."
+    image: "../../../static/images/blog/Blog-header.png"
+    image_alt: "ai-powered-learning" 

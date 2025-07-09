@@ -27,6 +27,7 @@ import TwoColumnCarousel from "../components/TwoColumnCarousel";
 import TwoColumn from "../components/TwoColumn/index.js";
 import WeTrust from "../components/WeTrust/index.js";
 import FaqCard from "../components/FaqCard";
+import ChooseYourProgram from "../components/ChooseYourProgram";
 
 const JobGuarantee = ({ data, pageContext, yml }) => {
   const { session } = useContext(SessionContext);
@@ -86,7 +87,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
     <>
       <Div
         margin={isCustomBarActive(session) ? "40px 0 0 0" : "0"}
-        padding="10px 30px 0 30px"
+        padding="10px 15px 0 15px"
+        padding_sm="10px 20px 0 20px"
         padding_tablet="120px 130px 72px 130px"
         padding_lg="120px 0 72px 0"
         position="relative"
@@ -273,9 +275,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             lineHeight_tablet="46px"
             lineHeight_sm="30px" /* Ajuste para pantallas pequeñas */
             lineHeight_xs="30px" /* Ajuste para móviles muy pequeños */
+            margin="20px 0 20px 0"
+            margin_sm="15px 0 15px 0" /* Ajuste de margen en pantallas pequeñas */
+            margin_xs="10px 0 10px 0" /* Ajuste de margen en móviles pequeños */
             margin_tablet="40px 0 40px 0"
-            margin_sm="30px 0 30px 0" /* Ajuste de margen en pantallas pequeñas */
-            margin_xs="20px 0 20px 0" /* Ajuste de margen en móviles pequeños */
             textTransform="uppercase"
             fontFamily="Archivo, Lato, sans-serif"
           >
@@ -284,7 +287,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
           <SubTitle
             color={Colors.black}
-            margin="15px auto"
+            margin="10px auto"
+            margin_sm="8px auto"
+            margin_xs="5px auto"
+            margin_tablet="15px auto"
             padding="0"
             width="auto"
             letterSpacing="0.05em"
@@ -307,7 +313,10 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
           <Paragraph
             color={Colors.black}
-            margin="15px auto"
+            margin="10px auto"
+            margin_sm="8px auto"
+            margin_xs="5px auto"
+            margin_tablet="15px auto"
             padding="0"
             width="auto"
             textAlign="center"
@@ -333,6 +342,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             justifyContent="start"
             justifyContent_tablet="center"
             alignItems="center"
+            margin="20px 0 30px 0"
+            margin_sm="15px 0 25px 0"
+            margin_xs="10px 0 20px 0"
             margin_tablet="0 0 50px 0"
           >
             <Div width="100%" width_tablet="fit-content">
@@ -425,19 +437,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Modal>
         </Container>
       </Div>
-      {/* <Container
-        margin="40px 0"
-        margin_tablet="40px 0"
-        padding="40px 0"
-        padding_tablet="20px 0"
-        display="flex"
-        flexDirection="row"
-        flexWrap="nowrap"
-        alignItems="center"
-        justifyContent="space-between"
-      > */}
       <TwoColumn
-        padding="60px 80px"
+        padding="30px 20px"
+        padding_sm="40px 30px"
         padding_md="60px 80px"
         padding_lg="60px 80px"
         right={{ image: ymlTwoColumn.image }}
@@ -451,10 +453,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         proportions={ymlTwoColumn.proportions}
         session={session}
       />
-
-      {/* <Container margin="40px 0" padding="0" padding_tablet="0 90px" padding_lg="0">
-        <WeTrust we_trust={yml.we_trust_section} />
-      </Container> */}
 
       <div>
         <WeTrust
@@ -474,25 +472,32 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
 
       <Container
         display="block"
-        margin="40px auto"
-        padding="40px 10px"
+        margin="20px auto"
+        margin_sm="15px auto"
+        margin_xs="10px auto"
+        margin_tablet="40px auto"
+        padding="20px 10px"
+        padding_sm="30px 20px"
         padding_tablet="40px 90px"
         padding_md="40px 130px"
         padding_lg="40px 0"
       >
-        <Div display="block" margin="0px auto 40px 0" padding="42px 0">
+        <Div display="block" margin="0px auto 20px 0" margin_sm="0px auto 15px 0" margin_xs="0px auto 10px 0" margin_tablet="0px auto 40px 0" padding="20px 0" padding_sm="30px 0" padding_tablet="42px 0">
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <SubTitle>{yml.how_it_works.text}</SubTitle>
         </Div>
         <Div
           margin="auto"
           margin_lg="auto"
-          marginBottom="50px"
+          marginBottom="30px"
+          marginBottom_sm="25px"
+          marginBottom_xs="20px"
+          marginBottom_tablet="50px"
           width="300px"
           width_tablet="fit-content"
           width_md="auto"
-          gap_tablet="30px"
-          gap_md="40px"
+          gap_tablet="60px"
+          gap_md="60px"
           flexDirection="column"
           flexDirection_tablet="row"
           justifyContent="center"
@@ -500,9 +505,9 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           {yml.how_it_works.steps.map((step, i) => (
             <Div
               width="100%"
-              width_tablet="90px"
-              width_md="130px"
-              height_tablet="300px"
+              width_tablet="120px"
+              width_md="160px"
+              height_tablet="350px"
               position="relative"
             >
               {i !== yml.how_it_works.steps.length - 1 && (
@@ -511,14 +516,14 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   position="absolute"
                   left_tablet="50%"
                   left="90px"
-                  top_md={i % 2 === 0 ? "30px" : "5px"}
-                  top_tablet="30px"
+                  top_md={i % 2 === 0 ? "40px" : "15px"}
+                  top_tablet="40px"
                   top="80px"
                   rotate_tablet={i % 2 !== 0 && "123deg"}
                   rotate={i % 2 !== 0 && "-45deg"}
                   alt="Dashed line"
-                  width_tablet="150px"
-                  width_md="200px"
+                  width_tablet="180px"
+                  width_md="240px"
                   width="150px"
                   height="69px"
                   height_tablet="69px"
@@ -533,7 +538,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 flexDirection_tablet="column"
                 alignItems="center"
                 position_tablet="absolute"
-                top={i % 2 !== 0 && "70px"}
+                top={i % 2 !== 0 && "90px"}
                 zIndex="5"
                 width="100%"
                 width_tablet="auto"
@@ -541,31 +546,34 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                 <Div
                   flexDirection="column"
                   justifyContent="center"
-                  width="120px"
-                  width_tablet="90px"
-                  width_md="120px"
-                  height="120px"
-                  height_tablet="90px"
-                  height_md="120px"
+                  width="140px"
+                  width_tablet="110px"
+                  width_md="100px"
+                  height="140px"
+                  height_tablet="110px"
+                  height_md="100px"
                   border={`4px solid #FFB718`}
                   background="#FFF1D1"
-                  borderRadius="60px"
+                  borderRadius="70px"
                 >
                   <Icon
                     style={{ margin: "auto" }}
                     color="#FFB718"
                     icon={step.icon}
-                    width="45px"
-                    height="45px"
+                    width="60px"
+                    height="60px"
                   />
                 </Div>
                 <Paragraph
-                  fontSize={step.highlight ? "20px" : "18px"}
+                  fontSize={step.highlight ? "16px" : "14px"}
+                  fontSize_tablet={step.highlight ? "22px" : "20px"}
+                  fontSize_md={step.highlight ? "22px" : "20px"}
                   color={step.highlight ? "#FFB718" : "#000"}
                   opacity="1"
-                  maxWidth="130px"
-                  maxWidth_tablet="90px"
-                  maxWidth_md="130px"
+                  maxWidth="100px"
+                  maxWidth_tablet="120px"
+                  maxWidth_md="180px"
+                  margin="15px 0 0 0"
                 >
                   {`${i + 1}. ${step.title}`}
                 </Paragraph>
@@ -573,18 +581,6 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             </Div>
           ))}
         </Div>
-
-        <Container
-          margin="0"
-          padding="0"
-          padding_tablet="0"
-          id="faq-card-section"
-        >
-          <FaqCard
-            faqs={data.allFaqYaml.edges[0].node.faq}
-            topicSlug="job_guarantee"
-          />
-        </Container>
 
         {yml.how_it_works.link && (
           <Paragraph
@@ -601,109 +597,23 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           </Paragraph>
         )}
       </Container>
-      {/* <TwoColumnCarousel
-        background="#FAFAFA"
-        title={yml.successful_stories.title}
-        text={yml.successful_stories.text}
-      >
-        {testimonials.map((testimonial) => {
-          return (
-            <Div display="block" key={testimonial.student_name}>
-              <Div
-                background={Colors.veryLightBlue}
-                margin="0"
-                border="2px solid black"
-                display="block"
-                display_md="flex"
-                height_tablet="548px"
-                height_md="368px"
-              >
-                <StyledBackgroundSection
-                  image={
-                    testimonial.student_thumb.childImageSharp.gatsbyImageData
-                  }
-                  alt={testimonial.student_name}
-                  width="300px"
-                  width_tablet="100%"
-                  width_md="200px"
-                  height="340px"
-                  height_tablet="240px"
-                  height_md="100%"
-                  backgroundSize="contain"
-                  flexShrink="0"
-                />
-                <Div padding="10px" display="block">
-                  <H4 textAlign="left" fontWeight="700">
-                    {testimonial.student_name}
-                  </H4>
-                  <Div gap="10px" alignItems="center" margin="0 0 10px 0">
-                    {testimonial.country && (
-                      <Div>
-                        <Div
-                          className="react-tel-input"
-                          margin="0"
-                          width="25px"
-                        >
-                          <div className={`flag ${testimonial.country.iso}`} />
-                        </Div>
-                        <Paragraph
-                          margin="0 0 0 5px"
-                          textAlign="left"
-                          color={Colors.black}
-                        >
-                          {testimonial.country.name}
-                        </Paragraph>
-                      </Div>
-                    )}
-                    {testimonial.linkedin_url && (
-                      <Img
-                        src="/images/linkedin.png"
-                        onClick={() => {
-                          if (testimonial.linkedin_url.indexOf("http") > -1)
-                            window.open(testimonial.linkedin_url);
-                          else navigate(testimonial.linkedin_url);
-                        }}
-                        style={{
-                          cursor: "pointer",
-                        }}
-                        alt="Linkedin profile"
-                        height="20px"
-                        width="60px"
-                        backgroundSize="contain"
-                      />
-                    )}
-                  </Div>
-                  <HR
-                    background="#A4A4A4"
-                    width="100%"
-                    height="1px"
-                    margin="5px 0"
-                  />
-                  <Paragraph textAlign="left" opacity="1" color={Colors.black}>
-                    {testimonial.content}
-                  </Paragraph>
-                </Div>
-              </Div>
-            </Div>
-          );
-        })}
-      </TwoColumnCarousel> */}
 
       <Container
         id="two_column_right"
         flexDirection="column"
         margin="0"
-        padding="80px 0"
+        padding="40px 0"
+        padding_sm="50px 0"
         padding_tablet="0"
         padding_md="0 50px"
         padding_lg="0"
       >
         <TwoColumn
-          left={{
+          right={{
             image: yml.two_columns_video?.image,
             video: yml.two_columns_video?.video,
           }}
-          right={{
+          left={{
             heading: yml.two_columns_video?.heading,
             sub_heading: yml.two_columns_video?.sub_heading,
             bullets: yml.two_columns_video?.bullets,
@@ -712,6 +622,45 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
             button: yml.two_columns_video?.button,
           }}
           proportions={yml.two_columns_video?.proportions}
+          session={session}
+        />
+      </Container>
+      <ChooseYourProgram
+        id="choose-program"
+        lang={pageContext.lang}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
+          (p) =>
+            p.title === "Coding Bootcamp" ||
+            p.title === "Data Science and ML" ||
+            p.title === "CyberSecurity Bootcamp"
+        )}
+        title={yml.choose_program?.title}
+        paragraph={yml.choose_program?.paragraph}
+        background={Colors.veryLightBlue3}
+        padding="0"
+      />
+
+      <Container
+        id="two_column_right_section"
+        flexDirection="column"
+        margin="0"
+        padding="40px 0"
+        padding_sm="50px 0"
+        padding_tablet="0"
+        padding_md="0 50px"
+        padding_lg="0"
+      >
+        <TwoColumn
+          left={{
+            image: yml.two_column_right?.image,
+          }}
+          right={{
+            heading: yml.two_column_right?.heading,
+            sub_heading: yml.two_column_right?.sub_heading,
+            content: yml.two_column_right?.content,
+            button: yml.two_column_right?.button,
+          }}
+          proportions={yml.two_column_right?.proportions}
           session={session}
         />
       </Container>
@@ -726,38 +675,43 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         height="1px"
         margin="20px"
       />
-      <GridContainer
-        columns_tablet="12"
-        padding="0 17px 40px 17px"
+
+      <Container
+        id="two_column_geek_section"
+        flexDirection="column"
+        margin="0"
+        padding="40px 0"
+        padding_sm="50px 0"
         padding_tablet="0"
-        margin_tablet="0 auto 81px auto"
-        childMargin="auto"
-        childMaxWidth="1280px"
+        padding_md="0 50px"
+        padding_lg="0"
       >
-        <Div gridColumn_tablet="1 / 7" flexDirection="column">
-          <H2 textAlign_md="left" margin="0 0 30px 0">
-            {yml.form.title}
-          </H2>
-          {yml.form.paragraph.split("\n").map((m, i) => (
-            <Paragraph
-              key={i}
-              margin="7px 0"
-              textAlign_md="left"
-              dangerouslySetInnerHTML={{ __html: m }}
-            />
-          ))}
-        </Div>
-        <Div flexDirection="column" gridColumn_tablet="7 / 13">
-          <LeadForm
-            formHandler={beHiringPartner}
-            // handleClose={handleClose}
-            enableAreaCodes={false}
-            lang={pageContext.lang}
-            inputBgColor={Colors.white}
-            fields={["full_name", "email", "phone"]}
-          />
-        </Div>
-      </GridContainer>
+        <TwoColumn
+          left={{
+            image: yml.two_column_geek?.image,
+          }}
+          right={{
+            heading: yml.two_column_geek?.heading,
+            sub_heading: yml.two_column_geek?.sub_heading,
+            bullets: yml.two_column_geek?.bullets,
+            button: yml.two_column_geek?.button,
+          }}
+          proportions={yml.two_column_geek?.proportions}
+          session={session}
+        />
+      </Container>
+
+      <Container
+        margin="0"
+        padding="0"
+        padding_tablet="0"
+        id="faq-card-section"
+      >
+        <FaqCard
+          faqs={data.allFaqYaml.edges[0].node.faq}
+          topicSlug="job_guarantee"
+        />
+      </Container>
     </>
   );
 };
@@ -813,6 +767,35 @@ export const query = graphql`
             }
           }
 
+          two_column_right {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              font_size
+              style
+            }
+            button {
+              text
+              color
+              background
+              hover_color
+              path
+            }
+          }
+
           two_columns_video {
             proportions
             image {
@@ -835,6 +818,39 @@ export const query = graphql`
               text
               color
               background
+              path
+            }
+          }
+
+          two_column_geek {
+            proportions
+            image {
+              style
+              src
+            }
+            heading {
+              text
+              font_size
+              style
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            bullets {
+              item_style
+              items {
+                heading
+                text
+                icon
+              }
+            }
+            button {
+              text
+              color
+              background
+              hover_color
               path
             }
           }
@@ -866,7 +882,7 @@ export const query = graphql`
             text
             testimonials
           }
-          form {
+          choose_program {
             title
             paragraph
           }
@@ -1028,6 +1044,21 @@ export const query = graphql`
           }
           fields {
             lang
+          }
+        }
+      }
+    }
+    allChooseYourProgramYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          programs {
+            title
+            sub_title
+            description
+            description_mobile
+            link
+            icon
+            text_link
           }
         }
       }

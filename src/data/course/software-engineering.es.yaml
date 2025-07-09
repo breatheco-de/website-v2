@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: false
   redirects: ["/ingenieria-software", "/es/software-engineering", "/es/course/ingenieria-software"]
   related_clusters: ["trends-and-tech"]
+  duration: "P18W"  # 18 weeks duration in ISO 8601 format
 
 apply_form:
   label: Ingeniero de Software Senior

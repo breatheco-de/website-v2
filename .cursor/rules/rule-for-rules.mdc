@@ -1,0 +1,124 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Rule for Writing Project Rules
+
+**Purpose:**
+This document defines how to write, update, and maintain rules for this project. It ensures consistency, clarity, and respect for the project's 7-year history, Gatsby structure, and multilingual (English and Spanish) support. Link this file in the README or contributing guide so all team members can find and follow it.
+
+---
+
+## How to Use This File
+- **Read before adding or updating any project rule.**
+- **Follow the structure and examples below.**
+- **Propose updates via pull request and get team approval.**
+- **All changes must pass `npm run test` to ensure nothing breaks.**
+
+---
+
+## 1. Rule Creation Guidelines
+
+Every rule **must** include:
+- **Purpose:** Why the rule exists.
+- **Scope:** Which files, folders, or features it affects.
+- **Guidelines:** The specific requirements.
+- **Examples:** Show correct and incorrect usage.
+- **Enforcement:** Tools or methods to check compliance.
+- **Version & Date:** Track changes (e.g., `v1.1, 2024-06-01`).
+
+**Rules must:**
+- Be written in English.
+- Be short and clear.
+- Be checkable automatically where possible.
+- Not break existing features or language support.
+- Be updated only with team approval.
+- Require all changes to pass project tests (`npm run test`).
+
+**Example Rule Structure:**
+```
+### Rule: Component Folder Structure
+- Purpose: Ensure all components are organized and easy to maintain.
+- Scope: /src/components/
+- Guidelines: Each component must be in its own folder, with the main file named `index.js` (e.g., `/src/components/TwoColumnLeft/index.js`).
+- Examples:
+    - ✅ `/src/components/TwoColumnLeft/index.js`
+    - ❌ `/src/components/TwoColumnLeft.js`, `/src/components/two-column-left/TwoColumnLeft.js`
+- Enforcement: Code review, linting, directory checks.
+- Version: v1.1, 2024-06-01
+```
+
+---
+
+## 2. File and Folder Consistency
+
+### Component Structure
+- **Each component must be stored in its own folder.**
+- **The main file must be named `index.js`.**
+- **Example:**
+    - ✅ `/src/components/TwoColumnLeft/index.js`
+    - ❌ `/src/components/TwoColumnLeft.js`, `/src/components/TwoColumnLeft/TwoColumnLeft.js`
+
+### YAML and Content Files
+- **Naming:** Use lowercase, hyphen-separated names. Add `.es` for Spanish files and `.us` for English (e.g., `landing-page.us.yml`, `landing-page.es.yml`).
+- **Organization:** Group by feature or content type.
+- **Example:**
+    - ✅ `landing-page.us.yml`, `landing-page.es.yml`
+    - ❌ `LandingPage.yaml`, `landingpage-spanish.yaml`
+
+### Translations
+- **Required:** For most content (e.g., landing pages, major user-facing features), provide both English and Spanish versions.
+- **Optional:** For specific components or pages where only one language is needed, translations are optional. Clearly state in the rule when translations are not required.
+- **Keys:** Use the same keys in both language files when translations are required.
+- **Example:**
+    - ✅ `landing-page.us.yml` and `landing-page.es.yml` have matching keys.
+    - ❌ `landing-page.us.yml` has keys missing in `landing-page.es.yml`.
+
+### Folders
+- **Use lowercase, hyphen-separated names for folders.**
+- **Example:**
+    - ✅ `user-data/`
+    - ❌ `UserData/`, `user_data/`
+
+---
+
+## 3. Test Compliance
+- **All changes must pass the project’s tests using `npm run test`.**
+- **Do not merge changes that break existing tests or features.**
+- **Example:**
+    - ✅ All tests pass after your change.
+    - ❌ Tests fail or features break after your change.
+
+---
+
+## 4. Text and Content Consistency
+- **Keep text style and formatting consistent across files.**
+- **Use the same terminology in both languages.**
+- **Review translations for accuracy and completeness.**
+
+---
+
+## 5. Updating Rules
+- **Propose changes via pull request.**
+- **Require team review and approval before merging.**
+- **Update the version and date in the rule.**
+
+---
+
+## 6. Enforcement Tools
+- Use linters, code review, CI checks, and directory structure checks to enforce rules where possible.
+- Document any custom scripts or tools in the rule.
+
+---
+
+## 7. Versioning
+- Each rule must include a version and date.
+- Update the version when making changes.
+
+---
+
+**Note:**
+- Link this file in the README or contributing guide for team visibility.
+- Review rules regularly to keep them relevant.
+- These guidelines help maintain a consistent, reliable, and multilingual codebase as the project evolves.

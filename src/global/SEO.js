@@ -103,6 +103,22 @@ const SEO = (props) => {
 
   return (
     <>
+      <SchemaOrg
+        author={author}
+        description={props.excerpt || description || defaultDescription[lang]}
+        image={previewImage}
+        type={type}
+        title={title || defaultTitle}
+        url={url}
+        seoTitle={seo_title}
+        context={context}
+        organization={{
+          url: siteUrl,
+          logo: `${siteUrl}/${logo}`,
+          name: name,
+        }}
+        wordCount={props.wordCount}
+      />
       <Helmet
         title={title || defaultTitle}
         titleTemplate={titleTemplate}
@@ -159,23 +175,6 @@ const SEO = (props) => {
         />
         <meta name="twitter:image" content={previewImage} />
       </Helmet>
-      <SchemaOrg
-        author={author}
-        // canonicalUrl=""
-        // datePublished={}
-        description={props.excerpt || description || defaultDescription[lang]}
-        image={previewImage}
-        type={type}
-        title={title || defaultTitle}
-        url={url}
-        seoTitle={seo_title}
-        context={context}
-        organization={{
-          url: siteUrl,
-          logo: `${siteUrl}/${logo}`,
-          name: name,
-        }}
-      />
     </>
   );
 };

@@ -1,16 +1,16 @@
 meta_info:
-  slug: node-js-backend-development
-  title: "Learn About Node.js Backend at 4Geeks Academy"
-  description: "Master Node.js backend development. Build scalable, efficient server-side apps with the most popular JavaScript runtime."
-
-  bc_slug: "node-js"
-  template: "course-engineering"
-  image: ""
+  slug: node-js-backend-development   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/node-js
+  title: "Node.js Bootcamp | 4Geeks Academy"
+  description: "Master Node.js development with 4Geeks Academy's bootcamp and job guarantee. Secure a future in tech with our expert-led program."
+  image: "/images/og-preview/node-js.us.png"
   visibility: "hidden"
   keywords: ""
-  show_in_apply: false  # also, the yml must be VISIBLE
-  redirects: []
+  show_in_apply: false
   related_clusters: ["trends-and-tech"]
+  template: "course-engineering"
+  duration: "P8W"  # 8 weeks duration in ISO 8601 format
+  redirects: []
+  bc_slug: "node-js"
 
 apply_form:
   label: Node-js Backend Development

@@ -10,6 +10,7 @@ meta_info:
   show_in_apply: false
   related_clusters: ["full-stack-developer"]
   redirects: []
+  duration: "P9W"  # 9 weeks duration in ISO 8601 format
 
 apply_form:
   label: Introducción a la Programación

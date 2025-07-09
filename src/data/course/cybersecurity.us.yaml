@@ -10,6 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
+  duration: "P14W"  # 14 weeks duration in ISO 8601 format
 
 apply_form:
   label: Cybersecurity
@@ -184,7 +185,7 @@ details:
       Become proficient at managing risks using data loss prevention (DLP) strategies and <strong>navigating compliance with international standards such as ISO 27001 and NIST.</strong>
     list:
       - label: "Duration"
-        content: "16 weeks"
+        content: "14 weeks"
         icon: "duration-icon"
       - label: "Classes"
         content: "3 live online classes per week"
@@ -209,7 +210,7 @@ details:
   week_unit: "wks"
   facts:
     - label: "Duration"
-      value: "16 weeks"
+      value: "14 weeks"
     - label: "Commitment"
       value: "20 hrs/week (Mon - Wed - Fri)"
     - label: "Certificate"

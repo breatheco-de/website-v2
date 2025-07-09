@@ -5,11 +5,12 @@ meta_info:
   image: "/images/og-preview/full-stack.es.png"
   bc_slug: "full-stack-own-pace"
   visibility: "hidden"
-  keywords: null
+  keywords: ""
   show_in_apply: false
-  redirects: []
   related_clusters: [""]
   template: "course-fullstack-at-your-own"
+  duration: "P26W"  # 26 weeks duration in ISO 8601 format
+  redirects: []
 
 apply_form:
   label: Curso Full Stack Developer a tu propio ritmo

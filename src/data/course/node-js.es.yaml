@@ -1,15 +1,16 @@
 meta_info:
-  slug: curso-de-node-js-backend
-  title: "Aprende sobre desarrollo backend con Node.js en 4Geeks Academy"
-  description: "Aprende desarrollo backend con Node.js. Construye aplicaciones del lado del servidor escalables y eficientes con el entorno de ejecución JavaScript más popular."
+  slug: curso-de-node-js-backend   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/node-js
+  title: "Bootcamp de Node.js | 4Geeks Academy"
+  description: "Domina el desarrollo con Node.js con el bootcamp de 4Geeks Academy y garantía de empleo."
+  image: "/images/og-preview/node-js.es.png"
   bc_slug: "node-js"
-  template: "course-engineering"
-  image: ""
+  template: "course-node-js"
   visibility: "hidden"
   keywords: ""
-  show_in_apply: false # also, the yml must be VISIBLE
+  show_in_apply: true
+  related_clusters: [""]
+  duration: "P8W"  # 8 weeks duration in ISO 8601 format
   redirects: []
-  related_clusters: ["trends-and-tech"]
 
 apply_form:
   label: Node-js Backend

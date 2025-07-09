@@ -1,12 +1,12 @@
 meta_info:
   slug: job-guarantee
-  title: "With 4Geeks Academy’s Job Guarantee, we’ll help you land your first tech job. We’re committed to ensuring your success in the coding world."
+  title: "With 4Geeks Academy's Job Guarantee, we'll help you land your first tech job. We're committed to ensuring your success in the coding world."
   description: "Job Guarantee 4Geeks Academy"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/programs-heading.webp"
   keywords: "Job Guarantee at 4Geeks Academy"
   redirects: ["/job-guarantee"]
-  utm_course: ["full-stack", "datascience-ml"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
 
 button:
   btn_label: "REQUEST A SYLLABUS"
@@ -16,50 +16,46 @@ button:
 
 seo_title: "Job Guarantee"
 header:
-  title: "GET HIRED IN TECH OR YOUR MONEY BACK"
-  sub_title: "Your success is our mission"
-  paragraph: |
-    <ul style="list-style-type: disc; padding-left: 20px;">
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px; ">•</span>
-        Get career-ready with our award-winning method.
-      </li>
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Access our unmatched career support services.
-      </li>
-      <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
-        <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
-        Secure a job within 9 months of graduation, or we’ll refund your tuition.
-      </li>
-    </ul>
+  title: "GET INTO TECH WITH OUR JOB GUARANTEE"
+  sub_title: "Your success is our mission — Get hired within 9 months of graduation, or we'll refund your tuition."
+  paragraph: ""
+    #<ul style="list-style-type: disc; padding-left: 20px;">
+     # <li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+      #  <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px; ">•</span>
+       # Get career-ready with our award-winning method.
+      #</li>
+      #<li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+       # <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+       # Access our unmatched career support services.
+      #</li>
+      #<li style="color: #000; font-size: 18px; margin-bottom: 8px; display: flex; align-items: left; justify-content: center;">
+       # <span style="color: #ffb718; font-size: 22px; font-weight: bold; margin-right: 10px;">•</span>
+       # Secure a job within 9 months of graduation, or we'll refund your tuition.
+      # </li>
+   # </ul>
 
 two_column_left:
   proportions: [6, 6]
   image:
     style: '{ "backgroundSize": "contain", "background-position": "center" }'
-    src: "/images/landing/hombre-joven-con-laptop.webp"
+    src: "/images/landing/job-guarantee-1.png"
   heading:
-    text: "Why do we offer a job guarantee?"
+    text: "Who's Eligible?"
     font_size: ["42px", "34px", "34px", "34px", "34px"]
     style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
-    text: "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers."
+    text: "You'll qualify for  the  Job Guarantee if you:"
     font_size: ["22px", "22px", "22px", "20px", "18px"]
     style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
   content:
     text: |
-      From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey.
+      <span style="color: #0097CD; ">✓</span> Have U.S. work authorization
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> Proven effectiveness of our program
+      <span style="color: #0097CD; ">✓</span> Pass our logic test 
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> The tech industry is booming
+      <span style="color: #0097CD; ">✓</span> Complete all coursework and projects
       <br><br>
-      <span style="color: #0097CD; ">✓  - </span> We trust the process
-      <br><br>
-      <span style="color: #0097CD; ">✓  - </span> We trust you
-      <br><br>
-      <span style=" color: #000;">Let’s shape your future together!</span>
+      <span style="color: #0097CD; ">✓</span> Follow our career team's guidance
     font_size: ["20px", "20px", "18px", "16px", "14px"]
     style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
   button:
@@ -70,47 +66,72 @@ two_column_left:
     path: "/us/apply"
 
 we_trust_section:
-  title: Why choose 4Geeks?
+  title: Does the Job Guarantee Deliver Results You Can Count On?
   text: |
-    With a proven track record of success and industry recognition, our program empowers students to turn their career goals into reality
-    <br>
-    <br>
-    The numbers speak for themselves:
+    Yes — and we've got the numbers to back it up    
+    <br><br>
+    These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
+    <br><br>
+    We don't just teach you how to code — we help you build a career you're proud of.
   boxes:
     - icon: briefcase-2
       title: "84%"
       text: Job placement rate
-    - icon: chart
-      title: "60K"
-      text: Avg. Income at a new job
     - icon: graduation-2
-      title: "130"
-      text: Average days to get hired
+      title: "140"
+      text: Days on avg. to get hired
+    - icon: chart
+      title: "55%"
+      text: Salary increase after graduation
 
 how_it_works:
-  title: How it works
-  text: These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 9 months of graduation, you’ll get 100% of your tuition back.
+  title: How the Refund Works
+  text: |
+    We've made it simple: if you complete all the required steps, and you don't land a qualifying job within 9 months after graduation, we'll refund 100% of your tuition.    
   steps:
-    - icon: rocket-2
-      title: Start the program
-    - icon: assignment
-      title: Comply with assignments and attendance
-    - icon: folder
-      title: Approve the final project
-    - icon: graduation-2
-      title: Graduate
-      highlight: True
-    - icon: handshake
-      title: Complete the career support process
     - icon: briefcase-2
-      title: Get a job in 9 months
+      title: You were not hired into a qualifying role within 9 months of graduation.
+    - icon: assignment
+      title: Our team verifies that you met all Job Guarantee requirements
+    - icon: folder
+      title: Receive the full refund within 30 days.
   link:
     url: https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Conditions%20Job%20Guaranteed%20Program.pdf
     label: Conditions Apply.
 
+two_column_right:
+  proportions: [6, 6]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center" }'
+    src: "/images/landing/hombre-joven-con-laptop.webp"
+  heading:
+    text: "Why We Have the Confidence to Offer a Job Guarantee"
+    font_size: ["42px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+  sub_heading:
+    text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
+    font_size: ["20px", "20px", "18px", "18px", "16px"]
+    style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
+  content:
+    text: |
+      <span style="color: #0097CD; ">✓   </span> Our program's effectiveness is backed by strong placement rates
+      <br><br>
+      <span style="color: #0097CD; ">✓   </span> The tech industry continues to grow with high demand for talent
+      <br><br>
+      <span style="color: #0097CD; ">✓   </span> We believe in our teaching approach and your commitment to succeed
+      <br><br>
+    font_size: ["20px", "20px", "18px", "16px", "14px"]
+    style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
+  button:
+    text: "Apply"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/us/apply"
+
 successful_stories:
   title: Success stories
-  text: "Our job guarantee program is yielding great results. Check out some of our graduates’ stories:"
+  text: "Our job guarantee program is yielding great results. Check out some of our graduates' stories:"
   testimonials:
     - "nai-kali"
     - "azu-bota"
@@ -125,14 +146,16 @@ two_columns_video:
     shadow: false
   video: "z8L4yGdP5xM"
   heading:
-    text: "Daniel Pena's Journey with 4Geeks Academy"
-    font_size: ["30px", "30px", "24px", "24px", "24px"] # De mayor a menor (Desktop → Móvil)
+    text: "See How One Graduate Turned Our Job Guarantee Into a Real Career"
+    font_size: ["42px", "34px", "34px", "34px", "34px"] # De mayor a menor (Desktop → Móvil)
     style: '{"font-weight": "bold", "color": "#333", "text-align": "center"}'
   sub_heading:
     text: |
-      Daniel Pena shares his experience at 4Geeks Academy, where he transitioned into tech through the Full Stack Developer program. With a curriculum covering both front-end and back-end development, he gained the confidence and skills needed to land a job he loves.
-      Thanks to hands-on projects, expert instructors, and the job guarantee program, Daniel was fully prepared to apply for tech positions and successfully launched his career.
-    font_size: ["20px", "18px", "16px", "15px", "14px"]
+      Daniel Peña transitioned to a tech career through 4Geeks Academy's Full-Stack Developer program. With our industry-aligned curriculum that covers front-end and back-end development, he built real-world skills through hands-on projects and expert mentorship.
+      Most importantly, he followed all the steps in our Job Guarantee — and it paid off. Daniel landed a tech job he loves and launched a new career with confidence.
+      Watch his story to see what's possible when commitment meets support.
+
+    font_size: ["20px", "18px", "16px", "16px", "14px"]
     style: '{"color": "#2a2a2a", "text-align": "justify", "line-height": "1.6", "max-width": "800px", "margin": "0 auto", "font-weight":"200" }'
   button:
     text: "APPLY NOW"
@@ -141,6 +164,43 @@ two_columns_video:
     path: "/us/apply"
     style: '{"padding": "20px 48px", "border-radius": "5px"}'
 
-form:
-  title: "Become a 4Geeks Partner"
-  paragraph: "Contact us today to join our network and start benefiting from the opportunities we offer.  Let us help you choose the right track to achieve your goals. Get in touch!"
+choose_program:
+  title: "Our Job Guarantee is Available for Our Top Tech Programs "
+  paragraph: "Choose your career path. Master the skills and get hired."
+
+two_column_geek:
+  proportions: [5, 7]
+  image:
+    style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+    src: "/images/landing/feliz-empresario-laptop-3.png"
+  heading:
+    text: |-
+      What Sets 4Geeks Apart: 
+      AI-Forward Skills, Unlimited Mentorship and Career Support
+    font_size: ["38px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+  sub_heading:
+    text: "Everything You Need to Launch and Grow a Career in Tech"
+    font_size: ["26px", "26px", "24px", "24px", "22px"]
+    style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
+  bullets:
+    item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+    items:
+      - heading: "Get ahead of the curve with next-gen tech skills."
+        text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+        icon: "check"
+      - heading: "Access unlimited mentorship and career support."
+        text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+        icon: "check"
+      - heading: "Enjoy hyperpersonalized learning, at every level."
+        text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+        icon: "check"
+      - heading: "Join an active tech community."
+        text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+        icon: "check"
+  button:
+    text: "Learn More"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/us/apply"

@@ -10,6 +10,7 @@ meta_info:
   keywords: ""
   redirects: ["/es/datascience"]
   related_clusters: ["trends-and-tech"]
+  duration: "P16W"  # 16 weeks duration in ISO 8601 format
 
 apply_form:
   label: Datascience - Machine Learning

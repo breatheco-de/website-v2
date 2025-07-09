@@ -13,16 +13,22 @@ const options = {
 };
 
 const getPost = async (slug) => {
-  const _resp = await axios.get(
-    process.env.GATSBY_BREATHECODE_HOST + `/registry/asset/${slug}`,
-    options
-  );
-  if (_resp.status != 200) {
-    logger.error(_resp.data);
-    throw new Error(_resp.data);
+  try {
+    const _resp = await axios.get(
+      process.env.GATSBY_BREATHECODE_HOST + `/registry/asset/${slug}`,
+      options
+    );
+    if (_resp.status !== 200) {
+      // Log error but return null instead of throwing
+      if (typeof logger !== 'undefined') logger.error(_resp.data);
+      return null;
+    }
+    return _resp.data;
+  } catch (e) {
+    // Log error but return null instead of throwing
+    if (typeof logger !== 'undefined') logger.error(e);
+    return null;
   }
-
-  return _resp.data;
 };
 
 const ThumbnailPage = () => {
@@ -80,7 +86,9 @@ const ThumbnailPage = () => {
         margin="0 auto"
         lineHeight="normal"
       >
-        {post && (post.frontmatter?.title || post.title)}
+        {post
+          ? post.frontmatter?.title || post.title
+          : "No post found or failed to load post."}
       </H1>
     </Div>
   );

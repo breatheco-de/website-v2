@@ -7,7 +7,7 @@ navbar:
       paragraph: "Make the career change you've always wanted. From zero to coding in weeks and specialized in the most wanted technologies int he market."
       width: "950px"
       links:
-        - title: "Full Stack Coding Bootcamp"
+        - title: "Full Stack with AI"
           level: " "
           icon: "fullstack_2"
           paragraph: "Become a Full Stack software developer using Python, React and Javascript. The most in-demand skills. Find a job as a developer."

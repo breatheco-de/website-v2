@@ -8,6 +8,8 @@ meta_info:
   visibility: "visible"
   keywords: ""
   show_in_apply: false
+  related_clusters: ["software-engineering"]
+  duration: "P18W"  # 18 weeks duration in ISO 8601 format
   redirects: [
     "/software-engineering", 
     "/us/software-engineering",
@@ -16,7 +18,6 @@ meta_info:
     "/us/coding-bootcamps/software-engineering-coding-bootcamp",
     "/coding-bootcamps/software-engineer-bootcamp"
   ]
-  related_clusters: ["trends-and-tech"]
 
 apply_form:
   label: Senior Software Engineer

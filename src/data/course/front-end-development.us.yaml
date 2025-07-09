@@ -9,6 +9,8 @@ meta_info:
   show_in_apply: false
   redirects: []
   related_clusters: ["desarrollador-full-stack"]
+  template: "course-front-end"
+  duration: "P12W"  # 12 weeks duration in ISO 8601 format
 
 apply_form:
   label: Curso de Desarrollo Frontend
