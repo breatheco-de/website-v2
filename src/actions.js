@@ -48,17 +48,26 @@ export const locByLanguage = (locations, languageToFilter) => {
 
   const locs = locations.nodes
     .filter((l) => {
+      // Add null check for fields and file_name
+      if (!l.fields || !l.fields.file_name) return false;
+      
       const [name, _lang] = l.fields.file_name.split(".");
       //filter repetead locations and only focuse on the desired language
       if (_lang !== languageToFilter || repeated.includes(name)) return false;
       repeated.push(name);
       return true;
     })
-    .map(
-      (l) =>
-        locations.edges.find((loc) => loc.node.meta_info.slug === l.fields.slug)
-          .node
-    );
+    .map((l) => {
+      // Add null check for fields.slug
+      if (!l.fields || !l.fields.slug) return null;
+      
+      const foundLocation = locations.edges.find(
+        (loc) => loc.node.meta_info && loc.node.meta_info.slug === l.fields.slug
+      );
+      
+      return foundLocation ? foundLocation.node : null;
+    })
+    .filter(Boolean); // Remove any null values
 
   return locs;
 };
