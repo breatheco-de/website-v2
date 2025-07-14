@@ -2,6 +2,7 @@ meta_info:
   slug: part-time-full-stack-developer   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer
   title: "Full Stack Developer Bootcamp | 4Geeks Academy"
   bc_slug: "full-stack"
+  job_guarantee: true
   description: "Master full stack development with 4Geeks Academy's bootcamp and job guarantee. Secure a future in tech with our expert-led program."
   image: "/images/og-preview/full-stack.us.png"
   visibility: "visible"

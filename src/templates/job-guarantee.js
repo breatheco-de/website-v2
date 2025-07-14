@@ -637,7 +637,12 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
       <ChooseYourProgram
         id="choose-program"
         lang={pageContext.lang}
-        programs={data.allChooseYourProgramYaml.edges[0].node.programs}
+        programs={data.allChooseYourProgramYaml.edges[0].node.programs.filter(
+          (p) =>
+            p.title === "Full Stack Development with AI" ||
+            p.title === "Data Science and ML" ||
+            p.title === "CyberSecurity Bootcamp"
+        )}
         title={yml.choose_program?.title}
         paragraph={yml.choose_program?.paragraph}
         background={Colors.veryLightBlue3}
