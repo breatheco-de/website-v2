@@ -43,7 +43,7 @@ navbar:
 header_data:
   tagline: "Hey Texans! Your Life in Tech Starts Here!"
   sub_heading: |
-    <span style="font-size: 32px;">Get Ready for a Tech Career with a Full Scholarship.</span>
+    <span style="font-size: 32px;">Get Ready for a Tech Career with a Scholarship.</span>
   background: "#ffffff"
   partner_logo_url: "../../../static/images/partner/4geeks-n-kosmos-logo.webp"
   tagline_color: "#1c1c1c"
