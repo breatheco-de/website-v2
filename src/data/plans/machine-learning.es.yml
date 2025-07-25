@@ -1,13 +1,13 @@
 full_time:
-## USA FULL TIME
+#USA 
   - slug: 'plan-4'
     academies: ['downtown-miami', 'orlando']
     recomended: true
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
-    price: "$11,999"
-    original_price: "$19,998"
-    offer: "40% de descuento"
+    price: "$10,999"
+    original_price: "$11,999"
+    offer: "10% de descuento"
     bullets: 
       - "Estás ahorrando $1000 USD"
       - "Este descuento aplica a estudiantes que no son elegibles para la Beca de la Universidad Clark (generalmente empleados o con trabajo estable)."
@@ -44,48 +44,34 @@ full_time:
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
 
-
 part_time:
 
-## USA Part-time
-  - slug: 'plan-4'
+## USA Medio Tiempo
+  - slug: 'usa-upfront-pt'
     recomended: true
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     scholarship: "Pago completo"
     payment_time: "Paga hoy"
-    price: "$11,999"
-    original_price: "$19,998"
-    offer: "40% de descuento"
-    bullets: 
-      - "Estás ahorrando $7,999 USD"
-      - "Solo si no aplica la Beca de la Universidad Clark (desempleado o subempleado)"
+    price: "$9,899"
+    original_price: "$10,999"
+    offer: "10% de descuento"
+    bullets:
+      - "Paga por adelantado y ahorra un 10% en tu matrícula."
+      - "La matrícula regular es de $10,999, pero sólo pagas $9,899."
     icons:
       - "/images/visa-mastercard.png"
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
 
-  - slug: 'plan-1'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: false
-    scholarship: "Beca"
-    payment_time: "No hay nada como esto"
-    price: "$7,999"
-    original_price: "$16,665"
-    warning_message: "¡Plazas limitadas!"
-    bullets: 
-      - "Estás ahorrando 40% + 4K USD. Gracias a la Universidad Clark y el Fondo TechBoost"
-    icons: 
-      - "/images/clarkuniversity.png"
-
-  - slug: 'plan-2'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+  - slug: 'usa-financed-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'tampa-usa', 'losangeles-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Paga en 3, 4 o 5 años"
-    price: "~$200 p/m"
+    price: "$200 - $299/mes"
     bullets: 
       - "Varios socios ofrecen préstamos y planes de pago"
-      - "El saldo restante se puede pagar a lo largo del tiempo, $200 p/mo"
+      - "El saldo restante se puede pagar a lo largo del tiempo, $200 al mes"
       - "Puedes obtener una beca parcial y el saldo restante con un plan de pago"
       - "Estamos totalmente comprometidos a hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir con nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional."
@@ -93,6 +79,35 @@ part_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Garantía de Empleo"
+    payment_time: "Consigue empleo o te devolvemos tu dinero"
+    price: "+$2,000"
+    original_price: ""
+    warning_message: ""
+    bullets: 
+      - "Inscríbete aceptando los términos y condiciones."
+      - "Cumple con la carga académica y asistencia requeridas."
+      - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
+    recomended: false
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    payment_time: "Pagos flexibles después de la graduación"
+    price: "IBR"
+    bullets:
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
+      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
+      - "Pagos flexibles que se ajustan según tus ingresos."
+      - "La matrícula se paga directamente a la academia."
+    icons:
+      - "/images/edly.png"
 
 ## spain & Europe
   - slug: 'spain-upfront-ds-pt'
@@ -109,7 +124,7 @@ part_time:
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"   
+      - "/images/ethereum.png"    
 
   - slug: 'spain-scholarships-ds-pt'
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
@@ -141,7 +156,7 @@ part_time:
     icons: 
       - "/images/visa-mastercard.png"    
       - "/images/bitcoin_logo.png"  
-      - "/images/ethereum.png"   
+      - "/images/ethereum.png"    
 
   - slug: 'north-europe-scholarships-ds-pt'
     academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
@@ -184,9 +199,6 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
 
-
-## Chile
-
   - slug: 'chile-ds-gf-pt'
     academies: ['santiago-chile']
     recomended: true
@@ -196,7 +208,7 @@ part_time:
     original_price: "€4.500.000"
     offer: "25% de descuento"
     bullets:
-      - "Paga con transferencia bancaria, tarjeta de crédito o débito"
+      - "Paga con transferencia bancaria, tarjeta de crédito o débito"    
       - "*Descuento de hasta 1.125.000 CLP. Desde 3.375.000 CLP en lugar de 4.500.000 CLP"
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy. Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
       - "Paga solo por el programa de Ciencia de Datos si aún no estás interesado en nuestro programa de apoyo profesional."
@@ -232,85 +244,48 @@ part_time:
       - "/images/visa-mastercard.png"
       - "/images/flevo-new.png"
 
-## LATAM 
+## LATAM
 
-  - slug: 'latam-upfront-ds-cs'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  - slug: 'latam-trabajo-garantizado-ml-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
     recomended: true
-    scholarship: "Programa de Ciencia de Datos + Apoyo Profesional"
-    payment_time: "Te ayudamos a construir tu perfil profesional"
-    price: "USD $3.600"
-    original_price: "USD $5.000"
-    offer: "28% de descuento"
+    scholarship: "Trabajo Garantizado"
+    payment_time: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
+    price: "USD $4,000"
+    original_price: "USD $5,000"
+    offer: "20% DE DESCUENTO"
     bullets:
-      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte"
-      - "Necesitas elegir si solo estás tomando el programa, o si también deseas obtener nuestro Apoyo Profesional completo, o si deseas inscribirte con nuestra Función de Garantía de Empleo"
-      - "Además del programa de Ciencia de Datos, obtén un apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"
+      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible ofreciendo múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
+      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."
+      - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible."
+      - "No dudes en contactarnos para explorar las posibilidades disponibles para ti. Estamos aquí para encontrar una solución adaptada a tus necesidades."
     icons:
       - "/images/visa-mastercard.png"
 
-  # - slug: 'latam-solo-programa-ds'
-  #   academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-  #   recomended: true
-  #   scholarship: "Sólo paga el programa"
-  #   payment_time: "Enfócate en obtener nuevas habilidades. Paga mensualmente."
-  #   price: "A partir de $120/m"
-  #   bullets: 
-  #     - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-  #     - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-  #     - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
-  #     - "Pague solamente por el programa de Data Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
-  #   icons: 
-  #     - "/images//flevo-new.png" 
-
-  # - slug: 'latam-program-only-ds-upfront'
-  #   academies: ['montevideo-uruguay','bogota-colombia', 'costa-rica', 'mexicocity-mexico','quito-ecuador', 'panamacity-panama', 'buenosaires-argentina','lima-peru','lapaz-bolivia']
-  #   recomended: false
-  #   scholarship: "Sólo el Programa Data Science"
-  #   payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-  #   price: "USD $4000"
-  #   bullets: 
-  #     - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-  #     - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-  #     - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
-  #     - "Pague solamente por el programa Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
-  #   icons: 
-  #     - "/images//flevo-new.png" 
-
-## colombia 
-
-  - slug: 'colombia-upfront-ds-cs'
-    academies: ['bogota-colombia']
-    recomended: true
+  - slug: 'latam-career-support-ds-cs'
+    academies: ['buenosaires-argentina', 'caracas-venezuela', 'bogota-colombia', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    recomended: false
     scholarship: "Programa de Ciencia de Datos + Apoyo Profesional"
     payment_time: "Te ayudamos a construir tu perfil profesional"
-    price: "USD $3.600"
-    original_price: "USD $5.000"
-    offer: "28% de descuento"
+    price: "USD $3,250"
     bullets:
       - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte"
-      - "Necesitas elegir si solo estás tomando el programa, o si también deseas obtener nuestro Apoyo Profesional completo, o si deseas inscribirte con nuestra Función de Garantía de Empleo"
+      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
+      - "Necesitas elegir si solo estás tomando el programa, o si también deseas obtener nuestro Apoyo Profesional completo, o si deseas inscribirte con nuestra Función de Garantía de Empleo"  
       - "Además del programa de Ciencia de Datos, obtén un apoyo profesional de por vida de nuestro equipo especializado y acceso permanente a nuestra comunidad en línea de graduados"
-    icons:
-      - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
-
-## Venezuela
-
-  - slug: 'venezuela-full-payment-ds-pt'
-    academies: ['caracas-venezuela']
-    recomended: true
-    scholarship: "Sólo el Programa Data Science"
-    payment_time: "Enfócate en obtener nuevas habilidades. Paga de contado."
-    price: "$2.400*"
-    original_price: "$4000"
-    offer: "40% OFF"
-    bullets: 
-      - "Siempre hay un plan de pago disponible para que te unas a 4Geeks Academy"
-      - "Si no encuentras aquí lo que esperas, por favor contáctanos y trataremos de encontrar nuevas formas de ayudarte"     
-      - "Debes elegir si tomarás solo el programa, si también quieres obtener nuestro sistema de Career Support, o si quieres ir a por todo y registrarte con nuestra opción de Trabajo Garantizado"  
-      - "Pague solamente por el programa Science si todavía no está interesado en nuestro programa de apoyo profesional y nuestra garantía de empleo."   
     icons: 
-      - "/images//flevo-new.png" 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-program-only-ml-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'bogota-colombia', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela']
+    recomended: false
+    scholarship: "Solo Programa de Machine Learning"
+    payment_time: "Enfócate en aprender machine learning. Paga por adelantado."
+    price: "USD $2,500"
+    bullets:
+      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
+      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."
+      - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible."
+      - "Paga solo por el programa de Machine Learning si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de trabajo."
+    icons:
+      - "/images/visa-mastercard.png" 

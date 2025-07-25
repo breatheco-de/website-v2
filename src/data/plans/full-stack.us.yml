@@ -4,36 +4,18 @@ full_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: true
     scholarship: "Pay upfront"
-    payment_time: "Get a 40% discount"
-    price: "$10,999"
-    original_price: "$18,300"
-    offer: "40% OFF"
+    payment_time: "Get a 10% discount"
+    price: "$14,999"
+    original_price: "$16,700"
+    offer: "10% OFF"
     bullets:
-      - "You're saving $7,301 USD"  
+      - "You're saving $1,701 USD"  
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-      - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
       - "We also provide several full or partial scholarship options that you may be eligible for. Contact us for further details."
+      - "This plan includes a job guarantee"
     icons:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
-
-  # - slug: 'usa-clark-scholarship-ft'
-  #   academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-  #   recomended: false
-  #   scholarship: "Scholarship"
-  #   payment_time: "There is nothing like this"
-  #   price: "$9,000"
-  #   original_price: "$15,000"
-  #   warning_message: "Limited availability!"
-  #   offer: "40% OFF"
-  #   bullets:
-  #     - "You're saving ~$6,666 USD"
-  #     - "Remaining balance could be paid over time $200 p/mo"
-  #     - "Regular tuition is $11,999. Avg tuition in the US is $16k."
-  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
-  #     - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services, or enroll with a Job Guarantee."
-  #   icons:
-  #     - "/images/clarkuniversity.png"
 
 
   - slug: 'usa-financed-ft'
@@ -41,7 +23,7 @@ full_time:
     recomended: false
     scholarship: "Financed"
     payment_time: "24 months payment"
-    price: "from $299/mo"
+    price: "$200 - $299/mo"
     bullets: 
       - "Affordable long term loans based on credit score."
       - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">link to Ascent partnership page</a>."
@@ -152,44 +134,58 @@ part_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pay upfront"
     payment_time: "Get a 10% discount"
-    price: "$9,000"
-    original_price: "$9,999"
+    price: "$9,899"
+    original_price: "$10,999"
     offer: "10% OFF"
     bullets:
       - Pay upfront and save 10%
-      - Regular tuition is $ 9,999 and can be financed interest free-up to 6 months.
+      - Regular tuition is $ 10,999 and can be financed interest free-up to 6 months.
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'toronto-canada', 'dallas-usa']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "from $299/mo"
+    price: "$200 - $299/mo"
     bullets: 
       - "Choose among short or long term financing plans."
       - "Affordable long term loans based on credit score."
-      - "loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
+      - "Loan terms displayed are effective as of 3/11/2025. To see full repayment examples, visit <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">our 4Geeks and Ascent page</a>."
       # - "Explore available options <a href=\"https://partner.ascentfunding.com/4geeksacademy/\" target=\"_blank\" rel=\"noopener noreferrer nofollow\" style=\"color: #007bff; \">here</a>."
     icons: 
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
-
-
+      
   - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
+    academies: ['atlanta-usa', 'toronto-canada', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
     recomended: false
     scholarship: "Job Guarantee"
     payment_time: "Get hired or your money back"
-    price: "Tuition"
+    price: "+$2,000"
     original_price: ""
-    warning_message: "+ 2,000 USD"
     bullets: 
       - "Enroll, agreeing to terms and conditions."
       - "Fulfill required coursework and attendance."
       - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
     icons: 
       # - "/images/clarkuniversity.png" 
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Income-Based Repayment Loan"
+    payment_time: "Flexible payments after graduation"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
+
+
 
 ##  EUROPE Part-time
 
@@ -335,13 +331,13 @@ part_time:
 ## LATAM  
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
     recomended: true
     scholarship: "Job Guarantee"
     payment_time: "Get hired within 9 months of graduation or your money back"
-    price: "USD $3.500"
-    original_price: "USD $5.000"
-    offer: "40% OFF"
+    price: "USD $4,000"
+    original_price: "USD $5,000"
+    offer: "20% OFF"
     bullets:
       - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
       - "You can adapt your learning path to your financial considerations. Choose between enrolling only in the full stack program, adding our career support services, or enrolling with a Job Guarantee."     
@@ -350,13 +346,26 @@ part_time:
     icons: 
       - "/images/visa-mastercard.png"
 
-  - slug: 'latam-probram-only-fs-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+  - slug: 'latam-apoyo-profesional-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
+    recomended: false
+    scholarship: "Career Support Only"
+    payment_time: "Get expert career support."
+    price: " USD $3,000"
+    bullets:
+      - "Receive personalized career support from our expert team to help you launch your tech career."
+      - "Access exclusive resources, workshops, and mentorship to boost your employability."
+      - "Benefit from networking opportunities and job search strategies tailored to the LATAM market."
+      - "Please note: This plan does not include a job guarantee, but maximizes your chances of success with professional guidance."
+    icons:
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-program-only-fs-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'bogota-colombia', 'caracas-venezuela']
     recomended: false
     scholarship: "Full-Stack Program Only"
     payment_time: "Focus on learning to code. Pay upfront."
-    price: "$2.000 USD"
-    original_price: "USD $4.000 USD"
+    price: "USD $2,000"
     bullets: 
       - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
       - "You can adapt your learning path to your financial considerations. Choose between enrolling only in the full stack program, adding our career support services, or enrolling with a Job Guarantee."     
@@ -364,84 +373,11 @@ part_time:
       - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
     icons: 
       - "/images/visa-mastercard.png"
-
-
-## COLOMBIA
-  - slug: 'colombia-trabajo-garantizado-fs-pt'
-    academies: ['bogota-colombia']
-    recomended: true
-    scholarship: "Job Guarantee"
-    payment_time: "Get hired within 9 months of graduation or your money back"
-    price: "USD $3.500"
-    original_price: "USD $5.000"
-    offer: "40% OFF"
-    bullets:
-      - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
-      - "You can adapt your learning path to your financial considerations. Choose between enrolling only in the full stack program, adding our career support services, or enrolling with a Job Guarantee."     
-      - "We offer a number of full or partial scholarship options that you could be eligible for."  
-      - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."   
-    icons: 
-      - "/images/flevo-new.png"
-
-  - slug: 'colombia-probram-only-fs-pt'
-    academies: ['bogota-colombia']
-    recomended: false
-    scholarship: "Full-Stack Program Only"
-    payment_time: "Focus on learning to code. Pay upfront."
-    price: "$2.000 USD"
-    original_price: "USD $4.000 USD"
-    bullets: 
-      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
-      - "You can adapt your learning path to your financial considerations. Choose between enrolling only in the full stack program, adding our career support services, or enrolling with a Job Guarantee."     
-      - "We offer a number of full or partial scholarship options that you could be eligible for." 
-      - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
-    icons: 
-      - "/images/partner/flevo-new.png" 
-
-  # - slug: 'latam-solo-programa-pt'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-  #   recomended: false
-  #   scholarship: "Only pay for the program"
-  #   payment_time: "Focus on gaining skills. Pay monthly."
-  #   price: "Starting from $90/m"
-  #   bullets: 
-  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
-  #     - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
-  #     - "We offer a number of full or partial scholarship options that you could be eligible for."  
-  #     - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
-  #   icons: 
-  #     - "/images/flevo-new.png" 
-
-  # - slug: 'latam-upfront-fs-pt'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-  #   recomended: false
-  #   scholarship: "Full-stack program + Career Support"
-  #   payment_time: "Learn to code and get full support building your career"
-  #   price: "USD $3000"
-  #   bullets:
-  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
-  #     - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
-  #     - "We offer a number of full or partial scholarship options that you could be eligible for."  
-  #     - "Additionally to the Full-Stack program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
-  #   icons: 
-  #     - "/images/flevo-new.png"
-
-  #- slug: 'latam-job-guarantee-fs-pt'
-    #academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    #recomended: false
-    #scholarship: "Trabajo garantizado"
-    #payment_time: "Consigues un trabajo o te devolvemos tu dinero"
-    #price: "USD $4000"
-    #bullets:
-    #  - "Planes de pago disponibles en toda latam"
-    #  - "Conseguirás un trabajo dentro de los próximos 9 meses después de la graduación."     
-    #icons: 
-    #  - "/images/quotanda-logo.png"
 
 ## Venezuela
 
   - slug: 'venezuela-scholarship-pt'
-    academies: ['caracas-venezuela']
+    academies: ['']
     recomended: true
     scholarship: "Pay upfront"
     payment_time: "Pay early and $250 off"
@@ -457,43 +393,3 @@ part_time:
       - "/images/visa-mastercard.png"
       - "/images/flevo-new.png"
 
-  - slug: 'venezuela-upfront-pt'
-    academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Pay in 4 parts"
-    payment_time: "You can pay today or in 4 parts without interest"
-    price: "$2.000 USD"
-    original_price: "$4.000 USD"
-    bullets: 
-      - "Pay with debit, credit or wire transfer."
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-    icons: 
-      - "/images/visa-mastercard.png"
-
-  # - slug: 'venezuela-financed-pt'
-  #   academies: ['caracas-venezuela']
-  #   recomended: false
-  #   scholarship: "Financed"
-  #   payment_time: "12 months"
-  #   price: "~$200 / mo."
-  #   bullets: 
-  #     - "Financing in 2, 3 or up to 12 months."
-  #     - "Get interview with Flevo for fast financing approval."
-  #     - "Prices may vary depending on the length of your financing period."
-  #   icons: 
-  #     - "/images/flevo-new.png"
-
-  # - slug: 'venezuela-laptop-pt'
-  #   academies: ['caracas-venezuela']
-  #   recomended: false
-  #   scholarship: "Includes a new laptop"
-  #   payment_time: "Special offer with laptop included"
-  #   price: "~$2500"
-  #   bullets: 
-  #     - "There is always a payment plan available for you to join 4Geeks Academy"
-  #     - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-  #     - "Pay with debit, credit or wire transfer."
-  #     - "Keep the laptop once you finish the program."
-    # icons:
-    #   - "/images/laptp.jpg"

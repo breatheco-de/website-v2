@@ -220,10 +220,8 @@ faq:
         locations: ["santiago-chile"]
         priority: 1
         answer: |-
-          El Plan de Pagos Extendido está diseñado específicamente para satisfacer las necesidades de nuestros estudiantes en Chile. Puedes solicitar un plan que dure 6, 12, 18 o 24 meses, lo que te permite pagar de manera gradual. Simplemente paga el depósito requerido y firma un contrato que detalle el calendario de pagos que mejor se adapte a tu estilo de vida. Para obtener detalles sobre el plan, visita <a class="faq-link" target="_blank" rel="noopener noreferrer nofollow" href="https://quotanda.com/en/4geeks/">Quotanda</a>. Para más detalles, visita nuestra <a class="faq-link" target="_blank" href="/es/financiacion">página de financiación</a>.
-      ##  // ¿Plan de pago extendido? ¿Cómo funciona? ¿Qué significa eso?  //
+          El Plan de Pagos Extendido está diseñado específicamente para satisfacer las necesidades de nuestros estudiantes en Chile. Puedes solicitar un plan que dure 12, 18 o 24 meses, lo que te permite pagar de manera gradual. Simplemente paga el depósito requerido y firma un contrato que detalle el calendario de pagos que mejor se adapte a tu estilo de vida. Para más detalles, visita nuestra <a class="faq-link" target="_blank" href="/es/financiacion">página de financiación</a>.      
 
-      ##  ¿Puedo pagar después de conseguir un trabajo?
       - question: "¿Puedo pagar después de conseguir un trabajo?"
         templates: ["faq"]
         priority: 0

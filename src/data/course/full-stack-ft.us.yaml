@@ -1,7 +1,7 @@
 meta_info:
   slug: full-time-full-stack-developer   #<----URL: https://4geeksacademy.com/us/coding-bootcamps/full-time-full-stack-developer
-  title: "Desarrollador Full Stack estudiando full-time, durante 10 semanas."
-  description: "Conviértete en Desarrollador Full Stack en tan solo 10 semanas, estudia full-time para acelerar tu aprendizaje y cambia tu vida lo más rápido posible."
+  title: "Full Stack Developer studying full-time for 10 weeks."
+  description: "Become a Full Stack Developer in just 10 weeks. Study full-time to accelerate your learning and change your life as quickly as possible." 
   image: "/images/og-preview/full-stack-ft.us.png"
   bc_slug: "full-stack-ft"
   visibility: "unlisted"

@@ -163,7 +163,7 @@ const PricingCard = ({
                   lineHeight="36px"
                   opacity="1"
                   textAlign="right"
-                  color={Colors.red}
+                  color={Colors.black}
                 >
                   {data.warning_message}
                 </Paragraph>

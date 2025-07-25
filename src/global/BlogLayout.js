@@ -172,7 +172,11 @@ const BlogLayout = ({ children, seo, context, wordCount }) => {
           </button>
         </div>
       )}
-      <SEO {...seo} context={{ ...context, locations: myLocations }} wordCount={wordCount} />
+      <SEO
+        {...seo}
+        context={{ ...context, locations: myLocations }}
+        wordCount={wordCount}
+      />
       {myNavbar && (
         <>
           <Navbar

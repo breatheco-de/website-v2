@@ -1,43 +1,59 @@
 meta_info:
   slug: inicio
-  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  title: "4Geeks Academy - Coding Bootcamp Miami, España, Portugal, Alemania Chile y Venezuela"
-  description: "El #1 part-time coding bootcamp, 3000+ graduados y soporte de por vida. Coding Bootcamp en Miami, España, Portugal, Alemania, Chile y Venezuela."
+  visibility: "visible"
+  title: "Bootcamp de Programación Miami, Madrid España, Santiago de Chile"
+  description: "El bootcamp #1 con más de 6,000 graduados y soporte profesional de por vida. Bootcamp en USA, España, Portugal, Alemania, Chile y Venezuela."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
-  keywords: "Coding Bootcamp, Coding Bootcamp Miami, Coding Bootcamp España, Coding Bootcamp Chile, Aprende a programar, aprender programación, aprende computación"
+  keywords: "Bootcamp de Programación Miami, Aprende a programar Miami, aprender a programar, bootcamp de programación, Bootcamp Miami, Aprende Python, Bootcamp Madrid, Bootcamp España"
   redirects: ["/es/home", "/es"]
 
 header_data:
-  title: "Impulsa tu carrera gracias a la programación"
-  tagline: "Coding bootcamp"
-  sub_heading: ""
+  title: "La IA llegó.<br/>Nosotros también."
+  tagline: "Construye tu nueva carrera en tecnología"
+  sub_heading: "Somos un bootcamp global formando a la próxima generación de profesionales tech. Con formación orientada a la carrera, herramientas con IA y mentoría humana ilimitada, te preparamos para lanzar una carrera tecnológica duradera."
   bullets:
-    - Tutoría de codificación de por vida, asistencia profesional interminable y una comunidad de desarrolladores impulsada por la tecnología.
-    - 'Trabajo Garantizado: Obtenga un trabajo hasta 9 meses después de graduarse o le devolvemos el dinero, <a href="https://storage.googleapis.com/4geeks-academy-website/PDF%20and%20Docs/Condiciones%20y%20Requerimientos%20Job%20Guaranteed%20Program.pdf" style="text-decoration: none; color: #000000; font-weight: 700;"> condiciones aplican. </a>'
-    - Aprende en todas partes, todo el tiempo, tú eliges la metodología.
-  join_button_text: Empezar un curso →
+    - Experiencia de aprendizaje hiperpersonalizada
+    - Soporte profesional ilimitado  impulsado por IA
+    - Adquiere las habilidades y mentalidad que buscan los reclutadores
+    - '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Garantía de Empleo</strong>: Consigue trabajo en 9 meses tras graduarte — o te devolvemos tu dinero (aplican condiciones)'
+  join_button_text: ELIGE UN PROGRAMA
   join_button_path: "#choose-program"
-  free_button_text: PRUEBA GRATIS
-  #If it doesn't have a video it will show the image
-  #It must be a video from videoaks 
-  #TODO: Este es el video para poner en español https://ask.4geeks.com/f67qc0ewu
+  free_button_text: PRUÉBALO GRATIS
+  free_button_path: ""
   video: ""
   image: "../../../static/images/bg/6000-students-bg.webp"
+
+news:
+  heading: "Lee sobre nuestros bootcamps en las noticias..."
+  limit: 7
+button:
+  button_text: Ver Programas
+  button_link: "#programs"
+
+badges:
+  title: |-
+    Entre los mejores bootcamps del mundo.
+    Con la confianza de miles de personas.
+  paragraph: "Autorizados por el Departamento de Educación de Florida, reconocidos por Forbes como uno de los 5 mejores bootcamps y constantemente destacados en los principales listados independientes."
+
+choose_program:
+  title: CONSTRUYE TU FUTURO EN TECNOLOGÍA
+  paragraph: Elige tu programa. Domina las habilidades. Consigue trabajo.
 
 why_4geeks:
   proportions: [6, 6]
   image:
-    style: '{ "backgroundSize": "contain", "background-position": "center", "min-height": "400px", "height": "400px"}'
+    style: '{ "backgroundSize": "contain", "background-position": "center"}'
     src: "/images/landing/hombre-con-laptop-2.png"
     shadow: false
   heading:
-    text: "Sé parte de una comunidad vibrante"
-    style: '{ "fontWeight": 400, "marginBottom": "32px", "marginTop": "0px" }'
+    text: "Triunfa en tecnología con herramientas de IA y apoyo humano de por vida"
+    style: '{ "fontWeight": 400}'
   sub_heading:
-    text: "Únete a nuestra comunidad internacional de más de 6000 estudiantes, profesores, socios y exalumnos. Conéctate a través de diversos canales como Slack, GitHub, redes sociales y nuestra plataforma exclusiva 4Geeks.com. ¡Donde hay un geek, hay un camino! Lo que nos diferencia:"
+    text: "Con 7+ campus globales, 6,000+ egresados y mentores expertos siempre disponibles, 4Geeks ofrece más que habilidades de código: te damos un sistema de apoyo para toda tu carrera."
+
   content:
-    text: |-
-      Pertenecerás a una comunidad de personas afines que se apoyan genuinamente entre sí. Obtén acceso de por vida a nuestra plataforma de aprendizaje en línea y servicios de mentoría. Siempre estaremos aquí para ti, incluso después de graduarte.
+    text: " "
   button:
     text: "Aplica ahora"
     color: "white"
@@ -45,54 +61,15 @@ why_4geeks:
     path: "/es/apply"
   bullets:
     items:
-    - text: " Mentoría en codificación disponible de por vida"
+
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Aprendizaje personalizado en cada etapa:</strong> Disfruta de una relación estudiante-mentor inigualable, acceso ilimitado a mentores humanos y coaching con IA adaptado a tus objetivos.'
       icon: "check"
-    - text: " Soporte profesional ilimitado y personalizado"
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Mentoría y soporte profesional de por vida:</strong> Recibe orientación 1:1 de mentores y coaches expertos siempre que lo necesites, para siempre.'
       icon: "check"
-    - text: " Plan de estudios y metodología galardonados"
-      icon: "check"
-    - text: " Una extensa red de socios en tecnología"
+    - text: '<strong style="text-decoration: none; color: #000000; font-weight: 700;">Currículo y herramientas integradas con IA:</strong> Domina las últimas herramientas de IA y mantente a la vanguardia del mercado laboral.'
       icon: "check"
 
-with_4geeks:
-  title: Escúchalo de nuestros alumnos
-
-news:
-  heading: "Lee sobre nosotros en las noticias..."
-  limit: 7
-button:
-  button_text: Ver Programas
-  button_link: "#programs"
-## BADGES SECTION
-badges:
-  title: "8 años ayudando a las personas a iniciar en la tecnología"
-  paragraph: "Estamos autorizados por el Departamento de Educación de Florida, Forbes nos ha nombrado una de las 5 mejores escuelas de programación y todos los listados independientes de las principales escuelas de programación nos han nombrado como el mejor Bootcamp del mundo a lo largo de los años."
-
-success_cases:
-  title: Historias de éxito
-  content: 86% de nuestros alumnos han sido contratados
-
-two_column_carousel:
-  title: "¡Cambia tu futuro hoy! 🚀"
-  text: |
-    En 4Geeks Academy hacemos posible que consigas el trabajo de tus sueños. Nuestro programa de Job Guarantee transforma vidas. 
-    Historias reales, resultados garantizados. <br>
-    Entra a 4Geeks Academy, consigue trabajo y crea el futuro que mereces.
-  videos:
-    - src: "/images/testimonials/4geeks-meeting-video.webp"
-      video: "0JqAn7C790c"
-    - src: "/images/testimonials/pablo-review.jpg"
-      video: "OtJvrNwQw9E"
-
-## CHOOSE YOUR PROGRAM /components/ChooseYourProgram
-choose_program:
-  title: Elige tu programa
-  paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
-
-
-## TWO COLUMNS
 two_columns:
-  two_columns:
   proportions: [6, 6]
   justify: "center"
   image:
@@ -102,124 +79,133 @@ two_columns:
   section_heading:
     text: "Financia tu futuro"
   heading:
-    text: "$20 Millones en becas"
-    style: '{ "fontWeight": 400, "marginBottom": "32px" }'
+    text: "Invierte en tu carrera con planes flexibles y Garantía de Empleo"
+    style: '{ "fontWeight": 200, "marginBottom": "24px", "marginTop": "0px", "fontSize": "22px" }'
   content:
     text: |
-      1.456 personas se han beneficiado de nuestros programas de becas, de todos los orígenes posibles, <a style="color: black; cursor:pointer; text-decoration: underline; opacity: 0.8;">lea aquí</a> historias de los beneficiarios y proyectos.
-    path: /es/financiacion
+      <p>Queremos que te concentres en lo importante: aprender, crecer y lanzar tu carrera tech—no en cómo pagarla.</p>
+      <br/>
+      <p>Por eso facilitamos la financiación de tu educación:</p>
+      <br/>
+      <ul>
+        <li>✓ Una de las matrículas más accesibles entre los bootcamps top</li>
+        <li>✓ Planes de pago desde menos de $299/mes</li>
+        <li>✓ Garantía de Empleo disponible (con requisitos)</li>
+      </ul>
+      <br/>
+      <p>¿Necesitas otra razón? En 2024, <strong style="text-decoration: none; color: #000000; font-weight: 700;">Forbes</strong> nos nombró el <a href="https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition" style="text-decoration: none; color: #000000; font-weight: 700;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">mejor bootcamp para estudiantes con presupuesto limitado<span style="font-size: 0.8em;">↗</span></a>—reconociendo nuestro compromiso con la educación tech accesible.</p>
+      <p><strong style="text-decoration: none; color: #000000; font-weight: 700;">¿Tienes dudas?</strong> Nuestro equipo de admisiones te ayuda a encontrar el plan ideal para ti.</p>
+    path: "/es/apply"
   button:
-    text: "Opciones de financiamiento"
+    text: "CONTÁCTANOS"
     color: "white"
     background: "blue"
-    path: "/es/financiacion#prices_and_payment"
-  boxes:
-    - icon: rocket-2
-      title: "14"
-      text: Proyectos completados
-    - icon: handsheart
-      title: "1465"
-      text: Beneficiarios hasta ahora
+    path: "/es/apply"
 
-iconogram:
-  heading:
-    text: "¿Cómo hemos construido nuestra credibilidad a lo largo de los años?"
-    style: '{ "textAlign": "center" }'
-  swipable: false
-  background: veryLightBlue3
-  icons:
-  - icon: "graduation-2"
-    content: "6000+ Graduados"
-    content_style: '{ "fontSize": "24px" }'
-  - icon: "group-2"
-    color: "#23C520"
-    content: "7 Campuses"
-    content_style: '{ "fontSize": "24px" }'
-  - icon: "briefcase-new"
-    color: "#7D79FF"
-    content: "86% contratados"
-    content_style: '{ "fontSize": "24px" }'
-  - icon: "star-2"
-    color: "#0084FF"
-    content: "4.85 de valoración"
-    content_style: '{ "fontSize": "24px" }'
 
-# Two Columns - Rigo
 two_columns_rigo:
   proportions: [7, 5]
-  justify: "center" #start,end,center
+  justify: "center"
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-  heading: 
-    text: "Descifra el código del éxito con ¡Nuestras nuevas herramientas de IA marcarán la diferencia en tu proceso de aprendizaje!"
-    font_size: ["21px"]
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor-esp.jpg"
+    shadow: true
+  video: "cOFm_deKj6Q"
+  heading:
+    text: "Bienvenido al aprendizaje hiperpersonalizado"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
     style: '{ "lineHeight": "30px" }'
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
-    font_size: ["18px"]
+    text: "Progresa como nunca antes"
+    font_size: ["16px","16px","16px","16px","16px"]
   content:
-    style: '{ "font-size":"18px", "margin":"0" }'
-    text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
-  button: 
-    text: "Opciones de financiación"
-    color: white
-    hover_color: "white"
-    background: "black"
-    path: "/es/financiacion"
-  bullets:
+    style: '{ "font-size":"16px", "margin":"15px 0" }'
+    text: |
+      <p>Todos somos diferentes—pero la educación siempre fue igual para todos. En 4Geeks, creamos una mejor forma de aprender: <strong style="text-decoration: none; color: #000000; font-weight: 700;">una que se adapta a ti.</strong></p>
+      <br />
+      <ul>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Nuestra IA propia</strong>, Rigobot, sigue tu progreso y detecta tus fortalezas y áreas de mejora—dándote feedback en tiempo real para maximizar tu aprendizaje.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Sesiones ilimitadas 1:1 con mentores expertos</strong> para que nunca te estanques ni pierdas impulso.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Coaches de carrera trabajan contigo</strong> para potenciar tu confianza y estrategia—ayudándote a destacar en CV, entrevistas y plataformas como LinkedIn.</li>
+        <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Relación 1:7 en clases en vivo</strong> para que recibas atención real y tus dudas se resuelvan.</li>
+      </ul>
+      <br />
+      <p>Eso es el aprendizaje hiperpersonalizado: avanzas más rápido, aprendes mejor y ganas confianza real que dura más allá de la graduación.</p>
+    bullets:
     item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
     items:
-      - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
+      - heading: "Conoce a Rigobot, nuestro asistente IA:"
         text: |
-          • Tutoría instantánea mientras programas
+          ✓ Tutoría instantánea mientras programas.
           <br />
-          • Evaluaciones de habilidades para seguir tu progreso
+          ✓ Evaluaciones de habilidades para seguir tu progreso.
           <br />
-          • Asistencia para corregir errores
+          ✓ Asistencia experta para corregir errores.
           <br /><br />
-          ¡Es el complemento perfecto para nuestro programa de mentoría humana!
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
+          ¡El complemento perfecto para nuestra mentoría humana!
+        icon: "check"
         icon_color: '#25BF6C'
-      - heading: "Learnpack, nuestro software de aprendizaje fácil de usar, proporciona:"
+      - heading: "Learnpack, nuestro software interactivo, te da:"
         text: |
-          • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades
+          ✓ Cientos de ejercicios interactivos para dominar y retener habilidades.
           <br />
-          • Pruebas automatizadas para ayudarte a seguir tu progreso
+          ✓ Pruebas automáticas para seguir tu avance.
           <br />
-          • Y mucho más…
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
+          ✓ Práctica estructurada.
+        icon: "check"
         icon_color: '#25BF6C'
 
-## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "Compara 4Geeks con otros bootcamps"
-  sub_heading: "En pocas palabras, la forma más simple de comparar coding bootcamps"
+  sub_heading: "Descubre qué nos hace diferentes:"
 
-## JOIN 4GEEKS SECTION DATA
+iconogram:
+  heading:
+    text: "Nuestro historial de éxito"
+    style: '{ "textAlign": "center" }'
+  swipable: false
+  background: veryLightBlue3
+  icons:
+    - icon: "graduation-2"
+      content: "6000+ Graduados"
+      content_style: '{ "fontSize": "24px" }'
+    - icon: "group-2"
+      color: "#23C520"
+      content: "7 Campuses"
+      content_style: '{ "fontSize": "24px" }'
+    - icon: "briefcase-new"
+      color: "#7D79FF"
+      content: "84% contratados"
+      content_style: '{ "fontSize": "24px" }'
+    - icon: "star-2"
+      color: "#0084FF"
+      content: "4.85 de valoración"
+      content_style: '{ "fontSize": "24px" }'
+
+with_4geeks:
+  title: Historias reales de cambio profesional
+  sub_title: "Miles de graduados han usado nuestros programas para entrar en tecnología. Aquí algunas historias, desde aumentos salariales hasta reinvenciones totales."
+
 join_geeks:
-  heading: APLICA A 4GEEKS
-  sub_heading: Programa tu historia. Mentoría para toda la vida.
+  heading: ÚNETE A 4GEEKS
+  sub_heading: "Al unirte a 4Geeks obtienes acceso ilimitado y de por vida a mentoría y soporte profesional."
   geek_data:
-    geek_pal_heading: Programming - Always - Limitless
+    geek_pal_heading: Programación - Siempre - Sin límites
     geek_pal_data:
-      content: Nunca programes sol@ otra vez. Estaremos junto a ti, a lo largo de tu viaje y durante todo el tiempo que quieras y nos necesites.
+      content: Nunca programes solo otra vez. Tendrás un PAL de código para toda la vida. Estaremos contigo mientras lo necesites, incluso después de conseguir tu primer trabajo. Mentoría, 1:1, comunidad, office hours y más.
       icon_link: "/es/geekpal-soporte"
-    geek_force_heading: FOR Career Empowerment
+    geek_force_heading: Impulso profesional
     geek_force_data:
-      content: Haremos todo lo que esté en nuestras manos para ayudarte a conseguir un trabajo en el sector. Esto incluye el programa de Career Support, GeekPAL, y GeekTALK.
+      content: "¡Haremos todo para ayudarte a conseguir trabajo en tecnología! Incluye: construcción de perfil, referidos, entrenamiento en entrevistas, coaching semanal, 1:1 ilimitados, networking y más."
       icon_link: "/es/geekforce-soporte-a-tu-carrera"
 
-## ALUMNI SECTION
 alumni_header:
   heading: "CONOCE A NUESTROS GRADUADOS Y SUS PROYECTOS"
-  sub_heading: "Éstos son algunos de los proyectos que serás capaz de desarrollar durante la última etapa del curso"
+  sub_heading: "Conoce a nuestros egresados y algunos de los proyectos finales que desarrollaron."
 
-  ## TESTIMONIAL SECTION
 testimonial_header:
-  heading: "TESTIMONIAL"
-  sub_heading: ""
+  heading: "El 86% de nuestros graduados consigue trabajo tras completar el programa."
+  button_text: "Ver todos los testimonios"
+  button_link: ""

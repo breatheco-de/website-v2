@@ -46,7 +46,9 @@ const SquaresVariant = ({
           {title && (
             <H2 type="h2">
               {title.split("\n").map((line, idx) => (
-                <span key={idx} style={{ display: "block" }}>{line}</span>
+                <span key={idx} style={{ display: "block" }}>
+                  {line}
+                </span>
               ))}
             </H2>
           )}

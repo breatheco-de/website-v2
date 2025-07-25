@@ -5,9 +5,9 @@ full_time:
     recomended: true
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$11,999"
-    original_price: "$19,998"
-    offer: "40% OFF"
+    price: "$10,999"
+    original_price: "$11,999"
+    offer: "10% OFF"
     bullets: 
       - "You're saving $1000 USD"
       - "This discount applies to students who are not eligible for the Clark University Scholarship (typically employed or in stable work)."
@@ -47,44 +47,31 @@ full_time:
 part_time:
 
 ## USA Part-Time 
-  - slug: 'plan-4'
+  - slug: 'usa-upfront-pt'
     recomended: true
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$11,999"
-    original_price: "$19,998"
-    offer: "40% OFF"
-    bullets: 
-      - "You're saving $7,999 USD"
-      - "Only if the Clark University Scholarship doesn't apply (unemployed or underemployed)"
+    price: "$9,899"
+    original_price: "$10,999"
+    offer: "10% OFF"
+    bullets:
+      - "Pay upfront and save 10% on your tuition."
+      - "Regular tuition is $10,999, but you pay only $9,899."
     icons:
       - "/images/visa-mastercard.png"
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
 
-  - slug: 'plan-1'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
-    recomended: false
-    scholarship: "Scholarship"
-    payment_time: "There is nothing like this"
-    price: "$7,999"
-    original_price: "$16,665"
-    warning_message: "Limited seats!"
-    bullets: 
-      - "You're saving 40% + 4K USD. Thanks to Clark University and the TechBoost Fund"
-    icons: 
-      - "/images/clarkuniversity.png"
-
-  - slug: 'plan-2'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
+  - slug: 'usa-financed-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'tampa-usa', 'losangeles-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     recomended: false
     scholarship: "Financed"
     payment_time: "Pay in 3, 4 or 5 years"
-    price: "~$100p/m"
+    price: "$200 - $299/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
-      - "Remaining balance could be paid over time $200 p/mo"
+      - "Remaining balance could be paid over time $200 p/m"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
       - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to uphold our promise."
       - "You can adapt your learning path to your financial needs. Choose to include or exclude our career support services."
@@ -92,6 +79,35 @@ part_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Job Guarantee"
+    payment_time: "Get hired or your money back"
+    price: "+$2,000"
+    original_price: ""
+    warning_message: ""
+    bullets: 
+      - "Enroll, agreeing to terms and conditions."
+      - "Fulfill required coursework and attendance."
+      - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
+    icons: 
+      - "/images/visa-mastercard.png"
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
+    recomended: false
+    scholarship: "Income-Based Repayment Loan"
+    payment_time: "Flexible payments after graduation"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
 
 
 ## Spain & Europe
@@ -229,14 +245,29 @@ part_time:
       - "/images/flevo-new.png"
 
 ##  LATAM
-  - slug: 'latam-upfront-ds-cs'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+
+  - slug: 'latam-trabajo-garantizado-ml-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
     recomended: true
+    scholarship: "Job Guarantee"
+    payment_time: "Get hired within 9 months of graduation or your money back"
+    price: "USD $4,000"
+    original_price: "USD $5,000"
+    offer: "20% OFF"
+    bullets:
+      - "We're fully committed to making our education accessible by offering multiple payment plans and financing options to fulfill our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between enrolling only in the program, adding our career support services, or enrolling with a Job Guarantee."
+      - "We offer a number of full or partial scholarship options that you could be eligible for."
+      - "Feel free to contact us to explore the possibilities available to you! We're here to find a solution tailored to your needs."
+    icons:
+      - "/images/visa-mastercard.png"
+
+  - slug: 'latam-career-support-ds-cs'
+    academies: ['buenosaires-argentina', 'caracas-venezuela', 'bogota-colombia', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
+    recomended: false
     scholarship: "Data Science program + Career Support"
     payment_time: "We help you build your professional profile"
-    price: "USD $3.600"
-    original_price: "USD $5.000"
-    offer: "28% OFF"
+    price: "USD $3,250"
     bullets:
       - "There is always a payment plan available for you to join 4Geeks Academy"
       - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
@@ -245,71 +276,18 @@ part_time:
     icons: 
       - "/images/visa-mastercard.png"
 
-  # - slug: 'latam-solo-programa-ds'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-  #   recomended: false
-  #   scholarship: "Only pay for the program"
-  #   payment_time: "Focus on gaining skills. Pay monthly."
-  #   price: "Starting from $120/m"
-  #   bullets: 
-  #     - "There is always a payment plan available for you to join 4Geeks Academy"
-  #     - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-  #     - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-  #     - "Pay only for the Data Science program if you are not interested yet in our career support program and our job guarantee"   
-  #   icons: 
-  #     - "/images/visa-mastercard.png"
-  #     - "/images/flevo-new.png" 
 
-  # - slug: 'latam-program-only-ds-upfront'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-  #   recomended: false
-  #   scholarship: "Data Science Program Only"
-  #   payment_time: "Focus on gaining skills. Pay upfront."
-  #   price: "$4000"
-  #   bullets: 
-  #     - "There is always a payment plan available for you to join 4Geeks Academy"
-  #     - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-  #     - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-  #     - "Pay only for the Data Science program if you are not interested yet in our career support program and our job guarantee"   
-  #   icons: 
-  #     - "/images/flevo-new.png" 
-
-## Colombia
-
-  - slug: 'colombia-upfront-ds-cs'
-    academies: ['bogota-colombia']
-    recomended: true
-    scholarship: "Data Science program + Career Support"
-    payment_time: "We help you build your professional profile"
-    price: "USD $3.600"
-    original_price: "USD $5.000"
-    offer: "28% OFF"
+  - slug: 'latam-program-only-ml-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'bogota-colombia', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela']
+    recomended: false
+    scholarship: "Machine Learning Program Only"
+    payment_time: "Focus on learning machine learning. Pay upfront."
+    price: "USD $2,500"
     bullets:
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-      - "You need to choose if you are taking just the program, or if you also want to get our Career Support in full, or if you want to go all in and sign up with our Job Guaranteed Feature"  
-      - "Additionally to the Data Science program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
-    icons: 
+      - "We’re fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
+      - "You can adapt your learning path to your financial considerations. Choose between enrolling only in the program, adding our career support services, or enrolling with a Job Guarantee."
+      - "We offer a number of full or partial scholarship options that you could be eligible for."
+      - "Pay only for the Machine Learning program if you are not interested yet in our career support program and our job guarantee."
+    icons:
       - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"    
-
-
-## Venezuela
-
-  - slug: 'venezuela-full-payment-ds-pt'
-    academies: ['caracas-venezuela']
-    recomended: true
-    scholarship: "Pay upfront"
-    payment_time: "Pay early and $250 off"
-    price: "$2.400*"
-    original_price: "$4000"
-    offer: "40% OFF"
-    bullets: 
-      - "Pay with debit, credit or wire transfer."
-      - "You have to pay least 20 days before the start of the program."
-      - "There is always a payment plan available for you to join 4Geeks Academy"
-      - "If you don't find here what you are expecting, please contact us and we will try to find new ways to help"     
-    icons: 
-      - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
 

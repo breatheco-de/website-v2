@@ -49,11 +49,31 @@ follow_bar:
     number: ""
 
 features:
+  text: "¡Conviértete en un experto en tecnología con nuestros bootcamps! Aprende a desarrollar aplicaciones web con el curso de <a href='https://4geeksacademy.com/es/coding-bootcamps/desarrollador-full-stack'>Full-Stack</a>, domina el análisis de datos con <a href='https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning'>Data Science</a>, o protege sistemas con nuestro programa de <a href='https://4geeksacademy.com/es/coding-bootcamps/curso-ciberseguridad'>Ciberseguridad</a>. ¡Inicia tu carrera hoy!"
   bullets:
     - ¡Conviértete en full stack developer, data scientist o consultor en ciberseguridad!
     - Mentorías ilimitadas y con apoyo profesional de por vida
     - Programas 100% en remoto y en directo a medio tiempo
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+
+short_badges:
+  - name: "Premios Tecnologia Siglo XXI"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "El mejor Bootcamp de programación de Course Report 2024"
+  - name: "Switchup"
+    url: "https://www.coursereport.com/best-coding-bootcamps"
+    image: "../../../static/images/badges/switchup-badge-2023.png"
+    alt: "El mejor Bootcamp de Programación Switchup 2023"   
+  - name: "Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Departamento de Educación de Florida"
+
 
 apply_schollarship:
   imageSide: left
@@ -140,18 +160,18 @@ components:
     sub_heading:
       text: Programas para convertirte en un experto en programación y complementar tu
         perfil profesional
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      font_size: ["18px", "18px", "18px", "18px", "18px"]
       style: '{ "textAlign": "center", "width": "90%" }'
     icons:
       - icon: fullstack
-        title: Full-Stack Dev
-        content: Aprende a crear aplicaciones web completas, dominando tanto el frontend
-          como el backend de un proyecto.
+        title: Full-Stack
+        content: 'Aprende a crear aplicaciones web completas, dominando tanto el frontend como el backend de un proyecto. </br><strong style="text-decoration: none; color: #000000; font-weight: 400;">Duración: </strong>20 semanas.  </br><strong style="text-decoration: none; color: #000000; font-weight: 400;">Alumnos: </strong>18 con 1 profesor por cada 9 alumnos.'
+        content_mobile: '<strong style="text-decoration: none; color: #000000; font-weight: 400;">Herramientas: </strong>HTML, CSS, JS, Python.<br/><strong style="text-decoration: none; color: #000000; font-weight: 400;">Duración: </strong>20 sem.<br/><strong style="text-decoration: none; color: #000000; font-weight: 400;">Alumnos: </strong>18.'
       - icon: machine
         title: Data Science
-        content: Entra al mundo de la ciencia de datos y el machine learning,
-          adquiriendo habilidades para analizar y visualizar información.
+        content: 'Entra al mundo de la ciencia de datos y machine learning, adquiriendo habilidades para analizar y visualizar información. </br><strong style="text-decoration: none; color: #000000; font-weight: 400;">Duración:</strong> 18 semanas.</br><strong style="text-decoration: none; color: #000000; font-weight: 400;">Alumnos: </strong>18 con 1 profesor por cada 9 alumnos.'
+        content_mobile: '<strong style="text-decoration: none; color: #000000; font-weight: 400;">Herramientas: </strong>Python, Pandas, ML.<br/><strong style="text-decoration: none; color: #000000; font-weight: 400;">Duración: </strong>18 sem.<br/><strong style="text-decoration: none; color: #000000; font-weight: 400;">Alumnos: </strong>18.'
       - icon: cibersecurity
         title: Ciberseguridad
-        content: Conviértete en un profesional junior ciberseguridad y prepárate contra
-          posibles ataques en sistemas como Windows o Linux.
+        content: 'Conviértete en un profesional junior ciberseguridad y prepárate contra posibles ataques en sistemas como Windows o Linux. </br><strong style="text-decoration: none; color: #000000; font-weight: 400;">Duración:</strong> 16 semanas.</br><strong style="text-decoration: none; color: #000000; font-weight: 400;">Alumnos: </strong>18 con 1 profesor por cada 9 alumnos.'
+        content_mobile: '<strong style="text-decoration: none; color: #000000; font-weight: 400;">Herramientas: </strong>Linux, Windows, Redes.<br/><strong style="text-decoration: none; color: #000000; font-weight: 400;">Duración: </strong>16 sem.<br/><strong style="text-decoration: none; color: #000000; font-weight: 400;">Alumnos: </strong>18.'

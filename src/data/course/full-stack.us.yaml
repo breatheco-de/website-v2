@@ -34,10 +34,10 @@ apply_form:
   label: Full Stack Developer
 seo_title: "Full Stack Developer with AI Bootcamp "
 header:
-  title: "FULL STACK DEVELOPMENT WITH AI"
+  title: "FULL STACK DEVELOPMENT\nWITH AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "how-to-become-a-full-stack-developer-"
-  paragraph: "Our Full Stack Development with AI bootcamp gets you job-ready for a future-proof career in today's tech — with unlimited mentorship and an AI-integrated curriculum. Plus, a job guarantee.*"
+  paragraph: "Our Full Stack Development with AI bootcamp gets you job-ready for a future-proof career in today's tech — with unlimited mentorship and an AI-integrated curriculum. Plus, a job guarantee."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -80,7 +80,7 @@ overlaped:
     color: "blue"  
     link: "/"
   image:
-    src: "/images/landing/Group-6626.webp"  
+    src: "/images/landing/vibe-coder.webp"  
 
 two_columns:
   proportions: [6, 6]
@@ -90,17 +90,26 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=ln3bQsV1BaQ"
   heading:
-    text: "4Geeks, Miami and a mission of creating opportunities"
+    text_by_location:
+      miami: "4Geeks, Miami and a mission of creating opportunities"
+      default: "Your New Career Starts Here — Just Ask Our Grads"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
   sub_heading:
-    text: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
+    text_by_location:
+      miami: "With Miami as our home base, we're dedicated to fostering opportunities throughout South Florida."
+      default: "Becoming an AI-powered  full stack developer with 4Geeks isn’t just about learning to code — it’s about changing your life."
     style: '{"font-weight": "400" }'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   bullets:
     items: 
-    - text: "Accessible scholarships, whether full or partial, are always available."
-    - text: "Exclusive opportunities await residents of Miami-Dade, Broward, and Palm Beach counties, ensuring local talent thrives."
-    - text: "We maintain ongoing partnerships with institutions such as Miami Dade College, Miami Tech Coalition, UWM, The City of Miami, Miami Dade County, and many more. "
+    - text: "Hernán García shares how the bootcamp helped him go from just getting by to landing a tech job he never thought possible — thanks to the skills, support, and confidence he gained through our bootcamp."
+    - text: "Our students come from all walks of life and leave with real results:"
+    - text: " ✅ 84% get hired within 6 months of graduation"
+    - text: " ✅ Salaries increase by an average of 55%"
+    - text: "See where 4Geeks can take you."
+  content:
+    text: "Watch his story. Picture yours."
+    style: '{"font-weight": "700", "margin":"0", "font-size":"16px" }'
 
 two_columns_info:
   proportions: [6, 6]
@@ -173,7 +182,7 @@ two_columns_rigo:
     
 
 badges:
-  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top coding bootcamps, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.92/5 on SwitchUp. Licensed by the Florida Department of Education."
+  paragraph: "Prepare to thrive in today’s AI-fluent tech industry with hyperpersonalized, AI-powered learning, 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world’s top <a href='https://4geeksacademy.com/us/blog/coding-bootcamp'> coding bootcamps</a>, chosen by Forbes as <a href='https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition'>best bootcamp for students on a budget (2024)</a>, and rated <a hre='https://www.switchup.org/bootcamps/4geeks-academy'>4.9/5 on SwitchUp</a>. Licensed by the Florida Department of Education."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
   actionMessage: "Let me know when dates are available"
@@ -186,15 +195,15 @@ credentials:
 details:
   about:
       title: "About the program"
-      sub_title: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to <strong style=\"text-decoration: none; color: #000000; font-weight: 500;\">code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with powerful tools like Cursor to generate, debug,  iterate and ship with speed and precision.</strong> Reshape your mindset and embrace the programming, logic, and research skills to succeed in today's tech industry."
+      sub_title: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with tools like <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">Cursor, Copilot, and Windsurf</strong>, and leverage the power of <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">LLMs like GPT-4, Claude 3, and Gemini</strong> to generate, debug,  iterate and ship with speed and precision. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry."
       list:
         - label: "Duration"
-          content: "16+2 Weeks"
+          content: "20 Weeks of live classes + 2-4 weeks of self-paced pre-work"
           icon: "duration-icon"
         - label: "Classes"
           content: "3 classes weekly"
           icon: "book-2"
-        - label: "Size of the Class"
+        - label: "Class Size"
           content: "Ratio of 1 teacher per 7 students"
           icon: "people"
         - label: "Certificate"
@@ -202,17 +211,17 @@ details:
           link_text: "See example"
           link: "https://certificate.breatheco.de/4ae7a46bba78dc19b823e124fea120c17b45e044"
           icon: "certification"
-        - label: "Requisites"
-          content: "No previous coding skills or advanced math are required."
+        - label: "Prequisites"
+          content: "No previous coding skills or advanced math required."
           icon: "contract-checked"
         - label: "Language"
           content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
           icon: "language"
          
-  heading: "Part-Time Full Stack Development Bootcamp"
-  weeks: 18
+  heading: "PART-TIME FULL-STACK DEVELOPMENT WITH AI BOOTCAMP"
+  weeks: 20
   week_unit: "wks"
-  sub_heading: "Hands-on learning through real-life projects. \n Master the 3 most used languages worldwide: Python, JS, and React."
+  sub_heading: "Hands-on learning through real-life projects. \nMaster the most in-demand coding languages and AI-powered tools: Python, React, Cursor, Copilot, Vercel and more."
   left_labels:
     description: "DESCRIPTION:"
     projects: "PROJECTS:"

@@ -20,13 +20,13 @@ const getPost = async (slug) => {
     );
     if (_resp.status !== 200) {
       // Log error but return null instead of throwing
-      if (typeof logger !== 'undefined') logger.error(_resp.data);
+      if (typeof logger !== "undefined") logger.error(_resp.data);
       return null;
     }
     return _resp.data;
   } catch (e) {
     // Log error but return null instead of throwing
-    if (typeof logger !== 'undefined') logger.error(e);
+    if (typeof logger !== "undefined") logger.error(e);
     return null;
   }
 };

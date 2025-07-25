@@ -147,7 +147,10 @@ sections:
       Las categorías tratadas son datos identificativos. No tratamos categorías de datos especialmente protegidos.
 
   - title: "¿Por cuánto tiempo conservaremos tus datos?"
-    text: "Los datos personales se conservarán hasta que solicites su supresión o hasta que dejen de ser necesarios para la finalidad recabada. En el caso de SMS, aplicamos retención limitada como se describe en la sección 'Tratamiento y Seguridad de Datos SMS'"
+
+    text: |
+      Los datos personales se conservarán hasta que solicites su supresión o hasta que dejen de ser necesarios para la finalidad recabada. En el caso de SMS, aplicamos retención limitada como se describe en la sección "Tratamiento y Seguridad de Datos SMS".
+
 
   - title: "¿A qué destinatarios se comunicarán tus datos?"
     text: "
@@ -193,8 +196,9 @@ sections:
     text: "
       Declaras haber sido informado de las condiciones sobre protección de datos personales, aceptando y consintiendo el tratamiento de los mismos por parte de 4Geeks Academy España S.L. en la forma y para las finalidades indicadas en esta política.
 
-      Al proporcionar tu número de teléfono y marcar las casillas correspondientes (cuando proceda), consientes recibir comunicaciones SMS según lo descrito en la sección 'Comunicaciones SMS y Consentimiento (10DLC)'
-      "
+
+      Al proporcionar tu número de teléfono y marcar las casillas correspondientes (cuando proceda), consientes recibir comunicaciones SMS según lo descrito en la sección "Comunicaciones SMS y Consentimiento (10DLC)".
+
 
   - title: "Revocabilidad"
     text: "

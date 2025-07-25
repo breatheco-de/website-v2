@@ -16,7 +16,7 @@ info:
     icon: "teacher"
 
   - features: "Proporción Profesor:Estudiante"
-    at4_Geeks: "1:7 avg"
+    at4_Geeks: "1:9 avg"
     industry_average: "1:10 avg"
     why_important: "Es muy fácil sentirse estancado cuando estás aprendiendo a programar. Necesitas atención personal. Es por eso que encontrarás más profesores en 4Geeks que en cualquier otra escuela o coding bootcamp."
     icon: "glasses"

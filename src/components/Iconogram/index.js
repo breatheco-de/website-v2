@@ -67,6 +67,7 @@ const Iconogram = ({ yml, index }) => {
                   color={item.color}
                   title={item.title}
                   content={item.content}
+                  content_mobile={item.content_mobile}
                   {...item}
                 />
               </React.Fragment>

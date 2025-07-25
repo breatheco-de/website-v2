@@ -4,7 +4,7 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 import Icon from "../Icon";
 
-export default ({ icon, title, content, color, content_style }) => {
+export default ({ icon, title, content, color, content_style, content_mobile }) => {
   return (
     <Div
       background="#FFF"
@@ -47,15 +47,25 @@ export default ({ icon, title, content, color, content_style }) => {
             {title}
           </H3>
         )}
-        {content && (
+        {(content || content_mobile) && (
           <Paragraph
             textAlign="left"
             color={Colors.darkGray}
             fontFamily="Archivo"
             fontSize="18px"
             style={content_style ? JSON.parse(content_style) : {}}
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          >
+            {content_mobile ? (
+              <>
+                {content && (
+                  <span className="d-block d-xs-none w-100" dangerouslySetInnerHTML={{ __html: content }} />
+                )}
+                <span className="d-none d-xs-block w-100" dangerouslySetInnerHTML={{ __html: content_mobile }} />
+              </>
+            ) : (
+              content && <span className="w-100" dangerouslySetInnerHTML={{ __html: content }} />
+            )}
+          </Paragraph>
         )}
       </Div>
     </Div>

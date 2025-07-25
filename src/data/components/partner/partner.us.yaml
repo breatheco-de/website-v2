@@ -3,14 +3,11 @@
 ## THIS COMPONENT IS USED IN "/partners" and "/pricing"
 
 partners:
-  tagline: "Who is hiring our students?"
+  tagline: "WHO’S HIRING OUR GRADUATES?"
   sub_heading: |
-    Our network of partners is constantly growing. With the dedicated effort of GeekFORCE, our career support service, we proudly boast an employment rate of ~84% within 100 days of graduation.
-    
-    We keep hearing how our graduate’s skills amaze the companies that hired them. 
-    
-    "I'm continually impressed by the depth of knowledge possessed by 4Geeks students. In fact,
-    one of my hires from the program ended up becoming a team leader." - CodeNinjas.
+    'Top companies hire 4Geeks graduates, with 84% landing jobs within 140 days thanks to personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:
+    "I’m continually impressed by the depth of knowledge possessed by 4Geeks students. One of my hires ended up becoming a team leader." – CodeNinjas'
+
   footer_tagline: "438 COMPANIES"
   footer_button: "Review our latest hirings"
   footer_link: "/partners"

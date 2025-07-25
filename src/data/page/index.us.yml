@@ -3,7 +3,7 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   canonical: "/"
   title: "Miami Coding Bootcamp, Madrid España, Santiago de Chile"
-  description: "The #1 coding bootcamp with over 3,000 graduates and life-long career support. USA, Spain, Portugal, Germany, Chile and Venezuela Bootcamp."
+  description: "The #1 coding bootcamp with over 6,000 graduates and life-long career support. USA, Spain, Portugal, Germany, Chile and Venezuela Bootcamp."
   image: "https://storage.googleapis.com/4geeks-academy-website/website-preview.png"
   keywords: "Coding Bootcamp Miami, Learn to code miami, learn to code, coding bootcamp, Miami Coding Bootcamp, Learn Code Miami, Learn python, Coding Bootcamp Madrid, Coding Bootcamp Spain, Coding Bootcamp españa"
   redirects: ["/home", "/us/home", "/en/home", "/us"]
@@ -55,7 +55,7 @@ why_4geeks:
     text: "Succeed in Tech With AI-Powered Tools and Lifelong Human Support"
     style: '{ "fontWeight": 400}'
   sub_heading:
-    text: "With 7+ global campuses, 4,000+ alumni, and expert mentors always within reach, 4Geeks offers more than just the latest coding skills—we provide a lifelong support system for your tech career."
+    text: "With 7+ global campuses, 6,000+ alumni, and expert mentors always within reach, 4Geeks offers more than just the latest coding skills—we provide a lifelong support system for your tech career."
   content:
     text: " "
   button:

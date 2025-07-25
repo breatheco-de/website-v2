@@ -5,43 +5,26 @@ full_time:
     recomended: true
     scholarship: "Pago completo"
     payment_time: "Pagar hoy"
-    price: "$10,999"
-    original_price: "$18,300"
-    job_guarantee_price: "pruebaaa"
-    offer: "40% DE DESCUENTO"
+    price: "$14,999"
+    original_price: "$16,700"
+    job_guarantee_price: " "
+    offer: "10% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando $7,301 USD"  
+      - "Estás ahorrando $1,701 USD"  
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-      - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
       - "También proporcionamos varias opciones de becas completas o parciales para las cuales puedes ser elegible. Contáctanos para más detalles."
+      - "Este plan incluye una garantía de trabajo."
     icons:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
 
-  # - slug: 'usa-clark-scholarship-ft'
-  #   academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
-  #   recomended: false
-  #   scholarship: "Beca"
-  #   payment_time: "Podrías estar ahorrando más de los $5,000 ya descontados."
-  #   price: ""
-  #   original_price: "$15,000"
-  #   warning_message: "¡Plazas limitadas!"
-  #   offer: "40% DE DESCUENTO"
-  #   bullets:
-  #     - "Estás ahorrando aproximadamente $6,000 USD"
-  #     - "El saldo restante se puede pagar a lo largo del tiempo, $200 al mes"
-  #     - "La matrícula regular es de $15,000. La matrícula promedio en los Estados Unidos es de $16k."
-  #     - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-  #     - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
-  #   icons:
-  #     - "/images/clarkuniversity.png"
 
   - slug: 'usa-financed-ft'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Pago en 24 meses"
-    price: "~$200 por mes"
+    price: "$200 - $299/mes"
     bullets:
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus necesidades financieras. Elige incluir o excluir nuestros servicios de apoyo profesional, o inscríbete con una Garantía de Empleo."
@@ -201,22 +184,21 @@ part_time:
 # USA Medio Tiempo
   - slug: 'usa-upfront-pt'
     recomended: true
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
+    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago Completo"
     payment_time: "Pagar hoy"
-    price: "$9,000"
-    original_price: "$15,000"
-    offer: "40% DE DESCUENTO"
+    price: "$9,899"
+    original_price: "$10,999"
+    offer: "10% DE DESCUENTO"
     bullets:
-      - "Estás ahorrando $6,000 USD."
-      - "Este descuento se aplica a estudiantes que no son elegibles para la Beca de la Universidad Clark (generalmente empleados o con trabajo estable)."
-
+      - Paga por adelantado y ahorra un 10 %.
+      - La matrícula regular es de $10,999 y se puede financiar sin intereses hasta en 6 meses.
   - slug: 'usa-financed-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: false
     scholarship: "Financiado"
     payment_time: "Puedes pagar en 3, 4 o 5 años"
-    price: "~$150 al mes"
+    price: "$200 - $299/mes"
     bullets: 
       - "Varios socios ofrecen préstamos y planes de pago"
       - "Puedes obtener una beca parcial y el saldo restante con un plan de pago"
@@ -226,7 +208,7 @@ part_time:
       - "/images/bcas.png"
 
   - slug: 'usa-clark-scholarship-pt'
-    academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada']
+    academies: ['']
     recomended: false
     scholarship: "Beca"
     payment_time: "Podrías estar ahorrando más de los $5,000 ya descontados."
@@ -242,32 +224,33 @@ part_time:
 
 
   - slug: 'usa-job-guarantee-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa']
+    academies: ['atlanta-usa', 'toronto-canada', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa', 'toronto-canada']
     recomended: false
     scholarship: "Garantía de Empleo"
     payment_time: "Consigue empleo o te devolvemos tu dinero"
-    price: "Matrícula"
+    price: "+$2,000"
     original_price: ""
-    warning_message: "+ 2,000 USD"
+    warning_message: ""
     bullets: 
       - "Inscríbete aceptando los términos y condiciones."
       - "Cumple con la carga académica y asistencia requeridas."
       - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
     icons: 
-      # - "/images/clarkuniversity.png"
+      - "/images/visa-mastercard.png" 
 
-
-  # - slug: 'usa-isa-pt'
-  #   academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa']
-  #   recomended: false
-  #   scholarship: "Plan de Paga Cuando Consigas Trabajo"
-  #   payment_time: "Paga después de obtener trabajo"
-  #   price: "$0"
-  #   bullets: 
-  #     - "Con $400 p/ semana en gastos de vida"
-  #     - "8.5% de tu salario hasta el pago completo, sólo si consigues un trabajo en tech."
-  #   icons: 
-  #     - "/images/miashare.png"      
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    payment_time: "Pagos flexibles después de la graduación"
+    price: "IBR"
+    bullets:
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes."
+      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo."
+      - "Pagos flexibles que se ajustan según tus ingresos."
+      - "La matrícula se paga directamente a la academia."
+    icons:
+      - "/images/edly.png"
 
 # Europe part-time
   - slug: 'north-europe-upfront-fs-pt'
@@ -414,47 +397,13 @@ part_time:
 ## LATAM
 
   - slug: 'latam-trabajo-garantizado-fs-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    recomended: true
-    scholarship: "Trabajo Garantizado"
-    payment_time: "Consigue un trabajo dentro de los 6 meses posteriores a la graduación o te devolvemos tu dinero"
-    price: "USD $3,500"
-    original_price: "USD $5,000"
-    offer: "40% DE DESCUENTO"
-    job_guarantee_price: "USD $5,000"
-    bullets:
-      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible ofreciendo múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa Full-Stack, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."     
-      - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible."  
-      - "No dudes en contactarnos para explorar las posibilidades disponibles para ti. Estamos aquí para encontrar una solución adaptada a tus necesidades."   
-    icons: 
-      - "/images/quotanda-logo.png"
-      - "/images/visa-mastercard.png"
-
-  - slug: 'latam-probram-only-fs-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    recomended: false
-    scholarship: "Solo Programa Full-Stack"
-    payment_time: "Enfócate en aprender a programar. Paga por adelantado."
-    price: "$2,000 USD"
-    original_price: "USD $4,000 USD"
-    bullets: 
-      - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
-      - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa Full-Stack, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."     
-      - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible." 
-      - "Paga solo por el programa Full-Stack si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de trabajo."   
-    icons: 
-      - "/images/visa-mastercard.png"
-
-#### Colombia     
-  - slug: 'colombia-trabajo-garantizado-fs-pt'
-    academies: ['bogota-colombia']
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
     recomended: true
     scholarship: "Trabajo Garantizado"
     payment_time: "Consigue un trabajo dentro de los 9 meses posteriores a la graduación o te devolvemos tu dinero"
-    price: "USD $3,500"
+    price: "USD $4,000"
     original_price: "USD $5,000"
-    offer: "40% DE DESCUENTO"
+    offer: "20% DE DESCUENTO"
     job_guarantee_price: "USD $5,000"
     bullets:
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible ofreciendo múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
@@ -464,92 +413,33 @@ part_time:
     icons: 
       - "/images/quotanda-logo.png"
       - "/images/visa-mastercard.png"
-      - "/images/partner/flevo-new.png" 
 
-  - slug: 'colombia-probram-only-fs-pt'
-    academies: ['bogota-colombia']
+  - slug: 'latam-apoyo-profesional-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
+    recomended: false
+    scholarship: "Solo Apoyo Profesional"
+    payment_time: "Recibe apoyo profesional experto."
+    price: "USD $3,000"
+    bullets:
+      - "Recibe apoyo profesional personalizado de nuestro equipo experto para impulsar tu carrera en tecnología."
+      - "Accede a recursos exclusivos, talleres y mentoría para mejorar tu empleabilidad."
+      - "Aprovecha oportunidades de networking y estrategias de búsqueda de empleo adaptadas al mercado LATAM."
+      - "Nota: Este plan no incluye garantía de empleo, pero maximiza tus oportunidades de éxito con orientación profesional."
+    icons:
+      - "/images/visa-mastercard.png"
+
+
+  - slug: 'latam-program-only-fs-pt'
+    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
     recomended: false
     scholarship: "Solo Programa Full-Stack"
     payment_time: "Enfócate en aprender a programar. Paga por adelantado."
-    price: "$2,000 USD"
-    original_price: "USD $4,000 USD"
+    price: "USD $2,000"
     bullets: 
       - "Estamos totalmente comprometidos en hacer que nuestra educación sea accesible y ofrecemos múltiples planes de pago y opciones de financiamiento para cumplir nuestra promesa."
       - "Puedes adaptar tu camino de aprendizaje a tus consideraciones financieras. Elige entre unirte solo al programa Full-Stack, agregar nuestros servicios de apoyo profesional o inscribirte con una garantía de trabajo."     
       - "Ofrecemos varias opciones de becas completas o parciales para las cuales podrías ser elegible." 
       - "Paga solo por el programa Full-Stack si aún no estás interesado en nuestro programa de apoyo profesional y nuestra garantía de trabajo."   
     icons: 
-      - "/images/quotanda-logo.png"
       - "/images/visa-mastercard.png"
-      - "/images/partner/flevo-new.png" 
 
-  # - slug: 'latam-solo-programa-pt'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-  #   recomended: false
-  #   scholarship: "Only pay for the program"
-  #   payment_time: "Focus on gaining skills. Pay monthly."
-  #   price: "Starting from $90/m"
-  #   bullets: 
-  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
-  #     - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
-  #     - "We offer a number of full or partial scholarship options that you could be eligible for."  
-  #     - "Pay only for the Full-Stack program if you are not interested yet in our career support program and our job guarantee"   
-  #   icons: 
-  #     - "/images/flevo-new.png" 
-
-  # - slug: 'latam-upfront-fs-pt'
-  #   academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-  #   recomended: false
-  #   scholarship: "Full-stack program + Career Support"
-  #   payment_time: "Learn to code and get full support building your career"
-  #   price: "USD $3000"
-  #   bullets:
-  #     - "We're fully committed to making our education accessible and offer multiple payment plans and financing options to hold up to our promise."
-  #     - "You can adapt your learning path to your financial considerations. Choose between joining the Full-stack program only, adding our career support services, or enrolling with a Job Guarantee."     
-  #     - "We offer a number of full or partial scholarship options that you could be eligible for."  
-  #     - "Additionally to the Full-Stack program, get a lifetime of career support from our specialized team and permanent access to our online community of graduates"   
-  #   icons: 
-  #     - "/images/flevo-new.png"
-
-  #- slug: 'latam-job-guarantee-fs-pt'
-    #academies: ['bogota-colombia', 'buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador']
-    #recomended: false
-    #scholarship: "Trabajo garantizado"
-    #payment_time: "Consigues un trabajo o te devolvemos tu dinero"
-    #price: "USD $4000"
-    #bullets:
-    #  - "Planes de pago disponibles en toda latam"
-    #  - "Conseguirás un trabajo dentro de los próximos 6 meses después de la graduación."     
-    #icons: 
-    #  - "/images/quotanda-logo.png"
-
-# Venezuela
-
-  - slug: 'venezuela-scholarship-pt'
-    academies: ['caracas-venezuela']
-    recomended: true
-    scholarship: "Pago por adelantado"
-    payment_time: "Paga temprano y obtén $250 de descuento"
-    price: "$1750*"
-    original_price: "$4000"
-    offer: "40% DE DESCUENTO"
-    bullets: 
-      - "Paga con tarjeta de débito, crédito o transferencia bancaria."
-      - "Debes pagar al menos 20 días antes del inicio del programa."
-      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
-    icons: 
-      - "/images/visa-mastercard.png"
-      - "/images/flevo-new.png"
-
-  - slug: 'venezuela-upfront-pt'
-    academies: ['caracas-venezuela']
-    recomended: false
-    scholarship: "Paga en 4 partes"
-    payment_time: "Puedes pagar hoy o en 4 partes sin interés"
-    price: "$2.000 USD"
-    original_price: "$4.000 USD"
-    bullets: 
-      - "Paga con tarjeta de débito, crédito o transferencia bancaria."
-      - "Si no encuentras aquí lo que esperas, contáctanos y trataremos de encontrar nuevas formas de ayudarte."
-    icons: 
-      - "/images/visa-mastercard.png"

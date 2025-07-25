@@ -541,6 +541,7 @@ export const query = graphql`
               color
               title
               content
+              content_mobile
             }
             image {
               src

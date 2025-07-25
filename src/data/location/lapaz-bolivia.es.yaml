@@ -22,7 +22,7 @@ seo_title: "Coding bootcamp en Bolivia"
 header:
   tagline: "Aprende a programar en Bolivia"
   sub_header: "Todos los programas son enseñados "
-  sub_header_highlighted: "Online, Híbrida o En Persona."
+  sub_header_highlighted: "Online o Híbrida."
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de código o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/bolivia-header.png"
   alt: "4GeeksAcademy, aprende a programar en modalidad online en Bolivia"

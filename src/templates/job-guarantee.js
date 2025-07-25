@@ -482,7 +482,16 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
         padding_md="40px 130px"
         padding_lg="40px 0"
       >
-        <Div display="block" margin="0px auto 20px 0" margin_sm="0px auto 15px 0" margin_xs="0px auto 10px 0" margin_tablet="0px auto 40px 0" padding="20px 0" padding_sm="30px 0" padding_tablet="42px 0">
+        <Div
+          display="block"
+          margin="0px auto 20px 0"
+          margin_sm="0px auto 15px 0"
+          margin_xs="0px auto 10px 0"
+          margin_tablet="0px auto 40px 0"
+          padding="20px 0"
+          padding_sm="30px 0"
+          padding_tablet="42px 0"
+        >
           <H2 margin="0 0 15px 0">{yml.how_it_works.title}</H2>
           <SubTitle>{yml.how_it_works.text}</SubTitle>
         </Div>

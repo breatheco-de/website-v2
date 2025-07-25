@@ -3,14 +3,14 @@ part_time:
 ## USA Part-time
   - slug: 'usa-upfront-cybersecurity-pt'
     recomended: true
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Full Payment"
     payment_time: "Pay today"
-    price: "$9,000"
-    original_price: "$15,000"
-    offer: "40% OFF"
+    price: "$8,999"
+    original_price: "$9,999"
+    offer: "10% OFF"
     bullets:
-      - "You're saving $6,000 USD."
+      - "You're saving $1,000 USD."
       - "We are extremely invested in making quality coding education accessible to everyone"
     icons:
       - "/images/visa-mastercard.png"    
@@ -19,11 +19,11 @@ part_time:
 
 
   - slug: 'usa-financed-cybersecurity-pt'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
+    academies: ['atlanta-usa', 'tampa-usa',  'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     recomended: false
     scholarship: "Financed"
     payment_time: "You can pay in 3, 4 or 5 years"
-    price: "~$150 p/mo"
+    price: "$200 - $299/mo"
     bullets: 
       - "Several partners offering loans and payment plans"
       - "You can get a partial scholarship and the remaining balance with a payment plan"
@@ -31,7 +31,35 @@ part_time:
       - "/images/ascent_logo.png"
       - "/images/climb-logo.png"
       - "/images/quotanda-logo.png"
+
+  - slug: 'usa-job-guarantee-pt'
+    academies: ['atlanta-usa', 'austin-usa',  'toronto-canada', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'tampa-usa', 'dallas-usa']
+    recomended: false
+    scholarship: "Job Guarantee"
+    payment_time: "Get hired or your money back"
+    price: "+$2,000"
+    original_price: ""
+    bullets: 
+      - "Enroll, agreeing to terms and conditions."
+      - "Fulfill required coursework and attendance."
+      - "Get hired within 9 months of graduation or we’ll refund 100% of your tuition."
+    icons: 
+      # - "/images/clarkuniversity.png" 
     
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
+    recomended: false
+    scholarship: "Income-Based Repayment Loan"
+    payment_time: "Flexible payments after graduation"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
+
 ## Spain & Europe
   - slug: 'spain-scholarships-cs-pt'
     academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']

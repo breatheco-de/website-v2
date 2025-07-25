@@ -36,9 +36,6 @@ export const defaultSession = {
 };
 
 export const isCustomBarActive = (session) => {
-  if (session && session.location) {
-    return session.location.custom_bar.active;
-  }
   return false;
 };
 

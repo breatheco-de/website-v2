@@ -253,7 +253,7 @@ const SchemaOrg = ({
           {JSON.stringify(schemaType[type])}
         </script>
       )}
-      {(type === 'post' || context.defaultTemplate === 'landing_post') && (
+      {(type === "post" || context.defaultTemplate === "landing_post") && (
         <script type="application/ld+json">{JSON.stringify(blog)}</script>
       )}
       {context.defaultTemplate === "faq" && (

@@ -139,9 +139,7 @@ const Home = (props) => {
                 fontWeight="400"
                 color={Colors.black}
               >
-                {pageContext.lang === "es" && city
-                  ? `${city} ${yml.header_data.tagline}`
-                  : yml.header_data.tagline}
+                {yml.header_data.tagline}
               </H2>
 
               {yml.header_data.sub_heading && (
@@ -389,16 +387,6 @@ const Home = (props) => {
         paragraph={yml.geeks_vs_others.sub_heading}
         link
       />
-      {yml.success_cases && (
-        <Testimonials
-          lang={data.allTestimonialsYaml.edges}
-          background={Colors.veryLightBlue3}
-          heading={yml.success_cases.title}
-          content={yml.success_cases.content}
-          margin="0"
-          variant="carousel"
-        />
-      )}
       {yml.two_column_carousel && (
         <TwoColumnCarousel
           title={
@@ -454,7 +442,7 @@ const Home = (props) => {
             button: yml.two_columns?.button,
             content: yml.two_columns?.content,
             justify: yml.two_columns?.justify,
-            boxes: yml.two_columns?.boxes,
+            // Removed boxes
             padding_tablet: "0",
           }}
           proportions={yml.two_columns?.proportions}
@@ -522,10 +510,10 @@ export const query = graphql`
             image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  layout: CONSTRAINED
                   width: 700
                   quality: 100
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  placeholder: NONE
                   breakpoints: [200, 340, 520, 890]
                 )
               }
@@ -542,18 +530,6 @@ export const query = graphql`
           button {
             button_text
             button_link
-          }
-          success_cases {
-            title
-            content
-          }
-          two_column_carousel {
-            title
-            text
-            videos {
-              src
-              video
-            }
           }
           choose_program {
             title
@@ -612,11 +588,6 @@ export const query = graphql`
               color
               background
               path
-            }
-            boxes {
-              icon
-              title
-              text
             }
           }
           two_columns_rigo {
@@ -686,9 +657,9 @@ export const query = graphql`
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    layout: FULL_WIDTH # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    layout: FULL_WIDTH
                     width: 200
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                    placeholder: NONE
                   )
                 }
               }
@@ -740,18 +711,18 @@ export const query = graphql`
             linkedin_image {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  layout: CONSTRAINED
                   height: 14
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  placeholder: NONE
                 )
               }
             }
             student_thumb {
               childImageSharp {
                 gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  layout: CONSTRAINED
                   height: 200
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  placeholder: NONE
                 )
               }
             }

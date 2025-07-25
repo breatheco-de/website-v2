@@ -61,7 +61,7 @@ const Program = ({ data, pageContext, yml }) => {
     <>
       <Header
         margin={
-          isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
+          isCustomBarActive(session) ? "120px auto 0 auto" : "40px auto 0 auto"
         }
         paragraphMargin="26px 20px"
         paragraphMargin_Tablet="26px 22%"
@@ -258,8 +258,24 @@ const Program = ({ data, pageContext, yml }) => {
       <TwoColumn
         left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
         right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
+          heading: {
+            ...yml.two_columns?.heading,
+            text:
+              yml.two_columns?.heading?.text_by_location &&
+              session?.location?.city?.toLowerCase() === "miami"
+                ? yml.two_columns.heading.text_by_location.miami
+                : yml.two_columns.heading.text_by_location?.default ||
+                  yml.two_columns.heading.text,
+          },
+          sub_heading: {
+            ...yml.two_columns?.sub_heading,
+            text:
+              yml.two_columns?.sub_heading?.text_by_location &&
+              session?.location?.city?.toLowerCase() === "miami"
+                ? yml.two_columns.sub_heading.text_by_location.miami
+                : yml.two_columns.sub_heading.text_by_location?.default ||
+                  yml.two_columns.sub_heading.text,
+          },
           bullets: yml.two_columns?.bullets,
           content: yml.two_columns?.content,
           button: yml.two_columns?.button,
@@ -507,10 +523,18 @@ export const query = graphql`
             heading {
               text
               font_size
+              text_by_location {
+                miami
+                default
+              }
             }
             sub_heading {
               text
               font_size
+              text_by_location {
+                miami
+                default
+              }
             }
             button {
               text

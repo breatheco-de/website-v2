@@ -22,7 +22,7 @@ seo_title: "Coding Bootcamp Perú"
 header:
   tagline: "Aprender a programar en Lima, Perú"
   sub_header: "Todos los programas son enseñados "
-  sub_header_highlighted: "Online, Híbrida o En Persona."
+  sub_header_highlighted: "Online o Híbrida."
   paragraph: "Únete a uno de los coding bootcamps y comunidades de programadores más grandes del mundo, mejora tus habilidades de codigo o aprende a programar desde cero y recibe soporte técnico y profesional de por vida."
   image: "../../../static/images/locations/peru-header.png"
   alt: ""

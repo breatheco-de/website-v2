@@ -10,11 +10,7 @@ meta_info:
 
   template: "landing_a" # <--- choose your landing template
   redirects:
-    [] # <--- URL redirections to avoid 404 errors
-
-
-    # Set a particular course or location to the landing page
-  # this UTM fields will be also included in the CRM contact
+    []
   utm_course:
     ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
   utm_location:
@@ -22,6 +18,7 @@ meta_info:
       "atlanta-usa",
       "austin-usa",
       "chicago-usa",
+      "dallas-usa",
       "downtown-miami",
       "houston-usa",
       "losangeles-usa",
@@ -67,17 +64,15 @@ header_data:
   image_filter: brightness(0.9)
 
 features:
-  marginTop: 0px #<-- separation between tagline and the bullets
-
-  #                                         up   left down  right
+  marginTop: 0px 
   text: |-
     We live and breathe code. Helping aspiring techies achieve their career goals is our calling, and we’ve perfected our hands-on teaching methods to ensure you gain the skills and confidence to launch a thriving tech career.
     <br><br>From our  industry-aligned syllabus to a lifetime career network, here’s why our bootcamps beat the rest.
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
-  # bullets:
-  #   - Get career-ready with our award-winning method.
-  #   - Access our unmatched career support services.
-  #   - Secure a job within 9 months of graduation, or we’ll refund your tuition
+  bullets:
+  - Get career-ready with our award-winning method.
+  - Access our unmatched career support services.
+  - Secure a job within 9 months of graduation, or we’ll refund your tuition
 
   # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
 
@@ -145,12 +140,6 @@ rating_reviews:
       rating: 5
       url: ""
 
-# program_details:
-#   position: 3
-#   background: "#faf2e1"
-#   heading: "Master Full-Stack Development with Austin Coding Courses"
-#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
-
 why_4geeks:
   position: 8
   heading: "Hear It from Our Students"
@@ -158,18 +147,9 @@ why_4geeks:
 geeks_vs_others:
   position: 7
   heading: "Compare Our Coding Courses vs. the Competition"
-  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   total_rows: 5
 
-# why_python:
-#   position: 5
-#   heading: "Why Python and React.js" # optional or set to white space to hide
-#   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
 
-# why_4geeks:
-#   position: 9
-#   heading: "Why 4Geeks Academy"
-#   sub_heading: ""
 
 # badges:
 #   position: 5
@@ -191,7 +171,7 @@ components:
         src: "/images/landing/hombre-joven-con-laptop-senalando.webp"
         shadow: false
       heading:
-        text: "A Support System Like No Other"
+        text: "Unlimited Mentorship & Career Support for Tech Success"
         font_size: ["33px", "33px", "33px", "33px", "33px"]
         style: '{ "lineHeight": "30px" }'
       bullets:
@@ -227,7 +207,7 @@ components:
         src: "/images/landing/community-support-2.webp"
         shadow: false
       heading:
-        text: "A Support System Like No Other"
+        text: "Your 24/7 Learning Hub and AI Coding Assistance"
         font_size: ["33px", "33px", "33px", "33px", "33px"]
         style: '{ "lineHeight": "30px" }'
       bullets:
@@ -266,143 +246,13 @@ components:
       bullets:
         items:
           - heading: "Full and partial scholarships for qualifying applicants."
-            text: ""
+            text: "Unlock your future with scholarships designed to make tech education accessible. Apply now and take advantage of financial support to jumpstart your career in technology."
             icon: "check"
           - heading: "Flexible financing and loan options, starting as low as $150/month."
-            text: ""
+            text: "Choose from a variety of flexible payment plans and financing options to fit your budget. Start your journey in tech with affordable monthly payments and no financial stress."
             icon: "check"
       button:
         text: "See financing options"
         color: "white"
         background: "black"
         path: "/us/financials"
-
-    # - name: fourth
-    #   position: 4
-    #   proportions: [6, 6]
-    #   layout: two_column_left
-    #   heading:
-    #     text: "Enroll with a Job Guarantee"
-    #     font_size: ["33px", "30px", "26px", "22px", "20px"]
-    #     style: '{ "lineHeight": "30px", "font-weight": "700" }'
-    #   sub_heading:
-    #     text: |
-    #       Your success is our promise. 
-    #       Get hired within 9 months of graduation, or we’ll give you a full refund.
-    #       Here’s how it works:
-    #     font_size: ["20px", "20px", "20px", "20px", "20px"]
-    #     style: '{ "margin": "0", "font-weight": "400" }'
-    #   bullets:
-    #     items:
-    #       - text: "Start the program"
-    #         icon: "check"
-    #       - text: "Stay on track with assignments and attendance"
-    #         icon: "check"
-    #       - text: "Complete and approve your final project"
-    #         icon: "check"
-    #       - text: "Graduate successfully"
-    #         icon: "check"
-    #       - text: "Fully participate in our career support process"
-    #         icon: "check"
-    #   image:
-    #     style: '{ "backgroundSize": "contain", "background-position": "center" }'
-    #     src: "/images/landing/hombre-joven-con-laptop.webp"
-    #   button:
-    #     text: "Learn More"
-    #     color: "white"
-    #     background: "black"
-    #     path: "/us/job-guarantee"
-
-    # - name: geekinfo_2
-    #   position: 7
-    #   layout: two_column_left
-    #   proportions: [6, 6]
-    #   background: "veryLightBlue"
-    #   image:
-    #     style: '{ "backgroundSize": "contain"}'
-    #     src: "/images/landing/jog-guarantee-landing.webp"
-    #     shadow: false
-    #   section_heading:
-    #     text: ""
-    #     style: '{ "font-size": "30px" }'
-    #   heading:
-    #     text: "How it works"
-    #     font_size: ["40px", "40px", "40px", "40px", "40px"]
-    #   sub_heading:
-    #     text: "These are the commitments you have to make to qualify for the job guarantee. If you complete every step and don’t get hired within 9 months of graduation, you’ll get 100% of your tuition back."
-    #     font_size: ["16px", "16px", "16px", "16px", "16px"]
-    #   button:
-    #     text: "Get More Info"
-    #     color: white
-    #     hover_color: "#fcb91a"
-    #     background: "black"
-    #     hover: "blue"
-    #     path: "#leadform_bottom"
-    #   content:
-    #     text: ""
-    #     font_size: ["16px"]
-    #     path: ""
-    #   bullets:
-    #     items:
-    #       - heading: " Start the program"
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: "Comply with assignments and attendance"
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: "Approve the final project"
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: "Graduate"
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: "Complete the career support process"
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-    #       - heading: "Get a job in 9 months"
-    #         icon: "circle" #string with icon for example ['check', 'cicle', etc]
-
-    # - name: why-4geeks-icons
-    #   position: 2
-    #   background: "#fbfcfc"
-    #   layout: iconogram
-    #   swipable: True
-    #   heading:
-    #     text: "Job guarantee commitment"
-    #     font_size: ["30px", "30px", "30px", "30px", "30px"]
-    #   sub_heading:
-    #     text: ""
-    #     font_size: ["16px", "16px", "16px", "16px", "16px"]
-    #     style: '{ "textAlign": "center", "width": "60%" }'
-    #   icons:
-    #     - icon: "mortar-board-icon"
-    #       title: ""
-    #       content: "Get a job within 270 days after graduation or get your money back."
-
-    #     - icon: "stage-dots-icon"
-    #       title: ""
-    #       content: "Go through each phase of our comprehensive career support process for job readiness."
-
-    #     - icon: "people-group-icon"
-    #       title: ""
-    #       content: "Connect with a network of 5,000+ hiring partners across various industries."
-
-    #     - icon: "hands-w-purple"
-    #       title: ""
-    #       content: "We commit to supporting your future career, ensuring your success in tech."
-
-    # - name: some_id
-    #   position: 6
-    #   layout: two_column_right
-    #   image:
-    #     src: "/images/testimonials/allisa-testimonial.jpg"
-    #     shadow: true
-    #   video: "TCHASxvkhpI"
-    #   heading:
-    #     text: "Discover Opportunities in Coding Courses Miami"
-    #       #xl      lg     md     sm    xs
-    #     font_size: ["40px", "34px", "34px", "25px", "20px"]
-    #   content:
-    #     text: "Meet Alissa, the Campus Manager at 4Geeks Academy Miami. In this video, Alissa shares how our team is committed to supporting students throughout South Florida. We partner with organizations like Miami Tech Works, United Way Miami, and Clark University to provide full and partial scholarships for Miami-Dade and Broward county residents. As a bootcamp deeply rooted in Miami, we prioritize making these opportunities accessible to our community. If you’re ready to take advantage of these scholarships and launch your tech career, contact our admissions team today. Alissa and our dedicated staff are here to guide you every step of the way."
-    #     font_size: ["16px"]
-    #   button:
-    #     text: "Get More Info"
-    #     background: black
-    #     color: white
-    #     hover_color: "#white"
-    #     path: "#leadform_header"
