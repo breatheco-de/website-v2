@@ -1,6 +1,7 @@
-title: Casos de éxito
-contributor: Colaborador
 
+title: Las Carreras Reales Comienzan Aquí — Pregunta a Nuestros Estudiantes
+subtitle: "Nuestros graduados son muy demandados, con más del 84% contratados dentro de los seis meses de finalizar el programa. Las reseñas de estudiantes y los resultados profesionales lo demuestran: te irás con habilidades técnicas, confianza y una estrategia profesional para ingresar a uno de los campos más gratificantes de la tecnología y seguir creciendo."
+contributor: Contributor
 cases:
   - name: Loretta Thompson
     img: "../../../../static/images/students/ttaLoretta.jpeg"
@@ -40,16 +41,16 @@ cases:
     achievement: Consiguió un aumento del 100% de su salario
   - name: Jean St. Cloud
     img: ../../../../static/images/students/JeanSt.Cloud.jpeg
-    status: Graduated
+    status: Graduado
     country:
       iso: us
-      name: United Stated of America
+      name: Estados Unidos
     contributor: Clark
     description: Jean está haciendo la transición de otra industria y se está abriendo camino en el ámbito de la Tecnología. Lo logró con el apoyo de la Universidad Clark y ya se está trabajando como desarrollador y mentor.
     achievement: Consiguió un aumento del 100% de su salario. 
   - name: Alexandra Espinoza
     img: ../../../../static/images/students/AlexandraEspinoza.jpeg
-    status: Graduated
+    status: Graduada
     country:
       iso: cr
       name: Costa Rica
@@ -58,7 +59,7 @@ cases:
     achievement: Consiguió un aumento del 100% de su salario.
   - name: Gabriel Salazar
     img: ../../../../static/images/students/GabrielSalazar.jpeg
-    status: Graduated
+    status: Graduado
     country:
       iso: cr
       name: Costa Rica
@@ -67,7 +68,7 @@ cases:
     achievement: Consiguió un aumento del 50% de su salario.
   - name: Laura Magallanes
     img: ../../../../static/images/students/Laura.jpeg
-    status: Graduated
+    status: Graduada
     country:
       iso: uy
       name: Uruguay
@@ -76,7 +77,7 @@ cases:
     achievement: Consiguió un aumento del 120% de su salario.
   - name: Leandro Matonte
     img: ../../../../static/images/students/Leandro.jpeg
-    status: Graduated
+    status: Graduado
     country:
       iso: uy
       name: Uruguay
@@ -85,7 +86,7 @@ cases:
     achievement: Consiguió un aumento del 60% de su salario.
   - name: Melanie Galaretto
     img: ../../../../static/images/students/MelamnieGalaretto.jpeg
-    status: Graduated
+    status: Graduada
     country:
       iso: uy
       name: Uruguay
@@ -94,7 +95,7 @@ cases:
     achievement: Consiguió un aumento del 100% de su salario.
   - name: Natia Lombardo
     img: ../../../../static/images/students/NatiaLombardo.jpeg
-    status: Graduated
+    status: Graduada
     country:
       iso: uy
       name: Uruguay
@@ -102,7 +103,7 @@ cases:
     description: Natia es filósofa y desarrolladora de software. Actualmente trabaja como Ingeniera de QA de una enorme y exitosa empresa internacional.
   - name: Luis Larraburo
     img: ../../../../static/images/students/LuisLarraburo.jpeg
-    status: Graduated
+    status: Graduado
     country:
       iso: cr
       name: Costa Rica

@@ -1,13 +1,13 @@
 meta_info:
   slug: curso-datascience-machine-learning   #<----URL: https://4geeksacademy.com/es/coding-bootcamps/curso-datascience-machine-learning
-  title: "Estudia Data Science y Machine Learning en 4Geeks Academy"
-  description: "Sin conocimientos previos, empieza una carrera en el mundo del Data Science y escribe tus primeros modelos de Machine Learning"
+  title: "Conviértete en un Ingeniero de IA y Machine Learning en 4Geeks Academy"
+  description: "El bootcamp de Data Science y ML de 4Geeks Academy ofrece garantía de empleo. Desarrolla habilidades demandadas y desbloquea oportunidades profesionales"
   bc_slug: "datascience-ml"
   template: "course-datascience"
   image: "/images/og-preview/datascience-ml.es.png"
   visibility: "visible"
-  show_in_apply: true
   keywords: ""
+  show_in_apply: true
   redirects: ["/es/datascience"]
   related_clusters: ["trends-and-tech"]
   duration: "P16W"  # 16 weeks duration in ISO 8601 format
@@ -15,21 +15,21 @@ meta_info:
 apply_form:
   label: Datascience - Machine Learning
 
-seo_title: "Curso Data Science and Machine Learning"
+seo_title: "Bootcamp de Data Science y Machine Learning"
 header:
-  title: "Conviértete en un ingeniero de Data Science y Machine Learning"
-  paragraph: "Una de las profesiones mejor pagadas del mundo."
-  image: "../../../static/images/bg/apple-building.jpg"
-  image_alt: "apple-building"
+  title: "DATA SCIENCE Y MACHINE LEARNING CON IA"
+  paragraph: "Adéntrate en uno de los campos de tecnología de más rápido crecimiento y mejor pagados. Aprende a analizar datos, construir modelos predictivos y usar herramientas de IA para resolver problemas del mundo real—respaldado por mentoría experta, aprendizaje práctico y la opción de garantía de empleo."
+  image: "../../../static/images/bg/circles.jpg"
+  image_alt: "circles"
 
 button:
-  syllabus_heading: "Descargar Detalles del Curso"
+  syllabus_heading: "Descargar Programa"
   syllabus_btn_label: "Descarga Instantánea"
-  syllabus_motivation: "En 2 min. recibirás en tu buzón de correo un PDF con información muy detallada sobre nuestra metodología, tecnologías, becas, financiación e información del curso."
+  syllabus_motivation: "Recíbelo en solo unos segundos"
   apply_button_link: "/es/aplica"
   apply_button_text: "Aplicar"
 
-course_instructors:
+course_instructors: 
   header:
     title: "Conoce a nuestros instructores"
     paragraph: ""
@@ -39,7 +39,7 @@ course_instructors:
       sub_title: "Doctorado en Inteligencia Artificial de la Universidad de Toronto"
       degree: "Doctorado en Inteligencia Artificial"
       image: "../../../static/images/instructors/sayyed.jpeg"
-      bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Hardvard y MIT respectivamente."
+      bio: "Más de 25 años de experiencia en la entrega de soluciones complejas habilitadas para IA y arquitecturas digitales para grandes empresas. PhD en Inteligencia Artificial de la Universidad de Toronto, y certificados en Big Data Analytics y Big Data de Harvard y MIT respectivamente."
       github: "https://github.com/snezhadi"
       linkedin: "https://www.linkedin.com/in/sayyednezhadi"
 
@@ -61,32 +61,31 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados estan avalados por el Departamento de Educación de Estado Unidos en Florida."
+  paragraph: "Prepárate para prosperar en la industria tecnológica actual impulsada por IA con aprendizaje hiperpersonalizado, mentoría ilimitada 1:1 y apoyo profesional de por vida. Reconocido por Course Report como uno de los mejores bootcamps de programación del mundo, elegido por Forbes como mejor bootcamp para estudiantes con presupuesto limitado (2024), y calificado 4.9/5 en SwitchUp. Licenciado por el Departamento de Educación de Florida."
 
-
-overlaped:
-  heading: "Aprende a crear modelos predictivos que cambien el mundo"
-  paragraph: "En el bootcamp de Data Science y Machine Learning de 4Geeks Academy, adquirirás habilidades para utilizar eficazmente las herramientas líderes en este campo, como Python, TensorFlow y Scikit-learn. A lo largo del programa, te sumergirás en el desarrollo de modelos predictivos con aplicaciones prácticas en áreas tan diversas como la detección de fraude, recomendación de productos, clasificación de imágenes y procesamiento del lenguaje natural"
-  button:
-    text: "Aplicar"
-    color: "blue"  
-    path: "/es/aplica"
+# TWO COLUMNS
+two_columns:
+  proportions: [6, 6]
   image:
-    src: "/images/landing/tres-personas-reloaded.webp"  
-
-## TWO COLUMNS INFO
-# two_columns_info:
-#   proportions: [6, 6]
-#   image:
-#     style: '{"backgroundSize": "contain" }'
-#     src: "/images/landing/grupo-ventanas.webp"
-#     shadow: false  
-#   heading:
-#     text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
-#     font_size: ["30px", "30px", "30px", "30px", "30px"]
-#   sub_heading:
-#     text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
-#     font_size: ["16px", "16px", "16px", "16px", "16px"]
+    style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
+    src: "../../../static/images/testimonials/alissa-datascience.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=snI-n8Ruvxg"
+  heading:
+    text: "Aprende a Crear Modelos Predictivos y Domina Machine Learning con 4Geeks Academy"
+    font_size: ["30px", "30px", "30px", "30px", "30px"]
+  sub_heading:
+    text: "Sumérgete en Data Science y Machine Learning con el programa especializado de 4Geeks Academy. Gana experiencia práctica construyendo modelos predictivos para aplicaciones del mundo real como detección de fraude, procesamiento del lenguaje natural y toma de decisiones basada en datos. Domina herramientas y bibliotecas líderes en la industria incluyendo Python, TensorFlow y Scikit-learn para lanzar una carrera de data science bien pagada."
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Aplicar ahora"
+    color: "white"
+    background: "black"
+    path: "/es/aplica"
+  content: 
+    text: ""
+    style: '{ "font-size":"18px", "margin":"0"}'  
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
 
 two_columns_info:
   proportions: [6, 6]
@@ -95,120 +94,91 @@ two_columns_info:
     shadow: false 
     src: "/images/landing/grupo-ventanas.webp"
   section_heading: 
-    text: "Aprende a aplicar el Machine Learning a problemas del mundo real"
+    text: "Todo lo que Necesitas para Lanzar una Carrera en Data Science y Machine Learning"
   heading:
     text: ""
           #xl      lg     md     sm    xs
     font_size: ["40px", "34px", "34px", "25px", "20px"]
   sub_heading:
     style: '{}'
-    text: "Nuestro bootcamp de data science está enfocado en brindar todas las herramientas y el apoyo necesario para que puedas triunfar en este campo."
+    text: "Habilidades Integradas con IA, Mentoría Ilimitada y Apoyo Profesional de por Vida"
     font_size: ["16px"]
   content:
-    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
+    text: ""
   button:
-    text: "Comparar precios y planes"
+    text: "Comparar Precios y Planes"
     path: "#prices_and_payment"
     color: "white"
     background: "black"
     hover: "lightBlue"
   bullets:
-    items: 
-    - heading: "MENTORÍAS ILIMITADAS"
-      text: "Obtén soporte experto para todas tus preguntas. Nuestros mentores están siempre disponibles en línea, listos para ayudarte desde el primer día hasta siempre."
-    - heading: "PROPORCIÓN PROFESOR ESTUDIANTE 1:7"
-      text: "Experimenta una atención perzonalizada con nuestra proporción profesor-alumno superior a la media."
-    - heading: "APOYO PROFESIONAL PERSONALIZADO"
-      text: "Recibe asesoramiento, orientación y formación ilimitados adaptados a tu perfil único y a tus ofertas de trabajo específicas."
-
-two_columns:
-  proportions: [6, 6]
-  image:
-    style: '{ "border" : "3px solid black" }' 
-    shadow: true 
-    src: "../../../static/images/testimonials/fidel-vera-testimonio-ds.jpg"
-  video: "https://www.youtube.com/watch?v=zfLGOolXHWQ"
-  heading:
-    text:
-      "Conoce una historia de transformación de uno de nuestros estudiantes"
-      #xl      lg     md     sm    xs
-    font_size: ["40px", "34px", "34px", "25px", "20px"]
-  content:
-    style: '{}'
-    text: "Fidel Vera siempre tuvo una fascinación por el potencial de los datos. En 4Geeks Academy, encontró el trampolín perfecto para convertir su pasión en una carrera profesional exitosa. Nuestro bootcamp de Data Science le proporcionó las herramientas y el conocimiento necesarios para integrarse en este campo en la industria tech."
-    font_size: ["16px"]
-  button:
-    text: "Obtener Información"
-    path: "#top"
-    color: "white"
-    background: "black"
-    hover: "lightBlue"
+    items:
+    - heading: "DOMINA HABILIDADES DE DATA SCIENCE DE NUEVA GENERACIÓN."
+      text: "Aprende a analizar datos y construir modelos predictivos usando herramientas y flujos de trabajo impulsados por IA utilizados por equipos de datos modernos."  
+    - heading: "OBTÉN MENTORÍA ILIMITADA Y APOYO PROFESIONAL."
+      text: "Trabaja 1:1 con mentores expertos y coaches de carrera—durante tu bootcamp y para siempre."
+    - heading: "APRENDE MÁS RÁPIDO CON APOYO HIPERPERSONALIZADO."
+      text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
+    - heading: "ÚNETE A UNA COMUNIDAD TECNOLÓGICA GLOBAL."
+      text: "Recibe consejos, orientación y entrenamiento ilimitados adaptados a tu perfil único y ofertas de trabajo específicas."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"
-  actionMessage: "Avisadme de fechas disponibles"
-
-# description:
-#   heading: "Sobre este curso"
-#   sub_heading: "Prepárate para la era de la Ciencia de Datos."
-#   content: >
-#     Entrénate con expertos en Data Science, Machine Learning e Inteligencia Artificial. Aprende Data Science desde las bases, recolecta, manipula y modela datos. Crea modelos de Machine Learning e iníciate en el Deep Learning.\n
-#     Practica con escenarios típicos de empresas de la vida real y conoce algunas de las herramientas más utilizadas en la industria. \n
-
-
-
+  actionMessage: "Avísame cuando haya fechas disponibles"
 
 ## PROGRAM DETAILS
 details:
   about:
-      title: "Sobre este programa"
+      title: "Sobre Nuestro Curso de Data Science y Machine Learning"
       sub_title: |
-        Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas para convertirte en analista de datos y formar parte de un equipo técnico en cualquier compañía.
-        Crea tus propios modelos predictivos con Python, Pandas, Numpy, etc. Utiliza algoritmos predictivos como vecinos cercanos, árboles de decisión, entre otros muchos. Y emplea algoritmos de aprendizaje supervisado y no supervisado. 
-        Practica con escenarios comerciales de la vida real, típicos en los negocios y aprende a utilizar algunas de las herramientas utilizadas en la industria.
-        
+        Aprende Python, SQL, Looker (Google Data Studio), Streamlit y Estadísticas y conviértete en un Analista de Datos profesional, listo para contribuir a cualquier equipo basado en datos en cualquier empresa.
+        Crea modelos predictivos usando Python, Pandas, Numpy y otras bibliotecas poderosas. Explora algoritmos como Vecinos Cercanos, Árboles de Decisión y más. Trabaja con modelos de aprendizaje supervisado y no supervisado.
+        Practica resolviendo casos de la vida real y aprende a abordar el tipo de desafíos que encontrarás en tu carrera. Domina el uso de herramientas estándar de la industria.
+        Estrategiza y desarrolla tus propios proyectos de IA, siguiendo el ciclo completo de vida desde el desarrollo hasta el despliegue y mantenimiento, asegurando privacidad y seguridad.
+
       list:
         - label: "Duración"
-          content: "16 semanas"
+          content: "16 Semanas."
           icon: "duration-icon"
         - label: "Clases"
-          content: "3 clases semanales"
+          content: "3 clases semanales."
           icon: "book-2"
         - label: "Tamaño de la clase"
-          content: "12 personas máx"
+          content: "Máx. 12 estudiantes."
           icon: "people"
         - label: "Certificado"
-          content: "Nuestros certificados son reconocidos por múltiples instituciones."
+          content: "Reconocido por la industria.\n"
           link_text: "Ver ejemplo"
           link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certification"
         - label: "Requisitos"
-          content: "No se necesita experiencia previa."
+          content: "No se necesita experiencia previa"
           icon: "contract-checked"
         - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para consumir el plan de estudios y el contenido. Las clases se imparten en el idioma oficial de tu campus."
+          content: "Inglés o Español (dependiendo del campus)"
           icon: "language"
-
-  heading: DETALLES DEL PROGRAMA
+          
+  heading: Programa de Data Science y Machine Learning
   weeks: 16
-  week_unit: "sm"
+  week_unit: "sem"
+  weeks_label: "semanas"
   facts:
     - label: "Duración"
       value: "16 semanas"
     - label: "Compromiso"
-      value: "20 hrs/sem. (Lun - Mie - Vie)"
+      value: "20 hrs (Lun - Mie - Vie)"
     - label: "Certificado"
-      content: "Nuestros certificados son reconocidos por múltiples instituciones."
+      content: "Nuestros certificados son reconocidos por múltiples organizaciones."
       link_text: "Ver ejemplo"
       link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
       icon: "certificate"
-    - label: "Horario"
+    - label: "Entrega"
       value: "Online / Remoto"
     - label: "Tamaño Clase"
-      value: "Hasta 14 personas"
-    - label: "Horas totales"
+      value: "12 Personas Máx"
+    - label: "Horas Totales"
       value: "320"
-  sub_heading: "Comienza de cero con Python, profundiza en Ciencia de Datos, modela y predice con Aprendizaje de Máquina, y despliega tu aplicación"
+  sub_heading: "Comienza con Python, Data Science, Machine Learning, Deep Learning y el mantenimiento de un entorno de producción en IA"
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -217,23 +187,24 @@ details:
   details_modules:
     - module_name: "Python"
       title: "Introducción a Python"
-      description: "Empezaremos con un 'prework' de 2 semanas, donde aprenderás o repasarás cómo construir algoritmos utilizando funciones, condicionales y otros elementos de Python. Una buena base de Python es importante para poder desarrollar algoritmos de recolección de datos, consultar API's o hacer Web Scrapping. También obtendrás las bases para depurar tus datos utilizando las bibliotecas Pandas y Numpy. Estas dos bibliotecas constituyen la base sobre la que esta construida toda la industria de Data Science."
-      projects: "Micro ejercicios con autocorrecciones sobre algoritmos y utilización de Pandas, Numpy y Matplotlib."
+      description: >
+        Comenzando desde un Prework (2 semanas antes), te introducimos al mundo de la programación y aprendes los fundamentos de Python y Algoritmos; Este módulo te ayudará a prepararte para programar y desarrollar los diferentes entrenamientos y evaluaciones de modelos de IA y Machine Learning para el siguiente paso.
+      projects: "Recolecta, almacena y mide con Numpy, Pandas, Matplotlib, etc."
       slug: "python-intro"
       duration: "2 sem"
       step: 2
     - module_name: "Fundamentos"
       title: "Estadística y Álgebra Lineal con Python"
-      description: "Siempre con un enfoque muy práctico y programando en Python, vamos a aplicar los conceptos de Álgebra Lineal más utilizados en Data Science y Machine Learning. Matrices y Vectores, Funciones F(x) y relaciones entre variables. También programaremos en Python los conceptos probabilísticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
-      projects: "Para aplicar lo aprendido trabajaremos con casos reales enfocados en el mundo laboral."
+      description: "Usa python para escribir código que revisa y aplica los conceptos de Álgebra Lineal más utilizados, Matrices y Vectores, F(x), y las relaciones que las funciones tienen entre variables. También programaremos en Python los conceptos probabilísticos más utilizados: tendencias centrales, desviación estándar, medias y medianas. Por último, calcularemos probabilidades de que un evento o dato ocurra, una habilidad muy importante para poder desarrollar modelos y predicciones."
+      projects: "Te proporcionaremos una lista de problemas de la vida real y soluciones para los diferentes conceptos, usarás python para resolverlos."
       slug: "datascience-fundamentals"
       duration: "2 sem"
       step: 2
     - module_name: "Recolecta"
-      title: "Recolecta y Almacena Datos"
+      title: "Recolecta y almacena datos"
       description: "Probablemente la etapa más larga de todos los proyectos de Data Science es recolectar (y limpiar) los datos. En este módulo trabajarás con Python para conectarte a bases de datos SQL, aprenderás la sintaxis de SQL para consultar y manipular esos datos, cargar y descargar archivos estáticos CSV, JSON entre otros más utilizados en la industria. Aprenderás a conectarte con API's o descargar datos de páginas que no cuentan con una API utilizando web scraping. Almacenarás todos los datos de forma ordenada y coherente en una base de datos."
       projects: "Carga de data estructurada y no-estructurada, a partir de diferentes fuentes (E.j: SQL, Web Scraping, ficheros de prueba) y conectándote a la API de Twitter."
-      slug: "datacollection"
+      slug: "data-science"
       duration: "2 sem"
       step: 2
     - module_name: "Manipula"
@@ -251,13 +222,13 @@ details:
       duration: "4 sem"
       step: 4
     - module_name: "Despliega"
-      title: "Machine Learning en producción"
+      title: "IA en Producción"
       description: "Uno de los aspectos más importantes al desarrollar una Inteligencia Artificial es entender cómo preparar, desplegar y mantener una solución en un ambiente de producción. Te llevaremos de la mano durante todo el ciclo de desarrollo de software detrás de la solución. Machine Learning Operations (MLOps), así como privacidad, seguridad y ética. Tu proyecto final será desplegar tu aplicación de Machine Learning en producción."
       projects: "Construyendo arquitecturas de datos, desplegando I.A. en produccion localmente y en la nube, monitoreando y manteniendo los modelos."
       slug: "quality-deploy"
       duration: "1 sem"
       step: 1
-    - module_name: "Projecto Final"
+    - module_name: "Proyecto Final"
       title: "Elige un problema y resuélvelo con Machine Learning"
       description: "Trabajarás en equipo para escoger un problema real, recolectar los datos necesarios para resolverlo con una predicción, realizar un análisis exploratorio con varias visualizaciones que permitan entender los datos, limpiar el dataset para poder utilizarlo correctamente y seleccionar un par de modelos para realizar una predicción. Luego evaluarás la efectividad de tus modelos utilizando las técnicas vistas durante el curso. Por último, pondrás tu modelo en produccion utilizando Streamlit o Google DataStudio."
       projects: "Construyendo arquitecturas de datos, desplegando la aplicación de Machine Learning localmente y en la nube, monitoreando y manteniendo los modelos."
@@ -265,20 +236,54 @@ details:
       duration: "2 sem"
       step: 1.9
     - module_name: "DE POR VIDA"
-      title: "De por vida"
+      title: "Apoyo de por Vida"
       description: "Sigue recibiendo la ayuda de la academia de por vida, acceso a los contenidos, soporte profesional (career support). Recibe incluso ayuda durante el inicio de tu nuevo trabajo, nunca más estarás sólo."
       projects: "Conseguirás trabajo, empezarás a ganar más dinero pero continuarás aprendiendo hasta convertirte en Ingeniero Senior en Inteligencia Artificial."
       slug: "lifelong-learning"
       duration: "para siempre"
       step: 0.1
 
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
+  heading: 
+    text: "Aprende Data Science y Machine Learning más rápido - con soporte hiperpersonalizado impulsado por IA que se adapta a ti"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Clases en vivo, mentorías ilimitadas y herramientas de IA construidas para un progreso más inteligente y rápido."
+    font_size: ["24px","24px","22px","22px","20px"]
+    style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"18px", "margin":"0"}'
+    text: "Con el apoyo combinado de nuestros mentores humanos y herramientas de IA, dominarás la Ciencia de Datos integrada con IA más rápido, más inteligente y con más confianza que nunca."
+  bullets:
+    item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
+    items:
+      - heading: ""
+        text: |
+          • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, nuestro <strong style="text-decoration: none; color: #000000; font-weight: 700;">asistente de programación con IA</strong> personalizado, sigue tu progreso y te da retroalimentación personalizada exactamente cuando y cómo la necesitas.
+          <br>
+          <br>
+          • Obtén atención personal sin igual con nuestra <strong style="text-decoration: none; color: #000000; font-weight: 700;">proporción estudiante-profesor de 7:1</strong>, más <strong style="text-decoration: none; color: #000000; font-weight: 700;">acceso ilimitado a sesiones 1:1</strong> con nuestros mentores expertos y coaches de carrera.
+          <br />
+
 syllabus:
-  heading: Descarga toda la información acerca de este programa
+  heading: Obtén toda la información sobre el programa
   button_label: Descargar
 
 potential_companies:
   tagline: "Entrénate para destacar en las compañías más exigentes"
-  sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
+  sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para mejorar tus habilidades para el futuro del trabajo con IA"
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/meta-logo.png"
@@ -304,11 +309,10 @@ potential_companies:
     - name: "Uber"
       image: "../../../static/images/partner/uber.png"
       alt: ""
-
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿Qué nos hace tan exitosos?"
-  sub_heading: ""
+  heading: "¿QUÉ NOS HACE TAN EXITOSOS?"
+  sub_heading: "Compara 4Geeks con otras escuelas de programación"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
@@ -338,10 +342,10 @@ prices:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "Conoce a ex-estudiantes y sus proyectos"
+  heading: "CONOCE A EX-ESTUDIANTES Y SUS PROYECTOS"
   sub_heading: "Conoce a personas que ya se han graduado y algunos de los proyectos que estarás construyendo durante el programa"
 
 faq:
   title: "Preguntas Frecuentes"
-  read_more: "Ver más preguntas"
+  read_more: "Contáctanos para más preguntas"
   link: "/faq"

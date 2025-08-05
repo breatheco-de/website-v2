@@ -47,10 +47,10 @@ const Title_Paragraph = (props) => {
             letterSpacing="0.06em"
             width="100%"
             margin="0 0 15px 0"
-            style={{ fontStyle: "normal" }}
-          >
-            {props.paragraph}
-          </SubTitle>
+            dangerouslySetInnerHTML={{
+              __html: props.paragraph,
+            }}
+          />
         </Div>
       </Grid>
     </>

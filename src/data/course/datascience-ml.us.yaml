@@ -15,10 +15,10 @@ meta_info:
 apply_form:
   label: Datascience - Machine Learning
 
-seo_title: "Data Science and Machine Learning Bootcamp with Job Guarantee"
+seo_title: "Data Science and Machine Learning Bootcamp"
 header:
-  title: "Become a Data Scientist or Machine Learning Engineer"
-  paragraph: "Be ready to enter tech's highest-paying fields in just 16 weeks!"
+  title: "DATA SCIENCE AND MACHINE LEARNING WITH AI"
+  paragraph: "Break into one of tech’s fastest-growing, highest-paying fields. Learn to analyze data, build predictive models, and use AI tools to solve real-world problems—backed by expert mentorship, hands-on learning, and the option of a job guarantee."
   image: "../../../static/images/bg/circles.jpg"
   image_alt: "circles"
 
@@ -61,52 +61,7 @@ course_instructors:
       linkedin: "https://www.linkedin.com/in/alexismena/"
 
 badges:
-  paragraph: "Kickstart your career at 4Geeks Academy, where developers grow and thrive. Named the best <a href='/us/coding-bootcamp'>coding bootcamp</a> 2023 by Course Report, best center for coding bootcamps 2023 by Premios de Excelencia Educativa in Spain, listed among the top 10 in the US by Newsweek, and rated 4.92/5 on Switchup. Licensed by the Florida Department of Education, USA."
-
-# OVERLAPED
-overlaped:
-  heading: "Learn to create predictive models and master machine learning with 4Geeks Academy"
-  paragraph: "Dive into the world of machine learning with 4Geeks Academy's specialized program. Gain the skills to build predictive models for practical applications like fraud detection and natural language processing, using industry-leading tools such as Python, TensorFlow, and Scikit-learn."
-  button:
-    text: "LEARN MORE"
-    color: "blue" 
-    link: "/us/apply" 
-  image:
-    src: "/images/landing/tres-personas-reloaded.webp"
-
-
-two_columns_info:
-  proportions: [6, 6]
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}' 
-    shadow: false 
-    src: "/images/landing/grupo-ventanas.webp"
-  section_heading: 
-    text: "Learn to Apply Machine Learning to Real-World Problems"
-  heading:
-    text: ""
-          #xl      lg     md     sm    xs
-    font_size: ["40px", "34px", "34px", "25px", "20px"]
-  sub_heading:
-    style: '{}'
-    text: "Our data science bootcamp is focused on providing all the tools and support necessary for you to succeed in this field."
-    font_size: ["16px"]
-  content:
-    text: ""
-  button:
-    text: "Compare Prices and Plans"
-    path: "#prices_and_payment"
-    color: "white"
-    background: "black"
-    hover: "lightBlue"
-  bullets:
-    items: 
-    - heading: "UNLIMITED MENTORING"
-      text: "Get expert support for all your questions. Our mentors are always available online, ready to assist you from day one and beyond."
-    - heading: "1:7 STUDENT-TEACHER RATIO"
-      text: "Experience personalized attention with our above-average student-teacher ratio."
-    - heading: "PERSONALIZED PROFESSIONAL SUPPORT"
-      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers."
+  paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top coding bootcamps, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
 
 # TWO COLUMNS
 two_columns:
@@ -117,17 +72,55 @@ two_columns:
     shadow: true  
   video: "https://www.youtube.com/watch?v=snI-n8Ruvxg"
   heading:
-    text: "Discover data science with Alissa, our campus manager in Miami"
+    text: "Learn to Create Predictive Models and Master Machine Learning with 4Geeks Academy"
     font_size: ["30px", "30px", "30px", "30px", "30px"]
   sub_heading:
-    text: "Hear our campus manager explain the fundamentals of data science and its applications! Discover the core concepts of 4Geeks Data Science & Machine Learning Bootcamp, including data analysis, predictive model building, and the use of tools such as Python, SQL, Looker, and Streamlit."
+    text: "Dive deep into data science and machine learning with 4Geeks Academy’s specialized program. Gain hands-on experience building predictive models for real-world applications like fraud detection, natural language processing, and data-driven decision-making. Master industry-leading tools and libraries including Python, TensorFlow, and Scikit-learn to launch a high-paying data science career."
     font_size: ["16px", "16px", "16px", "16px", "16px"]
   button:
     text: "Apply now"
     color: "white"
     background: "black"
     path: "/us/apply"
+  content: 
+    text: ""
+    style: '{ "font-size":"18px", "margin":"0"}'
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
 
+two_columns_info:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    shadow: false 
+    src: "/images/landing/grupo-ventanas.webp"
+  section_heading: 
+    text: "Everything you Need to Launch a Career in Data Science and Machine Learning"
+  heading:
+    text: ""
+          #xl      lg     md     sm    xs
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: "AI-Integrated Skills, Unlimited Mentorship, and Career Support for Life"
+    font_size: ["16px"]
+  content:
+    text: ""
+  button:
+    text: "Compare Prices and Plans"
+    path: "#prices_and_payment"
+    color: "white"
+    background: "black"
+    hover: "lightBlue"
+  bullets:
+    items:
+    - heading: "MASTER NEXT-GEN DATA SCIENCE SKILLS."
+      text: "Learn to analyze data and build predictive models using AI-powered tools and workflows used by modern data teams."  
+    - heading: "GET UNLIMITED MENTORSHIP AND CAREER SUPPORT."
+      text: "Work 1:1 with expert mentors and career coaches—during your bootcamp and forever after."
+    - heading: "LEARN FASTER WITH HYPERPERSONALIZED SUPPORT."
+      text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
+    - heading: "JOIN A GLOBAL TECH COMMUNITY."
+      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -145,16 +138,16 @@ details:
 
       list:
         - label: "Duration"
-          content:  "16 Weeks"
+          content:  "16 Weeks."
           icon: "duration-icon"
         - label: "Classes"
-          content: "3 classes weekly"
+          content: "3 classes weekly."
           icon: "book-2"
         - label: "Class size"
-          content: "12 people max"
+          content: "Max 12 students."
           icon: "people"
         - label: "Certificate"
-          content: "Our certificates are recognized by multiple organizations."
+          content: "Industry-recognized.\n"
           link_text: "See example"
           link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
           icon: "certification"
@@ -162,7 +155,7 @@ details:
           content: "No previous experience needed"
           icon: "contract-checked"
         - label: "Language"
-          content: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
+          content: "English or Spanish (campus dependent)"
           icon: "language"
           
   heading: Data Science and Machine Learning Syllabus
@@ -250,6 +243,40 @@ details:
       duration: "forever"
       step: 0.1
 
+# Two Columns - Rigo
+two_columns_rigo:
+  proportions: [7, 5]
+  background: "#FFFFFF"
+  justify: "center" #start,end,center
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    src: "/images/landing/ai-mentor.jpg"
+    shadow: true
+  video: "6m1Jyya7eCc"
+  heading: 
+    text: "Learn Data Science and Machine Learning Faster - with AI-powered, Hyperpersonalized Support that Adapts to You"
+    font_size: ["33px", "33px", "33px", "33px", "33px"]
+    style: '{ "lineHeight": "30px" }'
+    heading_image:
+      src: "/images/rigobot-logo.png"
+  sub_heading:
+    text: "Live instruction, unlimited mentorship, and AI tools built for smarter, faster progress."
+    font_size: ["24px","24px","22px","22px","20px"]
+    style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
+  content:
+    style: '{ "font-size":"18px", "margin":"0"}'
+    text: "With the combined support of our human mentors and AI tools, you'll master AI-integrated Data Science faster, smarter, and with more confidence than ever."
+  bullets:
+    item_style: '{"font-weight": "100", "margin":"0", "font-size":"18px" }'
+    items:
+      - heading: ""
+        text: |
+          • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot</strong>, our custom-built <strong style="text-decoration: none; color: #000000; font-weight: 700;">AI coding assistant</strong>, follows your progress and gives tailored feedback exactly when and how  you need it.
+          <br />
+          <br />
+          • Get unmatched personal attention with our <strong style="text-decoration: none; color: #000000; font-weight: 700;">7:1 student teacher ratio</strong>, plus <strong style="text-decoration: none; color: #000000; font-weight: 700;">unlimited access to 1:1 sessions</strong> with our expert mentors and career coaches.
+          <br />
+
 syllabus:
   heading: Get all the information about the syllabus
   button_label: Download
@@ -282,7 +309,6 @@ potential_companies:
     - name: "Uber"
       image: "../../../static/images/partner/uber.png"
       alt: ""
-
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
   heading: "WHAT MAKES US SO SUCCESSFULL?"

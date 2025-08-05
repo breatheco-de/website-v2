@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { isCustomBarActive } from "../actions";
 import { H1, H2, Paragraph } from "../components/Heading";
 import { graphql, Link } from "gatsby";
-import { Header, Div } from "../components/Sections";
+import { Header, HR, Div } from "../components/Sections";
 import { Button, Colors, Img } from "../components/Styling";
 import ProgramDetails from "../components/ProgramDetails";
 import ProgramDetailsMobile from "../components/ProgramDetailsMobile";
@@ -22,6 +22,7 @@ import TwoColumn from "../components/TwoColumn/index.js";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
+import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
 
 const DataScience = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -203,12 +204,36 @@ const DataScience = ({ data, pageContext, yml }) => {
         course={program_type}
       />
 
-      {/* OVERLAPED CREAR EN EL YML*/}
-      <Overlaped
-        heading={yml.overlaped?.heading}
-        content={yml.overlaped?.paragraph}
-        button={yml.overlaped?.button}
-        image={yml.overlaped?.image}
+      {/* Two Columns Rigo */}
+      <TwoColumn
+        right={{
+          image: yml.two_columns_rigo?.image,
+          video: yml.two_columns_rigo?.video,
+        }}
+        left={{
+          heading: yml.two_columns_rigo?.heading,
+          heading_image: yml.two_columns_rigo?.heading_image,
+          sub_heading: yml.two_columns_rigo?.sub_heading,
+          bullets: yml.two_columns_rigo?.bullets,
+          content: yml.two_columns_rigo?.content,
+          button: yml.two_columns_rigo?.button,
+        }}
+        proportions={yml.two_columns_rigo?.proportions}
+        session={session}
+      />
+
+      {/* TWO COLUMN CREAR EN EL YML*/}
+      <TwoColumn
+        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
+        right={{
+          heading: yml.two_columns?.heading,
+          sub_heading: yml.two_columns?.sub_heading,
+          bullets: yml.two_columns?.bullets,
+          content: yml.two_columns?.content,
+          button: yml.two_columns?.button,
+        }}
+        proportions={yml.two_columns?.proportions}
+        session={session}
       />
 
       {/* GEEKSINFO IS A TWOCOLUMN WITH TITLE 
@@ -233,20 +258,6 @@ const DataScience = ({ data, pageContext, yml }) => {
         />
       </Div>
 
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <TwoColumn
-        left={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        right={{
-          heading: yml.two_columns?.heading,
-          sub_heading: yml.two_columns?.sub_heading,
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      />
-
       <UpcomingDates
         lang={pageContext.lang}
         message={courseDetails.upcoming?.no_dates_message}
@@ -265,9 +276,14 @@ const DataScience = ({ data, pageContext, yml }) => {
         paragraph={yml.prices.sub_heading}
       />
 
-      <ScholarshipProjects
-        content={data.allScholarshipProjectsYaml.edges[0].node}
-        lang={pageContext.lang}
+      <ScholarshipSuccessCases
+        content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
+      <HR
+        background={Colors.verylightGray}
+        width="70%"
+        height="1px"
+        margin="20px"
       />
 
       <OurPartners
@@ -564,6 +580,40 @@ export const query = graphql`
               }
             }
           }
+          two_columns_rigo {
+            proportions
+            image {
+              style
+              src
+              shadow
+            }
+            video
+            heading {
+              text
+              font_size
+              style
+              heading_image {
+                src
+              }
+            }
+            sub_heading {
+              text
+              font_size
+              style
+            }
+            content {
+              text
+              style
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+                icon_color
+              }
+            }
+          }
           overlaped {
             heading
             paragraph
@@ -617,6 +667,40 @@ export const query = graphql`
         }
       }
     }
+    allScholarshipSuccessCasesYaml(
+      filter: { fields: { lang: { eq: $lang } } }
+    ) {
+      edges {
+        node {
+          title
+          subtitle
+          contributor
+          cases {
+            name
+            img {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                  width: 700
+                  quality: 100
+                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  breakpoints: [200, 340, 520, 890]
+                )
+              }
+            }
+            status
+            country {
+              iso
+              name
+            }
+            contributor
+            description
+            achievement
+          }
+        }
+      }
+    }
+
     allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
       edges {
         node {

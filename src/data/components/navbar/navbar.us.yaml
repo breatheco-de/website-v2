@@ -10,7 +10,9 @@ navbar:
         - title: "Full Stack with AI"
           level: " "
           icon: "fullstack_2"
-          paragraph: "Become an AI-fluent software engineer. Learn Python, React, and Vibe Coding tools like Cursor and Vercel to launch a future-proof career."
+
+          paragraph: "Become a Full Stack developer using Cursor, Vercel v0, and other AI tools. Master in-demand AI skills. Land a job as a developer."
+
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamps/part-time-full-stack-developer"

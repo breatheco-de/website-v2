@@ -1,26 +1,30 @@
+
 heading: "SEDES: EN LÍNEA O EN PERSONA"
 image: "/images/locations/locations_image.png"
 sub_heading: "Sea online o presencial, tendrás una interacción real e instantánea con tus profesores, mentores y compañeros de clase para trabajar en ejercicios o proyectos y tendrás acceso a materiales, conferencias y todo lo que necesitas para convertirte en un profesional de la programación."
 title_image: "Online, o Presencial."
+
 title: "Nuestros programas son"
 highlighted_text:
-  - text: Virtuales,
+  - text: Online,
     color: "#0084FF"
   - text: o
     color: "#000000"
-  - text: <br/>En persona
+  - text: <br/>Presencial
     color: "#23C520"
 sub_title: ""
 sub_title_image: |
-  <p>Entorno de aula en vivo, tutoría 1-1 ilimitada,<br> basada en cohortes y en tiempo real.</p>
-choose: "Escoge una región"
+  Sumérgete en un entorno de aula en vivo para aprendizaje basado en cohortes en tiempo real. <br /> Disfruta de mentorías 1-1 ilimitadas y orientación profesional personalizada.
+
+image: "/images/locations/locations_image.png"
+choose: "Elige una región"
 regions:
   - name: "usa-canada"
     title: "US & Canada"
-    content: "Con la modalidad online tienes acceso a nuestras locaciones físicas a nivel mundial"
+    content: "Con la modalidad online tienes acceso a nuestras ubicaciones físicas en todo el mundo"
   - name: "europe"
     title: "Europa"
-    content: "Todos nuestros campus en Europa cuentan con modalidad presencial y online"
+    content: "Todos nuestros campus en Europa tienen modalidades presenciales y online"
   - name: "latam"
     title: "LATAM"
-    content: "Todos nuestros campus en América cuentan con modalidad presencial y online"
+    content: "Todos nuestros campus en América tienen modalidades presenciales y online"

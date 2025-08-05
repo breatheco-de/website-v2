@@ -147,11 +147,12 @@ sections:
       Las categorías tratadas son datos identificativos. No tratamos categorías de datos especialmente protegidos.
 
   - title: "¿Por cuánto tiempo conservaremos tus datos?"
-    text: "Los datos personales se conservarán hasta que solicites su supresión o hasta que dejen de ser necesarios para la finalidad recabada. En el caso de SMS, aplicamos retención limitada como se describe en la sección 'Tratamiento y Seguridad de Datos SMS'"
+
+    text: "Los datos personales se conservarán hasta que solicites su supresión o hasta que dejen de ser necesarios para la finalidad recabada. En el caso de SMS, aplicamos retención limitada como se describe en la sección 'Tratamiento y Seguridad de Datos SMS'."
+
 
   - title: "¿A qué destinatarios se comunicarán tus datos?"
-    text: "
-      Muchas herramientas que utilizamos para gestionar tus datos son de terceros. Para prestar servicios estrictamente necesarios, https://4GeeksAcademy.com comparte datos con:
+    text: "Muchas herramientas que utilizamos para gestionar tus datos son de terceros. Para prestar servicios estrictamente necesarios, https://4GeeksAcademy.com comparte datos con:
 
       <span class='bold-privacy-text'>Analítica web</span>: Google Analytics (Google Inc., California, EE. UU.). Usa cookies. La info generada (incluida tu IP) se almacena en EE. UU.
 
@@ -163,15 +164,13 @@ sections:
 
       <span class='bold-privacy-text'>Escritorio de soporte</span>: Zendesk, Inc. (San Francisco, EE. UU.). Más info: <a class='faq-link' target='_blank' rel='noopener noreferrer nofollow' href='https://www.zendesk.com/company/customers-partners/privacy-policy/'>https://www.zendesk.com/company/customers-partners/privacy-policy/</a>.
 
-      <span class='bold-privacy-text'>Proveedor de envío de SMS</span>: Utilizamos proveedores de mensajería SMS para entregar mensajes. Estos actúan como encargados de tratamiento y solo usan los datos para prestar el servicio en nuestro nombre.
-      "
+      <span class='bold-privacy-text'>Proveedor de envío de SMS</span>: Utilizamos proveedores de mensajería SMS para entregar mensajes. Estos actúan como encargados de tratamiento y solo usan los datos para prestar el servicio en nuestro nombre."
 
   - title: "Navegación"
     text: "Al navegar por https://4GeeksAcademy.com se pueden recoger datos no identificables, como IP, ubicación geográfica aproximada, registro de uso de servicios y sitios, y otros datos no identificativos (hábitos de navegación). Esta web utiliza Google Analytics para analizar tendencias, administrar el sitio y recopilar info demográfica."
 
   - title: "Secreto y seguridad de los datos"
-    text: "
-      https://4GeeksAcademy.com se compromete al uso y tratamiento de los datos personales respetando su confidencialidad y utilizándolos conforme a su finalidad, así como a guardarlos aplicando medidas para evitar alteración, pérdida, tratamiento o acceso no autorizado.
+    text: "https://4GeeksAcademy.com se compromete al uso y tratamiento de los datos personales respetando su confidencialidad y utilizándolos conforme a su finalidad, así como a guardarlos aplicando medidas para evitar alteración, pérdida, tratamiento o acceso no autorizado.
 
       Esta web incluye certificado SSL, lo que asegura que tus datos viajan cifrados entre servidor y usuario.
 
@@ -179,38 +178,27 @@ sections:
 
       4Geeks Academy España S.L. garantiza que cualquier persona autorizada a procesar datos (personal, colaboradores, proveedores) mantendrá la debida confidencialidad.
 
-      Cuando se presente algún incidente de seguridad, 4Geeks Academy notificará al cliente sin demoras indebidas y proporcionará información oportuna relativa al incidente.
-      "
+      Cuando se presente algún incidente de seguridad, 4Geeks Academy notificará al cliente sin demoras indebidas y proporcionará información oportuna relativa al incidente."
 
   - title: "Exactitud y veracidad de los datos"
-    text: "
-      Como usuario, eres el único responsable de la veracidad y corrección de los datos que remitas a https://4GeeksAcademy.com, exonerando a 4Geeks Academy España S.L. de cualquier responsabilidad.
+    text: "Como usuario, eres el único responsable de la veracidad y corrección de los datos que remitas a https://4GeeksAcademy.com, exonerando a 4Geeks Academy España S.L. de cualquier responsabilidad.
 
-      Garantizas y respondes por la exactitud, vigencia y autenticidad de los datos personales facilitados y te comprometes a mantenerlos actualizados. Te comprometes a proporcionar información completa y correcta en los formularios.
-      "
+      Garantizas y respondes por la exactitud, vigencia y autenticidad de los datos personales facilitados y te comprometes a mantenerlos actualizados. Te comprometes a proporcionar información completa y correcta en los formularios."
 
   - title: "Aceptación y consentimiento"
-    text: "
-      Declaras haber sido informado de las condiciones sobre protección de datos personales, aceptando y consintiendo el tratamiento de los mismos por parte de 4Geeks Academy España S.L. en la forma y para las finalidades indicadas en esta política.
+    text: "Declaras haber sido informado de las condiciones sobre protección de datos personales, aceptando y consintiendo el tratamiento de los mismos por parte de 4Geeks Academy España S.L. en la forma y para las finalidades indicadas en esta política.
 
-      Al proporcionar tu número de teléfono y marcar las casillas correspondientes (cuando proceda), consientes recibir comunicaciones SMS según lo descrito en la sección 'Comunicaciones SMS y Consentimiento (10DLC)'
-      "
+      Al proporcionar tu número de teléfono y marcar las casillas correspondientes (cuando proceda), consientes recibir comunicaciones SMS según lo descrito en la sección 'Comunicaciones SMS y Consentimiento (10DLC)'"
 
   - title: "Revocabilidad"
-    text: "
-      El consentimiento prestado es revocable en cualquier momento comunicándolo a 4Geeks Academy España S.L. en los términos establecidos para el ejercicio de derechos ARCO/ROP. En SMS, basta responder STOP para revocar ese canal específico. La revocación no tendrá carácter retroactivo.
-      "
+    text: "El consentimiento prestado es revocable en cualquier momento comunicándolo a 4Geeks Academy España S.L. en los términos establecidos para el ejercicio de derechos ARCO/ROP. En SMS, basta responder STOP para revocar ese canal específico. La revocación no tendrá carácter retroactivo."
 
   - title: "Correos comerciales"
-    text: "
-      De acuerdo con la LSSICE, https://4GeeksAcademy.com no realiza prácticas de SPAM. No enviamos comunicaciones comerciales por vía electrónica o SMS sin haber sido previamente solicitadas o autorizadas. En cada formulario, el usuario puede dar su consentimiento expreso para recibir el boletín u ofertas.
+    text: "De acuerdo con la LSSICE, https://4GeeksAcademy.com no realiza prácticas de SPAM. No enviamos comunicaciones comerciales por vía electrónica o SMS sin haber sido previamente solicitadas o autorizadas. En cada formulario, el usuario puede dar su consentimiento expreso para recibir el boletín u ofertas.
 
-      Nos comprometemos a no enviar comunicaciones comerciales sin identificarlas debidamente.
-      "
+      Nos comprometemos a no enviar comunicaciones comerciales sin identificarlas debidamente."
 
   - title: "Cambios en esta política"
-    text: "
-      Podemos actualizar esta Política de Privacidad periódicamente. Publicaremos la versión revisada con una fecha de vigencia actualizada. El uso continuado del sitio tras los cambios implica la aceptación de la nueva política.
-      "
+    text: "Podemos actualizar esta Política de Privacidad periódicamente. Publicaremos la versión revisada con una fecha de vigencia actualizada. El uso continuado del sitio tras los cambios implica la aceptación de la nueva política."
 
 date_release: "Última modificación de nuestra política de privacidad: <span class='bold-privacy-text'>23/07/2025</span>"

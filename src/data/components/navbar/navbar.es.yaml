@@ -11,7 +11,7 @@ navbar:
         - title: "Desarrollador Full Stack"
           level: "Desde cero"
           icon: "fullstack_2"
-          paragraph: "Convierte en un programador que utiliza las tecnologias más búscadas, mentoria personalizada y un plan de estudios y career support para conseguir tu primer trabajo."
+          paragraph: "Conviértete en un programador que prioriza la IA utilizando tecnologías de vanguardia, tutoría personalizada, un plan de estudios a medida y apoyo profesional para conseguir tu primer trabajo."
           buttons:
             - text: "Ver programa"
               link: "/es/coding-bootcamps/desarrollador-full-stack"
