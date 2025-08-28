@@ -104,9 +104,14 @@ export default function Template(props) {
       >
         <Header
           hideArrowKey
-          padding={isCustombarActive === false ? null : "90px 17px 70px 17px"}
+          padding={"90px 17px 70px 17px"}
           paddingParagraph="0"
-          paddingTitle="0"
+          paddingTitle="10px 0 0 0"
+          margin="20px 0 0 0"
+          margin_tablet="10px 0 0 0"
+          margin_md="10px 0 0 0"
+          margin_xxs="0"
+          height="100%"
           textAlign_tablet="left"
           seo_title={post.frontmatter.cluster}
           title={post.frontmatter.title}

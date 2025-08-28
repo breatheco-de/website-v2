@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import dayjs from "dayjs";
-import { Colors, Button, Link, Anchor } from "../Styling";
+import { Colors, Button, Link, Anchor, PhoneText, PhoneTextDesktop } from "../Styling";
 import { Break } from "../Responsive";
 import { useScrollPosition } from "./useScrollPosition";
 
@@ -116,28 +116,13 @@ const FollowBar = ({
           </Link>
           {phone && (
             <>
-              <p
-                style={{
-                  textDecoration: "none",
-                  textAlign: "center",
-                  marginTop: "6px",
-                  fontSize: "15px",
-                }}
-              >
+              <PhoneText>
                 <a className="d-sm-none" display="inline" href={`tel:${phone}`}>
                   {phoneText}
                   {phone}
                 </a>
-              </p>
-              <p
-                style={{
-                  textDecoration: "none",
-                  textAlign: "right",
-                  marginTop: "3px",
-                  marginRight: "10px",
-                  fontSize: "15px",
-                }}
-              >
+              </PhoneText>
+              <PhoneTextDesktop>
                 <a
                   className="d-none d-sm-block"
                   display="inline"
@@ -146,7 +131,7 @@ const FollowBar = ({
                   {phoneText}
                   {phone}
                 </a>
-              </p>
+              </PhoneTextDesktop>
             </>
           )}
         </Right>

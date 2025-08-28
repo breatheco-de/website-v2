@@ -10,17 +10,90 @@ banner:
   tagline: "Thank You"
   sub_heading: ""
 content:
-  title: "Check your email! :)"
-  message: "We have received your application.  Our Geeky Advisor is going to contact you shortly.  Sit tight!
-    In the meantime, please read our blog.  It's full of important info that we are sure you will find useful. :)"
+  title: "🎉 Congratulations! You just took the first step toward your tech career!"
+  message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. One of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
+
     
-  articles_title: "Some articles that may interest you:"
+  articles_title: " "
   button: "Read our blog"
 social: 
   title: "Follow Us"
   message: "Select where you like to follow us"
   button_text: "Take me to"
-      
-      
-    
   
+components:
+  - name: free_resources
+    layout: two_column_left
+    position: 1
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/4geeksacademy.webp"
+      shadow: false
+    heading:
+      text: "💻 Explore Free Resources"
+    content:
+      text: "Start coding today! Check out exercises and tutorials on 4Geeks.com to practice your skills while you wait."
+    button:
+      text: "👉 Start Practicing"
+      path: "https://4geeks.com/"
+      background: "blue"
+      color: "white"
+
+  - name: builidng_relationships
+    layout: two_column_left
+    position: 3
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario.png"
+      shadow: false
+    heading:
+      text: "📚 Download Free Career Guides"
+    content:
+      text: "Get a taste of how we help students navigate networking, career growth, and real-world job strategies — even before day one."
+    button:
+      text: "👉 Get the Guide"
+      path: "https://storage.googleapis.com/media-breathecode/f5db5a88c24d96a753a27d5fde198a3932717b2741cde56417db76b4842d6b98"
+      background: "blue"
+      color: "white"
+
+  - name: salary_negotiation
+    layout: two_column_left
+    position: 5
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario-laptop.png"
+      shadow: false
+    heading:
+      text: "💰 Discover Salary Negotiation Strategies"
+    content:
+      text: "Learn how to negotiate your salary and get the best deal for your skills and experience."
+    button:
+      text: "👉 Get the Guide"
+      path: "https://storage.googleapis.com/media-breathecode/caf84c93e43000deb02356389ff3bf9ea1cd59e8744c5e2ab2170ace27523f7a"
+      background: "blue"
+      color: "white"
+
+  - name: job_guarantee
+    layout: two_column_left
+    position: 7
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/programs-heading.webp"
+      shadow: false
+    heading:
+      text: "🚀 Discover Our Job Guarantee"
+    content:
+      text: "See how this optional add-on gives you extra confidence while building your tech career."
+    button:
+      text: "👉 Learn More"
+      path: "https://4geeksacademy.com/us/job-guarantee"
+      background: "blue"
+      color: "white"

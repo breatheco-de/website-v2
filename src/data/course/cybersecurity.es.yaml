@@ -253,7 +253,7 @@ details:
         En la práctica entrarás de lleno con modelos de referencia, gestión de direcciones IP, protocolos de red, arquitectura de red empresarial y Virtual Box. \n 
         Dominarás herramientas como Nmap, Wireshark y Nessus para analizar y proteger redes.
       slug: "cybersecurity-fundamentals"
-      duration: "1 sem"
+      duration: "2 sem"
       step: 1
     - module_name: "Linux y Administración de Servidores"
       title: " Linux y Administración de Servidores"

@@ -108,7 +108,7 @@ follow_bar:
     text: "Start now and shape your future in technology!"
     text_mobile: "Start now and shape your future in technology!"
     # devices:   XL      LG    MD      SM    XS
-    font_size: ["25px", "25px", "25px", "20px", "18px"]
+    font_size: ["22px", "20px", "18px", "16px", "14px"]
   button:
     text: "Get More Info"
     path: "#leadform_header"

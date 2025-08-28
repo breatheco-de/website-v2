@@ -231,7 +231,7 @@ details:
         icon: "language"
 
   heading: DETALLES DEL PROGRAMA PART-TIME
-  weeks: 18
+  weeks: 20
   week_unit: "sem"
   weeks_label: "semanas"
   sub_heading: "Proyectos de la vida real y exactamente lo que buscan las empresas"
@@ -255,14 +255,14 @@ details:
       description: "Piensa como un ordenador: Controlarás el flujo de tu código, crearás algoritmos, harás bucles, usarás condicionales y una mezcla de JavaScript con HTML5 y CSS3 para lanzar tu primer sitio web interactivo."
       projects: "Construye tu clon de Instagram post, formulario con HTML5, Curriculum Online, entre otros."
       slug: "fundamentos"
-      duration: "2 sem"
+      duration: "3 sem"
       step: 2
     - module_name: "LA WEB"
       title: "Desarrollo web"
       description: "Crearás tu primera aplicación con React.js, Patrón MVC, Módulos JS, Bundling, Babel JS, el DOM, Eventos."
       projects: "Clon de Instagram Feed, Generador de cartas aleatorias,  Pruebas unitarias con Jest, Lading page con React, Traffic Light, To-do list con React, entre otros... "
       slug: "desarrollo-web"
-      duration: "6 sem"
+      duration: "7 sem"
       step: 6
     - module_name: "API'S"
       title: "Desarrollo de APIs"

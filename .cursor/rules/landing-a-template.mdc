@@ -1,6 +1,5 @@
 ---
-description: 
-globs: src/data/landing/*
+globs: src/data/landing/*,src/templates/landing_a.js
 alwaysApply: false
 ---
 # Rule: Landing A Template Structure

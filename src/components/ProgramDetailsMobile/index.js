@@ -106,18 +106,6 @@ const ProgramDetailsMobile = (props) => {
                     <Paragraph textAlign="left" margin="0 0 20px 0">
                       {item.projects}
                     </Paragraph>
-                    <Div display="flex" alignItems={`center`} margin={`10px 0`}>
-                      <Icon
-                        icon="clock"
-                        width="36px"
-                        fill={Colors.blue}
-                        stroke={Colors.blue}
-                      />
-                      <H3 margin={`0 10px`} fontWeight="700" textAlign="left">
-                        {strings[lang]["Duration"]}
-                      </H3>
-                    </Div>
-                    <Paragraph textAlign="left">{item.duration}</Paragraph>
                   </Div>
                 )}
               </Div>

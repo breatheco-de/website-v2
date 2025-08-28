@@ -276,7 +276,7 @@ details:
         Dive into reference models, IP address management, network protocols, enterprise network architecture, and Virtual Box. \n
         Master tools like Nmap, Wireshark, and Nessus to analyze and secure networks.
       slug: "cybersecurity-fundamentals"
-      duration: "1 week"
+      duration: "2 weeks"
       step: 1
     - module_name: "Linux and Server Administration"
       title: "Linux and Server Administration"

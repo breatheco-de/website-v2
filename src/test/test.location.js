@@ -60,11 +60,9 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
 
     // If the first file is undefined replace the value with an object (in this case bogota-colombia[es/us])
     if (allLocations[fileLang] === undefined) allLocations[fileLang] = {};
-    else {
-      // Replace file language inside the file yaml because the filename lang must prevail
-      doc.lang = fileLang;
-      allLocations[fileLang][fileSlug] = doc;
-    }
+    // Replace file language inside the file yaml because the filename lang must prevail
+    doc.lang = fileLang;
+    allLocations[fileLang][fileSlug] = doc;
   });
 
   const _files = files.filter(
@@ -188,11 +186,16 @@ walk(`${__dirname}/../data/location`, async (err, files) => {
         if (!meta_keys.includes(field["key"]) && field["mandatory"] === true)
           warn(`Missing prop ${field["key"]} from location on ${_path}`);
         Object.keys(allLocations["us"]).forEach((slug) => {
-          const location_fields_es =
-            allLocations["es"][slug]["yaml"][field["key"]];
-          const location_fields_us =
-            allLocations["us"][slug]["yaml"][field["key"]];
-          const path = allLocations["es"][slug].filePath;
+          const esNode = allLocations["es"][slug];
+          const usNode = allLocations["us"][slug];
+          if (!esNode || !usNode) {
+            fail(
+              `❌ ERROR: Missing location pair for slug ${slug} => es=${!!esNode}, us=${!!usNode}`
+            );
+          }
+          const location_fields_es = esNode["yaml"][field["key"]];
+          const location_fields_us = usNode["yaml"][field["key"]];
+          const path = esNode.filePath;
           if (
             !onlineSlugs.includes(slug) &&
             location_fields_es !== location_fields_us

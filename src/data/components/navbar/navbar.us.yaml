@@ -17,7 +17,7 @@ navbar:
             - text: "Full-time"
               link: "/us/coding-bootcamps/full-time-full-stack-developer"
 
-        - title: "Data Science, and ML and AI"
+        - title: "Data Science and ML with AI"
           level: " "
           icon: "machine_2"
           paragraph: "Master AI-powered data analysis with Python. Build intelligent models using cutting-edge Machine Learning and AI techniques to solve real-world problems."

@@ -18,7 +18,7 @@ navbar:
             - text: "Full-time"
               link: "/es/coding-bootcamps/full-stack-full-time"
 
-        - title: "Data Science, Machine Learning y AI"
+        - title: "Data Science y Machine Learning con IA"
           level: "Desde cero"
           icon: "machine_2"
           paragraph: "Conviértete en científico de datos y domina Python, Machine Learning y AI. Crea modelos predictivos de alto impacto."

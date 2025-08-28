@@ -1,6 +1,5 @@
 ---
-description: Centralized styling system that defines component architecture, prevents duplication, and ensures consistent styling patterns across the application. Includes guidelines for component organization, variant handling, and dependency management.
-globs: 
+globs: src/components/Styling/index.js,src/components/Styling/*
 alwaysApply: false
 ---
 # Rule: Styling Components and Structure
@@ -52,6 +51,8 @@ The following components must be imported from Styling:
 - `Toggle`
 - `Tooltip`
 - `Spinner`
+- `PhoneText`
+- `PhoneTextDesktop`
 
 Any new styling component must be added to this list after team review.
 
