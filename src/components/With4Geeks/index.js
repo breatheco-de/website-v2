@@ -85,8 +85,9 @@ const With4Geeks = ({
           maxWidth="1280px"
           display="block"
           margin="0 auto"
-          pading="0 10px 32px 10px"
+          padding="0 20px 32px 20px"
           padding_tablet="0 40px 32px 40px"
+          width="100%"
           {...headerProps}
         >
           <H2 margin_tablet="0 0 15px 0" margin_xs="0px" textAlign="center">
@@ -96,8 +97,16 @@ const With4Geeks = ({
             <Paragraph
               textAlign="center"
               color={Colors.darkGray}
-              fontSize="20px"
-              margin="16px 0 0 16px"
+              fontSize="16px"
+              fontSize_tablet="18px"
+              fontSize_md="20px"
+              margin="16px auto 0 auto"
+              margin_tablet="16px auto 0 auto"
+              margin_md="16px auto 0 auto"
+              lineHeight="1.4"
+              lineHeight_tablet="1.5"
+              width="100%"
+              maxWidth="100%"
             >
               {subtitle}
             </Paragraph>
