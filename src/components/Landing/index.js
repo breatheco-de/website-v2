@@ -841,15 +841,61 @@ export const landingSections = {
         ? data.allPageYaml.edges
         : data.allDownloadableYaml.edges;
 
-    const hiring = data.allPartnerYaml?.edges?.[0]?.node;
-    let landingHiriging = dataYml?.[0]?.node?.who_is_hiring;
+    const hiring = data.allPartnerYaml.edges[0].node;
+    let landingHiring = dataYml[0].node?.who_is_hiring;
+
+    // Lógica de priorización:
+    // 1. Si hay custom_logos, usar solo esos (ignora todo lo demás)
+    // 2. Si hay featured, usar esos con showFeatured
+    // 3. Si no hay ninguno, usar los globales del partner.yaml
+
+    const customLogos = landingHiring?.custom_logos;
+    const featuredLogos = landingHiring?.featured;
+
+    // Configuration-based approach to replace if-else logic
+    const logoConfigurations = [
+      {
+        condition: () => customLogos && customLogos.length > 0,
+        config: {
+          imagesToShow: customLogos,
+          showFeaturedLogos: false,
+          featuredImagesToShow: []
+        }
+      },
+      {
+        condition: () => featuredLogos && featuredLogos.length > 0,
+        config: {
+          imagesToShow: hiring.partners.images,
+          showFeaturedLogos: true,
+          featuredImagesToShow: featuredLogos
+        }
+      },
+      {
+        condition: () => true, // Default fallback
+        config: {
+          imagesToShow: hiring.partners.images,
+          showFeaturedLogos: true,
+          featuredImagesToShow: hiring.partners.images.filter(
+            (img) => img.featured === true
+          )
+        }
+      }
+    ];
+
+    // Find the first configuration that matches the condition
+    const selectedConfig = logoConfigurations.find(config => config.condition())?.config;
+    
+    const {
+      imagesToShow,
+      showFeaturedLogos,
+      featuredImagesToShow
+    } = selectedConfig;
 
     return (
       <Div
         id="who_is_hiring"
         key={index}
         flexDirection="column"
-        //margin="40px auto"
         margin_tablet="60px auto 60px auto"
         m_sm="0"
         p_xs="0"
@@ -858,23 +904,21 @@ export const landingSections = {
         <OurPartners
           multiLine
           variant="carousel"
-          images={hiring?.partners?.images || []}
+          images={imagesToShow}
           margin="0"
           padding="0 ​0 75px 0"
           marquee
           paddingFeatured="0 0 70px 0"
-          featuredImages={landingHiriging?.featured}
-          showFeatured
+          featuredImages={featuredImagesToShow}
+          showFeatured={showFeaturedLogos}
           withoutLine
           title={
-            landingHiriging
-              ? landingHiriging.heading
-              : hiring?.partners?.tagline
+            landingHiring ? landingHiring.heading : hiring.partners.tagline
           }
           paragraph={
-            landingHiriging
-              ? landingHiriging.sub_heading
-              : hiring?.partners?.sub_heading
+            landingHiring
+              ? landingHiring.sub_heading
+              : hiring.partners.sub_heading
           }
         />
       </Div>

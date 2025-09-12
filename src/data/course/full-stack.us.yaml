@@ -37,7 +37,7 @@ header:
   title: "FULL STACK DEVELOPMENT\nWITH AI"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "how-to-become-a-full-stack-developer-"
-  paragraph: "Our Full Stack Development with AI bootcamp gets you job-ready for a future-proof career in today's tech — with unlimited mentorship and an AI-integrated curriculum. Plus, a job guarantee."
+  paragraph: "Start a future-proof career with average starting salaries of $65K+. Train on an AI-powered full-stack curriculum, backed by unlimited mentorship, an 84% hire rate within 6 months, and our job guarantee."
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -181,7 +181,7 @@ two_columns_rigo:
     
 
 badges:
-  paragraph: "Prepare to thrive in today’s AI-fluent tech industry with hyperpersonalized, AI-powered learning, 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world’s top <a href='https://4geeksacademy.com/us/blog/coding-bootcamp'> coding bootcamps</a>, chosen by Forbes as <a href='https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition'>best bootcamp for students on a budget (2024)</a>, and rated <a hre='https://www.switchup.org/bootcamps/4geeks-academy'>4.9/5 on SwitchUp</a>. Licensed by the Florida Department of Education."
+  paragraph: "Prepare to thrive in today’s AI-fluent tech industry with hyperpersonalized, AI-powered learning, 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world’s top <a  nofollow noreferrer noopener href='https://4geeksacademy.com/us/blog/coding-bootcamp'> coding bootcamps</a>, chosen by Forbes as <a nofollow noreferrer noopener href='https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition'>best bootcamp for students on a budget (2024)</a>, and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
   actionMessage: "Let me know when dates are available"

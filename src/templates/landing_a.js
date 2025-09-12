@@ -480,7 +480,20 @@ export const query = graphql`
                 }
               }
             }
+            custom_logos {
+              name
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
+                    width: 150
+                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
+                  )
+                }
+              }
+            }
           }
+
           why_python {
             position
             heading
@@ -794,7 +807,6 @@ export const query = graphql`
               }
             }
           }
-
           why_python {
             position
             heading

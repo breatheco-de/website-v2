@@ -39,7 +39,7 @@ header:
   title: "Full Stack Developer"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "Programa"
-  paragraph: "De cero a tener tu primer trabajo como programador, aprende todo lo necesario, recibe soporte de por vida y consigue un trabajo después de 18 semanas de estudio."
+  paragraph: "Inicia una carrera a prueba de futuro con salarios iniciales promedio de $65K+. Entrena con un currículo full stack impulsado por IA, respaldado por mentoría ilimitada, una tasa de contratación del 84% en 6 meses y nuestra garantía de trabajo."
 
 button:
   syllabus_heading: "Descargar Detalles del Curso"
@@ -185,7 +185,7 @@ two_columns_info:
       text: "Encontrarás más profesores en 4Geeks que el promedio de la industria."
 
 badges:
-  paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami, según SwitchUp y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
+  paragraph: "4Geeks Academy es el lugar idóneo para <a href='/es/curso-de-programacion-desde-cero'>aprender a programar desde cero</a>. Estamos avalados y autorizados por el Departamento de Educación de Florida y hemos sido reconocidos como el mejor de Miami y de los 10 mejores cursos de programación, según Newsweek. En España, hemos recibido el Premio Excelencia Educativa durante dos años consecutivos. Y a nivel global formamos parte del top 35 de cursos de programación en el mundo."
 
 upcoming:
   no_dates_message: "Actualmente no hay próximas fechas para este programa"

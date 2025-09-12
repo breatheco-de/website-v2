@@ -4,6 +4,9 @@ import { Div, Header, GridContainer, Grid } from "../components/Sections";
 import { H2, H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
 import { Charts } from "../components/Chart";
+import Badges from "../components/Badges";
+import DraggableDiv from "../components/DraggableDiv";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BaseRender from "./_baseLayout";
 import { StyledBackgroundSection } from "../components/Styling";
 import Modal from "../components/Modal";
@@ -126,6 +129,11 @@ const Outcomes = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
   const [open, setOpen] = useState(false);
 
+  // Get badges data from the separate query
+  const badgesData = data.allBadgesYaml.edges.find(
+    ({ node }) => node.fields.lang === pageContext.lang
+  )?.node;
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -238,58 +246,204 @@ const Outcomes = ({ data, pageContext, yml }) => {
                         background: "#c4c4c4",
                       }}
                     />
-                    {section.paragraph.split("\n").map((m, i) => (
-                      <Paragraph
-                        key={i}
-                        letterSpacing="0.05em"
-                        textAlign="left"
-                        margin="10px 0"
-                      >
-                        {m}
-                      </Paragraph>
-                    ))}
-                    <GridContainer
-                      justifyContent="between"
-                      gridGap_tablet="30px"
-                      containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
-                      columns_tablet={
-                        Array.isArray(section.stats) && section.stats.length
-                      }
-                      margin="41px 0 0 0"
-                    >
-                      {section.stats.map((m, i) => {
-                        return (
-                          <Div
+                    {section.paragraph &&
+                      section.paragraph
+                        .split("\n")
+                        .map((m, i) => (
+                          <Paragraph
                             key={i}
-                            gap="0"
-                            gridColumnGap="40px"
-                            flexDirection="column"
-                            margin="0 0 38px 0"
+                            letterSpacing="0.05em"
+                            textAlign="left"
+                            margin="10px 0"
+                            fontSize="20px"
+                            dangerouslySetInnerHTML={{ __html: m }}
+                          />
+                        ))}
+                    {/* Conditionally render stats only if they exist */}
+                    {Array.isArray(section.stats) &&
+                      section.stats.length > 0 && (
+                        <GridContainer
+                          justifyContent="between"
+                          gridGap_tablet="30px"
+                          containerColumns_tablet="0fr repeat(12, 1fr) 1fr"
+                          columns_tablet={section.stats.length}
+                          margin="41px 0 0 0"
+                        >
+                          {section.stats.map((m, i) => {
+                            return (
+                              <Div
+                                key={i}
+                                gap="0"
+                                gridColumnGap="40px"
+                                flexDirection="column"
+                                margin="0 0 38px 0"
+                              >
+                                <H2
+                                  type="h2"
+                                  textAlign_tablet="left"
+                                  color={Colors.blue}
+                                  margin="0 0 10px 0"
+                                  fontSize="27px"
+                                  lineHeight="28px"
+                                >
+                                  {m.stat}
+                                </H2>
+                                <H3
+                                  type="h3"
+                                  textAlign_tablet="left"
+                                  lineHeight="28px"
+                                >
+                                  {m.content}
+                                </H3>
+                              </Div>
+                            );
+                          })}
+                        </GridContainer>
+                      )}
+                    {/* Render charts as independent component if section.charts is true */}
+                    {section.charts &&
+                      yml.charts &&
+                      Array.isArray(yml.charts.chart_list) && (
+                        <GridContainer
+                          columns_tablet="3"
+                          justifyContent="center"
+                          justifyContent_tablet="center"
+                          gridTemplateColumns_tablet="3"
+                          gridGap="40px"
+                          gridGap_tablet="60px"
+                          margin="30px 0"
+                        >
+                          {yml.charts.chart_list.map((c, k) => {
+                            return (
+                              <Div flexDirection="column" key={k}>
+                                <H4 textTransform="uppercase">{c.title}</H4>
+                                <Charts dataArray={c.data} />
+                              </Div>
+                            );
+                          })}
+                        </GridContainer>
+                      )}
+
+                    {/* Render badges as independent component if section.badges is true */}
+                    {section.badges &&
+                      badgesData &&
+                      Array.isArray(badgesData.badges) && (
+                        <Div margin="30px 0">
+                          {/* Desktop Grid Layout - Only for large screens */}
+                          <Div
+                            width="100%"
+                            background={Colors.white}
+                            padding="20px 0"
+                            margin="0"
+                            display="none"
+                            display_tablet="block"
                           >
-                            <H2
-                              type="h2"
-                              textAlign_tablet="left"
-                              color={Colors.blue}
-                              margin="0 0 10px 0"
-                              fontSize="27px"
-                              lineHeight="28px"
+                            <Div
+                              width="100%"
+                              maxWidth="800px"
+                              margin="0 auto"
+                              padding="0"
                             >
-                              {m.stat}
-                            </H2>
-                            <H3
-                              type="h3"
-                              textAlign_tablet="left"
-                              lineHeight="28px"
-                            >
-                              {m.content}
-                            </H3>
+                              <Div width="100%" style={{ overflowX: "auto" }}>
+                                <DraggableDiv gap="15px">
+                                  {badgesData.badges
+                                    .slice(0, 5)
+                                    .map((badge, index) => {
+                                      return (
+                                        <Div
+                                          key={badge.name}
+                                          width="140px"
+                                          height="100px"
+                                          background={Colors.white}
+                                          flexDirection="column"
+                                          justifyContent="center"
+                                          borderRadius="4px"
+                                          flexShrink="0"
+                                          border="1px solid #e5e5e5"
+                                        >
+                                          <GatsbyImage
+                                            style={{
+                                              height: "49px",
+                                              minWidth: "60px",
+                                              margin: "auto",
+                                              width: "100%",
+                                            }}
+                                            imgStyle={{
+                                              objectFit: "contain",
+                                            }}
+                                            loading="eager"
+                                            alt={badge.name}
+                                            draggable={false}
+                                            image={getImage(
+                                              badge.image.childImageSharp
+                                                .gatsbyImageData
+                                            )}
+                                          />
+                                        </Div>
+                                      );
+                                    })}
+                                </DraggableDiv>
+                              </Div>
+                            </Div>
                           </Div>
-                        );
-                      })}
-                    </GridContainer>
+
+                          {/* Mobile Swipable Layout */}
+                          <Div
+                            width="100%"
+                            background={Colors.white}
+                            padding="20px 0"
+                            margin="0"
+                            display="block"
+                            display_tablet="none"
+                          >
+                            <Div width="100%" style={{ overflowX: "auto" }}>
+                              <DraggableDiv gap="15px">
+                                {badgesData.badges
+                                  .slice(0, 5)
+                                  .map((badge, index) => {
+                                    return (
+                                      <Div
+                                        key={badge.name}
+                                        width="140px"
+                                        height="90px"
+                                        background={Colors.white}
+                                        flexDirection="column"
+                                        justifyContent="center"
+                                        borderRadius="4px"
+                                        flexShrink="0"
+                                        border="1px solid #e5e5e5"
+                                      >
+                                        <GatsbyImage
+                                          style={{
+                                            height: "38px",
+                                            minWidth: "45px",
+                                            margin: "auto",
+                                            width: "100%",
+                                          }}
+                                          imgStyle={{
+                                            objectFit: "contain",
+                                          }}
+                                          loading="eager"
+                                          alt={badge.name}
+                                          draggable={false}
+                                          image={getImage(
+                                            badge.image.childImageSharp
+                                              .gatsbyImageData
+                                          )}
+                                        />
+                                      </Div>
+                                    );
+                                  })}
+                              </DraggableDiv>
+                            </Div>
+                          </Div>
+                        </Div>
+                      )}
+
+                    {/* Conditionally render sub_sections only if they exist */}
                     {Array.isArray(section.sub_sections) &&
                       section.sub_sections
-                        .filter((section) => section.title !== "")
+                        .filter((subSection) => subSection.title !== "")
                         .map((m, i) => {
                           return (
                             <React.Fragment key={i}>
@@ -306,55 +460,39 @@ const Outcomes = ({ data, pageContext, yml }) => {
                                 letterSpacing="0.05em"
                                 textAlign="left"
                                 margin_md="10px 0"
+                                fontSize="18px"
                                 dangerouslySetInnerHTML={{ __html: m.content }}
                               />
                               {Array.isArray(m.image_section) &&
-                                m.image_section.map((m, i) => {
+                                m.image_section.map((imageItem, j) => {
                                   return (
-                                    <React.Fragment key={i}>
-                                      <StyledBackgroundSection
-                                        margin="30px 0"
-                                        minHeight="100px"
-                                        height="255px"
-                                        width="100%"
-                                        image={
-                                          m.image &&
-                                          m.image.childImageSharp
-                                            .gatsbyImageData
-                                        }
-                                        bgSize="contain"
-                                      />
+                                    <React.Fragment key={j}>
+                                      {/* Only render image if it exists */}
+                                      {imageItem.image && (
+                                        <Div
+                                          margin="30px 0"
+                                          minHeight="100px"
+                                          height="255px"
+                                          width="100%"
+                                          backgroundImage={`url(${imageItem.image})`}
+                                          backgroundSize="contain"
+                                          backgroundRepeat="no-repeat"
+                                          backgroundPosition="center"
+                                        />
+                                      )}
 
-                                      <Paragraph
-                                        justifyContent="center"
-                                        padding="50px 0 0"
-                                        display="none"
-                                        display_tablet="flex"
-                                        textAlign="left"
-                                      >
-                                        {m.image_paragraph}
-                                      </Paragraph>
-                                      <GridContainer
-                                        columns_tablet="3"
-                                        justifyContent="center"
-                                        justifyContent_tablet="center"
-                                        gridTemplateColumns_tablet="3"
-                                      >
-                                        {m.chart &&
-                                          yml.charts.chart_list.map((c, i) => {
-                                            return (
-                                              <Div
-                                                flexDirection="column"
-                                                key={i}
-                                              >
-                                                <Charts dataArray={c.data} />
-                                                <H4 textTransform="uppercase">
-                                                  {c.title}
-                                                </H4>
-                                              </Div>
-                                            );
-                                          })}
-                                      </GridContainer>
+                                      {/* Only render paragraph if it exists */}
+                                      {imageItem.image_paragraph && (
+                                        <Paragraph
+                                          justifyContent="center"
+                                          padding="50px 0 0"
+                                          display="none"
+                                          display_tablet="flex"
+                                          textAlign="left"
+                                        >
+                                          {imageItem.image_paragraph}
+                                        </Paragraph>
+                                      )}
                                     </React.Fragment>
                                   );
                                 })}
@@ -367,7 +505,7 @@ const Outcomes = ({ data, pageContext, yml }) => {
           </Div>
           <Div
             gridArea="1/9/1/13"
-            gridColumn_tablet="1 ​/ span 1"
+            gridColumn_tablet="1 â€‹/ span 1"
             margin="54px 0 0 0"
             display="none"
             display_md="flex"
@@ -485,6 +623,8 @@ export const query = graphql`
             title
             ref
             paragraph
+            badges
+            charts
             stats {
               stat
               content
@@ -493,18 +633,7 @@ export const query = graphql`
               title
               content
               image_section {
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 500
-                      quality: 100
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
-                  }
-                }
                 image_paragraph
-                chart
               }
             }
           }
@@ -518,6 +647,33 @@ export const query = graphql`
             button_text
             label
             motivation
+          }
+        }
+      }
+    }
+    allBadgesYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          paragraph
+          badges {
+            name
+            url
+            image {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  height: 150
+                  quality: 100
+                  placeholder: NONE
+                )
+              }
+            }
+          }
+          link_text
+          link_to
+          short_link_text
+          fields {
+            lang
           }
         }
       }

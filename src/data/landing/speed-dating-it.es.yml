@@ -1,0 +1,232 @@
+meta_info:
+  slug: speed-dating-it
+
+  # This will show on social media when shared
+  title: "Speed Dating IT Madrid: Conecta con talento tech"
+  description: "Evento para reclutadores IT. Entrevistas in situ con talento junior en Data Science, Machine Learning y Desarrollo Full-Stack."
+  image: "/images/bg/main-bg.jpg"
+  keywords: "Speed Dating IT, Reclutadores IT, Talento Tech, Data Science, Machine Learning, Full-Stack, 4Geeks Academy"
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  template: "landing_a" # <--- choose your landing template
+  redirects: [] # <--- URL redirections to avoid 404 errors
+
+  # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["front-end-development"]
+  utm_location: ["madrid-spain"]
+  automation: hiring-partner # comma separated, "soft" is the default value
+  tag: hiring_partner # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Solicitar invitación"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Solicita tu invitación gratuita"
+  motivation: "Speed Dating IT para reclutadores: conecta con talento tech junior en Madrid."
+  button_label: Confirma tu asistencia
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  imageSide: "right"
+  image: "../../../static/images/landing/apply.png"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#ffffff"
+  tagline: Speed Dating IT
+  sub_heading: "¿Eres reclutador IT? Conoce al mejor talento tech para tu empresa. Enfocado en perfiles de Data Science & Machine Learning y Desarrollo de Software Full-Stack."
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  badge: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+  image_filter: brightness(0.3)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
+  bullets:
+    - Conocer a talentosos profesionales IT y realizar entrevistas in situ.
+    - Fortalecer vuestro employer branding.
+    - Hacer networking.
+    - Más de 500 empresas nacionales e internacionales contratan a nuestros graduados. ¡Queremos que seas una de ellas!
+
+short_badges:
+  - name: "Premios Excelencia Educativa"
+    url: ""
+    image: "../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejor centro de Coding Bootcamp"
+  - name: "Premio Nacional"
+    url: ""
+    image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
+    alt: "Premio Nacional de Tecnología 2023"
+  - name: "Course Report"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best coding bootcamp Course Report 2024"
+  - name: "European Excellence Education"
+    url: ""
+    image: "../../../static/images/badges/european_excellence_education_black.png"
+    alt: "European Excellence Education"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "¡Últimas invitaciones, no te quedes fuera!"
+    text_mobile: "¡Últimas invitaciones!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "25px", "20px", "18px"]
+  button:
+    text: "¡Quiero asistir!"
+    path: "#leadform_header"
+  phone:
+    text: ""
+    number: " "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+who_is_hiring:
+  position: 10
+  limit: 4
+  heading: "Más de 500 empresas contratan a nuestros graduados"
+  sub_heading: "Trabajamos con empresas nacionales e internacionales que apuestan por talento junior."
+  # LA PROPIEDAD CUSTOM_LOGOS ES PARA AGREGAR LOGOS PERSONALIZADOS, SI NO SE AGREGA, SE USAN LOS LOGOS POR DEFECTO. SI SE AGREGA, SE USAN SOLO ESOS LOGOS.
+  custom_logos:
+    - name: "Sanitas"
+      image: "../../../static/images/partner/sanitas.webp"
+    - name: "Vargroup"
+      image: "../../../static/images/partner/vargroup.webp"
+    - name: "Expedia Group"
+      image: "../../../static/images/partner/expedia-group.webp"
+    - name: "Get Pits"
+      image: "../../../static/images/partner/get-pits.webp"
+    - name: "Pawsitive App"
+      image: "../../../static/images/partner/pawsitive-app.webp"
+    - name: "Chark"
+      image: "../../../static/images/partner/chark.webp"
+    - name: "Miurba"
+      image: "../../../static/images/partner/miurba.webp"
+    - name: "Intellio"
+      image: "../../../static/images/partner/intellio.webp"
+    - name: "Lingua VR"
+      image: "../../../static/images/partner/lingua-vr.webp"
+    - name: "Dormus"
+      image: "../../../static/images/partner/dormus.webp"
+    - name: "Nexi Health"
+      image: "../../../static/images/partner/nexi-health.webp"
+    - name: "Tenth Revolution"
+      image: "../../../static/images/partner/tenth-revolution.webp"
+    - name: "Afactory"
+      image: "../../../static/images/partner/afactory.webp"
+    - name: "Grafton Recruitment"
+      image: "../../../static/images/partner/grafton-recruitment.webp"
+    - name: "MTP"
+      image: "../../../static/images/partner/mtp.webp"
+    - name: "Naimitech"
+      image: "../../../static/images/partner/naimitech.webp"
+    - name: "Bo Growth"
+      image: "../../../static/images/partner/bo-growth.webp"
+    - name: "Mixreal AI"
+      image: "../../../static/images/partner/mixreal-ai.webp"
+
+badges:
+  position: 3
+  heading: "4Geeks Academy España ha ganado más de 20 premios desde 2020, siendo reconocido una y otra vez como el Mejor Coding Bootcamp de España."
+
+components:
+  - name: sobre-el-evento
+    position: 2
+    layout: two_column_left
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "cover", "min-height": "300px"}'
+      src: "/images/landing/PeopleStudying.jpeg"
+      shadow: true
+    heading:
+      text:
+        "Sobre el Evento"
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    sub_heading:
+      text: |
+        🌐 Dónde: <a style={{ marginLeft: "5px" }} target="_blank" rel="noopener noreferrer nofollow" className="decorated" href="/es/privacidad">La Nave, Madrid</a> <br>  
+        📅 Cuándo: 9 de Octubre <br>
+        🕥 Duración: de 10:00 a 15:00 <br>
+      font_size: ["20px"]
+    bullets:
+      items:
+        - text: "No habrá stand; habrá una mesa cómoda para realizar las entrevistas."
+          icon: "check"
+          icon_color: "#25BF6C"
+        - text: "Sugerimos llevar un roll-up y el merchandising que queráis."
+          icon: "check"
+          icon_color: "#25BF6C"
+        - text: "Con 1 o 2 personas de vuestro equipo de talento es suficiente."
+          icon: "check"
+          icon_color: "#25BF6C"
+        - text: "Nuestros graduados pueden hacer prácticas o incorporarse en posiciones entry level."
+          icon: "check"
+          icon_color: "#25BF6C"
+        - text: "Nos encantaría que preparéis una breve presentación de la empresa de 5 minutos."
+          icon: "check"
+          icon_color: "#25BF6C"
+    button:
+      text: "¡Confirmar asistencia!"
+      path: "#leadform_bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue"
+
+  - name: perfiles-tecnologicos
+    position: 4
+    background: veryLightBlue2
+    layout: iconogram
+    swipable: true
+    heading:
+      text: Perfiles disponibles
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: Conoce los perfiles más demandados que podrás entrevistar durante el evento.
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "90%" }'
+    icons:
+      - icon: cibersecurity
+        title: Ciberseguridad
+        content: "Profesionales junior preparados para proteger sistemas y redes en entornos Windows y Linux."
+      - icon: machine
+        title: Data Science & Machine Learning
+        content: "Talento formado para analizar datos, construir modelos y generar valor con ML y Python."
+      - icon: fullstack
+        title: Full-Stack Developer
+        content: "Desarrolladores capaces de crear aplicaciones web completas con frontend y backend."
+
+  - name: llamada-a-la-accion
+    position: 5
+    layout: two_column_left
+    background: "lightYellow"
+    image:
+      style: '{ "backgroundSize": "cover", "min-height": "300px"}'
+      src: "/images/4GeeksTeamES.jpeg"
+      shadow: true
+    heading:
+      text:
+        "¡No te quedes fuera!"
+      font_size: ["50px", "50px", "50px", "50px", "50px"]
+    content:
+      text: "Nuestros Geeks están deseando conocerte. Aprovecha esta oportunidad para entrevistar talento tech junior en un mismo lugar."
+      font_size: ["16px"]
+    button:
+      text: "¡Confirmar asistencia!"
+      path: "#leadform_bottom"
+      color: "white"
+      background: "black"
+      hover: "lightBlue" 

@@ -185,10 +185,6 @@ redirects:
     #redirectInBrowser: true
     isPermanent: true # if permanent google will erase the original url from its results 
 
-  - fromPath: "/us/outcomes"
-    toPath: "/us/career-growth/outcomes-report-2024"
-    #redirectInBrowser: true
-    isPermanent: true # if permanent google will erase the original url from its results 
 
   - fromPath: "/us/landing/dallas-scholarship"
     toPath: "/us/landing/texas-scholarship"
