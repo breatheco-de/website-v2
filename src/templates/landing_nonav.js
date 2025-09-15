@@ -609,15 +609,7 @@ export const query = graphql`
             tagline_color
             sub_heading
             image_filter
-            partner_logo_url {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  height: 70
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
+            partner_logo_url
             background_image {
               childImageSharp {
                 gatsbyImageData(

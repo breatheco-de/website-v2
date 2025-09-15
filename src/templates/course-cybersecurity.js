@@ -186,7 +186,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />

@@ -1,4 +1,5 @@
 ---
+globs: src/components/**
 alwaysApply: false
 ---
 # Rule: Component Consistency and Scalability

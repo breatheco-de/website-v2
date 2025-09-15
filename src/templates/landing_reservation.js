@@ -670,15 +670,7 @@ export const query = graphql`
             }
             sub_heading
             image_filter
-            partner_logo_url {
-              childImageSharp {
-                gatsbyImageData(
-                  layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                  width: 500
-                  placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                )
-              }
-            }
+            partner_logo_url
             background_image {
               childImageSharp {
                 gatsbyImageData(

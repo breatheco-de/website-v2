@@ -102,36 +102,72 @@ const LandingHeader = (props) => {
             gridColumn_md="1 / 8"
             gridColumn_tablet="1 / 8"
           >
-            {yml.header_data.partner_logo_url && (
-              <>
-                <Div
-                  width="auto"
-                  maxHeight="150px"
-                  flexDirection_tablet="column"
-                  height="auto"
-                  padding="0 0 25px 0"
-                >
-                  <GatsbyImage
-                    loading="eager"
-                    imgStyle={{ objectFit: "contain", objectPosition: "left" }}
-                    image={getImage(
-                      yml.header_data.partner_logo_url.childImageSharp
-                        .gatsbyImageData
-                    )}
-                    alt="4Geeks Logo"
-                  />
-                </Div>
+            {yml.header_data.partner_logo_url &&
+              (() => {
+                const logo = yml.header_data.partner_logo_url;
+                const hasGatsbyImage =
+                  typeof logo === "object" &&
+                  logo?.childImageSharp?.gatsbyImageData;
 
-                <Div
-                  display="none"
-                  display_tablet="flex"
-                  background="#FFFFFF"
-                  width="calc(50% - 30px)"
-                  height="2px"
-                  margin="7px 0"
-                />
-              </>
-            )}
+                const normalizeStaticPath = (src) => {
+                  if (typeof src !== "string") return null;
+                  if (src.startsWith("http")) return src;
+                  const staticIdx = src.indexOf("/static/");
+                  if (staticIdx !== -1)
+                    return src.substring(staticIdx + "/static".length);
+                  return src;
+                };
+
+                const normalizedSrc = !hasGatsbyImage
+                  ? normalizeStaticPath(logo)
+                  : null;
+
+                return (
+                  <>
+                    <Div
+                      width="auto"
+                      maxHeight="150px"
+                      flexDirection_tablet="column"
+                      height="auto"
+                      padding="0 0 25px 0"
+                    >
+                      {hasGatsbyImage ? (
+                        <GatsbyImage
+                          loading="eager"
+                          imgStyle={{
+                            objectFit: "contain",
+                            objectPosition: "left",
+                          }}
+                          image={getImage(logo.childImageSharp.gatsbyImageData)}
+                          alt="Partner logo"
+                        />
+                      ) : (
+                        normalizedSrc && (
+                          <img
+                            src={normalizedSrc}
+                            alt="Partner logo"
+                            style={{
+                              maxHeight: "150px",
+                              width: "auto",
+                              objectFit: "contain",
+                            }}
+                            loading="eager"
+                          />
+                        )
+                      )}
+                    </Div>
+
+                    <Div
+                      display="none"
+                      display_tablet="flex"
+                      background="#FFFFFF"
+                      width="calc(50% - 30px)"
+                      height="2px"
+                      margin="7px 0"
+                    />
+                  </>
+                );
+              })()}
             <H1
               zIndex="1"
               type="h1"
