@@ -3,6 +3,10 @@ newsletter:
   paragraph: "The developer community in your inbox! Stay up to date on discounts, promotions, events and announcements"
   button_text: "SIGN UP"
   thankyou: "Amazing! You have successfully joined, stay tuned for upcoming information soon 😁"
+  privacy_checkbox_prefix: "I agree to the"
+  privacy_checkbox_link: "Privacy Policy"
+  privacy_required: "You must agree to the Privacy Policy to subscribe"
+  form_errors: "There are some errors in your form"
 
 footer:
   - column_one:

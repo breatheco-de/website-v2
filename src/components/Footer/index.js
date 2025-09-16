@@ -55,6 +55,7 @@ const Footer = ({ yml }) => {
   const [formData, setVal] = useState({
     email: { value: "", valid: false },
     consent: { value: true, valid: true },
+    privacyPolicy: { value: false, valid: false },
   });
 
   const captchaChange = () => {
@@ -178,7 +179,7 @@ const Footer = ({ yml }) => {
               >
                 {yml.newsletter.heading}
               </H4>
-              <Div justifyContent="center" width="100%">
+              <Div justifyContent="center" width="100%" flexDirection="column">
                 <Form
                   onSubmit={async (e) => {
                     e.preventDefault();
@@ -188,7 +189,12 @@ const Footer = ({ yml }) => {
                     if (!formIsValid(formData)) {
                       setFormStatus({
                         status: "error",
-                        msg: "There are some errors in your form",
+                        msg: yml.newsletter.form_errors,
+                      });
+                    } else if (!formData.privacyPolicy.valid) {
+                      setFormStatus({
+                        status: "error",
+                        msg: yml.newsletter.privacy_required,
                       });
                     } else {
                       setFormStatus({ status: "loading", msg: "Loading..." });
@@ -241,7 +247,6 @@ const Footer = ({ yml }) => {
                     errorMsg="Please specify a valid email"
                     required
                   />
-                  {/* <button type="submit">{formStatus.status === "loading" ? "Loading..." : "text"}</button> */}
                   <Button
                     height="40px"
                     margin="0 0 0 10px"
@@ -269,6 +274,78 @@ const Footer = ({ yml }) => {
                     )}
                   </Button>
                 </Form>
+
+                {/* Privacy Policy Checkbox - Outside the form to avoid flex layout issues */}
+                <Div
+                  flexDirection="row"
+                  alignItems="center"
+                  margin="10px 0 0 0"
+                  width="100%"
+                >
+                  <input
+                    type="checkbox"
+                    id="privacy-policy"
+                    checked={formData.privacyPolicy.value}
+                    onChange={(e) => {
+                      const isChecked = e.target.checked;
+                      setVal({
+                        ...formData,
+                        privacyPolicy: { value: isChecked, valid: isChecked },
+                      });
+                      if (formStatus.status === "error") {
+                        setFormStatus({ status: "idle", msg: "Request" });
+                      }
+                    }}
+                    style={{
+                      marginRight: "8px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <label
+                    htmlFor="privacy-policy"
+                    style={{
+                      fontSize: "12px",
+                      color: Colors.darkGray,
+                      cursor: "pointer",
+                      lineHeight: "16px",
+                      margin: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      fontWeight: "400",
+                    }}
+                  >
+                    <span>{yml.newsletter.privacy_checkbox_prefix} </span>
+                    <Link
+                      to={
+                        yml.fields?.lang === "es"
+                          ? "/es/privacidad"
+                          : "/us/privacy-policy"
+                      }
+                      style={{
+                        color: Colors.darkGray,
+                        textDecoration: "underline",
+                        marginLeft: "2px",
+                        fontWeight: "400",
+                      }}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {yml.newsletter.privacy_checkbox_link}
+                    </Link>
+                  </label>
+                </Div>
+
+                {formData.privacyPolicy.valid === false &&
+                  formStatus.status === "error" && (
+                    <Div
+                      fontSize="12px"
+                      color="#e74c3c"
+                      margin="5px 0 0 0"
+                      textAlign="left"
+                    >
+                      {yml.newsletter.privacy_required}
+                    </Div>
+                  )}
               </Div>
               <Div width="fit-content" margin="10px auto 0 auto">
                 <ReCAPTCHA

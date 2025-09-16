@@ -3,6 +3,10 @@ newsletter:
   paragraph: "¡La comunidad de desarrolladores en tu buzón de correo! Eventos, Descuentos, Becas, Promociones y Anuncios."
   button_text: "SUSCRÍBETE"
   thankyou: "¡Excelente! Te haz suscrito con éxito, está pendiente que pronto haremos nuevos anuncios 😁"
+  privacy_checkbox_prefix: "Acepto la"
+  privacy_checkbox_link: "Política de Privacidad"
+  privacy_required: "Debes aceptar la Política de Privacidad para suscribirte"
+  form_errors: "Hay algunos errores en tu formulario"
 
 footer:
   - column_one:

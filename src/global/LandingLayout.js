@@ -47,6 +47,10 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
               paragraph
               button_text
               thankyou
+              privacy_checkbox_prefix
+              privacy_checkbox_link
+              privacy_required
+              form_errors
             }
             footer {
               heading

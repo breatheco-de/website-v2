@@ -3,122 +3,150 @@
 
 meta_info:
   slug: outcomes
-  title: "Outcomes Report"
+  title: "Proven Outcomes That Launch Tech Careers"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "Explore 4Geeks Academy’s Academy Outcomes Report for real success stories. See how our students are landing great jobs in tech after graduation."
   image: null
   keywords: ""
   redirects: []
 
-seo_title: "Academy Outcomes Report"
+seo_title: "4Geeks Academy Outcomes Report"
 header:
-  title: "4Geeks Academy Outcomes Report"
-  paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
-  image: ""
-  image_alt: "4Geeks Academy Outcomes Report"
+  title: "Proven Outcomes That Launch Tech Careers"
+  paragraph: "At 4Geeks, success isn’t a promise — it’s a track record. Our students launch successful tech careers across AI-powered coding, data science, and cybersecurity, and the numbers prove it. Read on to see the details: We keep our reporting transparent, regularly publishing verified placement and salary data across the U.S., Latin America, and Europe."
+  image: " "
+  image_alt: "4Geeks Academy Proven Outcomes Report"
 sections:
-  - title: "Our Statement"
-    ref: "our_statement"
+  - title: "🌎 The Global Picture"
+    ref: "global_picture"
     paragraph: |
-        The Coding Bootcamp industry has been growing tremendously in the last few years. Big cities are gathering the majority of the numbers, and also new tech hubs (such as Miami) are rising
-        the occasion and growing to meet the challenge.
-
-        4Geeks Academy is Licensed by the Florida Department of Education; we also have a long lasting business relationship with Miami Dade College, and we have been awarded and
-        recognized many times for our Syllabus, methodologies and outcomes. 
-
-        Since 2017 we have been growing really fast. We have graduated over 700 students across 6 different campus and more than 15 on going programs.
-    stats: 
-      - stat: "+6000 graduates"
-        content: "Graduates"
-      - stat: "2 Languages: Eng and Esp"
-        content: "Syllabus and Programs"
-      - stat: "More than 10 locations"
-        content: "Miami, Orlando, Boca, Houston, Chicago, Atlanta, Toronto, Madrid, Santiago de Chile, Caracas, Bogotá, México, Costa Rica, Uruguay and more to come"
+        Your career shouldn’t depend on one year or one market trend. At 4Geeks, we’ve helped thousands of graduates launch successful tech careers worldwide. Even in today’s shifting markets our bootcamps prove their effectiveness.
     sub_sections:
-      - title: ""
-        content: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better." 
-        image_section:
-          - image: 
-            image_paragraph: ""
-            
-  - title: "Student Facts"
-    ref: "student_facts"
-    paragraph: |
-      Here are the results of 4GA operations (excluding programs launched together with Miami Dade College) from March 202 to March 2022.
-      The programs included are the Full-Stack Software Development Program taught through Part-time and Full-Time methodologies.
-    stats: 
-      - stat: "325"
+      - title: "U.S. OUTCOMES"
         content: |
-          Students considered for
-          the purpose of this Report
-      - stat: "90%"
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>U.S. (2022 Benchmark): 84% hired | +55% salary increase</li>
+            <li class='li-outcomes-link'>(2024): A slower market year — average hire took 141 days.</li>
+            <li class='li-outcomes-link'>(2025 Mid-Year): Rebound in full swing — 86% hired | +71% salary increase | average hire in just 93 days.</li>
+          </ul>
+      - title: "LATAM OUTCOMES"
         content: |
-          Our students choose Part-time
-          Programs. Ony 10% pursue a
-          Full-Time program.
-    sub_sections:
-      - title: "PART - TIME"
-        content: "We were founded under a PT vision and we keep showing our main strength with Part- time Education; the new way of learning and achieving (upskill) a new career." 
-        image_section:
-          - image: 
-            image_paragraph: ""
-      - title: "Quantity of students"
-        content: "This report states the results for the last 24 months of operation in the US Campus. 200 students considered" 
-        image_section:
-          # - image: 
-          - image: "../../../static/images/outcomes/outcomes.png"
-            image_paragraph: "There are many things to know about our students. Where they come from, their age, gender, etc. Here are some of them."
-            chart: true
-  - title: "Job Placement"
-    ref: "job_placement"
-    paragraph: "Our students normally need around 100 days after graduation in order to land a job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days."
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>(2024): 86% hired | +233% salary increase | 111 days to hire</li>
+            <li class='li-outcomes-link'>(2025 Mid-Year): Faster placements (91 days) | +282% salary increase.</li>
+          </ul>
+      - title: "SPAIN OUTCOMES"
+        content: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>(2024): 85% of job-seekers hired | +30% salary increase | 128 days to hire</li>
+            <li class='li-outcomes-link'>(2025 Mid-Year): Market cooled, but grads still hired in 92 days on average.</li>
+          </ul>
+      - title: "📌 Takeaway:"
+        content: "Even when markets tighten, 4Geeks grads keep getting hired. And when conditions improve, they get hired faster and see higher salary lifts."
+
+  - title: "📊 Outcomes by the Numbers"
+    ref: "outcomes_numbers"
+    paragraph: " "
     stats: 
       - stat: "84%"
-        content: "Job Placement Ratio considering those with more than 90 days since graduation"
-      - stat: "11%"
-        content: "Students that have decided to drop out before graduating."
+        content: "of U.S. graduates hired within 6 months"
+      - stat: "+55%"
+        content: "average U.S. salary increase (benchmark)"
+      - stat: "+233%"
+        content: "average salary increase in LATAM"
+      - stat: "85%"
+        content: "placement rate in Spain"
+      - stat: "3-6 months"
+        content: "average time to get hired in 2025 across all markets"
+  
+  
+  - title: "🎓 Our Student Body at a Glance"
+    ref: "student_body"
+    paragraph: "These charts show the distribution of our students across different age groups, gender, and nationalities. Our community is diverse and global, with students from various backgrounds and regions."
+    charts: true
+
+  - title: "🚀 Why Students Get Results with Us"
+    ref: "why_results"
+    paragraph: |
+      We don’t just teach skills — we make sure you can turn them into a career. <br>
+      Every 4Geeks student gets:
     sub_sections:
-      - title: " Info to consider"
-        content: "In order to publish the referred data and information, we have considered the following facts:
+      - title: "GeekFORCE Career Support (for life):"
+        content: "Unlimited 1:1 career mentorship, interviews training, resume/portfolio coaching, and expert job search strategies."
+      - title: "GeekPAL Mentorship (for life):"
+        content: "Unlimited coding help from real human mentors for life"
+      - title: "AI-Powered Support:"
+        content: "24/7 personalized coding feedback and career development tools"
+      - title: "5,000+ Hiring Partners:"
+        content: "A global network of companies that trust and hire 4Geeks graduates"
+
+  - title: "🏆 Recognized, Rated, and Recommended"
+    ref: "recognition"
+    paragraph: |
           <ul class='ul-outcomes'>
-            <li class='li-outcomes-link' > Part-time programs are considered: other Bootcamps only consider Full-Time programs.</li>
-            <li class='li-outcomes-link' > Our Placement Ratio considers only students actually looking for a job and completing the career support process at 4GA.</li>
-            <li class='li-outcomes-link' > We have considered In-Person Students. Remote programs were launched due to Covid-19, and were not considered in this report because those cohorts were still open by the time this report was published.</li>
-          </ul>" 
-        image_section:
-          - image: 
-            image_paragraph: "You should plan to spend -at least- a 100 days after graduation to get your first Job. In order to land a Job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days."
-            
-  - title: ""
-    ref: ""
-    paragraph: ""
+            <li class='li-outcomes-link'>Named <strong style="font-weight: 800;">Top 5 Coding Bootcamp</strong> by Forbes</li>
+            <li class='li-outcomes-link'>Rated <strong style="font-weight: 800;">4.9/5</strong> on SwitchUp, Course Report, and Career Karma</li>
+            <li class='li-outcomes-link'>Licensed by the Florida Department of Education</li>
+            <li class='li-outcomes-link'>Trusted by students in 20+ countries</li>
+          </ul>
+    badges: true
+
+
+  - title: "💡 Making Tech Careers Accessible"
+    ref: "accessibility"
+    paragraph: "Tech careers should be open to everyone. That's why we offer:"
     stats: 
-      - stat: "84 Days"
-        content: "The average amount of time that our students needed to get their first job"
-      - stat: "$48K"
-        content: "Average income of 4GA Graduates"
-      - stat: "24% Salary Increase"
-        content: "After taking the program at 4Geeks Academy."
+      - stat: "Affordable Tuition"
+        content: "Lowest among top-rated bootcamps (recognized by Forbes as Best Bootcamp for Students on a Budget)."
+      - stat: "Flexible Financing"
+        content: "Options starting below $299/month, plus affordable loans and income-based payment plans."
+      - stat: "Full and Partial Scholarships"
+        content: "Location-based options thanks to important institutional partnerships and government initiatives."
     sub_sections:
-      - title: "HOW TO FIND A JOB"
-        content: "There are a few recommendations that we make in order to speed up the process:
+      - title: "FINANCING OPTIONS"
+        content: |
+          <p>We believe financial barriers shouldn't prevent anyone from accessing quality tech education. Our flexible payment plans make career transformation possible for everyone.</p>
+          <br>
+          <p>👉 <a target='_blank' nofollow noreferrer noopener href='/us/financials'>See Financing Options</a></p>
+      
+
+  - title: "✅ Extra Confidence: The Job Guarantee"
+    ref: "job_guarantee"
+    paragraph: "We know our bootcamps deliver results and we believe in your potential. That's why we offer an optional <strong style='font-weight: 800;'>Job Guarantee</strong>: Get hired within 9 months of graduation, or we'll refund 100% of your tuition."
+    sub_sections:
+      - title: "The requirements are simple:"
+        content: |
           <ul class='ul-outcomes'>
-            <li class='li-outcomes-link' > Spend as much time as you can with our mentors, or with Developer friends, or with people who know about coding and are willing to help you out.</li>
-            <li class='li-outcomes-link' > Keep practicing, there is no magical touch. If you put in the time, you will find a job.</li>
-            <li class='li-outcomes-link' > Get into internships even if they don't pay you well. If you can spend at least 3 months working for someone or joining an internship, do it.</li>
-            <li class='li-outcomes-link' > Your first Job is the most important part of your Application Process. Everything will be different after you land your first Job;</li>
-          </ul>" 
+            <li class='li-outcomes-link'>Enroll with the Job Guarantee</li>
+            <li class='li-outcomes-link'>Start the program and complete assignments</li>
+            <li class='li-outcomes-link'>Have good attendance and finish your final project</li>
+            <li class='li-outcomes-link'>Participate fully in GeekFORCE career support</li>
+          </ul>
+          <br>
+          <br>
+          <p>Follow these simple steps, and if you don't land a job, you'll receive 100% of your tuition back. We're that confident in our program's effectiveness.</p>
+          <br>
+          <br>
+          <p>👉 <a target='_blank' nofollow noreferrer noopener href='/us/job-guarantee'>Learn more about the Job Guarantee</a></p>
         image_section:
           - image: 
-            image_paragraph: "You should plan to spend -at least- a 100 days after graduation to get your first Job. In order to land a Job in the field. We have had students landing a job even before finishing the program, or within the next 15 days from Pitch Day. The average is 94 days."
+            image_paragraph: ""
+
+  - title: "🎯 The Bottom Line"
+    ref: "bottom_line"
+    paragraph: | 
+      Whether in the U.S., LATAM, or Europe, 4Geeks graduates consistently land jobs, raise salaries, and build lasting careers. <br>
+      We've proven that our students get hired and thrive in their careers. Ready to see your own success story? <br>
+      👉 <a target='_blank' nofollow noreferrer noopener href='/us/apply'>Apply now</a>
+
             
 charts:
   chart_list:
     ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
     ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
-    - title: "ages"
+    - title: "age"
       data:
-        - [Task, Ages]
+        - [Task, Age]
         - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
         - [22-25, "30"]
         - [33-42, "26"]
@@ -127,9 +155,9 @@ charts:
         - [Task, Gender]
         - [Female, "24"]
         - [Male, "76"]
-    - title: "nationality"
+    - title: "region"
       data:
-        - [Task, Nationality]
+        - [Task, Region]
         - [North America, "60"]
         - [Asia, "1"]
         - [Europe, "25"]
@@ -137,5 +165,5 @@ charts:
         
 download:
   button_text: "Download Report"
-  label: "Get result"
+  label: "Get Results"
   motivation: "In 2 min. You will receive the outcomes in your mailbox"

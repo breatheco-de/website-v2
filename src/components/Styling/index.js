@@ -816,3 +816,73 @@ export const OfferTag = styled.div`
     right: 45px;
   }
 `;
+
+// Chart Components
+export const ChartWrapper = styled.div`
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+
+  @media ${Break.sm} {
+    padding: 0;
+  }
+`;
+
+export const ChartContainer = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+export const FloatingLabels = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+`;
+
+export const FloatingLabel = styled.div`
+  position: absolute;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid ${Colors.lightGray};
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: ${Colors.grayBrown};
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+  transform: translate(-50%, -50%);
+
+  /* Position based on angle calculation */
+  ${(props) => {
+    const x = 50 + 30 * Math.cos(props.angle);
+    const y = 50 + 30 * Math.sin(props.angle);
+    return css`
+      left: ${x}%;
+      top: ${y}%;
+    `;
+  }}
+
+  @media ${Break.sm} {
+    padding: 3px 6px;
+    font-size: 10px;
+
+    /* Adjust position for mobile */
+    ${(props) => {
+      const x = 50 + 35 * Math.cos(props.angle);
+      const y = 50 + 35 * Math.sin(props.angle);
+      return css`
+        left: ${x}%;
+        top: ${y}%;
+      `;
+    }}
+  }
+`;

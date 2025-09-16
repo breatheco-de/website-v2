@@ -3,85 +3,161 @@
 
 meta_info:
   slug: resultados
-  title: "Informe de Resultados"
+  title: "Resultados Comprobados que Impulsan Carreras Tech"
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
-  description: "Resultados, logros y lo que consideramos que debe mejorarse. Nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
+  description: "Explora el Informe de Resultados de 4Geeks Academy con historias reales de éxito. Descubre cómo nuestros estudiantes consiguen trabajos tech."
   image: null
   keywords: ""
   redirects: []
 
 seo_title: "Informe de Resultados"
 header:
-  title: "4Geeks Informe de resultados de la Academia"
-  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar."
-  image: 
-  image_alt: "4Geeks Informe de resultados de la Academia"
+  title: "Resultados Comprobados que Impulsan Carreras Tech"
+  paragraph: "En 4Geeks, el éxito no es una promesa — es un historial comprobado. Nuestros estudiantes lanzan carreras tech exitosas en programación impulsada por IA, ciencia de datos y ciberseguridad, y los números lo demuestran. Sigue leyendo para ver los detalles: Mantenemos nuestra información transparente, publicando regularmente datos verificados de colocación y salarios en EE. UU., América Latina y Europa."
+  image: " "
+  image_alt: "Informe de Resultados de 4Geeks Academy"
 sections:
-  - title: "Nuestra Declaración"
-    ref: "our_statement"
-    paragraph: "La industria de los Bootcamp de codificación ha crecido enormemente en los últimos años. Las grandes ciudades están reuniendo la mayoría de los números, y también están aumentando los nuevos centros tecnológicos (como Miami).
-      la ocasión y creciendo para afrontar el desafío.
-
-      4Geeks Academy está autorizada por el Departamento de Educación de Florida; también tenemos una relación comercial duradera con Miami Dade College, y hemos sido galardonados y
-      reconocidos muchas veces por nuestro plan de estudios, metodologías y resultados.
-
-      Desde 2017 hemos estado creciendo muy rápido. Hemos graduado a más de 2300 estudiantes en 6 campus diferentes y más de 15 programas en curso."
-
-    stats: 
-      - stat: "+6000"
-        content: "Graduados"
-      - stat: "2 Idiomas"
-        content: "Syllabus y Programas"
-      - stat: "+ 10 Ciudades"
-        content: "Miami, Orlando, Boca, Houston, Chicago, Atlanta, Toronto, Madrid, Santiago de Chile, Caracas, Bogotá, México, Costa Rica, Uruguay y más por venir"
+  - title: "🌎 El Panorama Global"
+    ref: "global_picture"
+    paragraph: |
+      Tu carrera no debería depender de un año o una tendencia del mercado. En 4Geeks, hemos ayudado a miles de graduados a lanzar carreras tech exitosas en todo el mundo. Incluso en los mercados cambiantes de hoy, nuestros bootcamps demuestran su efectividad.
     sub_sections:
-      - title: ""
-        content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
-        image_section:
-          # - image: 
-          - image: "../../../static/images/outcomes/outcomes.png"
-            image_paragraph: "test"
-  - title: "Datos de los Estudiantes"
-    ref: "student_facts"
-    paragraph: "Estos son los resultados de las operaciones 4GA (excluidos los programas lanzados junto con Miami Dade College) desde marzo de 2018 hasta marzo de 2020.
+      - title: "RESULTADOS EN EE. UU."
+        content: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>EE. UU. (Referencia 2022): 84% contratados | +55% aumento salarial</li>
+            <li class='li-outcomes-link'>(2024): Un año de mercado más lento — la contratación promedio tomó 141 días.</li>
+            <li class='li-outcomes-link'>(Mediados de 2025): Repunte en pleno apogeo — 86% contratados | +71% aumento salarial | contratación promedio en solo 93 días.</li>
+          </ul>
+      - title: "RESULTADOS EN LATAM"
+        content: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>(2024): 86% contratados | +233% aumento salarial | 111 días para contratar</li>
+            <li class='li-outcomes-link'>(Mediados de 2025): Contrataciones más rápidas (91 días) | +282% aumento salarial.</li>
+          </ul>
+      - title: "RESULTADOS EN ESPAÑA"
+        content: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>(2024): 85% de los buscadores de empleo contratados | +30% aumento salarial | 128 días para contratar</li>
+            <li class='li-outcomes-link'>(Mediados de 2025): Mercado más frío, pero los graduados siguen siendo contratados en un promedio de 92 días.</li>
+          </ul>
+      - title: "📌 Conclusión:"
+        content: "Incluso cuando los mercados se contraen, los graduados de 4Geeks siguen siendo contratados. Y cuando las condiciones mejoran, son contratados más rápido y ven mayores aumentos salariales."
 
-      Los programas incluidos son el Programa de desarrollo de software Full-Stack que se imparte a través de metodologías de medio tiempo y tiempo completo."
-
+  - title: "📊 Resultados en Números"
+    ref: "outcomes_numbers"
+    paragraph: " "
     stats: 
-      - stat: "210"
-        content: "Estudiantes fueron considerados para este reporte"
-      - stat: "80%"
-        content: "Nuestros estudiantes eligen un 
-          programa Part-Time. Solo el 20% persigue una
-          Programa de tiempo completo."
+      - stat: "84%"
+        content: "de graduados en EE. UU. contratados en 6 meses"
+      - stat: "+55%"
+        content: "aumento salarial promedio en EE. UU. (referencia)"
+      - stat: "+233%"
+        content: "aumento salarial promedio en LATAM"
+      - stat: "85%"
+        content: "tasa de colocación en España"
+      - stat: "3-6 meses"
+        content: "tiempo promedio para ser contratado en 2025 en todos los mercados"
+
+  - title: "🎓 Nuestro Alumnado de un Vistazo"
+    ref: "student_body"
+    paragraph: "Estos gráficos muestran la distribución de nuestros estudiantes en diferentes grupos de edad, género y nacionalidades. Nuestra comunidad es diversa y global, con estudiantes de varios orígenes y regiones."
+    charts: true
+
+  - title: "🚀 Por Qué los Estudiantes Obtienen Resultados con Nosotros"
+    ref: "why_results"
+    paragraph: |
+      No sólo enseñamos habilidades — nos aseguramos de que puedas convertirlas en una carrera. <br>
+      Cada estudiante de 4Geeks recibe:
     sub_sections:
-      - title: "PART - TIME"
-        content: "Fuimos fundados bajo una visión de PT y seguimos mostrando nuestra principal fortaleza con la Educación a tiempo parcial; la nueva forma de aprender y lograr (mejorar) una nueva carrera." 
+      - title: "Apoyo Profesional GeekFORCE (de por vida):"
+        content: "Mentoría profesional 1:1 ilimitada, entrenamiento para entrevistas, asesoramiento en CV/portafolio y estrategias expertas de búsqueda de empleo."
+      - title: "Mentoría GeekPAL (de por vida):"
+        content: "Ayuda ilimitada en programación de mentores humanos reales de por vida"
+      - title: "Soporte Impulsado por IA:"
+        content: "Retroalimentación personalizada de código 24/7 y herramientas de desarrollo profesional"
+      - title: "Más de 5,000 Empresas Asociadas:"
+        content: "Una red global de empresas que confían y contratan a graduados de 4Geeks"
+
+  - title: "🏆 Reconocidos, Calificados y Recomendados"
+    ref: "recognition"
+    paragraph: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>Nombrados <strong style="font-weight: 800;">Top 5 Coding Bootcamp</strong> por Forbes</li>
+            <li class='li-outcomes-link'>Calificados <strong style="font-weight: 800;">4.9/5</strong> en SwitchUp, Course Report y Career Karma</li>
+            <li class='li-outcomes-link'>Licenciados por el Departamento de Educación de Florida</li>
+            <li class='li-outcomes-link'>Con la confianza de estudiantes en más de 20 países</li>
+          </ul>
+    badges: true
+
+  - title: "💡 Haciendo las Carreras Tech Accesibles"
+    ref: "accessibility"
+    paragraph: "Las carreras tech deberían estar abiertas a todos. Por eso ofrecemos:"
+    stats: 
+      - stat: "Matrícula Accesible"
+        content: "La más baja entre los bootcamps mejor calificados (reconocidos por Forbes como el Mejor Bootcamp para Estudiantes con Presupuesto Limitado)."
+      - stat: "Financiamiento Flexible"
+        content: "Opciones desde menos de $299/mes, más préstamos accesibles y planes de pago basados en ingresos."
+      - stat: "Becas Completas y Parciales"
+        content: "Opciones basadas en ubicación gracias a importantes alianzas institucionales e iniciativas gubernamentales."
+    sub_sections:
+      - title: "OPCIONES DE FINANCIAMIENTO"
+        content: |
+          <p>Creemos que las barreras financieras no deberían impedir que nadie acceda a una educación tech de calidad. Nuestros planes de pago flexibles hacen posible la transformación profesional para todos.</p>
+          <br>
+          <p>👉 <a target='_blank' nofollow noreferrer noopener href='/es/financiamiento'>Ver Opciones de Financiamiento</a></p>
+
+  - title: "✅ Confianza Extra: La Garantía de Empleo"
+    ref: "job_guarantee"
+    paragraph: "Sabemos que nuestros bootcamps dan resultados y creemos en tu potencial. Por eso ofrecemos una <strong style='font-weight: 800;'>Garantía de Empleo</strong> opcional: Consigue trabajo dentro de los 9 meses posteriores a la graduación, o te reembolsamos el 100% de tu matrícula."
+    sub_sections:
+      - title: "Los requisitos son simples:"
+        content: |
+          <ul class='ul-outcomes'>
+            <li class='li-outcomes-link'>Inscríbete con la Garantía de Empleo</li>
+            <li class='li-outcomes-link'>Comienza el programa y completa las tareas</li>
+            <li class='li-outcomes-link'>Ten buena asistencia y termina tu proyecto final</li>
+            <li class='li-outcomes-link'>Participa completamente en el apoyo profesional GeekFORCE</li>
+          </ul>
+          <br>
+          <br>
+          <p>Sigue estos simples pasos, y si no consigues trabajo, recibirás el 100% de tu matrícula de vuelta. Estamos tan seguros de la efectividad de nuestro programa.</p>
+          <br>
+          <br>
+          <p>👉 <a target='_blank' nofollow noreferrer noopener href='/es/garantia-de-trabajo'>Aprende más sobre la Garantía de Empleo</a></p>
         image_section:
           - image: 
             image_paragraph: ""
-      - title: "Cantidad de Estudiantes"
-        content: "Este informe presenta los resultados de los últimos 24 meses de funcionamiento en el campus de EE. UU. 200 estudiantes considerados" 
-        image_section:
-          - image: 
-            image_paragraph: ""
-  - title: "Job Placement"
-    ref: "job_placement"
-    paragraph: "Nuestros estudiantes normalmente necesitan alrededor de 100 días después de la graduación para conseguir un trabajo en el campo. Hemos tenido estudiantes que consiguen un trabajo incluso antes de terminar el programa, o dentro de los próximos 15 días a partir del Día de lanzamiento. El promedio es de 94 días."
-    
-    stats: 
-      - stat: "+ 2500"
-        content: "Graduados"
-      - stat: "2 Idiomas (En and Es)"
-        content: "Syllabus y Programas"
-      - stat: "10 Cities"
-        content: "Miami, Orlando, Toronto, Madrid, Berlin, Lisbon, Santiago de Chile, Uruguay, Costa Rica, Caracas, y más por venir"
-    sub_sections:
-      - title: ""
-        content: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que cada vez trabajamos más duro para mejorar." 
-        image_section:
-          - image: 
-            image_paragraph: ""
+
+  - title: "🎯 La Conclusión Final"
+    ref: "bottom_line"
+    paragraph: | 
+      Ya sea en EE. UU., LATAM o Europa, los graduados de 4Geeks consistentemente consiguen empleos, aumentan salarios y construyen carreras duraderas. <br>
+      Hemos demostrado que nuestros estudiantes son contratados y prosperan en sus carreras. ¿Listo para ver tu propia historia de éxito? <br>
+      👉 <a target='_blank' nofollow noreferrer noopener href='/es/aplica'>Aplica ahora</a>
+
+charts:
+  chart_list:
+    ## EACH DONUTCHART NEEDS AN ARRAY OF ARRAYS WITH  LABEL AND VALUE
+    ## THE VALUE NEED TO BE A STRING, NOT A NUMBER
+    - title: "edad"
+      data:
+        - [Task, Edad]
+        - [26-32, "44"] ## EACH ARRAY NEEDS LABEL AND VALUE
+        - [22-25, "30"]
+        - [33-42, "26"]
+    - title: "género"
+      data:
+        - [Task, Género]
+        - [Femenino, "24"]
+        - [Masculino, "76"]
+    - title: "región"
+      data:
+        - [Task, Región]
+        - [Norteamérica, "60"]
+        - [Asia, "1"]
+        - [Europa, "25"]
+        - [Lat.Am., "34"]
 
 download:
   button_text: "Descargar Informe"

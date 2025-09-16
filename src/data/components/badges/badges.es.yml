@@ -6,6 +6,11 @@ badges:
     url: ""
     image: "../../../../static/images/badges/forbes-logo-award.png"
     alt: "Hemos sido seleccionados como uno de los Mejores Bootcamps de Programación Online por Forbes."
+  
+  - name: "Mejores Bootcamps de Programación Online de 2025"
+    url: ""
+    image: "../../../../static/images/badges/exelencia-educativa-es.png"
+    alt: "Mejores Bootcamps de Programación Online de 2025"
 
   - name: "Mejor para Hispanohablantes de 2024 por Fortune"
     url: ""
@@ -19,8 +24,8 @@ badges:
 
   - name: "Mejor bootcamp de programación por Course Report 2024"
     url: ""
-    image: "../../../../static/images/badges/Course-Report-Badge-2024.png"
-    alt: "Mejor bootcamp de programación por Course Report 2024"
+    image: "../../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+    alt: "Mejor bootcamp de programación por Course Report 2025"
 
   - name: "Licenciado por el Departamento de Educación de Florida"
     url: ""

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import { isCustomBarActive } from "../actions";
 import { Header } from "../components/Sections";
 import GeeksVsOthers from "../components/GeeksVsOthers";
@@ -8,11 +8,22 @@ import { SessionContext } from "../session";
 import TwoColumn from "../components/TwoColumn/index.js";
 import { Div } from "../components/Sections";
 import { Colors } from "../components/Styling";
-import { H2 } from "../components/Heading";
+import { H2, H4 } from "../components/Heading";
+import { landingSections } from "../components/Landing";
 
 const View = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
+  const [components, setComponents] = React.useState({});
+
+  useEffect(() => {
+    let _components = {};
+    if (yml.components)
+      yml.components.forEach(({ name, ...rest }) => {
+        _components[name] = rest;
+      });
+    setComponents({ ...yml, ..._components });
+  }, [yml]);
 
   return (
     <>
@@ -56,76 +67,52 @@ const View = (props) => {
         <H2 type="h2" textAlign_tablet="center">
           {yml.section_heading?.text}
         </H2>
+
+        <Div
+          style={{
+            maxWidth: "1280px",
+            margin: "0 auto",
+            padding: "0 20px",
+          }}
+        >
+          <span
+            style={{
+              fontFamily: "Roboto, sans-serif",
+              color: "#424242",
+              lineHeight: "1.5",
+              fontSize: "22px",
+              textAlign: "center",
+            }}
+            dangerouslySetInnerHTML={{
+              __html: yml.section_heading?.sub_heading,
+            }}
+          />
+        </Div>
       </Div>
 
       <GeeksVsOthers lang={pageContext.lang} link={false} />
 
-      {/* first twocolumns */}
-      <Div display="block" background={Colors.veryLightBlue3} padding="40px 0">
-        <H2 type="h2" textAlign_tablet="center">
-          {yml.two_columns.section_heading.text}
-        </H2>
-        <TwoColumn
-          left={{
-            image: yml.two_columns?.image,
-            video: yml.two_columns?.video,
-          }}
-          right={{
-            sub_heading: yml.two_columns?.sub_heading,
-            bullets: yml.two_columns?.bullets,
-            content: yml.two_columns?.content,
-            button: yml.two_columns?.button,
-          }}
-          proportions={yml.two_columns?.proportions}
-          session={session}
-        />
-        <TwoColumn
-          right={{
-            image: yml.two_columns_first?.image,
-            video: yml.two_columns_first?.video,
-          }}
-          left={{
-            bullets: yml.two_columns_first?.bullets,
-            button: yml.two_columns_first?.button,
-          }}
-          proportions={yml.two_columns_first?.proportions}
-          session={session}
-        />
-      </Div>
-
-      {/* second twocolumns */}
-      <TwoColumn
-        left={{
-          image: yml.two_columns_second?.image,
-          video: yml.two_columns_second?.video,
-        }}
-        right={{
-          heading: yml.two_columns_second?.heading,
-          sub_heading: yml.two_columns_second?.sub_heading,
-          bullets: yml.two_columns_second?.bullets,
-          content: yml.two_columns_second?.content,
-          button: yml.two_columns_second?.button,
-        }}
-        proportions={yml.two_columns_second?.proportions}
-        session={session}
-      />
-
-      {/* two_columns_third */}
-      <TwoColumn
-        left={{
-          heading: yml.two_columns_third?.heading,
-          sub_heading: yml.two_columns_third?.sub_heading,
-          bullets: yml.two_columns_third?.bullets,
-          content: yml.two_columns_third?.content,
-          button: yml.two_columns_third?.button,
-        }}
-        right={{
-          image: yml.two_columns_third?.image,
-          video: yml.two_columns_third?.video,
-        }}
-        proportions={yml.two_columns_third?.proportions}
-        session={session}
-      />
+      {/* Dynamic Components */}
+      {Object.keys(components)
+        .filter(
+          (name) =>
+            components[name] &&
+            (landingSections[name] || landingSections[components[name].layout])
+        )
+        .sort((a, b) =>
+          components[b].position > components[a].position ? -1 : 1
+        )
+        .map((name, index) => {
+          const layout = components[name].layout || name;
+          return landingSections[layout]({
+            ...props,
+            yml: components[name],
+            session,
+            course: yml.meta_info?.utm_course,
+            location: components.meta_info?.utm_location,
+            index: index,
+          });
+        })}
     </>
   );
 };
@@ -151,58 +138,30 @@ export const query = graphql`
           }
           section_heading {
             text
+            sub_heading
           }
-          two_columns {
+          components {
+            name
+            position
+            background
             proportions
+            layout
+            justify
+            swipable
             image {
-              style
               src
+              style
               shadow
+            }
+            button {
+              text
+              color
+              path
+              background
             }
             section_heading {
               text
             }
-            sub_heading {
-              text
-              font_size
-              style
-            }
-            content {
-              text
-              style
-            }
-            bullets {
-              items {
-                heading
-                text
-                icon
-                icon_color
-              }
-            }
-          }
-          two_columns_first {
-            proportions
-            image {
-              style
-              src
-              shadow
-            }
-            bullets {
-              items {
-                heading
-                text
-                icon
-                icon_color
-              }
-            }
-          }
-          two_columns_second {
-            proportions
-            image {
-              style
-              src
-              shadow
-            }
             heading {
               text
               font_size
@@ -210,58 +169,27 @@ export const query = graphql`
             }
             sub_heading {
               text
-              font_size
               style
+              font_size
             }
             content {
               text
               style
             }
             bullets {
+              item_style
               items {
                 heading
                 text
                 icon
+                icon_color
               }
             }
-            button {
-              text
+            icons {
+              icon
               color
-              background
-              path
-            }
-          }
-          two_columns_third {
-            proportions
-            image {
-              style
-              src
-            }
-            heading {
-              text
-              font_size
-              style
-            }
-            sub_heading {
-              text
-              font_size
-              style
-            }
-            content {
-              text
-              style
-            }
-            bullets {
-              items {
-                text
-                icon
-              }
-            }
-            button {
-              text
-              color
-              background
-              path
+              title
+              content
             }
           }
         }

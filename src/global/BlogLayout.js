@@ -71,6 +71,10 @@ const BlogLayout = ({ children, seo, context, wordCount }) => {
               paragraph
               button_text
               thankyou
+              privacy_checkbox_prefix
+              privacy_checkbox_link
+              privacy_required
+              form_errors
             }
             footer {
               heading
