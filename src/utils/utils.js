@@ -2,7 +2,8 @@ import { navigate } from "gatsby";
 
 export const isWindow = () => (window !== undefined ? true : false);
 
-const isPlainObject = (obj) => obj && typeof obj === 'object' && !Array.isArray(obj);
+const isPlainObject = (obj) =>
+  obj && typeof obj === "object" && !Array.isArray(obj);
 
 export const flattenFormData = (data = {}, { excludeKeys = [] } = {}) => {
   // 1. Flattens form data: { name: { value: "John" }, age: 30 } → { name: "John", age: 30 }
@@ -17,7 +18,7 @@ export const flattenFormData = (data = {}, { excludeKeys = [] } = {}) => {
     if (excludeKeys.includes(key)) return;
     const value = data[key];
 
-    if (isPlainObject(value) && 'value' in value) {
+    if (isPlainObject(value) && "value" in value) {
       result[key] = value.value;
     } else result[key] = value;
   });
