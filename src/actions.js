@@ -1,4 +1,5 @@
 import { save_form } from "./utils/leads";
+import { flattenFormData } from "./utils/utils";
 
 const getRecaptchaV3Token = async (action) => {
   let token = null;
@@ -191,12 +192,8 @@ export function tagManager(eventName, payload = {}) {
 export const apply = async (data, session) => {
   console.log("Apply action called with session: ", session);
 
-  let body = {};
-
-  Object.keys(data).forEach((key) => {
-    if (typeof data[key] === "object") body[key] = data[key].value;
-    else body[key] = data[key];
-  });
+  // let body = {};
+  const body = flattenFormData(data);
 
   const tag = body.tag || "website-lead";
   const automation = body.automation || "strong";
@@ -248,8 +245,8 @@ export const apply = async (data, session) => {
 export const requestSyllabus = async (data, session) => {
   console.log("Succesfully requested Syllabus", data);
 
-  let body = {};
-  Object.keys(data).forEach((key) => (body[key] = data[key].value));
+  // let body = {};
+  const body = flattenFormData(data);
 
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
@@ -291,8 +288,8 @@ export const openGuidebook = (url) => {
 };
 export const beHiringPartner = async (data, session) => {
   console.log("Succesfully requested Be Hiring Partner", data);
-  let body = {};
-  for (let key in data) body[key] = data[key].value;
+  // let body = {};
+  const body = flattenFormData(data);
 
   if (!session || !session.utm || !session.utm.utm_test) {
     const _data = await save_form(
@@ -315,8 +312,8 @@ export const beHiringPartner = async (data, session) => {
 };
 export const applyJob = async (data, session) => {
   console.log("New job application", data);
-  let body = {};
-  for (let key in data) body[key] = data[key].value;
+  // let body = {};
+  const body = flattenFormData(data);
 
   if (!session || !session.utm || !session.utm.utm_test) {
     const _data = await save_form(
@@ -339,12 +336,8 @@ export const applyJob = async (data, session) => {
 };
 export const contactUs = async (data, session) => {
   console.log("Succesfully contact us", data);
-  let body = {};
-
-  Object.keys(data).forEach((key) => {
-    if (typeof data[key] === "object") body[key] = data[key].value;
-    else body[key] = data[key];
-  });
+  // let body = {};
+  const body = flattenFormData(data);
 
   try {
     //                                                                                      tag       automation
@@ -361,8 +354,8 @@ export const contactUs = async (data, session) => {
 };
 export const newsletterSignup = async (data, session) => {
   console.log("Succesfully newsletter signup", data);
-  let body = {};
-  for (let key in data) body[key] = data[key].value;
+  // let body = {};
+  const body = flattenFormData(data);
 
   try {
     //                                                                                      tag          automation
@@ -393,8 +386,8 @@ export const newsletterSignup = async (data, session) => {
 
 export const outcomesReport = async (data, session) => {
   console.log("Succesfully requested outcomes report", data);
-  let body = {};
-  for (let key in data) body[key] = data[key].value;
+  // let body = {};
+  const body = flattenFormData(data);
 
   try {
     //                                                                                      tag                automation
@@ -459,10 +452,11 @@ export const getEvents = async (_query = {}) => {
 export const processFormEntry = async (data, session) => {
   console.log("Form was sent successfully", data);
 
-  let body = {};
-  Object.keys(data).forEach(
-    (key) => key !== "form_type" && (body[key] = data[key].value)
-  );
+  // let body = {};
+  // Object.keys(data).forEach(
+  //   (key) => key !== "form_type" && (body[key] = data[key].value)
+  // );
+  const body = flattenFormData(data, { excludeKeys: ["form_type"] });
 
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
