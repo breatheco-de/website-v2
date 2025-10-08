@@ -59,7 +59,6 @@ upcoming:
 
 info_box:
   heading: "Encuéntranos Online"
-  address: "4201 Main St Ste 200, Houston, TX 77002"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
@@ -177,7 +176,6 @@ city: "Houston"
 name: "Resto de América en Español"
 latitude: "10000.760159"
 longitude: "-800000.200155"
-address: "4201 Main St Ste 200"
 zip_code: "77002"
 phone: "+1 (786) 416-6640"
 state: "Texas"

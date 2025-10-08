@@ -2,7 +2,7 @@ title: Elige tu programa
 paragraph: Contamos con programas que combinan clases prácticas dictadas por expertos
 
 programs:
-  - title: "Full-Stack Developer"
+  - title: "Full Stack Development con IA"
     sub_title: "Desde cero"
     icon: "fullstack_2"
     description: "Conviértete en un programador que prioriza la IA utilizando tecnologías de vanguardia, tutoría personalizada, un plan de estudios a medida y apoyo profesional para conseguir tu primer trabajo."
@@ -10,7 +10,7 @@ programs:
     link: "/es/coding-bootcamps/desarrollador-full-stack"
     text_link: "Más Info"
 
-  - title: "Data Science y Machine Learning"
+  - title: "Data Science, Machine Learning e IA"
     sub_title: "Desde cero"
     icon: "machine_2"
     description: "Conviértete en un científico de datos, desarrolla modelos de predicción y uneté a una de las profesiones mejores pagadas del mundo."

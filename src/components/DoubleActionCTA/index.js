@@ -1,4 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
+import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
@@ -17,14 +18,105 @@ const Form = styled.form`
   flex-direction: column;
 `;
 
-const DoubleActionCTA = ({
-  disableRestriction = false,
-  disableBullets = false,
-  location,
-  ctaData,
-}) => {
+const DoubleActionCTA = (props) => {
+  const data = useStaticQuery(graphql`
+    query DoubleActionCtaQuery {
+      allDoubleActionCtaYaml {
+        edges {
+          node {
+            fields {
+              lang
+            }
+            cta {
+              title
+              description
+              primary {
+                title
+                description
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED
+                      width: 900
+                      quality: 100
+                      placeholder: NONE
+                    )
+                  }
+                }
+                action_text
+                action_url
+                benefits
+                footer_text
+              }
+              secondary {
+                title
+                description
+                image {
+                  childImageSharp {
+                    gatsbyImageData(
+                      layout: CONSTRAINED
+                      width: 900
+                      quality: 100
+                      placeholder: NONE
+                    )
+                  }
+                }
+                action_text
+                action_url
+                benefits
+                footer_text
+              }
+              newsletter_form {
+                placeholder_email
+                error_email
+                button_submit
+                button_loading
+                status_idle
+                status_error
+                status_correct_errors
+                success_message
+              }
+            }
+          }
+        }
+      }
+      allAdmissionsStaffYaml {
+        edges {
+          node {
+            fields {
+              lang
+            }
+            assignment_algo
+            staff {
+              locations
+              calendly_link
+              priority
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  //TODO: We are hidding this component for now, I want to approve the PR but this component cannot show as is
+  // Lets wait for the refactoring to remove this return null;
+
   const { session: appSession } = useContext(SessionContext);
   const captcha = useRef(null);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -42,15 +134,131 @@ const DoubleActionCTA = ({
     }
     return true;
   };
-  if (!disableRestriction && location?.country !== "USA") {
-    return null;
+
+  // (Deprecated) filterByLocation removed in favor of staff availability checks
+
+  // Step 3: Admissions staff assignment logic
+  const getLocationCandidates = () => {
+    return [
+      appSession?.location?.breathecode_location_slug,
+      appSession?.location?.meta_info?.slug,
+      appSession?.location?.active_campaign_location_slug,
+    ].filter((s) => typeof s === "string" && s.length > 0);
+  };
+
+  const filterStaffByLocation = (staffMember) => {
+    const locations = Array.isArray(staffMember?.locations)
+      ? staffMember.locations
+          .filter((s) => typeof s === "string" && s.trim() !== "")
+          .map((s) => s.trim())
+      : [];
+
+    const candidates = getLocationCandidates();
+    if (candidates.length === 0) return locations.length > 0; // render only if staff targets at least one location
+    for (const id of candidates)
+      if (locations.includes(id) || locations.includes("all")) return true;
+    return false;
+  };
+
+  const selectAdmissionsStaff = (staffArray, algo) => {
+    if (!Array.isArray(staffArray) || staffArray.length === 0) return null;
+    const normalizedAlgo = (algo || "ROUND_ROBIN").toUpperCase();
+
+    if (normalizedAlgo === "FIRST") {
+      const withPriority = staffArray.filter(
+        (s) => typeof s?.priority === "number"
+      );
+      if (withPriority.length > 0)
+        return withPriority.sort((a, b) => a.priority - b.priority)[0];
+      return staffArray[0];
+    }
+    // Default: random selection (equal probability)
+    const idx = Math.floor(Math.random() * staffArray.length);
+    return staffArray[idx];
+  };
+
+  // Prefer flattened props when provided; fallback to centralized YAML by language
+  const hasDirectProps =
+    props &&
+    (props.title !== undefined ||
+      props.description !== undefined ||
+      props.primary !== undefined ||
+      props.secondary !== undefined ||
+      props.newsletter_form !== undefined);
+
+  let content;
+  let dataLang = (props.lang || appSession?.language || "us").replace(
+    "en",
+    "us"
+  );
+  if (hasDirectProps) {
+    content = {
+      title: props.title,
+      description: props.description,
+      primary: props.primary,
+      secondary: props.secondary,
+      newsletter_form: props.newsletter_form,
+    };
+  } else {
+    let ctaComponent = data.allDoubleActionCtaYaml.edges.find(
+      ({ node }) => node.fields.lang === dataLang
+    );
+    if (ctaComponent) ctaComponent = ctaComponent.node;
+    else return null;
+    content = ctaComponent.cta;
   }
 
-  const content = ctaData;
+  // Staff-availability gate: do not render if no admissions staff matches location
+  const locationCandidates = [
+    appSession?.location?.breathecode_location_slug,
+    appSession?.location?.meta_info?.slug,
+    appSession?.location?.active_campaign_location_slug,
+  ].filter((s) => typeof s === "string" && s.length > 0);
+
+  // Avoid flicker: if session exists but no candidates yet, do not render until location resolves
+  if (
+    appSession &&
+    locationCandidates.length === 0 &&
+    !props.disableRestriction
+  )
+    return null;
+
+  // Add defensive validation for content structure
+  if (!content || typeof content !== "object") return null;
+
   const existsPrimaryBenefits =
-    !disableBullets && content?.primary?.benefits.length > 0;
+    !props.disableBullets &&
+    Array.isArray(content?.primary?.benefits) &&
+    content.primary.benefits.length > 0;
   const existsSecondaryBenefits =
-    !disableBullets && content?.secondary?.benefits.length > 0;
+    !props.disableBullets &&
+    Array.isArray(content?.secondary?.benefits) &&
+    content.secondary.benefits.length > 0;
+
+  // Compute selected admissions staff for later use (Step 5 will use it)
+  let admissionsStaffNode = data.allAdmissionsStaffYaml.edges.find(
+    ({ node }) => node.fields.lang === dataLang
+  )?.node;
+  const availableStaff = Array.isArray(admissionsStaffNode?.staff)
+    ? admissionsStaffNode.staff.filter(filterStaffByLocation)
+    : [];
+  if (!props.disableRestriction && availableStaff.length === 0) return null;
+  const selectedStaff = selectAdmissionsStaff(
+    availableStaff,
+    (
+      admissionsStaffNode?.assignment_algo ||
+      props.assignmentAlgo ||
+      "ROUND_ROBIN"
+    ).toUpperCase()
+  );
+
+  // Resolve primary action URL: prefer selected staff Calendly, fallback to YAML action_url
+  const primaryActionUrl =
+    (selectedStaff &&
+    typeof selectedStaff.calendly_link === "string" &&
+    selectedStaff.calendly_link.trim().length > 0
+      ? selectedStaff.calendly_link
+      : null) || content?.primary?.action_url;
 
   return (
     <Div
@@ -71,7 +279,7 @@ const DoubleActionCTA = ({
           fontFamily="var(--font-sans)"
           letterSpacing="normal"
         >
-          {content.title}
+          {content?.title || ""}
         </H2>
         <Paragraph
           className="dual-cta-subtitle"
@@ -84,7 +292,7 @@ const DoubleActionCTA = ({
           fontFamily="var(--font-sans)"
           letterSpacing="normal"
         >
-          {content.description}
+          {content?.description || ""}
         </Paragraph>
       </Div>
 
@@ -136,7 +344,7 @@ const DoubleActionCTA = ({
           {/* Benefits List */}
           {existsPrimaryBenefits && (
             <Div margin="1rem 0" display="flex" flexDirection="column">
-              {content?.primary?.benefits.map((benefit, index) => (
+              {(content?.primary?.benefits || []).map((benefit, index) => (
                 <Div
                   key={index}
                   display="flex"
@@ -162,7 +370,7 @@ const DoubleActionCTA = ({
             </Div>
           )}
 
-          {content?.primary?.image?.childImageSharp && (
+          {content?.primary?.image?.childImageSharp?.gatsbyImageData && (
             <GatsbyImage
               style={{
                 height: "auto",
@@ -173,7 +381,7 @@ const DoubleActionCTA = ({
               }}
               imgStyle={{ objectFit: "cover" }}
               loading="eager"
-              alt="Book a Career Consultation"
+              alt={content?.primary?.title || "Career Consultation"}
               draggable={false}
               image={getImage(
                 content.primary.image.childImageSharp.gatsbyImageData
@@ -181,7 +389,7 @@ const DoubleActionCTA = ({
             />
           )}
 
-          <Link to={content?.primary?.action_url} target="_blank">
+          <Link to={primaryActionUrl} target="_blank">
             <Button
               className="scale_hover"
               width="100%"
@@ -266,7 +474,7 @@ const DoubleActionCTA = ({
           {/* Benefits List */}
           {existsSecondaryBenefits && (
             <Div margin="1rem 0" display="flex" flexDirection="column">
-              {content?.secondary?.benefits.map((benefit, index) => (
+              {(content?.secondary?.benefits || []).map((benefit, index) => (
                 <Div
                   key={index}
                   display="flex"
@@ -292,7 +500,7 @@ const DoubleActionCTA = ({
             </Div>
           )}
 
-          {content?.secondary?.image?.childImageSharp && (
+          {content?.secondary?.image?.childImageSharp?.gatsbyImageData && (
             <GatsbyImage
               style={{
                 height: "auto",
@@ -303,7 +511,7 @@ const DoubleActionCTA = ({
               }}
               imgStyle={{ objectFit: "cover" }}
               loading="eager"
-              alt="Newsletter"
+              alt={content?.secondary?.title || "Newsletter"}
               draggable={false}
               image={getImage(
                 content.secondary.image.childImageSharp.gatsbyImageData
@@ -375,11 +583,11 @@ const DoubleActionCTA = ({
                           status: "loading",
                           msg: content?.newsletter_form?.button_loading,
                         });
-                        const token = await captcha.current.executeAsync();
+                        const token = await executeRecaptcha();
                         newsletterSignup(
                           {
                             ...formData,
-                            token: { value: token, valid: true },
+                            token: { value: token || "", valid: !!token },
                           },
                           appSession
                         )

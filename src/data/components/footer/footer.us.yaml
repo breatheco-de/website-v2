@@ -39,9 +39,9 @@ footer:
     width: 3
     heading: "PROGRAMS"
     items:
-      - name: "Full Stack Coding Bootcamp"
+      - name: "Full Stack with AI"
         link: "/us/coding-bootcamps/part-time-full-stack-developer"
-      - name: "Data Science and Machine Learning Bootcamp"
+      - name: "Data Science and Machine Learning with AI"
         link: "/us/coding-bootcamps/datascience-machine-learning"
       - name: "Software Engineering Bootcamp"
         link: "/us/coding-bootcamps/software-engineer-bootcamp"
@@ -49,6 +49,8 @@ footer:
         link: "/us/coding-bootcamps/machine-learning-engineering"
       - name: "Coding Bootcamp"
         link: "/us/coding-bootcamp"
+      - name: "Cybersecurity"
+        link: "/us/coding-bootcamps/cybersecurity"
   - column_four:
     width: 2
     heading: "LOCATIONS"

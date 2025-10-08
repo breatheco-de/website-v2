@@ -6,29 +6,28 @@ meta_info:
   image: ""
   keywords: "coding bootcamp preparation"
   redirects: ["/prework"]
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
-
+ 
 ## BANNER - HEADER
 seo_title: "What is Prework"
 header:
-  title: "Prework at 4Geeks: Your Head Start into Tech"
+  title: "Prework at 4Geeks:\nYour Head Start into Tech"
   paragraph: |
     <span>Prework is the first step of every bootcamp. It combines self-paced study with live mentor support, so you're never on your own. You'll cover essential concepts, practice with our platforms, and build the habits that carry you through the program.</span>
 
     <span>By the time your bootcamp begins, you'll already feel comfortable with the pace, the tools, and the support system that sets 4Geeks apart.</span>
   tagline: "PREWORK AT 4GEEKS"
   sub_heading: "By the time your bootcamp begins, you'll already feel comfortable with the pace, the tools, and the support system that sets 4Geeks apart."
-  image: "../../../static/images/woman-laptop-smile-bg.webp"
+  image: "../../../static/images/landing/comunity-support.png"
   alt: "Students learning to code in prework"
   button: "Start Your Journey"
 
 ## WHAT YOU'LL LEARN SECTION
 what_you_will_learn:
-  title: "🔍 What You'll Learn & Do"
+  title: "What You'll Learn & Do"
   paragraph: |
     Prework isn't just about content — it's about learning how to learn in a coding environment. You'll:
   bullets:
-    - text: "Navigate platforms like <a href='https://4geeks.com/?utm_source=chatgpt.com' target='_blank'>4Geeks.com</a> and Slack"
+    - text: "Navigate platforms like <a class='link' href='https://4geeks.com/?utm_source=chatgpt.com' target='_blank'>4Geeks.com</a> and Slack"
     - text: "Get familiar with GitHub and GitHub CodeSpaces"
     - text: "Start using Rigobot and Learnpack for instant feedback"
     - text: "Practice submitting projects"
@@ -44,43 +43,40 @@ how_it_works:
     <li>Attending Live Prework Classes (study halls) is mandatory. You'll work through exercises, share your screen, and get real-time help from a mentor.</li>
   image: "../../../static/images/Group-6617.webp"
   schedule:
-    title: "Prework Class Schedule (EST)"
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+    title: "Prework Class Schedule"
     classes:
       - program: "Full Stack Development"
-        schedule: "Mon, Wed, Fri – 6:00 to 9:00 PM"
+        schedule: "Mon, Wed, Fri – 6:00 to 9:00 PM (EST)"
         icon: fullstack_2
       - program: "Data Science & Machine Learning"
-        schedule: "Mon, Wed – 6:00 to 9:00 PM"
+        schedule: "Mon, Wed – 6:00 to 9:00 PM (EST)"
         icon: machine_2
       - program: "Cybersecurity"
-        schedule: "Wed – 6:00 to 9:00 PM"
+        schedule: "Wed – 6:00 to 9:00 PM (EST)"
         icon: cyber-security
-  note: "Joining early is optional but strongly encouraged — it's the best way to get ahead, ask questions in real time, and ease into the program."
 
 ## WHY PREWORK MATTERS SECTION
 why_prework_matters:
   title: "Why Prework Matters"
-  bullets:
-    - text: "Builds your confidence before class begins"
-      icon: rocket
-      style:
-        background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
-        shadow: "rgba(59, 130, 246, 0.14)"
-    - text: "Helps you master the basics so you can focus on advanced skills during the bootcamp"
-      icon: users
-      style:
-        background: "linear-gradient(135deg, #10b981 0%, #059669 100%)"
-        shadow: "rgba(16, 185, 129, 0.14)"
-    - text: "Gets you familiar with the tools, support systems, and learning style at 4Geeks"
-      icon: chart
-      style:
-        background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
-        shadow: "rgba(245, 158, 11, 0.14)"
-    - text: "Makes your transition into tech smoother and less overwhelming"
-      icon: trophy
-      style:
-        background: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
-        shadow: "rgba(139, 92, 246, 0.14)"
+  text: "Our prework is designed to set you up for success. Here’s why it’s a critical part of your journey:"
+  boxes:
+    - title: "Confidence"
+      text: "Builds your confidence before class begins"
+      icon: "star-2"
+      color: "#FFC718"
+    - title: "Mastery"
+      text: "Helps you master the basics so you can focus on advanced skills during the bootcamp"
+      icon: "graduation-2"
+      color: "#0084FF"
+    - title: "Familiarity"
+      text: "Gets you familiar with the tools, support systems, and learning style at 4Geeks"
+      icon: "book-2"
+      color: "#10b981"
+    - title: "Transition"
+      text: "Makes your transition into tech smoother and less overwhelming"
+      icon: "rocket-2"
+      color: "#FFECBF"
 
 ## CTA SECTION
 cta:
@@ -90,5 +86,5 @@ cta:
     text: "Apply Now"
     link: "/us/apply"
   secondary_button:
-    text: "Learn More About Programs"
+    text: "Explore Our Programs"
     link: "/us/programs"

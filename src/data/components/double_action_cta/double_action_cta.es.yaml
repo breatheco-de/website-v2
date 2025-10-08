@@ -1,5 +1,6 @@
 cta:
   title: "Toma el Próximo Paso en tu Carrera Profesional"
+  locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
   description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
   primary:
     title: "Agenda una Consulta gratuita de 15 Minutos"

@@ -50,6 +50,7 @@ const UpcomingDates = ({
               default_course
               course_slug
               name
+              duration_weeks
             }
             email_form_content {
               heading
@@ -62,12 +63,17 @@ const UpcomingDates = ({
               button_text
               program_label
               duration_label
-              duration_weeks
-              duration_part_time
-              duration_full_time
               location_label
               date
               action_label
+              in_person
+              remote
+              remote_usa
+              remote_latam
+              remote_europe
+              region_usa
+              region_latam
+              region_europe
             }
             no_course_message
             footer {
@@ -82,26 +88,25 @@ const UpcomingDates = ({
           }
         }
       }
-      allCourseYaml {
-        edges {
-          node {
-            fields {
-              file_name
-              lang
-            }
-            details {
-              weeks
-              week_unit
-              weeks_label
-            }
-          }
-        }
-      }
     }
   `);
 
   const { session } = useContext(SessionContext);
   const captcha = useRef(null);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
 
   const [data, setData] = useState({
     cohorts: { catalog: [], all: [], filtered: [] },
@@ -109,6 +114,7 @@ const UpcomingDates = ({
   const [showForm, setShowForm] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [academy, setAcademy] = useState(null);
+  const [selectedRegion, setSelectedRegion] = useState(null);
 
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -132,31 +138,34 @@ const UpcomingDates = ({
   if (content) content = content.node;
   else return null;
 
-  // Get course data to map durations dynamically
-  const courseData = dataQuery.allCourseYaml.edges;
+  // Helper function to get duration from syllabus alias
+  const getDurationFromSyllabus = (courseSlug) => {
+    const syllabus = syllabusAlias.find(
+      (syll) => syll.course_slug === courseSlug
+    );
+    return syllabus?.duration_weeks || null;
+  };
 
-  // Helper function to get course duration from course files
-  const getCourseDuration = (courseSlug) => {
-    const course = courseData.find(({ node }) => {
-      const fileName = node.fields.file_name;
-      const fileLang = node.fields.lang;
+  // Helper function to get regional remote text based on academy slug
+  const getRegionalRemoteText = (academySlug) => {
+    const regionMappings = {
+      europe: () =>
+        academySlug?.includes("spain") || academySlug === "madrid-spain",
+      latam: () => academySlug === "online",
+      usa: () => academySlug?.includes("miami") || academySlug?.includes("usa"),
+    };
 
-      // Extract the base name from the filename (remove .us.yaml or .es.yaml)
-      const baseName = fileName.split(".")[0];
+    const matchedRegion = Object.keys(regionMappings).find((region) =>
+      regionMappings[region]()
+    );
 
-      return baseName === courseSlug && fileLang === lang;
-    });
+    const remoteTextMap = {
+      europe: content.info.remote_europe,
+      latam: content.info.remote_latam,
+      usa: content.info.remote_usa,
+    };
 
-    if (course && course.node.details && course.node.details.weeks) {
-      const weeks = course.node.details.weeks;
-      const weeksLabel =
-        course.node.details.weeks_label ||
-        course.node.details.week_unit ||
-        "weeks";
-      return `${weeks} ${weeksLabel}`;
-    }
-
-    return null;
+    return remoteTextMap[matchedRegion] || content.info.remote;
   };
 
   const emailFormContent = content.email_form_content;
@@ -165,21 +174,90 @@ const UpcomingDates = ({
   const getData = async () => {
     try {
       setIsLoading(true);
+
       const academySlug =
         session?.academyAliasDictionary?.[location] ||
         location ||
         session?.academyAliasDictionary?.[academy?.value];
+
+      // Normalize course slugs for API and matching consistency
+      const normalizedDefaultCourse = (() => {
+        const raw = (defaultCourse || "").toLowerCase();
+        // Map known aliases to canonical slugs
+        const aliasMap = {
+          cybersecurity: "cyber-security",
+        };
+        return aliasMap[raw] || raw;
+      })();
+
+      console.log("🔍 API Debug - Request Parameters:", {
+        defaultCourse,
+        academySlug,
+        apiUrl: "getCohorts",
+        requestParams: {
+          academy: academySlug,
+          limit: 10,
+          syllabus_slug_like: normalizedDefaultCourse || undefined,
+        },
+      });
+
       const response = await getCohorts({
         academy: academySlug,
         limit: 10,
-        syllabus_slug_like: defaultCourse || undefined,
+        syllabus_slug_like: normalizedDefaultCourse || undefined,
       });
+
+      console.log("📡 API Debug - Raw Response:", {
+        response,
+        resultsCount: response?.results?.length || 0,
+        hasResults: !!response?.results,
+      });
+
+      if (!response || !response.results) {
+        console.error("Invalid response from cohorts API:", response);
+        setIsLoading(false);
+        return;
+      }
+
+      // Add detailed cohort analysis
+      if (response?.results) {
+        console.log("📊 API Debug - Detailed Cohort Analysis:", {
+          defaultCourse,
+          totalCohorts: response.results.length,
+          cohortDetails: response.results.map((cohort) => ({
+            slug: cohort.slug,
+            academy: cohort.academy?.slug,
+            syllabusVersionSlug: cohort.syllabus_version?.slug,
+            syllabusVersionName: cohort.syllabus_version?.name,
+            matchesDefaultCourse: cohort.syllabus_version?.slug
+              ?.toLowerCase()
+              ?.includes(defaultCourse?.toLowerCase() || ""),
+          })),
+        });
+      }
 
       const academyLocation = locations.find(
         ({ node }) =>
           node.breathecode_location_slug === location ||
           node.breathecode_location_slug === academy?.value
       );
+
+      // Helper function to determine region from academy slug
+      const getRegionFromAcademy = (academySlug) => {
+        const regionDetectors = {
+          europe: () =>
+            academySlug?.includes("spain") || academySlug === "madrid-spain",
+          latam: () => academySlug === "online",
+          usa: () =>
+            academySlug?.includes("miami") || academySlug?.includes("usa"),
+        };
+
+        return (
+          Object.keys(regionDetectors).find((region) =>
+            regionDetectors[region]()
+          ) || null
+        );
+      };
 
       const cohorts =
         response?.results.filter((elm) => {
@@ -191,50 +269,111 @@ const UpcomingDates = ({
                 RegExp(regx).test(elm.slug)
               )
             ) {
-              console.log(`removing ${elm.slug}`);
               return false;
             }
           }
+
+          if (selectedRegion?.value) {
+            const cohortRegion = getRegionFromAcademy(elm.academy?.slug);
+            return cohortRegion === selectedRegion.value;
+          }
+
           return true;
         }) || [];
 
-      cohorts.forEach((cohort) => {
+      const courseFilteredCohorts = cohorts.filter((cohort) => {
+        const syllabusSlug = cohort.syllabus_version?.slug?.toLowerCase();
+
+        console.log("🎯 Course Filter Debug:", {
+          cohortSlug: cohort.slug,
+          defaultCourse,
+          syllabusSlug,
+          syllabusName: cohort.syllabus_version?.name,
+          fallbackMatch: syllabusSlug?.includes(normalizedDefaultCourse || ""),
+        });
+
+        // More precise matching using actual syllabus patterns
+        const courseMatchers = {
+          "full-stack": () => {
+            // Part-time full-stack: should contain "pt" but not be exactly "full-stack-ft"
+            return (
+              syllabusSlug?.includes("full-stack") &&
+              (syllabusSlug?.includes("pt") ||
+                syllabusSlug?.includes("part-time")) &&
+              syllabusSlug !== "full-stack-ft"
+            );
+          },
+          "full-stack-ft": () => {
+            // Full-time full-stack: exact match or contains "ft" without "pt"
+            return (
+              syllabusSlug === "full-stack-ft" ||
+              (syllabusSlug?.includes("full-stack") &&
+                syllabusSlug?.includes("ft") &&
+                !syllabusSlug?.includes("pt") &&
+                !syllabusSlug?.includes("part-time"))
+            );
+          },
+          "machine-learning": () => syllabusSlug?.includes("machine-learning"),
+          cybersecurity: () =>
+            syllabusSlug?.includes("cybersecurity") ||
+            syllabusSlug?.includes("cyber-security"),
+        };
+
+        const matcherResult = courseMatchers[normalizedDefaultCourse]?.();
+        const fallbackResult = syllabusSlug?.includes(
+          normalizedDefaultCourse || ""
+        );
+        const finalResult =
+          !normalizedDefaultCourse ||
+          !syllabusSlug ||
+          (matcherResult ?? fallbackResult);
+
+        console.log("🔍 Course Matcher Results:", {
+          cohortSlug: cohort.slug,
+          defaultCourse,
+          matcherExists: !!courseMatchers[defaultCourse],
+          matcherResult,
+          fallbackResult,
+          finalResult,
+        });
+
+        return finalResult;
+      });
+
+      courseFilteredCohorts.forEach((cohort) => {
         const syllabus =
           syllabusAlias.find((syll) => syll.default_course === defaultCourse) ||
           syllabusAlias.find((syll) =>
-            cohort.syllabus_version.slug
-              .toLowerCase()
-              .includes(syll.default_course)
+            cohort.syllabus_version?.slug
+              ?.toLowerCase()
+              ?.includes(syll.default_course)
           );
 
         if (syllabus) {
           cohort.syllabus_version.name = syllabus.name;
           cohort.syllabus_version.courseSlug = syllabus.course_slug;
-
-          // Get dynamic duration from course files
-          const dynamicDuration = getCourseDuration(syllabus.course_slug);
-          cohort.syllabus_version.duration =
-            dynamicDuration || syllabus.duration;
+          cohort.syllabus_version.duration = syllabus.duration_weeks;
         }
       });
 
       setData((oldData) => ({
         cohorts: {
           catalog: oldData.cohorts.catalog,
-          all: cohorts,
-          filtered: cohorts,
+          all: courseFilteredCohorts,
+          filtered: courseFilteredCohorts,
         },
       }));
+
       setIsLoading(false);
     } catch (e) {
-      console.log(e);
+      console.error("Error fetching cohorts data:", e);
       setIsLoading(false);
     }
   };
 
   useEffect(() => {
     if (session?.academyAliasDictionary) getData();
-  }, [session, academy]);
+  }, [session, academy, selectedRegion]);
 
   const formIsValid = (formData = null) => {
     if (!formData) return null;
@@ -244,28 +383,69 @@ const UpcomingDates = ({
     return true;
   };
 
+  // Build region-only dropdown options from YAML labels
   useEffect(() => {
-    if (session && Array.isArray(session.locations)) {
-      const _data = {
-        ...data,
-        cohorts: {
-          ...data.cohorts,
-          catalog: [{ label: "All Locations", value: null }].concat(
-            session.locations.map((l) => ({
-              label: l.city,
-              value: l.breathecode_location_slug,
-            }))
-          ),
-        },
-      };
-      setData(_data);
-    }
-  }, [session]);
+    if (!content?.info) return;
+    const regionOptions = [
+      { label: content.info.region_usa, value: "usa" },
+      { label: content.info.region_latam, value: "latam" },
+      { label: content.info.region_europe, value: "europe" },
+    ];
+    setData((prev) => ({
+      cohorts: {
+        ...prev.cohorts,
+        catalog: regionOptions,
+      },
+    }));
+  }, [content?.info]);
+
+  // Auto-select region based on session.location.meta_info.region
+  useEffect(() => {
+    const region = session?.location?.meta_info?.region;
+    const normalized = String(region || "").toLowerCase();
+
+    const regionOptions = {
+      usa: () => normalized.includes("usa"),
+      europe: () => normalized.includes("europe"),
+      latam: () => true, // default fallback
+    };
+
+    const matchedRegion = Object.keys(regionOptions).find((key) =>
+      regionOptions[key]()
+    );
+
+    const regionLabels = {
+      usa: { label: content?.info?.region_usa, value: "usa" },
+      europe: { label: content?.info?.region_europe, value: "europe" },
+      latam: { label: content?.info?.region_latam, value: "latam" },
+    };
+
+    const option = region ? regionLabels[matchedRegion] : null;
+    setSelectedRegion(option);
+  }, [session?.location?.meta_info?.region, content?.info]);
+
   const buttonText = session?.location?.button.apply_button_text;
 
   const isAliasLocation = (slug) => {
     const mapped = session?.academyAliasDictionary?.[slug];
     return Boolean(mapped && mapped !== slug);
+  };
+
+  // Helper function to determine location display text
+  const getLocationDisplayText = (cohort) => {
+    const isFullStackFt =
+      cohort.syllabus_version?.courseSlug === "full-stack-ft";
+    const cityName = cohort.academy.city.name?.toLowerCase();
+    const inPersonCities = ["miami", "dallas"];
+    const isInPersonLocation =
+      isFullStackFt &&
+      inPersonCities.some(
+        (city) => cityName === city || cityName?.includes(city)
+      );
+
+    return isInPersonLocation
+      ? `${cohort.academy.city.name} - ${content.info.in_person}`
+      : getRegionalRemoteText(cohort.academy?.slug);
   };
 
   return (
@@ -339,11 +519,10 @@ const UpcomingDates = ({
                   },
                 }}
                 options={data?.cohorts?.catalog}
-                placeholder={
-                  academy ? `Campus: ${academy.label}` : content.placeholder
-                }
+                placeholder={selectedRegion?.label || content.placeholder}
+                value={selectedRegion}
                 onChange={(opt) => {
-                  setAcademy(opt);
+                  setSelectedRegion(opt);
                 }}
               />
             </Div>
@@ -507,26 +686,9 @@ const UpcomingDates = ({
                             alignItems_tablet="flex-start"
                           >
                             <Div>
-                              <Link
-                                to={
-                                  loc
-                                    ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                    : ""
-                                }
-                              >
-                                <Paragraph textAlign="left" color={Colors.blue}>
-                                  {(() => {
-                                    const selectedSlug =
-                                      academy?.value ||
-                                      location ||
-                                      cohort.academy.slug;
-                                    return isAliasLocation(selectedSlug) ||
-                                      cohort.academy.city.name === "Remote"
-                                      ? content.remote
-                                      : `${cohort.academy.city.name} (${content.remote})`;
-                                  })()}
-                                </Paragraph>
-                              </Link>
+                              <Paragraph textAlign="left" color={Colors.black}>
+                                {getLocationDisplayText(cohort)}
+                              </Paragraph>
                             </Div>
                           </Div>
 
@@ -540,7 +702,10 @@ const UpcomingDates = ({
                           >
                             <Paragraph textAlign="left">
                               {cohort?.syllabus_version?.duration ||
-                                content.info.duration_weeks}
+                                getDurationFromSyllabus(
+                                  cohort?.syllabus_version?.courseSlug
+                                ) ||
+                                "Duration not available"}
                             </Paragraph>
                           </Div>
 
@@ -556,29 +721,12 @@ const UpcomingDates = ({
                                 {content.info.location_label}
                               </H4>
                               <Div>
-                                <Link
-                                  to={
-                                    loc
-                                      ? `/${lang}/coding-campus/${loc.node.meta_info.slug}`
-                                      : ""
-                                  }
+                                <Paragraph
+                                  textAlign="left"
+                                  color={Colors.black}
                                 >
-                                  <Paragraph
-                                    textAlign="left"
-                                    color={Colors.blue}
-                                  >
-                                    {(() => {
-                                      const selectedSlug =
-                                        academy?.value ||
-                                        location ||
-                                        cohort.academy.slug;
-                                      return isAliasLocation(selectedSlug) ||
-                                        cohort.academy.city.name === "Remote"
-                                        ? content.remote
-                                        : `${cohort.academy.city.name} (${content.remote})`;
-                                    })()}
-                                  </Paragraph>
-                                </Link>
+                                  {getLocationDisplayText(cohort)}
+                                </Paragraph>
                               </Div>
                             </Div>
                             <Div flexDirection="column" width="50%">
@@ -587,7 +735,10 @@ const UpcomingDates = ({
                               </H4>
                               <Paragraph textAlign="left">
                                 {cohort?.syllabus_version?.duration ||
-                                  content.info.duration_weeks}
+                                  getDurationFromSyllabus(
+                                    cohort?.syllabus_version?.courseSlug
+                                  ) ||
+                                  "Duration not available"}
                               </Paragraph>
                             </Div>
                           </Div>
@@ -690,12 +841,14 @@ const UpcomingDates = ({
                                   status: "loading",
                                   msg: "Loading...",
                                 });
-                                const token =
-                                  await captcha.current.executeAsync();
+                                const token = await executeRecaptcha();
                                 newsletterSignup(
                                   {
                                     ...formData,
-                                    token: { value: token, valid: true },
+                                    token: {
+                                      value: token || "",
+                                      valid: !!token,
+                                    },
                                   },
                                   session
                                 )
@@ -716,7 +869,6 @@ const UpcomingDates = ({
                                     }
                                   })
                                   .catch((error) => {
-                                    console.log("error", error);
                                     setFormStatus({
                                       status: "error",
                                       msg: error.message || error,

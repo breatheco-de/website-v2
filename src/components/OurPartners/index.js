@@ -15,7 +15,7 @@ const Title_Paragraph = (props) => {
     <>
       <Grid
         maxWidth="1280px"
-        margin="0 auto 20px auto"
+        margin={props?.margin || "0 auto 20px auto"}
         background={props.background}
         gridTemplateColumns_tablet="1fr repeat(12, 1fr) 1fr"
       >
@@ -126,7 +126,15 @@ const Images_With_Marquee = (props) => {
     );
   });
 
-  return <Marquee config={{ duration: 180, images: imgs }} />;
+  return (
+    <Marquee
+      config={{
+        duration: props?.duration || 180,
+        images: imgs,
+        ...props.config,
+      }}
+    />
+  );
 };
 
 //Funcion que muestra las imagenes en columna y centradas
@@ -179,6 +187,7 @@ const Images_Centered = (props) => {
 //Imagenes con propiedad featured==true
 const Images_Featured = (props) => {
   const imagesFiltered = props.images.filter((f) => f.featured === true);
+  const featuredImagesData = props.featuredImages || imagesFiltered;
   return (
     <>
       <GridContainer
@@ -192,28 +201,26 @@ const Images_Featured = (props) => {
         maxWidth="1280px"
         margin="0 auto"
         columns_tablet={
-          imagesFiltered.length <= 4 ? imagesFiltered.length : "3"
+          featuredImagesData.length <= 4 ? featuredImagesData.length : "3"
         }
         padding_tablet={props.paddingFeatured || "0"}
       >
-        {(props.featuredImages ? props.featuredImages : imagesFiltered).map(
-          (m, i) => {
-            return (
-              <GatsbyImage
-                key={i}
-                style={{
-                  height: "55px",
-                  minWidth: "100px",
-                  width: "200px",
-                  margin: "23px 15px",
-                }}
-                imgStyle={{ objectFit: "contain" }}
-                alt={m.name}
-                image={getImage(m.image.childImageSharp.gatsbyImageData)}
-              />
-            );
-          }
-        )}
+        {featuredImagesData.map((m, i) => {
+          return (
+            <GatsbyImage
+              key={i}
+              style={{
+                height: "55px",
+                minWidth: "100px",
+                width: "200px",
+                margin: "23px 15px",
+              }}
+              imgStyle={{ objectFit: "contain" }}
+              alt={m.name}
+              image={getImage(m.image.childImageSharp.gatsbyImageData)}
+            />
+          );
+        })}
         {/* </Div> */}
       </GridContainer>
       {!props.withoutLine && (
@@ -397,6 +404,8 @@ const OurPartners = ({
   maxWidth,
   gray,
   variant,
+  duration,
+  marqueeConfig,
   ...rest
 }) => {
   let FragmentStyle = {
@@ -429,6 +438,7 @@ const OurPartners = ({
           title={title}
           paragraph={paragraph}
           background={background}
+          margin="2rem auto 3rem auto"
         />
       )}
       {showFeatured && (
@@ -442,7 +452,11 @@ const OurPartners = ({
       {slider ? (
         <Images_With_Slider images={images} />
       ) : marquee ? (
-        <Images_With_Marquee images={images} />
+        <Images_With_Marquee
+          images={images}
+          duration={duration}
+          config={marqueeConfig}
+        />
       ) : (
         <Images_Centered images={images} gray={gray} />
       )}

@@ -7,10 +7,11 @@ meta_info:
   keywords: "Premios 4Geeks Academy, Reconocimientos a 4Geeks Academy"
   redirects: []
 
-seo_title: "Premios y Reconocimientos entregados a 4Geeks Academy"
+seo_title: "Premios y Reconocimientos"
 header:
-  title: "PREMIOS Y RECONOCIMIENTOS"
-  paragraph: "Es fanstástico ser reconocido por tus logros educativos y tecnológicos después de tantos años de trabajo y esfuerzo para lograr ser uno de los mejores bootcamps del mundo."
+  title: "Mejor Bootcamp de Programación — Confiado por Estudiantes, Reconocido por Expertos"
+  htmlTitle: "Mejor Bootcamp de Programación<br/><span style='font-size: 25px;'>Confiado por Estudiantes, Reconocido por Expertos</span>"
+  paragraph: "4Geeks Academy es reconocida por algunas de las plataformas más confiables de la industria educativa y tecnológica del mundo. Desde Forbes hasta Course Report, estamos constantemente clasificados entre las mejores escuelas de programación a nivel mundial y reconocidos por la calidad e impacto de nuestros programas."
   image: "../../../static/images/awards/awards.png"
 badges:
   paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a programar. Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores en solo unos meses y ayudarlos a impulsar sus carreras profesionales."
@@ -19,116 +20,142 @@ awards_list:
   #   title: "Departamento de Education de EEUU"
   #   paragraph: "Los Estados Unidos de America se aseguran de la calidad de la educación a través de los departamentos de educación a nivel federal. Contar con la certificación significa que estamos comprometidos a cumplir con todas las regulaciones nacionales y estatales y a ser supervisados y auditados anualmente para asegurar el éxito de la academia."
 
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Mejor Bootcamp de Ciencia de Datos y Machine Learning 2025"
+    paragraph: "Nuestro bootcamp fue elegido como la mejor opción por su formato práctico y amigable para principiantes, resultados verificados y garantía de empleo."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/#4geeks_academy_data_science_and_machine_learning_course_section"
+    height: "80px"
+    text_link: "Ver artículo"
+
   - image: "../../../static/images/badges/switchup-2025-top.webp"
     title: "Reconocido entre los Mejores Bootcamps de Programación por SwitchUp 2025"
     paragraph: "4Geeks Academy tiene el honor de ser incluido en la prestigiosa lista de SwitchUp de los mejores bootcamps de programación para 2025."
     link: "https://www.switchup.org/research/best-coding-bootcamps"
+    height: "140px"
     text_link: "Ver sitio web"
 
   - image: "../../../static/images/badges/fortune-logo.png"
     title: "Excelencia en Educación para Hispanohablantes"
     paragraph: "4Geeks Academy ha sido reconocida por Fortune como uno de los mejores bootcamps de programación para hispanohablantes, destacando su compromiso con una educación inclusiva y accesible."
     link: "https://fortune.com/education/articles/best-software-engineering-bootcamps/#4Geeks-Academy"
+    height: "80px"
     text_link: "Ver sitio web"
 
   - image: "../../../static/images/badges/arp-logo-certification.png"
     title: "Institutional Quality Online Education"
     paragraph: "4Geeks Academy ha obtenido la certificación ARP, destacándose como líder en educación de programación en línea."
     link: "https://arpcertificate.com/listado-de-cursos/programa-full-stack-development/"
+    height: "80px"
     text_link: Ver Página
 
   - image: "../../../static/images/badges/forbes-logo-award.png"
     title: "Los mejores Bootcamps Online del 2024"
     paragraph: "Hemos sido seleccionados por Forbes como uno de los mejores bootcamps de programación para este 2024."
     link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
+    height: "80px"
     text_link: Ver artículo
 
   - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
     title: "Mejor bootcamp de programación para Course Report 2024"
     paragraph: "Tenemos 3 años consecutivos siendo reconocidos por Course Report como uno de los mejores bootcamp de programación del mundo."
     link: "https://www.coursereport.com/best-coding-bootcamps"
+    height: "170px"
+    text_link: Ver artículo
+
+  - image: "../../../static/images/badges/south-florida-tech-hub.jpeg"
+    title: "Premio Champion Award 2024"
+    paragraph: "Reconocido por el South Florida Tech Hub por promover la educación tecnológica y el crecimiento profesional en toda la región."
+    link: "https://techhubsouthflorida.org/tech-hub-announces-the-2nd-annual-golden-palm-gala-award-2024-honorees/"
+    height: "80px"
     text_link: Ver artículo
 
   - image: "../../../static/images/badges/ebootcamp-top.png"
     title: "Mejor bootcamp de programación para Ebootcamp 2024"
     paragraph: "Hemos sido nominados por eBootcamp como el principal bootcamp de programación para el 2024."
     link: "https://ebootcamp.net/top-bootcamps-programacion/"
+    height: "170px"
     text_link: Ver artículo
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Mejor bootcamp de programación Switchup 2023"
     paragraph: "No solo en Florida, sino tambien en todos nuestros campus 4Geeks estamos constantemente recibiendo reconocimientos de nuestros alumnos permitiendonos posicionarnos como uno de los top bootcamps a nivel mundial."
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    height: "170px"
     text_link: Ver artículo
 
   - image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     title: "Ganadores de los Premios Tecnologia Siglo XXI mención 'Formación'"
     paragraph: "Nuestro campus de España fue reconocido como ganador de los Premios Tecnología Siglo XXI en la mención Formación en 2023"
     link: "https://www.elsuplemento.es/premiado/4geeks-academy-premio-nacional-de-tecnologia-2023-en-la-categoria-formacion"
+    height: "170px"
     text_link: Ver artículo
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Mejor Programa Especializado en Coding Bootcamp 2022"
     paragraph: 'Nos complace anunciar que hemos sido distinguidos con el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Premio Excelencia Educativa al Mejor Programa Especializado en Coding Bootcamp del año 2022</a>. Este reconocimiento resalta nuestro compromiso con la excelencia en la formación en tecnología.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Mejor Programa Educativo 2022"
     paragraph: 'Nos han otorgado el Premio Excelencia Educativa al <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Mejor Programa Educativo 2022</a>  Este reconocimiento es un testimonio de nuestro compromiso con la calidad y la innovación en la educación.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Mejor Plan de Becas Internacionales 2022"
     paragraph: 'Nos han otorgado el Premio Excelencia Educativa al <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Mejor Programa de Becas Internacionales 2022</a>! Reconoce nuestro esfuerzo por ofrecer oportunidades educativas globales a estudiantes talentosos, sin importar su situación económica.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Premios al Mejor bootcamp presencial 2022"
     paragraph: 'Nuestro campus de España ha sido honrado con el Premio <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Excelencia Educativa al Mejor Bootcamp Presencial 2022</a>. Este reconocimiento es un testimonio de nuestro compromiso inquebrantable con la excelencia en la educación presencial en el campo de la tecnología.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Reconocimiento a la Trayectoria Internacional"
     paragraph: 'En el marco de los Premios Excelencia Educativa 2022, nos enorgullece haber sido galardonados con el <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">premio a la Trayectoria Internacional</a> Destacada en el ámbito de la Escuela de Desarrollo de Software.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/awards/pee-career.png"
     title: "Mejor Programa Educativo para la Inserción Profesional"
     paragraph: 'Premio Excelencia Educativa 2021 al Mejor Programa Educativo para la Inserción Profesional Especializado en Coding Bootcamp, más información en el <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
     link: ""
+    height: "170px"
     text_link: 
 
   - image: "../../../static/images/awards/pee-innovation.png"
     title: "Excelencia Educativa a la Mejor innovación"
     paragraph: 'Premio Excelencia Educativa 2021 a la Mejor Innovación en Escuela de Coding Bootcamp, más información en el <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
     link: ""
+    height: "170px"
     text_link: 
 
   - image: "../../../static/images/awards/pee-trajectory.png"
     title: "Mejor Trayectoria Internacional"
     paragraph: 'Premio Excelencia Educativa 2021 a la Mejor Trayectoria Internacional en Escuela de Desarrollo de Software, más información en el <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">palmares 2021 de los premios excelencia educativa</a>'
     link: ""
+    height: "170px"
     text_link: 
 
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School for Newsweek"
     paragraph: "4Geeks Academy ha sido reconocida como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
     link: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+    height: "80px"
     text_link: Ver articulo
 
   - image: "../../../static/images/badges/reviews-es.png"
     title: "4.9 on all reviews"
     paragraph: "Contamos con una puntuación de 4.9 en todos los reviews de las plataformas de CourseReport y SwitchUp."
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    height: "80px"
     text_link: Ver articulo
-
-  - image: "../../../static/images/badges/syllabus.png"
-    title: "Award Winning Syllabus"
-    paragraph: "Obtuvimos un premio por la calidad de nuestro syllabus"
-    link: "/"
-    

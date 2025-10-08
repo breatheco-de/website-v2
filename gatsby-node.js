@@ -109,7 +109,7 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
         });
       }
 
-      const slug = node.frontmatter.slug?.replace(/\.[a-z]{2,2}/, "");
+      const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
       url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
     } else url = createFilePath({ node, getNode });
 
@@ -791,27 +791,87 @@ exports.createSchemaCustomization = ({ actions }) => {
     type EngineeringYamlCourse_instructorsInstructors {
       image: File
     }
+    type LandingYamlHeader_data {
+      background: String
+      tagline: String
+      tagline_color: String
+      sub_heading: String
+      image_filter: String
+      partner_logo_url: File @fileByRelativePath
+      background_image: File @fileByRelativePath
+      badge: File @fileByRelativePath
+      form_styles: LandingYamlHeaderFormStyles
+    }
+    type LandingYamlHeaderFormStyles {
+      background: String
+      color: String
+      button: LandingYamlHeaderFormStylesButton
+    }
+    type LandingYamlHeaderFormStylesButton {
+      background: String
+    }
+    
+    type LandingYaml implements Node {
+      header_data: LandingYamlHeader_data
+    }
+    type DownloadableYamlHeader_data {
+      background: String
+      tagline: String
+      tagline_color: String
+      sub_heading: String
+      image_filter: String
+      partner_logo_url: File @fileByRelativePath
+      background_image: File @fileByRelativePath
+      badge: File @fileByRelativePath
+      form_styles: DownloadableYamlHeaderFormStyles
+    }
+    type DownloadableYamlHeaderFormStyles {
+      background: String
+      color: String
+      button: DownloadableYamlHeaderFormStylesButton
+    }
+    type DownloadableYamlHeaderFormStylesButton {
+      background: String
+    }
+    
+    type DownloadableYaml implements Node {
+      header_data: DownloadableYamlHeader_data
+    }
   `;
   createTypes(typeDefs);
 };
 
 // This section was commented during the migration from GatsbyV2 to GatsbyV5
-// Now the worker is being loded with the webpack 5 native method
+// Now the worker is being loaded with the webpack 5 native method
 // Package workerize-loader was uninstalled
 
-// exports.onCreateWebpackConfig = ({
-//   actions: { replaceWebpackConfig },
-//   getConfig,
-// }) => {
-//   const config = getConfig();
+// Updated webpack config for Gatsby 5 + Webpack 5 compatibility
+exports.onCreateWebpackConfig = ({ actions, stage, getConfig }) => {
+  const config = getConfig();
 
-//   config.module.rules.push({
-//     test: /\.worker\.js$/,
-//     use: { loader: "workerize-loader" },
-//   });
+  // Fix for Gatsby 5 + Webpack 5 splitChunks configuration
+  if (stage === "build-javascript" || stage === "develop") {
+    // Remove conflicting cache groups that may cause issues
+    if (config.optimization && config.optimization.splitChunks) {
+      const splitChunks = config.optimization.splitChunks;
 
-//   //This line was commented during the migration from GatsbyV2 to GatsbyV5 because it caused the build product to fail
-//   // config.output.globalObject = "this";
+      // Ensure we're working with Gatsby 5's chunk strategy
+      if (splitChunks.cacheGroups) {
+        // Remove any styles cache group that conflicts with commons
+        if (splitChunks.cacheGroups.styles) {
+          delete splitChunks.cacheGroups.styles.name;
+        }
 
-//   replaceWebpackConfig(config);
-// };
+        // Disable CSS chunking to prevent conflicts
+        splitChunks.cacheGroups.styles = {
+          name: false,
+          test: /\.(css|scss|sass)$/,
+          chunks: "all",
+          enforce: false,
+        };
+      }
+    }
+
+    actions.replaceWebpackConfig(config);
+  }
+};

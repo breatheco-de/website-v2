@@ -313,13 +313,28 @@ export const beHiringPartner = async (data, session) => {
   }
   return true;
 };
-export const applyJob = async (data) => {
+export const applyJob = async (data, session) => {
   console.log("New job application", data);
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
-  // TODO: tag and utm are still missing for the form
-  // if(!session || !session.utm || !session.utm.utm_test) return await save_form(body, ['hiring-partner'], ['hiring-partner']);
+  if (!session || !session.utm || !session.utm.utm_test) {
+    const _data = await save_form(
+      body,
+      ["job-application"],
+      ["job-application"],
+      session
+    );
+    // save conversion info to GTM
+    tagManager("job_application", {
+      email: _data.email,
+      formentry_id: _data.id,
+      attribution_id: _data.attribution_id?.toString(),
+      referral_key: _data.referral_key,
+    });
+
+    return _data;
+  }
   return true;
 };
 export const contactUs = async (data, session) => {

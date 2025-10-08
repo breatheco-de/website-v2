@@ -8,14 +8,14 @@ meta_info:
   redirects: []
 
 banner:
-  tagline: "Category Archives: Coding Bootcamp Blog"
-  sub_heading: "Resources and news for both potential and current software builders."
+  tagline: "Tech Careers, AI, and Coding Bootcamp Resources"
+  sub_heading: "The go-to resource for tech careers, AI-powered learning, and the latest trends in Full-Stack Development with AI, Data Science & ML, and Cybersecurity. Explore articles, tips, and news to help students, graduates, and tech enthusiasts advance their careers."
   no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
-seo_title: "Category Archives: Coding Bootcamp Blog"
+seo_title: "Tech Careers, AI, and Coding Bootcamp Resources"
 header:
-  title: "Blog"
-  paragraph: "Resources and news for both potential and current software builders."
+  title: "The 4Geeks Blog"
+  paragraph: "The go-to resource for tech careers, AI-powered learning, and the latest trends in Full-Stack Development with AI, Data Science & ML, and Cybersecurity. Explore articles, tips, and news to help students, graduates, and tech enthusiasts advance their careers."
   image: "../../../static/images/blog/Blog-header.png"
   image_alt: "4Geeks Academy Blog"
 

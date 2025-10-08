@@ -64,7 +64,6 @@ upcoming:
 
 info_box:
   heading: ""
-  address: "1801 SW 3rd Ave #100, Miami, FL 33129"
   contact_heading: "Contacts"
   phone: "(786) 416-6640"
   email: "info@4GeeksAcademy.com"
@@ -185,7 +184,6 @@ city: "Resto de América"
 name: "Resto de América en Inglés"
 latitude: "10000.760158"
 longitude: "-800000.200154"
-address: "1801 SW 18th Road"
 zip_code: "33130"
 phone: "+1 (786) 416-6640"
 state: "Florida"

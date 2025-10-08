@@ -120,7 +120,7 @@ const Location = ({ data, pageContext, yml }) => {
             openLabel={chooseButton[lang]}
             closeLabel={chooseButton[lang]}
           />
-          {yml.info_box.address && (
+          {yml.address && (
             <Div
               alignItems="flex-start"
               margin="15px 0 0 0"
@@ -137,12 +137,12 @@ const Location = ({ data, pageContext, yml }) => {
                 lineHeight="22px"
                 width="100%"
               >
-                {yml.info_box.address}
-                {!yml.info_box.address.includes("Only remotely") && (
+                {yml.address}
+                {!yml.address.includes("Only remotely") && (
                   <Link
                     target="_blank"
                     to={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                      yml.info_box.address
+                      yml.address
                     )}`}
                     style={{ marginLeft: "5px", display: "inline" }}
                   >
@@ -419,6 +419,7 @@ export const query = graphql`
           latitude
           longitude
           phone
+          address
           header {
             tagline
             paragraph

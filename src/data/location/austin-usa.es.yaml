@@ -64,7 +64,6 @@ upcoming:
 
 info_box:
   heading: ""
-  address: "4201 Main St Ste 200, Houston, TX 77002"
   iframeMapUrl: ""
   open_on_maps: "Abrir Mapa."
   contact_heading: "Contacts"
@@ -197,7 +196,6 @@ city: "Austin"
 name: "Austin, USA"
 latitude: "30.267253"
 longitude: "-97.743073"
-address: "4201 Main St Ste 200"
 zip_code: "77002"
 phone: "+1 (786) 416-6640"
 state: "Texas"

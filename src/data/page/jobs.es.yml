@@ -5,14 +5,37 @@ meta_info:
   slug: empleo
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   title: "Empleos en 4Geeks Academy"
-  description: "Encuentra la oportunidad laboral que buscas, trabaja con nosotros en 4Geeks Academy"
+  description: "Explora oportunidades laborales en 4Geeks Academy. Nuestro bootcamp de programación abre puertas a una amplia gama de roles tech."
   image: null
   keywords: "empleo, trabajo, 4geeks academy"
   redirects: ["/empleo"]
 
-seo_title: Empleos en 4Geeks Academy
+seo_title: Oportunidades Laborales
 header:
-  title: "TRABAJA EN 4GEEKS ACADEMY"
-  paragraph: ""
-  image: "../../../static/images/bg/pricing-bg.jpg"
-  alt: ""
+  title: "Carreras en 4Geeks Academy"
+  paragraph: "Únete a una academia de programación global reconocida por su calidad, impacto e innovación. En 4Geeks, no solo trabajarás — ayudarás a miles de estudiantes en todo el mundo a lanzar carreras tecnológicas en programación, datos, IA y ciberseguridad."
+  image: "../../../static/images/landing/comunity-support.png"
+  image_alt: "Encabezado de Empleos 4Geeks Academy"
+
+work_together:
+  title: "¿Por qué trabajar en 4Geeks?"
+  features:
+    - title: "Trabajos remotos y flexibles en EE.UU., Europa y LATAM."
+      icon: "screen"
+      description: " "
+    
+    - title: "Genera un impacto medible en la educación tecnológica y la fuerza laboral del futuro."
+      icon: "community"
+      description: " "
+    
+    - title: "Colabora con un equipo global impulsado por su misión, reconocido por Forbes y confiado por instituciones como IDB, UTEC y United Way."
+      icon: "chat-2"
+      description: " "
+    
+    #- title: "Desarrollo Profesional"
+    #  icon: "notes-2"
+    # description: "Desarrolla tu carrera con oportunidades de desarrollo profesional, roles de liderazgo y avance de habilidades."
+
+form:
+  title: "¿No encontraste lo que buscabas?"
+  paragraph: "Siempre estamos buscando educadores, mentores e innovadores apasionados para unirse a nuestra red. Contáctanos y envíanos tu CV."

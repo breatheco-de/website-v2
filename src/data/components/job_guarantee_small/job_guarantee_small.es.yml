@@ -1,4 +1,4 @@
-title: Pregunta por la garantía de empleo
+title: Inscríbete con Garantía de Trabajo
 locations:
 - "atlanta-usa"
 - "berlin-germany"
@@ -29,14 +29,14 @@ locations:
 - "toronto-canada"
 icons:
   - icon: "mortar-board-icon"
-    title: Obtén un trabajo dentro de los 9 meses posteriores a la graduación o recupera tu dinero.
+    title: Nos comprometemos con tu carrera futura.
   - icon: "stage-dots-icon"
-    title: Completa las etapas de nuestro proceso de apoyo profesional.
+    title: Completa todas las etapas de nuestro proceso de apoyo profesional.
   - icon: "people-group-icon"
-    title: Accede a una red de contratación con más de 5,000 empresas.
+    title: Accede a una red de más de 5K socios contratantes.
   - icon: "hands-w-purple"
-    title: Nos comprometemos con tu carrera.
+    title: Obtén un trabajo dentro de los 9 meses posteriores a la graduación o recupera tu dinero.
 link:
   url: /es/trabajo-garantizado
   label: Consulta los Detalles Completos Aquí
-text: "*Las condiciones varían según tu estado en EE. UU."
+text: "*No aplica para todos los mercados, países o estados donde opera 4Geeks"

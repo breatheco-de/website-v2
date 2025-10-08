@@ -7,21 +7,26 @@ meta_info:
   keywords: "4Geeks Academy, Partners"
   redirects: []
 
-seo_title: "Academy Partnerships"
+seo_title: "Partner with 4Geeks Academy"
 header:
-  title: "We want to Partner Up"
+  title: "Building the Future of Tech, Together"
   image: "../../../static/images/partner/partnership-image.png"
   image_alt: "Partnership header"
-  paragraph: "At 4Geeks we believe in the power of collaboration and the positive impact that creates an active community. We are constantly looking for more ways to bring talent and organization that can help and join us in our vision to create the most relevant career-boosting community for future and present coders."
-  button: HAZTE HIRING PARTNER
+  paragraph: "At 4Geeks Academy, we believe in the power of collaboration to drive real impact. We partner with universities, nonprofits, workforce development initiatives, and global organizations to expand access to tech education and create stronger career pathways. Together, we train and place diverse talent, bridge the digital skills gap, and build the tech workforce of the future."
+  button: Join Our Partnership Network
 
 form:
-  title: "Become a 4Geeks Partner"
-  paragraph: "
-  Contact us and we'll connect you directly to the right candidates who are graduating from 4Geeks Academy every day.
-  Our graduates succeed at their own businesses, startups and big companies alike.
+  title: "Partner with a Globally Recognized Leader in Tech Education"
+  paragraph: |
+    When you partner with 4Geeks, you join a coding academy trusted by leading institutions and organizations worldwide:
+    <li style='margin: 0 0 0 1.4rem'>Named Top 5 Coding Bootcamp Worldwide by Forbes</li>
+    <li style='margin: 0 0 0 1.4rem'>Rated 4.9/5 on SwitchUp, Course Report, and Career Karma</li>
+    <li style='margin: 0 0 0 1.4rem'>Licensed by the Florida Department of Education</li>
+    <li style='margin: 0 0 0 1.4rem'>Selected by institutions like IDB, UTEC, and United Way as their training provider</li>
+    With a proven track record of transforming careers and delivering measurable workforce outcomes, your partnership gains both credibility and impact.
 
-  Our programs prepare students to work and thrive at any tech and forward-thinking organization."
+    👉 Fill out the form and help shape tomorrow’s tech workforce.
+
 footer_data:
   image: "../../../static/images/partner/partnership.png"
   alt: ""

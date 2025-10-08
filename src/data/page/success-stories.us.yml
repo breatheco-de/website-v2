@@ -40,17 +40,17 @@ images:
   - name: "Facebook"
     image: "../../../static/images/partner/meta-logo.png"
   - name: "Microsoft"
-    image: "../../../static/images/partner/google-gray.png"
+    image: "../../../static/images/partner/google.png"
   - name: "Apple"
     image: "../../../static/images/partner/apple.png"
   - name: "Uber"
     image: "../../../static/images/partner/uber.png"
   - name: "globant"
-    image: "../../../static/images/partner/globant-gray.png"
+    image: "../../../static/images/partner/globant.png"
   - name: "accenture"
-    image: "../../../static/images/partner/accenture-gray.png"
+    image: "../../../static/images/partner/accenture.png"
   - name: "discord"
-    image: "../../../static/images/partner/discord-gray.png"
+    image: "../../../static/images/partner/discord.webp"
 
 partners:
   title: Who is hiring our Graduates?

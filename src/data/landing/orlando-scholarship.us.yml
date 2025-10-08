@@ -196,7 +196,7 @@ components:
         link: "/us/coding-bootcamps/part-time-full-stack-developer"
         text_link: "Read More"
 
-      - title: "Data Science and ML"
+      - title: "Data Science and Machine Learning with AI"
         sub_title: "With Python"
         description: "Learn Python to collect and manage data. Create models and solve problems using Machine Learning, Deep Learning, and AI."
         icon: "machine_2"

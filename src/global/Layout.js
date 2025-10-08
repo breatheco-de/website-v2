@@ -10,7 +10,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import Footer from "../components/Footer";
 import CookieBot from "react-cookiebot";
 import CustomBar from "../components/CustomBar";
-import PageWrapper from "./PageWrapper";
 
 import GlobalStyle from "./GlobalStyle";
 import SEO from "./SEO";
@@ -98,6 +97,7 @@ const Layout = ({ children, seo, context, metaInfo }) => {
           node {
             navbar {
               name
+              id
               link
               sub_menu {
                 icon
@@ -105,6 +105,10 @@ const Layout = ({ children, seo, context, metaInfo }) => {
                 link
                 paragraph
                 width
+                program_comparison_cta {
+                  text
+                  link
+                }
                 links {
                   title
                   level
@@ -145,63 +149,6 @@ const Layout = ({ children, seo, context, metaInfo }) => {
           id
         }
       }
-      allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
-        edges {
-          node {
-            fields {
-              lang
-            }
-            cta {
-              title
-              description
-              primary {
-                title
-                description
-                benefits
-                footer_text
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 800
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
-                  }
-                }
-                action_text
-                action_url
-              }
-              secondary {
-                title
-                description
-                benefits
-                footer_text
-                image {
-                  childImageSharp {
-                    gatsbyImageData(
-                      layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                      width: 800
-                      placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    )
-                  }
-                }
-                action_text
-                action_url
-              }
-              newsletter_form {
-                placeholder_email
-                error_email
-                button_submit
-                button_loading
-                status_idle
-                status_error
-                status_correct_errors
-                success_message
-              }
-            }
-          }
-        }
-      }
     }
   `);
   let myFooter = data.allFooterYaml.edges.find(
@@ -214,9 +161,6 @@ const Layout = ({ children, seo, context, metaInfo }) => {
     (item) => item.node.fields.lang === context.lang
   );
 
-  let myDoubleActionCTA = data.allDoubleActionCtaYaml.edges.find(
-    (item) => item.node.fields?.lang === context.lang
-  );
   return (
     <>
       {editMode && (
@@ -270,13 +214,7 @@ const Layout = ({ children, seo, context, metaInfo }) => {
           />
         </Helmet>
       )}
-      <PageWrapper
-        pageContext={context}
-        doubleActionCTA={myDoubleActionCTA?.node.cta}
-        hideGlobalCTA={metaInfo?.hideGlobalCTA || false}
-      >
-        {children}
-      </PageWrapper>
+      {children}
       <Footer yml={myFooter.node} />
     </>
   );

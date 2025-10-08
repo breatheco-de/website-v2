@@ -57,6 +57,7 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
+    - Desde $100 al mes, planes de pago que siempre se ajustan a tu historial crediticio
     - Accede a oportunidades profesionales como Junior Data Scientist sin necesidad de experiencia previa
     - El salario promedio para un Data Scientist en México oscila entre $60.000 y $70.000 pesos al mes. 
     - Disfruta de un horario part-time adaptado a tu ritmo de vida

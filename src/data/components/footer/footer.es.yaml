@@ -41,14 +41,16 @@ footer:
     width: 3
     heading: "PROGRAMAS"
     items:
-      - name: "Desarrollador Full Stack"
+      - name: "Desarrollador Full Stack con IA"
         link: "/es/coding-bootcamps/desarrollador-full-stack"
       - name: "Ingeniero de software"
         link: "/es/coding-bootcamps/ingenieria-de-software-programacion"
-      - name: "Data Science y Machine Learning"
+      - name: "Data Science y Machine Learning con IA"
         link: "/es/coding-bootcamps/curso-datascience-machine-learning/"
       - name: "Curso de programación desde cero"
         link: "/es/curso-de-programacion-desde-cero"
+      - name: "Ciberseguridad"
+        link: "/es/coding-bootcamps/curso-ciberseguridad"
   - column_four:
     heading: "SEDES"
     width: 3

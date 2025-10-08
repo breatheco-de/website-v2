@@ -28,11 +28,11 @@
     "format"
   ],
   "scripts": {
-    "start": "node ./verify-node-version.js 'development server' && npm run clean && gatsby develop -H 0.0.0.0 -o",
+    "start": "node ./src/utils/check-node-version.js && npm run clean && gatsby develop -H 0.0.0.0 -o",
     "test": "sh ./src/test/test.sh",
     "prompts": "sh ./src/prompt/prompt.sh",
     "start:storybook": "start-storybook -p 9000 -c .storybook",
-    "build": "node ./verify-node-version.js 'build process' && npm run test && node ./src/utils/makePagesDictionary.js && node ./src/test/test.redirect.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js && gatsby build",
+    "build": "node ./src/utils/check-node-version.js && npm run test && node ./src/utils/makePagesDictionary.js && node ./src/test/test.redirect.js && node ./src/utils/makePostsDictionary.js && node ./src/utils/makeRedirectsDictionary.js && gatsby build",
     "build:gatsby": "gatsby build",
     "makeDictionaries": "node ./src/utils/makePagesDictionary.js && node ./src/utils/makeRedirectsDictionary.js",
     "serve": "gatsby serve -o -p 8080",

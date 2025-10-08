@@ -247,6 +247,21 @@ const LeadForm = ({
   let yml = { ...page.node, ...form.node };
 
   const captcha = useRef(null);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
+
   const [formStatus, setFormStatus] = useState({ status: "idle", msg: "" });
   const [formData, setVal] = useState(_fields);
   const [consentValue, setConsentValue] = useState([]);
@@ -349,9 +364,9 @@ const LeadForm = ({
           setFormStatus({ status: "error", msg: locationSelector.error });
         } else {
           setFormStatus({ status: "loading", msg: yml.messages.loading });
-          const token = await captcha.current.executeAsync();
+          const token = await executeRecaptcha();
           formHandler(
-            { ...cleanedData, token: { value: token, valid: true } },
+            { ...cleanedData, token: { value: token || "", valid: !!token } },
             session
           )
             .then((data) => {

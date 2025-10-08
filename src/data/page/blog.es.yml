@@ -8,14 +8,14 @@ meta_info:
   redirects: ["/es/blog"]
 
 banner:
-  tagline: "4Geeks Academy Blog"
-  sub_heading: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
+  tagline: "Carreras en Tecnología, IA y Recursos de Bootcamp de Programación"
+  sub_heading: El recurso de referencia para carreras en tecnología, aprendizaje impulsado por IA y las últimas tendencias en Desarrollo Full-Stack con IA, Ciencia de Datos y ML, y Ciberseguridad. Explora artículos, consejos y noticias para ayudar a estudiantes, graduados y entusiastas de la tecnología a avanzar en sus carreras.
   no_image: "https://i.imgur.com/n3V1Rqq.jpeg"
 
-seo_title: "4Geeks Academy Blog"
+seo_title: "Carreras en Tecnología, IA y Recursos de Bootcamp de Programación"
 header:
-  title: "Blog"
-  paragraph: "Recursos y novedades principalmente escritas para nuestra comunidad o personas interesadas en la industria Tech, de las startups y del crecimiento profesional a traves del Coding."
+  title: "El Blog de 4Geeks"
+  paragraph: El recurso de referencia para carreras en tecnología, aprendizaje impulsado por IA y las últimas tendencias en Desarrollo Full-Stack con IA, Ciencia de Datos y ML, y Ciberseguridad. Explora artículos, consejos y noticias para ayudar a estudiantes, graduados y entusiastas de la tecnología a avanzar en sus carreras.
   image: "../../../static/images/blog/Blog-header.png"
   image_alt: "4Geeks Academy Blog"
 

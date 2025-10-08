@@ -3,7 +3,7 @@ heading: "Meet the Geeks"
 sub_heading: "Our team is dedicated, highly skilled, and always ready to support you on your journey into tech. They provide all the guidance and encouragement you need to launch a successful new career."
 staff:
   - name: "Alejandro"
-    last_name: "Sanchez"
+    last_name: "Sánchez"
     nick_name: "Alesanchezr"
     slug: "alejandro-sanchez"
     job_title: "Co-Founder & Technology Director"
@@ -41,7 +41,7 @@ staff:
     last_name: "Landra"
     nick_name: ""
     slug: 
-    job_title: "Partnership & Program Manager"
+    job_title: "Campus & Growth Manager USA"
     github: ""
     bio: "I graduated from the AACSB Accredited State University of New York at Plattsburgh School of Business and Economics with a BA in Marketing & Business Administration with honors."
     linkdin: "https://www.linkedin.com/in/alissalandra/"
@@ -54,8 +54,8 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Victor"
-    last_name: "Gomez"
+  - name: "Victor Manuel"
+    last_name: "Gómez Pérez"
     nick_name: ""
     slug: ""
     job_title: "Regional Manager Europe"
@@ -71,30 +71,11 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Macarena"
-    last_name: "Rebolledo"
-    nick_name: "Macarena"
-    slug: "macarena-rebolledo"
-    job_title: "Lead Mentor"
-    bio: ""
-    github: "https://github.com/mojonapower"
-    linkdin: "https://www.linkedin.com/in/mrebolledovaldivia/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/macarenarebolledo.jpg"
-    age: 42
-    interests:
-      - Board Games
-      - Soccer
-      - Music
-    coding_skills:
-      - Javascript and Python
-    location: ["all"]    
   - name: "Pablo"
     last_name: "Bullor"
     nick_name: "Pablo"
     slug: "pablo-bullor"
-    job_title: "Program Manager Latam"
+    job_title: "Program Manager LATAM"
     bio: "Systems Engineer with more than 10 years of experience in IT."
     github: "https://github.com/pbullor"
     linkdin: "https://www.linkedin.com/in/pablobullor/"
@@ -109,11 +90,28 @@ staff:
     coding_skills:
       - Javascript and Python
     location: ["all"]
+  - name: "Laura"
+    last_name: "Magallanes"
+    nick_name: ""
+    slug: 
+    job_title: "Program Manager USA"
+    github: ""
+    bio: ""
+    linkdin: "https://www.linkedin.com/in/laura-magallanes-dev/"
+    twitter: ""
+    website: ""
+    image: "../../../../static/images/staff/laura.webp"
+    age: 
+    interests:
+      - 
+    coding_skills:
+      - 
+    location: ["all"]
   - name: "Valentina"
     last_name: "Ancieta"
     nick_name: ""
     slug: "Vale-anci"
-    job_title: "Career Support USA & Latam"
+    job_title: "Workforce Development Manager USA & LATAM"
     bio: ""
     github: ""
     linkdin: "https://www.linkedin.com/in/valentinaancieta/"
@@ -126,23 +124,41 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Tomas"
-    last_name: "Gonzalez"
+  - name: "Valentina"
+    last_name: "Botana"
     nick_name: ""
-    slug: "tom-gon"
-    job_title: "Product Manager"
-    bio: ""
+    slug: 
+    job_title: "Career Support Coordinator USA & LATAM"
     github: ""
-    linkdin: "https://www.linkedin.com/in/tomasgonzaleza/"
+    bio: ""
+    linkdin: "https://www.linkedin.com/in/valentina-botana/"
     twitter: ""
     website: ""
-    image: "../../../../static/images/staff/tomas-gonzalez.jpg"
-    age: 28
+    image: "../../../../static/images/staff/valentina-botana.webp"
+    age: 
     interests:
-      -
+      - 
     coding_skills:
       - 
     location: ["all"]
+
+  # - name: "Tomas"
+  #   last_name: "Gonzalez"
+  #   nick_name: ""
+  #   slug: "tom-gon"
+  #   job_title: "Product Manager"
+  #   bio: ""
+  #   github: ""
+  #   linkdin: "https://www.linkedin.com/in/tomasgonzaleza/"
+  #   twitter: ""
+  #   website: ""
+  #   image: "../../../../static/images/staff/tomas-gonzalez.jpg"
+  #   age: 28
+  #   interests:
+  #     -
+  #   coding_skills:
+  #     - 
+  #   location: ["all"]
   - name: "Martha"
     last_name: "López"
     nick_name: ""
@@ -160,23 +176,24 @@ staff:
     coding_skills:
       - 
     location: ["all"]
-  - name: "Gustavo"
-    last_name: "Marquez"
-    nick_name: ""
-    slug: "gusmar"
-    job_title: "Software Engineer"
-    bio: ""
-    github: ""
-    linkdin: "https://www.linkedin.com/in/gustavo-marquez-ing/"
-    twitter: ""
-    website: ""
-    image: "../../../../static/images/staff/gustavo-marquez.jpg"
-    age: 25
-    interests:
-      -
-    coding_skills:
-      - 
-    location: ["all"]
+  # - name: "Gustavo"
+  #   last_name: "Marquez"
+  #   nick_name: ""
+  #   slug: "gusmar"
+  #   job_title: "Software Engineer"
+  #   bio: ""
+  #   github: ""
+  #   linkdin: "https://www.linkedin.com/in/gustavo-marquez-ing/"
+  #   twitter: ""
+  #   website: ""
+  #   image: "../../../../static/images/staff/gustavo-marquez.jpg"
+  #   age: 25
+  #   interests:
+  #     -
+  #   coding_skills:
+  #     - 
+  #   location: ["all"]
+
   # - name: "María"
   #   last_name: "Miranda"
   #   nick_name: ""

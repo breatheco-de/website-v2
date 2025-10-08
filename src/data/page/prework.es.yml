@@ -6,19 +6,18 @@ meta_info:
   image: ""
   keywords: "preparación bootcamp programación"
   redirects: ["/prework"]
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
-
+ 
 ## BANNER - HEADER
 seo_title: "¿Qué es el Prework?"
 header:
-  title: "Prework en 4Geeks: Tu Ventaja Inicial en Tecnología"
+  title: "Prework en 4Geeks:\nTu Ventaja Inicial en Tecnología"
   paragraph: |
     <span>El Prework es el primer paso de cada bootcamp. Combina estudio a tu propio ritmo con apoyo de mentores en vivo, así que nunca estarás solo. Cubrirás conceptos esenciales, practicarás con nuestras plataformas y desarrollarás los hábitos que te acompañarán durante todo el programa.</span>
 
     <span>Para cuando comience tu bootcamp, ya te sentirás cómodo con el ritmo, las herramientas y el sistema de apoyo que hace único a 4Geeks.</span>
   tagline: "PREWORK EN 4GEEKS"
   sub_heading: "Para cuando comience tu bootcamp, ya te sentirás cómodo con el ritmo, las herramientas y el sistema de apoyo que distingue a 4Geeks."
-  image: "../../../static/images/woman-laptop-smile-bg.webp"
+  image: "../../../static/images/landing/comunity-support.png"
   alt: "Estudiantes aprendiendo a programar en prework"
   button: "Comienza Tu Viaje"
 
@@ -44,43 +43,40 @@ how_it_works:
     <li>Asistir a las Clases de Prework en Vivo (salas de estudio) es obligatorio. Trabajarás en ejercicios, compartirás tu pantalla y obtendrás ayuda en tiempo real de un mentor.</li>
   image: "../../../static/images/Group-6617.webp"
   schedule:
-    title: "Horario de Clases de Prework (EST)"
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+    title: "Horario de Clases de Prework"
     classes:
       - program: "Desarrollo Full Stack"
-        schedule: "Lun, Mié, Vie – 6:00 a 9:00 PM"
+        schedule: "Lun, Mié, Vie – 6:00 a 9:00 PM (EST)"
         icon: fullstack_2
       - program: "Ciencia de Datos y Machine Learning"
-        schedule: "Lun, Mié – 6:00 a 9:00 PM"
+        schedule: "Lun, Mié – 6:00 a 9:00 PM (EST)"
         icon: machine_2
       - program: "Ciberseguridad"
-        schedule: "Mié – 6:00 a 9:00 PM"
+        schedule: "Mié – 6:00 a 9:00 PM (EST)"
         icon: cyber-security
-  note: "Unirse temprano es opcional pero muy recomendado — es la mejor manera de adelantarte, hacer preguntas en tiempo real y adaptarte al programa."
 
 ## WHY PREWORK MATTERS SECTION
 why_prework_matters:
   title: "Por Qué Importa el Prework"
-  bullets:
-    - text: "Construye tu confianza antes de que comiencen las clases"
-      icon: rocket
-      style:
-        background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
-        shadow: "rgba(59, 130, 246, 0.14)"
-    - text: "Te ayuda a dominar los conceptos básicos para que puedas enfocarte en habilidades avanzadas durante el bootcamp"
-      icon: users
-      style:
-        background: "linear-gradient(135deg, #10b981 0%, #059669 100%)"
-        shadow: "rgba(16, 185, 129, 0.14)"
-    - text: "Te familiariza con las herramientas, sistemas de soporte y estilo de aprendizaje de 4Geeks"
-      icon: chart
-      style:
-        background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
-        shadow: "rgba(245, 158, 11, 0.14)"
-    - text: "Hace tu transición a la tecnología más suave y menos abrumadora"
-      icon: trophy
-      style:
-        background: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
-        shadow: "rgba(139, 92, 246, 0.14)"
+  text: "Nuestro prework está diseñado para prepararte para el éxito. He aquí por qué es una parte fundamental de tu viaje:"
+  boxes:
+    - title: "Confianza"
+      text: "Construye tu confianza antes de que comiencen las clases"
+      icon: "star-2"
+      color: "#FFC718"
+    - title: "Dominio"
+      text: "Te ayuda a dominar los conceptos básicos para que puedas enfocarte en habilidades avanzadas durante el bootcamp"
+      icon: "graduation-2"
+      color: "#0084FF"
+    - title: "Familiaridad"
+      text: "Te familiariza con las herramientas, sistemas de soporte y estilo de aprendizaje de 4Geeks"
+      icon: "book-2"
+      color: "#10b981"
+    - title: "Transición"
+      text: "Hace tu transición a la tecnología más suave y menos abrumadora"
+      icon: "rocket-2"
+      color: "#FFECBF"
 
 ## CTA SECTION
 cta:
@@ -88,8 +84,8 @@ cta:
   subtitle: "Inscríbete hoy y obtén acceso instantáneo al Prework — tu primer paso hacia una nueva carrera en tecnología."
   primary_button:
     text: "Inscríbete Ahora"
-    link: "/es/apply"
+    link: "/es/aplica"
   secondary_button:
-    text: "Conoce Más Sobre Programas"
-    link: "/es/programs"
+    text: "Explora Nuestros Programas"
+    link: "/es/programas"
   

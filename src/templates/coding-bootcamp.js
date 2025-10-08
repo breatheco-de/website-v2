@@ -591,6 +591,7 @@ const CodingBootcamp = ({ data, pageContext, yml }) => {
 
       <Testimonials
         id="testimonials"
+        categories={["full-stack", "content-and-syllabus", "job-guarantee"]}
         lang={data.allTestimonialsYaml.edges}
         background={Colors.white}
       />
@@ -825,6 +826,7 @@ export const query = graphql`
           button_link
           testimonials {
             student_name
+            related_features
             testimonial_date
             include_in_marquee
             hidden

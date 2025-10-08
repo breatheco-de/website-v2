@@ -6,18 +6,25 @@ meta_info:
   image: "/images/og-preview/finantial.us.png"
   keywords: "Financing at 4Geeks Academy"
   redirects: ["/financials", "/pricing"]
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
-
+ 
 ## BANNER - HEADER
 seo_title: "Bootcamp Financing"
 header:
-  title: Finance your future
-  paragraph: Low monthly payments, income-based options, and scholarships so nothing holds you back from launching a lasting tech career.
+  title: Finance Your Future in Tech, Your Way
+  paragraph: |
+      We offer several ways to fund your education, so you can focus on building your career without worrying about the cost. There’s an option to fit every need:
+      <br/>
+      <br/>
+      • Flexible payment plans
+      <br/>
+      • Affordable loans
+      <br/>
+      • Scholarships
   tagline: CELEBRATE THE BEST PRICE IN TOWN
   sub_heading: We never stopped trying until we mastered a real premium but affordable program. Our philosophy is rooted in making coding education available to everyone.
   image: "../../../static/images/Group-6663.png"
   alt: "financing"
-  button: See plans & prices
+  button: EXPLORE FINANCING OPTIONS
 
 ## FIRST SECTION AFTER THE BANNER
 intro:
@@ -212,7 +219,7 @@ data_table:
     - title: "Option"
     - title: "Pay in Full"
     - title: "Monthly Plans (TFC)"
-    - title: "Loans (Ascent/Climb)"
+    - title: "Loans (Ascent/ Climb)"
     - title: "Income-Based (Edly)"
   rows:
     - cells:

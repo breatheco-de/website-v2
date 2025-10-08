@@ -11,17 +11,25 @@ button:
 syllabus_alias:
   # EVERYTHING must be in lower case except for the name
   - default_course: full-stack
-    course_slug: full-stack
-    name: Desarrollador de Software Full Stack
-
+    course_slug: desarrollador-full-stack
+    name: Desarrollador de Software Full-Stack
+    duration_weeks: 20 semanas
+    
   - default_course: machine-learning
-    course_slug: datascience-ml
-    name: Datascience
-
-  - default_course: cyber-security
-    course_slug: cybersecurity
+    course_slug: curso-datascience-machine-learning 
+    name: Data Science
+    duration_weeks: 16 semanas
+    
+  - default_course: cybersecurity
+    course_slug: curso-ciberseguridad
     name: Ciberseguridad
-
+    duration_weeks: 16 semanas
+    
+  - default_course: full-stack-ft
+    course_slug: full-stack-ft
+    name: Desarrollador Full-Stack - Full Time
+    duration_weeks: 12 semanas
+    
 email_form_content:
   heading: Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus
   button_text: Avisenme cuando haya una fecha
@@ -35,14 +43,19 @@ info:
   location_label: sede
   duration_label: duración
   action_label: acción
-  duration_weeks: 18 semanas
-  duration_part_time: 18 semanas
-  duration_full_time: 10 semanas
   button_text: aplicar
   button_link: "/es/aplica"
+  in_person: Presencial
+  remote: Remoto
+  remote_usa: Remoto - USA
+  remote_latam: Remoto - LATAM
+  remote_europe: Remoto - Europa
+  region_usa: USA
+  region_latam: LATAM
+  region_europe: Europa
 footer:
   button_text: Ver más Fechas
   button_text_open: Ver más Fechas
-  button_text_close:
+  button_text_close: Ver menos Fechas
   button_link: "/es/proximas-fechas"
 no_course_message: "Actualmente no hay próximas fechas para este campus."

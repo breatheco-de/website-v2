@@ -16,6 +16,57 @@ const applyLink = "/us/apply";
 {getRegionalCTA(session, info)?.apply_link}
 ```
 
+### 2.1.1 YAML + GraphQL Workflow (CRITICAL)
+**MANDATORY PROCESS:** Every time you add a new field to YAML files, you MUST update the corresponding GraphQL query.
+
+**STEP-BY-STEP PROCESS:**
+1. **📋 Plan:** Identify what YAML fields need to be added
+2. **🏗️ YAML First:** Update both `.us.yml` and `.es.yml` files
+3. **🔍 GraphQL:** **MANDATORY** - Update GraphQL query to include new fields
+4. **⚛️ Component:** Update React component to use new fields
+5. **🧪 Test:** Run `npm run test` after each step
+
+**EXAMPLE WORKFLOW:**
+```javascript
+// 1. YAML files updated
+// prices_and_payment.us.yml
+other_payment_options: "Other payment options"
+
+// prices_and_payment.es.yml  
+other_payment_options: "Otras opciones de pago"
+
+// 2. GraphQL query updated (MANDATORY)
+const data = useStaticQuery(graphql`
+  query PricesAndPayment {
+    content: allPricesAndPaymentYaml {
+      edges {
+        node {
+          fields { lang }
+          we_accept
+          other_payment_options  // ✅ NEW FIELD ADDED
+          top_label
+        }
+      }
+    }
+  }
+`);
+
+// 3. Component uses field
+{info.other_payment_options} // ✅ WORKS
+```
+
+**COMMON GRAPHQL QUERY LOCATIONS:**
+```bash
+# Search for GraphQL queries
+grep -r "useStaticQuery\|graphql\`" src/components/
+
+# Common patterns:
+# - useStaticQuery(graphql`query ComponentName`)
+# - allPricesAndPaymentYaml
+# - allPlansYaml
+# - allLocationsYaml
+```
+
 ### 2.2 Commit Message Standards
 **FORMAT:** `PREFIX: Description (max 50 chars)`
 
@@ -287,12 +338,13 @@ job_guarantee_locations: [
 
 ### 6.2 Code Review Checklist
 - [ ] Both `.us.yml` and `.es.yml` files updated
-- [ ] GraphQL queries include all new YAML fields
+- [ ] **GraphQL queries include all new YAML fields** ⚠️ CRITICAL
 - [ ] Component logic handles undefined/null values gracefully
 - [ ] Regional filtering uses selected academy, not visitor origin
 - [ ] All tests pass (`npm run test`)
 - [ ] Commit messages follow project standards
 - [ ] Mobile and desktop rendering tested
+- [ ] **GraphQL query compilation successful** ⚠️ NEW
 
 ### 6.3 Debugging Guide
 **COMMON DEBUG POINTS:**
@@ -300,6 +352,33 @@ job_guarantee_locations: [
 2. **Regional logic broken:** Verify academy-based filtering
 3. **Spanish page errors:** Check both language files have matching keys
 4. **Toggle not working:** Ensure state variables are passed to child components
+
+### 6.4 GraphQL Debugging 
+**COMMON GRAPHQL PROBLEMS:**
+1. **Field undefined:** Check GraphQL query includes the field
+2. **Type mismatch:** Ensure YAML structure matches GraphQL expectations
+3. **Query compilation fails:** Check field name spelling and syntax
+4. **Data not loading:** Verify both .us.yml and .es.yml have the field
+
+**DEBUG COMMANDS:**
+```bash
+# Test GraphQL query compilation
+npm run build
+
+# Check GraphQL schema
+# Visit http://localhost:8000/___graphql
+
+# Test specific query
+query {
+  allPricesAndPaymentYaml {
+    edges {
+      node {
+        other_payment_options  # Test if field exists
+      }
+    }
+  }
+}
+```
 
 ---
 
@@ -371,14 +450,91 @@ useEffect(() => {
 ### 8.3 Testing Commands
 ```bash
 npm run test              # Full test suite
-npm run develop          # Development server
 npm run build            # Production build
-npm run serve            # Serve built site
 ```
 
 ---
 
-## ⚠️ 9. CRITICAL REMINDERS
+## 🏗️ 9. DYNAMIC COMPONENT ARCHITECTURE
+
+### 9.1 YAML-Driven Component Architecture
+**CRITICAL PATTERN:** Dynamic components driven by YAML configuration must be rendered directly without extra wrappers to maintain responsive behavior and preserve the configuration-first approach.
+
+```javascript
+// ❌ INCORRECT: Adding wrapper divs breaks mobile responsiveness
+{landingSections.map((name, index) => (
+  <Div margin="20px 0" margin_md="40px 0">
+    {landingSections[layout]({ ...props })}
+  </Div>
+))}
+
+// ✅ CORRECT: Direct rendering preserves responsive layout
+{landingSections.map((name, index) => 
+  landingSections[layout]({ ...props })
+)}
+```
+
+**WHY THIS MATTERS:**
+1. Each YAML-configured component manages its own responsive layout and behavior
+2. Extra wrapper divs interfere with the intended configuration-driven design
+3. Components need direct block-level flow to maintain YAML-defined structure
+4. Preserves the separation between configuration (YAML) and presentation (React)
+
+**IMPLEMENTATION REQUIREMENTS:**
+1. Always render dynamic components directly from their YAML configuration
+2. Let each component control its own margins/spacing via YAML props
+3. Use mobile-first props defined in the component's YAML schema
+4. Test all breakpoints after template changes
+5. Maintain clear separation between YAML configuration and component implementation
+
+### 9.2 Dynamic Template Migration Best Practices
+**PATTERN:** When migrating or creating new templates with dynamic components, use landing_a.js as the reference implementation for YAML-driven architecture.
+
+**MIGRATION CHECKLIST:**
+- [ ] Remove any wrapper Divs around landingSections output
+- [ ] Verify mobile-first props in template layout
+- [ ] Test responsive behavior matches landing_a.js
+- [ ] Validate section spacing/stacking on mobile
+- [ ] Check for overlapping components at all breakpoints
+
+**COMMON PITFALLS:**
+1. Adding margin/padding wrappers around sections
+2. Overriding section's built-in responsive behavior
+3. Not testing all breakpoints during migration
+4. Missing mobile-first props in template layout
+
+### 9.3 YAML-Driven Component Architecture
+**PRINCIPLE:** Components must handle their own responsive behavior through YAML configuration without external wrappers.
+
+```yaml
+# ❌ INCORRECT: Adding wrapper component with hardcoded responsive values
+components:
+  - name: feature_section
+    layout: two_column
+    wrapper:
+      margin: "20px 0"
+      margin_md: "40px 0"
+
+# ✅ CORRECT: Component defines its own responsive layout via YAML
+components:
+  - name: feature_section
+    layout: two_column
+    margin_xs: "10px 0"
+    margin_sm: "20px 0"
+    margin_md: "40px 0"
+    heading:
+      text: "Feature Title"
+      font_size: ["40px", "34px", "30px", "24px", "20px"] # [xl, lg, md, sm, xs]
+```
+
+**YAML-DRIVEN RESPONSIVE PATTERN:**
+- Use consistent breakpoint suffixes (`_xs`, `_sm`, `_md`, `_lg`) in YAML
+- Define responsive arrays in YAML for font sizes and spacing
+- Let YAML configuration control component layout/behavior
+- Avoid wrapper components that override YAML-defined responsive props
+- Test all breakpoints with different YAML configurations
+
+## ⚠️ 10. CRITICAL REMINDERS
 
 1. **ALWAYS** update both `.us.yml` and `.es.yml` files
 2. **NEVER** forget to update GraphQL queries when adding YAML keys
@@ -388,6 +544,10 @@ npm run serve            # Serve built site
 6. **MAINTAIN** mobile-first responsive design
 7. **CONSIDER** all regions when adding new features
 8. **VALIDATE** with `npm run test` before committing
+9. **NEVER** wrap YAML-driven components in extra container divs
+10. **ALWAYS** test responsive behavior on all breakpoints
+11. **MAINTAIN** separation between YAML configuration and component implementation
+12. **FOLLOW** the configuration-first principle for all dynamic components
 
 ---
 
@@ -396,3 +556,4 @@ npm run serve            # Serve built site
 **📖 Version History:**
 - v1.0 (2024): Initial project patterns
 - v2.0 (2025): Regional refactoring and comprehensive guide
+- v2.1 (2025): Added dynamic section architecture guidelines

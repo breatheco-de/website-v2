@@ -182,7 +182,7 @@ details:
       step: 3
     - module_name: "MASTER JAVASCRIPT"
       title: "Master JavaScript"
-      description: "The final section of our prework course is intended to strengthen and enhance your JavaScript skills through thorough practice. As you get ready to move into more advanced development positions, this particular exercise challenges you to improve your coding techniques, tackle difficult problems, and strengthen your grasp of JavaScript in readiness for the next stage of your coding education."
+      description: "The final section of our <a class='link' href='/us/prework'>prework course</a> is intended to strengthen and enhance your JavaScript skills through thorough practice. As you get ready to move into more advanced development positions, this particular exercise challenges you to improve your coding techniques, tackle difficult problems, and strengthen your grasp of JavaScript in readiness for the next stage of your coding education."
       projects: "Engage in 'More Practicing JS'—a comprehensive exercise that challenges you to apply all the JavaScript skills you've learned in a series of intricate coding tasks. This final project is aimed at enhancing your problem-solving abilities and ensuring you have a robust grasp of JavaScript essentials."
       slug: "master-javascript"
       duration: "1 activity"

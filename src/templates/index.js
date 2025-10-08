@@ -24,6 +24,7 @@ import ChooseYourProgram from "../components/ChooseYourProgram";
 import Testimonials from "../components/Testimonials";
 import TwoColumn from "../components/TwoColumn/index.js";
 import Badges from "../components/Badges";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Home = (props) => {
   const { data, pageContext, yml } = props;
@@ -492,6 +493,14 @@ const Home = (props) => {
         allLocationYaml={data.allLocationYaml}
         hideHeading
       />
+      <DoubleActionCTA
+        lang={pageContext.lang}
+        title={yml.double_action_cta?.title}
+        description={yml.double_action_cta?.description}
+        primary={yml.double_action_cta?.primary}
+        secondary={yml.double_action_cta?.secondary}
+        newsletter_form={yml.double_action_cta?.newsletter_form}
+      />
     </>
   );
 };
@@ -647,6 +656,57 @@ export const query = graphql`
           with_4geeks {
             title
             sub_title
+          }
+          double_action_cta {
+            title
+            description
+            locations
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }

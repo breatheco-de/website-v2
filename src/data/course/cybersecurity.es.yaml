@@ -57,39 +57,6 @@ badges:
   paragraph: "Gracias a un enfoque hacia la programación, nuestros programas han sido galardonados como TOP Coding Bootcamp en <a href='/es/premios'>España, USA y otros países</a>. Nuestros certificados están avalados por el Departamento de Educación de Estados Unidos en Florida."
 
 
-two_columns_first:
-  proportions: [6, 6]
-  #IMPORTANT: Only the locations listed here will be able to see this section
-  available_locations: ["madrid-spain", "malaga-spain", "barcelona-spain", "valencia-spain"]
-  image:
-    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/partner/chema-videoI.jpg" 
-    # link: "https://www.mypublicinbox.com/chemaalonso" # Link De la imagen  hacia cualquier URL.
-    shadow: true
-  video: "https://youtu.be/r0P4PwmOra0"
-  heading:
-    text: "Curso de Ciberseguridad validado por Chema Alonso el Hacker más Reconocido de España"
-    font_size: ["28px", "28px", "28px", "23px", "23px"]
-  sub_heading:
-    text: "Tanto los contenidos como los docentes del bootcamp de ciberseguridad de 4Geeks Academy han sido validados por Chema Alonso, experto en ciberseguridad. Se trata de un curso de alta calidad, con contenido actualizado en el que aprenderás a trabajar con los estándares ISO y NIST, y adquirirás experiencia práctica en técnicas de prevención de pérdida de datos (DLP), pruebas de penetración, etc. Además, nuestros estudiantes de cualquier campus en España tendrán:"
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-  disclosure: 
-    text: '* Estos beneficios relacionados con nuestra colaboración con Chema Alonso están disponibles <span style="font-weight: 600;" >únicamente</span> para nuestros estudiantes que asisten a clases en cualquiera de nuestros campus en 🇪🇸 España.'
-    style: '{"margin-top": "0px"}'
-  button:
-    text: "Inscríbete ahora"
-    color: "white"
-    background: "black"
-    path: "#prices_and_payment"
-  bullets:
-    items:
-      - text: |-
-          Sala de Chat con el profesor y Chema Alonso en <a href="https://www.mypublicinbox.com/" target="_blank">MyPublicInbox</a> + 2000 Tempos para gastar en la plataforma
-      - text: |-
-          4 libros de Ciberseguridad de <a href="https://0xword.com/" target="_blank">0xWORD</a>, la editorial de Chema Alonso.
-      - text: "Chema Alonso ha validado los contenidos y los profesores de este Curso."  
-      - text: "Sesión de Q&A grupal de una hora de todos los estudiantes con Chema Alonso donde se podrán hacer preguntas acerca del futuro profesional en el mundo de la ciberseguridad."  
-
 two_columns_second:
   proportions: [6, 6]
   image:
@@ -120,24 +87,41 @@ overlaped:
     src: "/images/landing/feliz-empresario.png"
 
 two_columns_info:
-  proportions: [6, 6]
+  proportions: [5, 7]
   image:
-    style: '{"border" : "0px sólido negro", "backgroundSize": "contain", "background-position": "center" }'
+    style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
     src: "../../images/landing/grupo-ventanas.webp"
-    shadow: false
   heading:
-    text: "Sé parte de la próxima generación de profesionales en ciberseguridad"
-    font_size: ["30px", "30px", "30px", "26px", "24px"]
+    text: |-
+      Lo que nos distingue:
+      Habilidades con IA, Mentoría Ilimitada y Apoyo Profesional
+    font_size: ["38px", "34px", "34px", "34px", "34px"]
+    style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
   sub_heading:
-    text: ""
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-
+    text: "Todo lo que necesitas para lanzar y hacer crecer una carrera en tecnología"
+    font_size: ["26px", "26px", "24px", "24px", "22px"]
+    style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
   bullets:
+    item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
     items:
-      - text: "Conéctate con una red de más de 6,000 profesionales y estudiantes en todo el mundo."
-      - text: "Programas de tiempo parcial que te permiten estudiar sin renunciar a tu vida actual."
-      - text: "No solo aprendes a programar, sino que también desarrollas habilidades prácticas y aplicables en el mundo real."
-      - text: "Acceso de por vida a mentorías personalizadas para apoyarte en cada paso de tu trayectoria profesional."
+    - heading: "Domina las habilidades tecnológicas de próxima generación."
+      text: "Aprende a construir con las herramientas y flujos de trabajo de IA utilizados por los equipos modernos de ciberseguridad."
+      icon: "check"
+    - heading: "Obtén mentoría ilimitada y apoyo profesional."
+      icon: "check" 
+      text: "Trabaja 1:1 con mentores expertos y coaches profesionales—durante tu bootcamp y para siempre."
+    - heading: "Aprende más rápido con apoyo hiperpersonalizado."
+      icon: "check"
+      text: "Progresa con retroalimentación instantánea de IA, orientación personalizada y clases pequeñas."
+    - heading: "Únete a una comunidad tecnológica global."
+      text: "Conéctate con compañeros, mentores y exalumnos y mantente apoyado mientras creces."
+      icon: "check"
+  button:
+    text: "Aprende más"
+    color: "white"
+    background: "black"
+    hover_color: "white"
+    path: "/es/aplica"
 
 
 
@@ -145,24 +129,34 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-daniela.webp"  
+    src: "../../images/staff/daniela-maissi-bg.jpg"
     shadow: false
   heading:
-    text: "Conviértete en un profesional junior con nuestro curso en ciberseguridad"
-    font_size: ["30px", "30px", "30px", "30px", "30px"]
+    text: "Sé parte de la próxima generación de profesionales en ciberseguridad"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
   sub_heading:
-    text: "Adquiere los conocimientos para proteger sistemas contra amenazas cibernéticas. Este curso intensivo te brindará las habilidades necesarias para identificar, analizar y prevenir ataques, usando herramientas como Nessus, Nmap, Wireshark y Metasploit. Este programa de estudios fue cocreado por Daniela Maissi, una hacker ética del EC-Council, investigadora de malware y desarrolladora web experta en ciberseguridad con más de 5 años de experiencia y 12+ certificaciones en computación en la nube, OSINT y soluciones de TI." 
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
+    text: |-
+      Nuestro bootcamp intensivo de ciberseguridad te equipa con las habilidades para detectar, analizar y prevenir ataques—usando herramientas estándar de la industria como Nessus, Nmap, Wireshark y Metasploit—y un plan de estudios de vanguardia construido por los mejores expertos globales:
+    font_size: ["16px", "16px", "16px", "14px", "14px"]
   button:
-    text: "Inscríbete ahora"
+    text: "Aplica ahora"
     color: "white"
     background: "black"
     path: "#prices_and_payment"
   bullets:
     items:
-      - text: "Técnicas para fortalecer sistemas Windows y Linux contra amenazas cibernéticas"
-      - text: "Desarrolla habilidades prácticas en técnicas de prevención de pérdida de datos (DLP)"
-      - text: "Curso de ciberseguridad validado por Chema Alonso, garantizando educación de primer nivel y experiencia en la industria."  
+      - text: ""
+  content:
+    text: |
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Daniela Maissi</strong>, miembro del EC-Council y especialista en malware con 12+ certificaciones en seguridad en la nube, <strong style="text-decoration: none; color: #000000; font-weight: 700;">OSINT</strong>, y <strong style="text-decoration: none; color: #000000; font-weight: 700;">sistemas de TI</strong>, co-diseñó el plan de estudios para asegurar la alineación con la industria.
+      <br><br>
+      <strong style="text-decoration: none; color: #000000; font-weight: 700;">Lo que aprenderás:</strong>
+      <br><br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Prevención de Pérdida de Datos (DLP)</strong> para proteger información sensible y prevenir brechas.<br>
+      <br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Pruebas de Penetración</strong> para descubrir vulnerabilidades y simular escenarios de ataque reales.<br>
+      <br>
+      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Fortalecimiento de Sistemas</strong> para Windows, Linux y más—desarrolla habilidades para defender infraestructura contra amenazas en evolución.<br><br>  
 
 
 upcoming:
@@ -182,33 +176,34 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "Sobre este programa"
-      sub_title: |
-        Obtendrás una base sólida en redes, Windows, Linux y administración de servidores, al mismo tiempo que adquirirás habilidades prácticas para proteger estos entornos. 
-        El programa profundiza en la seguridad en la nube, pruebas de penetración (tanto ofensivas como defensivas) y análisis de inteligencia cibernética. 
-        Aprende a gestionar riesgos con estrategias de prevención de pérdida de datos (DLP) y navega por el cumplimiento de estándares internacionales como <strong>ISO 27001 y NIST.</strong>
-        
-      list:
-        - label: "Duración"
-          content: "16 semanas"
-          icon: "duration-icon"
-        - label: "Clases"
-          content: "3 clases semanales"
-          icon: "book-2"
-        - label: "Tamaño de la clase"
-          content: "18 personas máx"
-          icon: "people"
-        - label: "Certificado"
-          content: "Nuestros certificados son reconocidos por múltiples instituciones."
-          link_text: "Ver ejemplo"
-          link: "https://certificate.4geeks.com/07d337ab332f79383002d1f7cf722e3642289a40"
-          icon: "certification"
-        - label: "Requisitos"
-          content: "No se necesita experiencia previa"
-          icon: "contract-checked"
-        - label: "Idioma"
-          content: "Puedes elegir entre inglés y español para el contenido y el temario. Las clases en vivo se imparten en el idioma de tu campus."
-          icon: "language"
+    title: "Sobre el programa"
+    sub_title: |-
+      Nuestro bootcamp intensivo de Ciberseguridad te entrena para proteger sistemas, detectar amenazas y responder a incidentes—usando herramientas estándar de la industria como Nessus, Nmap, Wireshark y Metasploit.
+      Desarrollado con los mejores expertos globales, el plan de estudios está construido para la preparación del mundo real. Dominarás habilidades como:
+      <strong>Prevención de Pérdida de Datos – manteniendo la información sensible segura.</strong>
+      <strong>Pruebas de Penetración – encontrando y corrigiendo vulnerabilidades.</strong>
+      <strong>Fortalecimiento de Sistemas – asegurando Windows, Linux y otras plataformas contra amenazas en evolución</strong>
+    list:
+      - label: "Duración"
+        content: "16 semanas"
+        icon: "duration-icon"
+      - label: "Clases"
+        content: "3 clases en vivo online por semana"
+        icon: "book-2"
+      - label: "Tamaño de la clase"
+        content: "Máx 15 personas"
+        icon: "people"
+      - label: "Certificado"
+        content: "Certificado oficial de finalización de 4Geeks, reconocido por múltiples instituciones"
+        link_text: "Ver ejemplo"
+        link: "https://certificate.4geeks.com/07d337ab332f79383002d1f7cf722e3642289a40"
+        icon: "certification"
+      - label: "Requisitos"
+        content: "No se requiere experiencia previa"
+        icon: "contract-checked"
+      - label: "Idioma"
+        content: "Puedes elegir entre inglés y español para el plan de estudios y contenido. Las clases en vivo se imparten en el idioma de tu campus"
+        icon: "language"
 
   heading: DETALLES DEL PROGRAMA
   weeks: 16
@@ -220,17 +215,17 @@ details:
     - label: "Compromiso"
       value: "20 hrs/sem. (Lun - Mie - Vie)"
     - label: "Certificado"
-      content: "Nuestros certificados son reconocidos por múltiples instituciones."
+      content: "Certificado oficial de finalización de 4Geeks, reconocido por múltiples instituciones."
       link_text: "Ver ejemplo"
-      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      link: ""
       icon: "certificate"
     - label: "Horario"
       value: "Online / Remoto"
     - label: "Tamaño Clase"
-      value: "Hasta 15 personas"
+      value: "Hasta 16 personas"
     # - label: "Horas totales"
     #   value: "320"
-  sub_heading: "Mejora tus habilidades de Ciberseguridad De Fundamentos a Técnicas Avanzadas"
+  sub_heading: "Adquiere habilidades fundamentales a avanzadas en ciberseguridad"
   left_labels:
     description: "DESCRIPCIÓN:"
     projects: "PROYECTOS:"
@@ -300,13 +295,30 @@ details:
       duration: "Para siempre"
       step: 0.1
 
-# syllabus:
-#   heading: Descarga toda la información acerca de este programa
-#   button_label: Descargar
+syllabus:
+  heading: Obtén toda la información sobre el plan de estudios
+  button_label: Descargar
+
+career_opportunities:
+  - slug: cryptographer
+  - slug: network-security-administrator
+  - slug: operating-systems-engineer
+  - slug: security-analyst
+  - slug: security-software-developer
+  - slug: cryptologist
+  - slug: cyber-crime-analyst/investigator
+  - slug: digital-forensics-analyst
+  - slug: ethical-hacker
+  - slug: information-security-analyst
+  - slug: penetration-tester
+  - slug: security-architect
+  - slug: security-engineer
+  - slug: security-management-specialist
+  - slug: security-software-developer
 
 potential_companies:
-  tagline: "Entrénate para destacar en las compañías más exigentes"
-  sub_heading: "Da un salto a tu carrera y trabaja en las mejores empresas"
+  tagline: "Entrénate para destacar en las compañías más importantes"
+  sub_heading: "Prepárate para aplicar a las mejores empresas del mundo: Desarrolla las herramientas para mejorar tus habilidades para el futuro del trabajo con IA."
   companies:
     - name: "Facebook"
       image: "../../../static/images/partner/meta-logo.png"
@@ -335,29 +347,20 @@ potential_companies:
 
 ## 4GEEKS VS OTHERS SECTION
 geeks_vs_others:
-  heading: "¿Qué nos hace tan exitosos?"
-  sub_heading: ""
+  heading: "¿QUÉ NOS HACE TAN EXITOSOS?"
+  sub_heading: "Las características únicas de 4Geeks Academy"
   sub_heading_link: ""
 ## GEEK PAL AND GEEK FORCE BOXES
 geek_data:
-  heading: ¡Para que te contraten empresas de Fortune 500!
+  heading: ¡Y las empresas Fortune 500 te contratarán!
   geek_pal:
-    - Un profesor cada siete estudiantes (1:7).
-    - Sesiones ilimitadas de tutoría 1-1 por demanda, en persona o en línea.
-    - Miles de ejercicios interactivos y autoevaluados.
-    - Soluciones en video para una retroalimentación instantánea.
-    - Chat de apoyo en línea 12 horas al día.
-    - Transmisión en línea de las clases.
-    - Grabación de las clases para su posterior revisión.
+    - Mentoría Senior ilimitada.
+    - Acceso de por vida a la comunidad de software.
+    - Acceso y apoyo mundial.
   geek_force:
-    - Construcción de CV y LinkedIn.
-    - Construcción del perfil de Github y portafolio desde el dia 1.
-    - Career Week para dedicación exclusiva a tu perfil profesional.
-    - Preparación de simulación de entrevistas.
-    - Sesión de preparación de entrevistas personalizadas para trabajos específicos.
-    - Entrenamiento en marca personal.
-    - Prácticas y ejercicios de programación posteriores a la graduación.
-    - Coaching SEMANAL hasta que consigas trabajo.
+    - Ayudándote a conseguir trabajo en una empresa Fortune 500.
+    - Perfil, portafolio, entrevistas, talleres, charlas, comunidad de software, red, colaboración en proyectos activos.
+    - Se trata de llevar tu carrera al siguiente nivel.
 
 ## PRICES AND PAYMENTS SECTION
 prices:
@@ -366,10 +369,10 @@ prices:
 
 ## ALUMNI SECTION
 alumni:
-  heading: "Conoce a ex-estudiantes y sus proyectos"
-  sub_heading: "Algunos de los proyectos de nuestros estudiantes que se han graduado"
+  heading: "CONOCE A LOS EXALUMNOS Y PROYECTOS"
+  sub_heading: "Conoce a nuestros graduados y algunos de los proyectos que construirás durante el programa"
 
 faq:
   title: "Preguntas frecuentes"
-  read_more: "Ver más preguntas"
+  read_more: "Contáctanos para más preguntas"
   link: "/faq"

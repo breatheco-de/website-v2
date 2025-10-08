@@ -187,7 +187,7 @@ details:
     - module_name: "Python"
       title: "Introduction to Python"
       description: >
-        Starting from a Prework (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; This module will help you prepare to code and develop the different A.I. and Machine Learning model training and evaluations for the next step.
+        Starting from a <a class='link' href='/us/prework'>Prework</a> (2 weeks before), get introduced into the world of coding and learn Python and Algorithms' basics; This module will help you prepare to code and develop the different A.I. and Machine Learning model training and evaluations for the next step.
       projects: "Collect, store and mesassure with Numpy, Pandas, Mstplotlib, etc."
       slug: "python-intro"
       duration: "2 wks"

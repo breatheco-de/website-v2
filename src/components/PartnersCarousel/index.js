@@ -115,12 +115,12 @@ const PartnersCarousel = ({ data }) => {
   return (
     <Div
       maxWidth="1280px"
-      margin="0 auto 10px auto"
+      margin="0 auto 30px auto"
       padding="30px 30px 50px 30px"
       padding_lg="30px 0 50px 0"
       width="100%"
       display="block"
-      maxHeight="500px"
+      // maxHeight="500px"
       maxHeight_tablet="none"
     >
       <H2
@@ -128,6 +128,7 @@ const PartnersCarousel = ({ data }) => {
         fontSize="30px"
         width="auto"
         fontWeight="bold"
+        textTransform="capitalize"
         margin="10px 0 30px 10px"
         textAlign="center"
       >

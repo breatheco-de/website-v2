@@ -8,9 +8,9 @@ titles:
   logo: "/images/rigobot-logo.png"
 globe_text: Click me!
 info:
-  - features: "Personalized Career Support"
-    at4_Geeks: "Lifetime support until you land a job (and beyond)"
-    industry_average: "Limited, often expires after months"
+  - features: "Career Support"
+    at4_Geeks: "Personalized support for a lifetime"
+    industry_average: "Limited, ending with 1st job."
     why_important: "Meet hiring partners during Demo Day (GeekTALKS), attend the CareerWeek™️, build your resume, mock interviews and tailored training. And keep coming back! GeekPAL services are available for life."
     icon: ""
 
@@ -27,7 +27,7 @@ info:
     icon: ""
 
   - features: "1-on-1 mentoring"
-    at4_Geeks: "Unlimited and ongoing"
+    at4_Geeks: "Unlimited and for a lifetime"
     industry_average: "Limited sessions"
     why_important: "Appointment system where you can request 1-on-1 mentorships from 9am - 9pm. Online and in-person, for the rest of your life."
     icon: ""

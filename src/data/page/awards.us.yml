@@ -7,10 +7,11 @@ meta_info:
   keywords: "4Geeks Academy Awards, 4Geeks Academy Recognition"
   redirects: []
 
-seo_title: "Awards and Recognition"
+seo_title: "Awards & Recognitions"
 header:
-  title: "AWARDS AND RECOGNITIONS"
-  paragraph: "It's fantastic to be recognized for years of effort in creating one of the best coding communities and learning ecosystems worldwide."
+  title: "Top Coding Bootcamp — Trusted by Students, Recognized by Experts"
+  htmlTitle: "Top Coding Bootcamp<br/><span style='font-size: 25px;'>Trusted by Students, Recognized by Experts</span>"
+  paragraph: "4Geeks Academy is recognized by some of the world’s most trusted education and tech industry platforms. From Forbes to Course Report, we’re consistently ranked among the top coding schools worldwide and recognized for the quality and impact of our programs."
   image: "../../../static/images/awards/awards.png"
 
 awards_list:
@@ -20,116 +21,142 @@ awards_list:
   #   text_link: "See article"
   #   link: "/"
 
+  - image: "../../../static/images/badges/forbes-logo-award.png"
+    title: "Best Overall Data Science and Machine Learning Bootcamp 2025"
+    paragraph: "Our bootcamp was chosen as the top option for its hands- on beginner friendly format, verified outcomes and job guarantee."
+    link: "https://www.forbes.com/advisor/education/bootcamps/best-data-science-bootcamps/#4geeks_academy_data_science_and_machine_learning_course_section"
+    height: "80px"
+    text_link: "See article"
+
   - image: "../../../static/images/badges/switchup-2025-top.webp"
     title: "Top 5 Coding Bootcamps on Switchup 2025"
     paragraph: "SwitchUp has honored 4Geeks Academy by featuring it on their prestigious list of top coding bootcamps for 2025."
     link: "https://www.switchup.org/rankings/best-coding-bootcamps"
+    height: "140px"
     text_link: "See website"
 
   - image: "../../../static/images/badges/fortune-logo.png"
     title: "Excellence in Education for Spanish Speakers"
     paragraph: "4Geeks Academy has been recognized by Fortune as one of the top coding bootcamps for Spanish speakers, highlighting our commitment to inclusive and accessible education."
     link: "https://fortune.com/education/articles/best-software-engineering-bootcamps/#4Geeks-Academy"
+    height: "80px"
     text_link: "See website"
 
   - image: "../../../static/images/badges/arp-logo-certification.png"
     title: "Institutional Quality Online Education"
     paragraph: "4Geeks Academy has earned the ARP certification, distinguishing it as a leader in online coding education."
     link: "https://arpcertificate.com/listado-de-cursos/programa-full-stack-development/"
+    height: "80px"
     text_link: See website
 
   - image: "../../../static/images/badges/forbes-logo-award.png"
     title: "Top Online Full-Stack Bootcamps Of 2024"
     paragraph: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
     link: "https://www.forbes.com/advisor/education/bootcamps/best-full-stack-developer-bootcamp/#4geeks_academy_full_stack_developer_bootcamp_section"
+    height: "80px"
     text_link: See article
 
-  - image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
-    title: "Best Bootcamp for Course Report 2024"
+  - image: "../../../static/images/badges/course-report-best-coding-bootcamps-badge-2025.png"
+    title: "Best Bootcamp for Course Report 2025"
     paragraph: "We have been selected as one of the Top Coding Bootcamps globally for 3 years in a row"
     link: "https://www.coursereport.com/best-coding-bootcamps"
+    height: "170px"
+    text_link: See article
+
+  - image: "../../../static/images/badges/south-florida-tech-hub.jpeg"
+    title: "Education Champion Award 2024"
+    paragraph: "Recognized by the South Florida Tech Hub for advancing tech education and career growth across the region."
+    link: "https://techhubsouthflorida.org/tech-hub-announces-the-2nd-annual-golden-palm-gala-award-2024-honorees/"
+    height: "80px"
     text_link: See article
 
   - image: "../../../static/images/badges/ebootcamp-top.png"
     title: "Best Bootcamp Ebootcamp for 2024"
     paragraph: "We've been nominated by eBootcamp as the top coding bootcamp for 2024"
     link: "https://ebootcamp.net/top-bootcamps-programacion/"
+    height: "170px"
     text_link: See article
 
   - image: "../../../static/images/badges/switchup-badge-2023.png"
     title: "Best Bootcamp according to Switchup 2023"
     paragraph: "Not only in Florida, but over each of our campus 4Geeks is constantly keeping a ~5 start rating that makes us one of the top bootcamp in the world"
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    height: "170px"
     text_link: See article
 
   - image: "../../../static/images/awards/premios_tecnologia_sigloxxi.png"
     title: "Winners of the Premios Tecnologia Siglo XXI mention 'Formación'"
     paragraph: "Our campus in Spain was awarded with the Premio Tecnología Siglo XXI on the 'Formation' category in 2023"
     link: https://www.elsuplemento.es/premiado/4geeks-academy-premio-nacional-de-tecnologia-2023-en-la-categoria-formacion"
+    height: "170px"
     text_link: See article
 
   - image: "../../../static/images/badges/newsweek.png"
     title: "Top Coding School according to Newsweek"
     paragraph: "4Geeks Academy has been recognized as one of the top 10 coding bootcamps in the United States according to Newsweek."
-    link: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+    link: "https://starthubcenters.com/4geeks-academy-named-top-coding-school-2017/"
+    height: "80px"
     text_link: See article
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Best Coding Bootcamp Program 2022"
     paragraph: 'We are pleased to announce that we have been distinguished with the <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Excellence in Education Award for Best Coding Bootcamp Program of 2022</a>. This recognition highlights our commitment to excellence in technology education.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Best Educational Program 2022"
     paragraph: 'We have been awarded the Excellence in Education Award for <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Best Educational Program 2022</a>. This recognition is a testament to our commitment to quality and innovation in education.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Best International Scholarship Program 2022"
     paragraph: 'We have been awarded the Excellence in Education Award for the <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Best International Scholarship Program 2022</a>! It recognizes our effort to offer global educational opportunities to talented students, regardless of their financial situation.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "Best On-site Bootcamp Awards 2022"
     paragraph: 'Our campus in Spain has been honored with the Excellence in Education <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">Award for Best On-site Bootcamp 2022</a>. This recognition is a testament to our unwavering commitment to excellence in on-site education in the field of technology.'
     link: ""
+    height: "80px"
     text_link: 
 
   - image: "../../../static/images/badges/exelencia-educativa-es.png"
     title: "International Trajectory Recognition"
     paragraph: 'As part of the Excellence in Education Awards 2022, we are proud to have been awarded the <a href="http://premiosexcelenciaeducativa.org/wp-content/uploads/2022/03/PALMAR%C3%89S-EXCELENCIA-2022.pdf" rel="noopener noreferrer nofollow">International Trajectory</a> Outstanding Award in the field of Software Development School.'
     link: ""
+    height: "80px"
     text_link:
 
   - image: "../../../static/images/awards/pee-career.png"
     title: "Best Career Oriented Educational Program"
     paragraph: 'Educational Excelence Awards 2021 to the Best Career Oriented Educational Program specialized in Coding Bootcamps, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
     link: "https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf"
+    height: "170px"
     text_link: See article
 
   - image: "../../../static/images/awards/pee-innovation.png"
     title: "Most Innovative Program"
     paragraph: 'Educational Excelence Awards 2021 to the most innovative coding bootcamp school, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
     link: "https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf"
+    height: "170px"
     text_link: See article
 
   - image: "../../../static/images/awards/pee-trajectory.png"
     title: "Best International Trajectory"
     paragraph: 'Educational Excelence Awards 2021 to the best international trajectory school, more information found on the palmares <a href="https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf" rel="noopener noreferrer nofollow">for the 2021 awards</a>'
     link: "https://premiosexcelenciaeducativa.org/wp-content/uploads/2016/05/PALMARE%CC%81S-EXCELENCIA-2020-1.pdf"
+    height: "170px"
     text_link: See article
 
   - image: "../../../static/images/badges/reviews.png"
     title: "4.9 on all reviews"
     paragraph: "4.9 in all Course Report, Switchup and Google reviews."
     link: "https://www.switchup.org/bootcamps/4geeks-academy"
+    height: "80px"
     text_link: See article
-
-  - image: "../../../static/images/badges/syllabus.png"
-    title: "Award Winning Syllabus"
-    paragraph: "Award winning syllabus."
-    link: ""
-    text_link: 

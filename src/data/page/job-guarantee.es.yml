@@ -10,9 +10,10 @@ meta_info:
 
 button:
   syllabus_heading: "SOLICITA UN PLAN DE ESTUDIOS"
+  apply_button_link: "/es/aplica"
+  syllabus_motivation: "Descarga nuestro plan de estudios"
   syllabus_btn_label: "Descarga Instantánea"
   btn_label: "Descargar Detalles del Curso"
-  syllabus_motivation: "Descarga nuestro plan de estudios"
 
 
 seo_title: "4Geeks Academy - Miami Coding Bootcamp, Madrid España, Santiago de Chile and Caracas"
@@ -93,13 +94,14 @@ we_trust_section:
   boxes:
     - icon: briefcase-2
       title: "84%"
-      text: de nuestros graduados consiguen empleo en tecnología
-    - icon: chart
-      title: "60K"
-      text: es el salario promedio inicial de nuestros graduados
+      text: Tasa de colocación laboral
     - icon: graduation-2
-      title: "130"
-      text: Días promedio para conseguir empleo
+      title: "3-6"
+      label: "meses"
+      text: Tiempo promedio para conseguir empleo
+    - icon: chart
+      title: "55%"
+      text: Aumento salarial después de graduarse
 
 how_it_works:
   title: ¿Cómo funciona?
@@ -113,7 +115,6 @@ how_it_works:
       title: Aprueba el proyecto final con éxito.
     - icon: graduation-2
       title: ¡Gradúate y celebra tus logros!
-      highlight: True
     - icon: handshake
       title: Participa activamente en nuestro programa de apoyo profesional.
     - icon: briefcase-2

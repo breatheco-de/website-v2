@@ -20,6 +20,7 @@ import OnlyFor from "../components/OnlyFor";
 import Overlaped from "../components/Overlaped";
 import JobGuaranteeSmall from "../components/JobGuaranteeSmall";
 import Loc from "../components/Loc";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const Cybersecurity = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -186,26 +187,6 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         />
       </Header>
 
-      {/* TWO COLUMN CREAR EN EL YML*/}
-      <OnlyFor locations={yml.two_columns_first?.available_locations}>
-        <TwoColumn
-          left={{
-            image: yml.two_columns_first?.image,
-            video: yml.two_columns_first?.video,
-          }}
-          right={{
-            heading: yml.two_columns_first?.heading,
-            sub_heading: yml.two_columns_first?.sub_heading,
-            bullets: yml.two_columns_first?.bullets,
-            content: yml.two_columns_first?.content,
-            disclosure: yml.two_columns_first?.disclosure,
-            button: yml.two_columns_first?.button,
-          }}
-          proportions={yml.two_columns_first?.proportions}
-          session={session}
-        />
-      </OnlyFor>
-
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
@@ -275,6 +256,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming?.no_dates_message}
         actionMessage={courseDetails.upcoming?.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
       />
 
       <PricesAndPayment
@@ -304,6 +286,7 @@ const Cybersecurity = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
@@ -560,40 +543,6 @@ export const query = graphql`
               color
               background
               path
-            }
-          }
-          two_columns_first {
-            proportions
-            available_locations
-            video
-            image {
-              style
-              src
-              shadow
-              link
-            }
-            heading {
-              text
-              font_size
-            }
-            sub_heading {
-              text
-              font_size
-            }
-            disclosure {
-              text
-              style
-            }
-            button {
-              text
-              color
-              background
-              path
-            }
-            bullets {
-              items {
-                text
-              }
             }
           }
           two_columns {
@@ -944,6 +893,62 @@ export const query = graphql`
             cohort_more_details_text
             syllabus_button_text
             syllabus_submit_text
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }

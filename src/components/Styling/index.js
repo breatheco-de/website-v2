@@ -792,23 +792,6 @@ export const Anchor = styled(StyledLink)`
   @media ${Devices.xxl} {
   }
 `;
-//   @media ${Break.lg}{
-//     text-align: ${props => props.align_lg};
-//     font-size: ${props => props.fs_lg};
-//   }
-//   @media ${Break.md}{
-//     text-align: ${props => props.align};
-//     font-size: ${props => props.fs_md};
-//   }
-//   @media ${Break.sm}{
-//     display: ${props => props.display_sm};
-//     font-size: ${props => props.fs_sm};
-//     text-align: ${props => props.align_sm || 'center'};
-//   }
-//   @media ${Break.xs}{
-//     font-size: ${props => props.fs_xs};
-//     text-align: ${props => props.align_xs};
-//   }
 
 export const Spinner = styled.div`
   border: ${(props) => `16px solid ${props.color || Colors.blue}`};
@@ -849,6 +832,18 @@ export const PhoneTextDesktop = styled.p`
   @media ${Break.xs} {
     font-size: 12px;
   }
+`;
+
+export const VerticalVideoHolder = styled.div`
+  border: 3px solid black;
+  box-shadow: 13px 13px 0px 1px rgba(0, 0, 0, 1);
+  z-index: 1;
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+  background: white;
+  position: relative;
 `;
 
 export const OfferTag = styled.div`

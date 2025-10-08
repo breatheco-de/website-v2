@@ -66,6 +66,7 @@ const View = (props) => {
           lang={pageContext.lang}
           programs={data.allChooseYourProgramYaml.edges[0].node.programs}
           title={yml.choose_program.title}
+          description={yml.choose_program.description}
           paragraph={yml.choose_program.paragraph}
           containerStyles={{
             padding: "4rem 40px 6rem",

@@ -100,12 +100,17 @@ const BlogLayout = ({ children, seo, context, wordCount }) => {
           node {
             navbar {
               name
+              id
               link
               sub_menu {
                 icon
                 title
                 paragraph
                 width
+                program_comparison_cta {
+                  text
+                  link
+                }
                 links {
                   title
                   level

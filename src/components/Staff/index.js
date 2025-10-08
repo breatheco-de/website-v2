@@ -146,6 +146,8 @@ const Staff = (props) => {
             }}
           >
             {staffFilteredByLocation?.map((item, index) => {
+              const firstName = item.name?.split(" ")[0] || "";
+              const lastName = item.last_name?.split(" ")[0] || "";
               return (
                 <Div
                   key={index}
@@ -174,7 +176,7 @@ const Staff = (props) => {
                     />
                   </Div>
                   <H3 fontSize="18px" lineHeight="22px" margin="14px 0 0 0">
-                    {item.name}
+                    {firstName} {lastName}
                   </H3>
                   <H4 fontSize="15px" lineHeight="18px" margin="8px 0">
                     {item.job_title}

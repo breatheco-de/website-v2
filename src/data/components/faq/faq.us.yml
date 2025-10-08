@@ -6,7 +6,7 @@ faq:
     questions:
       - question: "Why 4Geeks Academy?"
         templates: ["faq"] # To show this question inside the faqs page just write "template: ["faq"]"
-        related_features: [] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
+        related_features: [] # online-platform, mentors-and-teachers, price, career-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scolarships, rigobot, learnPack, certification
         priority: 0
         answer: |-
           We offer several advantages that make us stand out from other coding bootcamps:<br>
@@ -18,7 +18,7 @@ faq:
 
       - question: "Is 4Geeks a certified institution?" #all locations
         locations: ["all"]
-        related_features: [] # online-platform, mentors-and-teachers, price, carreer-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scholarships, rigobot, learnPack, certification
+        related_features: [] # online-platform, mentors-and-teachers, price, career-support, content-and-syllabus, job-guarantee, full-stack, cibersecurity, data-science, applied-ai, outcomes, scholarships, rigobot, learnPack, certification
         templates: ["faq"]
         priority: 1
         answer: |-

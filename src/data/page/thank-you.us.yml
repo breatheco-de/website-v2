@@ -16,10 +16,7 @@ content:
     
   articles_title: " "
   button: "Read our blog"
-social: 
-  title: "Follow Us"
-  message: "Select where you like to follow us"
-  button_text: "Take me to"
+
 
 title:
   heading:

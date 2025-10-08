@@ -2,10 +2,23 @@ import React from "react";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
 import { Colors } from "../Styling";
+import Icon from "../Icon";
 
-const SimpleCards = ({ heading, sub_heading, cards, background }) => {
+const SimpleCards = ({
+  heading,
+  cardStyle,
+  sub_heading,
+  containerStyle,
+  cardContainerStyle,
+  cards,
+  background,
+  defaultIcon,
+}) => {
   return (
-    <Div background={Colors[background] || background}>
+    <Div
+      background={Colors[background] || background}
+      width={containerStyle?.width || ""}
+    >
       <Div
         display="flex"
         flexDirection="column"
@@ -18,8 +31,9 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
         padding_tablet="40px 40px"
         width="100%"
         maxWidth="1280px"
+        {...containerStyle}
       >
-        <Div display="block" width_tablet="30%">
+        <Div display="block" width_tablet={heading?.style?.width || "30%"}>
           {heading.text && (
             <H2
               type="h2"
@@ -33,30 +47,34 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
               textAlign_sm="center"
               textAlign_tablet="left"
               style={
-                heading?.style
+                typeof heading?.style === "string"
                   ? { ...JSON.parse(heading.style) }
-                  : { textAlign: "center" }
+                  : { textAlign: "center", ...heading.style }
               }
             >
               {heading.text}
             </H2>
           )}
-          <Paragraph
-            margin="15px auto"
-            fontSize="16px"
-            textAlign="left"
-            textAlign_sm="center"
-            textAlign_tablet="left"
-            dangerouslySetInnerHTML={{ __html: sub_heading.text }}
-            style={
-              sub_heading?.style ? { ...JSON.parse(sub_heading.style) } : {}
-            }
-          />
+          {sub_heading?.text && (
+            <Paragraph
+              margin="15px auto"
+              fontSize="16px"
+              textAlign="left"
+              textAlign_sm="center"
+              textAlign_tablet="left"
+              dangerouslySetInnerHTML={{ __html: sub_heading.text }}
+              style={
+                typeof sub_heading?.style === "string"
+                  ? { ...JSON.parse(sub_heading.style) }
+                  : sub_heading?.style
+              }
+            />
+          )}
         </Div>
         <Div
           display="flex"
           flexDirection="column"
-          flexDirection_tablet="row "
+          flexDirection_tablet="row"
           justifyContent="center"
           maxWidth="1280px"
           margin="20px auto 0 auto"
@@ -64,6 +82,7 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
           gap="15px"
           overflow="hidden"
           className="badge-slider hideOverflowX__"
+          {...cardContainerStyle}
         >
           {Array.isArray(cards) &&
             cards?.map((item, index) => {
@@ -77,8 +96,35 @@ const SimpleCards = ({ heading, sub_heading, cards, background }) => {
                   width="240px"
                   widt_tablet="280px"
                   height="240px"
+                  {...cardStyle}
                 >
-                  <H3>{item.heading.text}</H3>
+                  {defaultIcon && (
+                    <Icon icon={defaultIcon} width="30px" height="30px" />
+                  )}
+                  {item?.icon && (
+                    <Icon
+                      icon={item.icon}
+                      width={item.iconWidth || "30px"}
+                      height="auto"
+                    />
+                  )}
+                  {item?.content && (
+                    <H3
+                      textAlign={cardStyle?.textAlign}
+                      dangerouslySetInnerHTML={{ __html: item.content }}
+                    />
+                  )}
+                  {item?.heading?.text && (
+                    <H3 textAlign={cardStyle?.textAlign}>
+                      {item?.heading?.text}
+                    </H3>
+                  )}
+                  {item?.text && (
+                    <Paragraph
+                      textAlign={cardStyle?.textAlign}
+                      dangerouslySetInnerHTML={{ __html: item.text }}
+                    />
+                  )}
                 </Div>
               );
             })}

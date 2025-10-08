@@ -5,145 +5,163 @@ meta_info:
   description: "Conoce nuestro sistema de apoyo integral a los egresados de 4Geeks Academy"
   image: null
   keywords: ""
-  redirects: []
+  redirects: ["/geekpal", "/es/career-support"]
 
-seo_title: Geekpal de 4Geeks Academy
+seo_title: "Geekpal de 4Geeks Academy"
 
 header:
-  title: "<strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-    <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong> <br> 
-    <strong style='font-family: Archivo;'>nunca vuelvas a codificar solo</strong>"
+  title: "Bienvenido a <strong style='color:black; font-family: Archivo-Black;'><br>Geek</strong>
+    <strong style = 'color:#CD0000; font-family: Archivo-Black;'>PAL</strong>:<br>
+    Mentoría de Por Vida y Apoyo de Programación Impulsado por IA"
   image: "../../../static/images/bg/companies-bg.jpg"
-  image_alt: "Geekpal - Mentorías ilimitadas y acceso a una comunidad de programadores"
-  paragraph: "GeekPAL es una membresía instantánea que obtienes cuando te conviertes en estudiante de 4Geeks Academy."
-  bullets: 
-    - No volverás a codificar sólo.
-    - Cuenta mentores por el resto de su vida.
-    - Incluso después de graduarte.
+  image_alt: "GeekPal - Ten mentores por el resto de tu vida"
+  paragraph: "Obtén mentoría de programación 1:1 ilimitada y orientación impulsada por IA de Rigobot 24/7. Nunca programes solo, recibe retroalimentación instantánea y únete a una comunidad global de desarrolladores — todo diseñado para ayudarte a aprender más rápido, mantenerte motivado y prosperar en tecnología de por vida."
+  bullets:
+    - " "
   image_logo: "/images/geekpal.png"
 
+# Introduction Video here
 geekPal:
-  - videoId: "MBXqEnhodx0"
-    image: ../../../static/images/staff/joao.png
+  - videoId: "D5nUZNL52-Q"
+    image: ../../../static/images/landing/geek-pal-thumbnail.webp
 
-icons:
-  - icon: "capacity"
-    title: "MÁXIMO 8 ALUMNOS POR CLASES"
-  - icon: "ratio"
-    title: "1:7 RATIO PROFESOR ESTUDIANTE"
-  - icon: "talk"
-    title: " EN PROMEDIO, CADA ALUMNO TIENE 50 MENTORIAS"
-  - icon: "timer"
-    title: "TIEMPO DE RESPUESTA DE 15 MINUTOS"
-    
-list:
-  - title: "Proceso Personalizado"
-    image: "../../../static/images/professional-support.png"
-    position: "right"
-    sub:
-      - title: "CLASES EXCLUSIVAS"
-        text: "En 4Geeks creemos que el proceso personalizado da mejores resultados, es por esto que nuestras clases están pensadas para un máximo de 8 estudiantes y contamos con un ratio de <span style='font-weight: bold'> 1 profesor por cada 5 alumnos.</span>"
-      - title: "MENTORÍAS 1:1"
-        text: "Contamos con una red de mentores que están dispuestos a darte 
-          <span style='font-weight: bold'> soporte 1:1</span> de manera presencial o remota, de forma ilimitada. Estas 
-          <span style='font-weight: bold'> mentorias ilimitadas continúan</span> incluso después de haber finalizado tus estudios en 4geeks."
-        
-  - title: "Dónde sea y cuando sea"
-    image: "../../../static/images/mujer-leyendo-cafeteria.webp"
-    position: "left"
-    text: "En 4Geeks no solo ajustamos las sesiones 
-      <span style='font-weight: bold'> acordes tu calendario</span>, sino que también te damos la oportunidad de verlas de forma 
-      <span style='font-weight: bold'> online o presencial</span>, esto debido a que contamos con campus en muchas diversas ciudades y por ende husos horarios.<br/>
-      <br/>En cualquier sea el caso, te aseguramos tener la oportunidad de mentorias constantes y siempre que las necesites."
+components:
+  - name: icons_banner
+    position: 1
+    heading:
+      text: "Avanza Más Rápido, Nunca Pierdas el Impulso"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "black" }'
+    sub_heading:
+      text: 'La razón #1 por la que las personas abandonan al aprender a programar? Quedarse estancado. En 4Geeks, hemos construido un sistema de apoyo personalizado donde siempre tendrás a alguien que te ayude con tus desafíos— para que nunca pierdas el momentum y sigas avanzando rápido.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "90%", "color": "black"}' 
+    layout: iconogram
+    background: "lightYellow"
+    icons:
+      - icon: "group-2"
+        title: "Ratio 7:1 Estudiante–Profesor"
+        color: "#0084FF"
+        content: "Atención individual en cada clase."
+      - icon: "hands-w-purple"
+        title: "Mentoría 1:1 Ilimitada"
+        color: "#FF0000"
+        content: "Desde el primer día — y de por vida."
+      - icon: "rocket-2"
+        title: "Asistente de IA 24/7 (Rigobot)"
+        color: "#FFC718"
+        content: "Retroalimentación instantánea mientras programas."
+      - icon: "hands-group"
+        title: "Apoyo de Comunidad Real"
+        color: "#EB5757"
+        content: "Mentores, egresados y compañeros siempre listos para ayudar."
 
-  - title: "Apoyo de la Comunidad"
-    image: "../../../static/images/Group-6606.webp"
-    position: "right"
-    sub:
-      - title: "4Geeks.com"
-        text: "Es una comunidad creada para acelerar la forma en que los desarrolladores junior aprenden y evolucionan utilizando la tecnología. <a href='https://4geeks.com'>4Geeks.com</a> te da acceso a muchos recursos para mejorar tus habilidades, pero también puedes contribuir para ayudar a otros con su código. "
-      - title: "Comunidad Slack"
-        text: "Nuestra comunidad internacional de más de 
-          <span style='font-weight: bold'> 2100 personas</span>, que te brindará todo el apoyo que necesites."
+  - name: two-column-rigobot
+    position: 2
+    proportions: [6, 6]
+    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
+    layout: two_column_right
+    image:
+      style: '{"backgroundSize": "cover"}'
+      src: "/images/mujer-leyendo-cafeteria.webp"
+      shadow: true
+    heading:
+      text: "Humano + IA: El Dúo de Apoyo Perfecto"
+        #           xl      lg      md      sm      xs
+      font_size: ["32px", "32px", "30px", "30px", "30px"]
+      style: '{ "font-weight": "700" }'
+    sub_heading:
+      text: |-
+        El aprendizaje funciona mejor cuando la experiencia humana y el apoyo de IA se unen. En 4Geeks, tendrás acceso a mentoría 1:1 ilimitada más retroalimentación guiada por IA de Rigobot, para que cada paso esté adaptado a tu viaje de aprendizaje.
+      font_size: ["18px"]
+      style: '{ "font-weight": "400" }'
+    content:
+      text: "Juntos, la mentoría humana y las herramientas impulsadas por IA aceleran tu aprendizaje, te mantienen comprometido y te empoderan para enfrentar desafíos con confianza."
+      font_size: ["16px"]
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Nuestro Equipo de Mentores Expertos:"
+          text: |
+            • Proporciona orientación personalizada en desafíos de programación y mejores prácticas
+            <br />
+            • Ofrece soporte en vivo para resolución de problemas y depuración
+            <br />
+            • Asistencia experta para corrección de errores.
+            <br />
+            • Comparte perspectivas de la industria, consejos de carrera y estrategias de aprendizaje
+          icon: "check"
+          icon_color: '#FFFFFF'
+        - heading: "Rigobot + Learnpack:"
+          text: |
+            • Proporciona retroalimentación instantánea y tutoría mientras programas
+            <br />
+            • Rastrea tus habilidades y progreso
+            <br />
+            • Ayuda con depuración y resolución de problemas
+            <br />
+            • Cientos de ejercicios de programación prácticos y práctica estructurada en Learnpack
+          icon: "check"
+          icon_color: '#FFFFFF'
 
-# Two Columns - Rigo
-two_columns:
-  proportions: [5, 7]
-  background: "#FFFFFF"
-  justify: "center" #start,end,center
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}'
-    src: "/images/landing/rigobot-section.webp"
-    shadow: false
-  # video: "https://www.youtube.com/watch?v=PWkgaAT8pHg&t=13s"
-  heading: 
-    text: "¡Nuestras herramientas de IA mejoran y agilizan tu aprendizaje!"
-    font_size: ["31px", "31px", "31px", "29px", "29px"]
-    style: '{ "lineHeight": "30px" }'
-    heading_image:
-      src: "/images/rigobot-logo.png"
-  sub_heading:
-    text: "Luego de años de investigación y experiencia, hemos perfeccionado nuestros métodos de enseñanza para optimizar tu curva de aprendizaje y tu tasa de éxito. A través de nuestra plataforma de aprendizaje 4Geeks.com, te brindamos las estrategias y herramientas para garantizar tu progreso constante y eficiente."
-    font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-weight":"600"}'
-  content:
-    style: '{ "font-size":"16px", "margin":"0", "font-weight":"600" }'
-    text: "¡Experimenta la diferencia que marcan nuestras nuevas herramientas de Inteligencia Artificial! Nuestro enfoque ha demostrado mantenerte comprometido, motivado y encaminado a lograr tus objetivos de programación."
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-    items:
-      - heading: "Rigobot, nuestra IA personalizada, ofrece de forma ilimitada:"
-        text: |
-          • Tutoría instantánea mientras programas.
-          <br />
-          • Evaluaciones de habilidades para seguir tu progreso.
-          <br />
-          • Asistencia para corregir errores.
-          <br /><br />
-          ¡Es el complemento perfecto para nuestro programa de mentoría humana!
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-      - heading: "LearnPack, nuestro software de aprendizaje fácil de usar, proporciona:"
-        text: |
-          • Cientos de ejercicios interactivos para ayudarte a dominar y retener habilidades.
-          <br />
-          • Pruebas automatizadas para ayudarte a seguir tu progreso.
-          <br />
-          • Y mucho más…
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
+  - name: community_support
+    position: 3
+    layout: two_column_left
+    proportions: [6, 6]
+    background: "#F4F9FF"
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      src: "/images/Group-6606.webp"
+      shadow: false
+    heading:
+      text: "Una Comunidad Global de Desarrolladores Apoyando Tu Crecimiento"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+    sub_heading:
+      text: "4Geeks es más que un bootcamp — es una red de apoyo de profesionales tech, mentores y compañeros geeks para mantenerte avanzando en tu carrera."
+      font_size: ["16px","16px","16px","16px","16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
+    bullets:
+      item_style: '{ "padding": "5px 0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Comunidad Slack (6,000+ miembros)"
+          text: "Obtén ayuda en tiempo real de mentores, egresados y compañeros a través de nuestros canales activos y temáticos — desde soporte de programación, hasta tableros de trabajo y consejos de carrera (¡y sí, también hay humor de programación!)."
+          icon: "check"
+          icon_color: '#F4F9FF'
+        - heading: "4Geeks.com"
+          text: "Sigue avanzando tus habilidades con recursos de entrenamiento adicionales, eventos en vivo y proyectos colaborativos. Conecta con personas que han estado donde tú estás — y saben cómo ayudarte a llegar donde quieres ir."
+          icon: "check"
+          icon_color: '#F4F9FF'
 
-# benefits:
-#   - p:
-#     heading: "Personal"
-#     items:
-#       - title: Clases exclusivas
-#         sub_title: (máx 8 estudiantes por clase)
-#       - title: 1:4 ratio de profesor por estudiante
-#         sub_title: (Un senior mentor por cada 8 estudiantes)
-#       - title: Mentoría 1-1
-#         sub_title: (Sesiones ilimitadas)
-#       - title: Apoyo Profesional ilimitado
-#         sub_title: (basado en cada oportunidad de trabajo)
-#   - a:
-#     heading: "Anywhere & time"
-#     items:
-#       - title: Ajustado a tu disponibilidad
-#         sub_title: (tu haces la solicitud de la reunión!)
-#       - title: Calendario de Mentores siempre disponibles
-#         sub_title: (Mentores dispuestos de manera dremota o directa)
-#       - title: Online o en persona
-#         sub_title: (Varias locaciones en 7 ciudades)
-#       - title: Apoyo Profesional ilimitado
-#         sub_title: (basado en cada oportunidad de trabajo)
-#   - l:
-#     heading: "Limitless"
-#     items:
-#       - title: Toda la mentoría que necesitas
-#         sub_title: (tu haces la solicitud de la reunión!)
-#       - title: Mentoría incluso después de graduarte
-#         sub_title: (después de consiguir trabajo y para que lo mantengas en el tiempo)
-#       - title: Mentoría de por vida
-#         sub_title: (Sigue viniendo y agendando reuniones con nosotros)
-#       - title: Apoyo Profesional ilimitado
-#         sub_title: (basado en cada oportunidad de trabajo)
+
+
+  - name: joao_testimonial
+    position: 6
+    layout: two_column_right
+    image:
+      src: "/images/staff/joao.png"
+      style: '{"backgroundSize": "contain"}'
+      shadow: true
+    video: "https://www.youtube.com/watch?v=MBXqEnhodx0"
+    heading:
+      text:
+        "Escucha a Uno de Nuestros Egresados"
+        #xl      lg     md     sm    xs
+      font_size: ["40px", "40px", "34px", "34px", "34px"]
+    sub_heading:
+      text: "Escucha a Joao hablar sobre su experiencia durante y después de nuestro bootcamp y cómo el acceso ilimitado a mentoría de programación marcó una gran diferencia en su carrera."
+      font_size: ["28px"]
+      style: '{ "font-weight": "400" }'
+    content:
+    bullets:
+      items:
+        - text: |
+            <br />
+            <br />
+            <br />
+            <br />
+          icon: "check"
+          icon_color: '#FFFFFF'
+      font_size: ["16px"]
+
+

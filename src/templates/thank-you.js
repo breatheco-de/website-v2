@@ -20,7 +20,6 @@ const ThankYou = (props) => {
     { label: "instagram", status: false, iconColor: "#8a3ab9" },
     { label: "meetup", status: false, iconColor: "#f65858" },
   ]);
-  let socials = session && session.location ? session.location.socials : [];
 
   const updateStatus = (index, newvalue) => {
     let g = checkStatus[index];
@@ -251,51 +250,6 @@ const ThankYou = (props) => {
             </React.Fragment>
           );
         })}
-
-      <GridContainer
-        flexDirection="column"
-        gridColumn_tablet="3 / span 10"
-        margin={{ xs: "20px 0 0 0", md: "40px 0 0 0" }}
-        padding={{ xs: "0 15px", md: "0" }}
-      >
-        <H3
-          type="h3"
-          margin="10px 0"
-          fontSize="15px"
-          lineHeight="22px"
-          fontWeight="400"
-          letterSpacing="0.05em"
-        >
-          {yml.social.title}
-        </H3>
-        <Div margin="15px auto" gap="40px">
-          {socials?.map((ln, i) => (
-            <Anchor
-              key={i}
-              cursor="pointer"
-              to={ln.link}
-              fontSize="13px"
-              fontWeight="400"
-              style={{
-                textTransform: "uppercase",
-                lineHeight: "22px",
-                textAlign: "left",
-              }}
-              color={Colors.black}
-            >
-              {ln.icon && (
-                <Icon
-                  icon={ln.icon}
-                  color={Colors.black}
-                  fill={Colors.black}
-                  height="42px"
-                  width="42px"
-                />
-              )}
-            </Anchor>
-          ))}
-        </Div>
-      </GridContainer>
     </>
   );
 };
@@ -326,11 +280,6 @@ export const query = graphql`
               text
             }
           }
-          social {
-            title
-            message
-            button_text
-          }
           components {
             name
             position
@@ -338,8 +287,8 @@ export const query = graphql`
             proportions
             layout
             image {
-              src
               style
+              src
               shadow
             }
             button {

@@ -18,6 +18,7 @@ import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 
 const ApliedAi = ({ data, pageContext, yml }) => {
   const { session } = React.useContext(SessionContext);
@@ -287,6 +288,7 @@ const ApliedAi = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };

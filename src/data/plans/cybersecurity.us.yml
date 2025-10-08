@@ -6,19 +6,35 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Pay upfront"
-    description: "Regular tuition is $8,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $11,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    price: "$8,999"
+    description: "Regular tuition is $9,999. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $11,999. Or spread interest-free over 6 months."
+    price: "$9,999"
     original_price: "$9,999"
     offer: "10% OFF"
     bullets:
       - Pay upfront and save 10%
-      - Regular tuition is $8,999 and can be financed interest free-up to 6 months.
+      - Regular tuition is $9,999 and can be financed interest free-up to 6 months.
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
+    recomended: "Learn now, pay later"
+    recommended_color: "#FF9800"
+    scholarship: "Income-Based Payments (IBR)"
+    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
+      
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
@@ -50,21 +66,7 @@ part_time:
       - "Get hired within 9 months of graduation or we'll refund 100% of your tuition."
     icons: 
 
-  - slug: 'edly-payment'
-    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
-    recomended: "Learn now, pay later"
-    recommended_color: "#FF9800"
-    scholarship: "Income-Based Payments (IBR)"
-    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
-    price: "IBR"
-    bullets:
-      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
-      - "Only make payments once you land a job and earn the minimum income."
-      - "Flexible payments adjust based on your income"
-      - "Tuition paid directly to your school"
-    icons:
-      - "/images/edly.png"
-      
+
   - slug: 'usa-job-guarantee-pt'
     academies: ['']
     recomended: "Colocación laboral o reembolso de matrícula."

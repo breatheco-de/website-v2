@@ -160,18 +160,18 @@ const initSession = async (locationsArray, storedSession, path, seed = {}) => {
     try {
       const response = await fetch(`${IP_API_URL}?key=${IP_API_KEY}`);
       let data = (await response.json()) || null;
-      
-      if (data && data.status === 'success') {
+
+      if (data && data.status === "success") {
         geoCode = {};
         geoCode.city = data.city;
         geoCode.country = data.country;
         geoCode.countryShort = data.countryCode;
         geoCode.region = data.regionName;
         geoCode.timezone = data.timezone;
-        
+
         latitude = data.lat;
         longitude = data.lon;
-        
+
         let filteredLocations = [];
 
         const locsInCountry = locations.filter(

@@ -17,6 +17,21 @@ const Contact = (props) => {
   const { data, pageContext, yml } = props;
   const captcha = useRef(null);
   const { session } = useContext(SessionContext);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
+
   const [alignment, setAlignment] = useState("left");
   const [formStatus, setFormStatus] = useState({
     status: "idle",
@@ -61,9 +76,9 @@ const Contact = (props) => {
           });
         } else {
           setFormStatus({ status: "loading", msg: "Loading..." });
-          const token = await captcha.current.executeAsync();
+          const token = await executeRecaptcha();
           contactUs(
-            { ...formData, token: { value: token, valid: true } },
+            { ...formData, token: { value: token || "", valid: !!token } },
             session
           )
             .then((data) => {

@@ -181,7 +181,7 @@ two_columns_rigo:
     
 
 badges:
-  paragraph: "Prepare to thrive in today’s AI-fluent tech industry with hyperpersonalized, AI-powered learning, 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world’s top <a  nofollow noreferrer noopener href='https://4geeksacademy.com/us/blog/coding-bootcamp'> coding bootcamps</a>, chosen by Forbes as <a nofollow noreferrer noopener href='https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition'>best bootcamp for students on a budget (2024)</a>, and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
+  paragraph: "Prepare to thrive in today’s AI-fluent tech industry with hyperpersonalized, AI-powered learning, 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world’s top coding bootcamps, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education."
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
   actionMessage: "Let me know when dates are available"
@@ -197,7 +197,7 @@ details:
       sub_title: "Master the most in-demand technologies and learn to build modern applications using AI. Learn algorithm scripting and build awesome apps using front-end libraries. Utilize APIs to consume data and enhance your app's functionality. Develop and present your own project, gaining game-changing hands-on experience. Learn to code alongside AI to unlock a faster, more creative way to build real apps from day one. Collaborate with tools like <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">Cursor, Copilot, and Windsurf</strong>, and leverage the power of <strong style=\"text-decoration: none; color: #000000; font-weight: 600;\">LLMs like GPT-4, Claude 3, and Gemini</strong> to generate, debug,  iterate and ship with speed and precision. Reshape your mindset and embrace the programming, logic, and research skills to succeed in today’s tech industry."
       list:
         - label: "Duration"
-          content: "20 Weeks of live classes + 2-4 weeks of self-paced pre-work"
+          content: "20 Weeks of live classes + 2-4 weeks of <a class='link' href='/us/prework'>self-paced pre-work</a>"
           icon: "duration-icon"
         - label: "Classes"
           content: "3 classes weekly"
@@ -314,34 +314,6 @@ prices:
     text: Check Prices and Plans
     link: ""
 
-typical:
-  heading: ""
-  sub_heading: ""
-  schedule:
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
-    - title: ""
-      time: ""
-      icon: ""
-      content: ""
 
 ## ALUMNI SECTION
 alumni:

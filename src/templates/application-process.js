@@ -10,10 +10,10 @@ import { Button, Colors, Img } from "../components/Styling";
 import Iconogram from "../components/Iconogram";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import DoubleActionCTA from "../components/DoubleActionCTA";
+import { tagManager } from "../actions";
 
 const ApplicationProcess = ({ data, pageContext, yml }) => {
   const { header, stepper, apply_button } = yml;
-  const doubleActionCTA = data.allDoubleActionCtaYaml.edges[0].node.cta;
   return (
     <>
       <Header
@@ -130,6 +130,14 @@ const ApplicationProcess = ({ data, pageContext, yml }) => {
       >
         <Link to={apply_button.path}>
           <Button
+            onClick={() => {
+              tagManager("application_process_apply_click", {
+                button_text: apply_button.text,
+                button_path: apply_button.path,
+                page_location:
+                  typeof window !== "undefined" ? window.location.pathname : "",
+              });
+            }}
             display="block"
             color="#000"
             background={Colors.white}
@@ -150,7 +158,14 @@ const ApplicationProcess = ({ data, pageContext, yml }) => {
 
       <Iconogram yml={yml.iconogram} background={Colors.veryLightBlue3} />
 
-      <DoubleActionCTA disableRestriction ctaData={doubleActionCTA} />
+      <DoubleActionCTA
+        lang={pageContext.lang}
+        title={yml.double_action_cta?.title}
+        description={yml.double_action_cta?.description}
+        primary={yml.double_action_cta?.primary}
+        secondary={yml.double_action_cta?.secondary}
+        newsletter_form={yml.double_action_cta?.newsletter_form}
+      />
     </>
   );
 };
@@ -167,7 +182,6 @@ export const query = graphql`
             description
             image
             keywords
-            hideGlobalCTA
           }
           seo_title
           header {

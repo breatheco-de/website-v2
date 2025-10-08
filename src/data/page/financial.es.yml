@@ -1,18 +1,25 @@
 meta_info:
   slug: financiacion
   title: "Financiación y formas de pago en 4Geeks Academy"
-  description: "Descubre todas las becas disponibles y formas de pago disponibles en 4Geeks Academy."
+  description: "4Geeks Academy ofrece financiación flexible para nuestro bootcamp de programación. Inicia tu carrera tech hoy con planes de pago adaptados a tu presupuesto."
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   image: "/images/og-preview/finantial.es.png"
   keywords: "Financiacion 4Geeks Academy, Financiamiento 4Geeks Academy"
   redirects: ["/financiacion"]
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
-
+ 
 ## BANNER - HEADER
 seo_title: "Financiación y formas de pago en 4Geeks Academy"
 header:
-  title: Financia tu futuro
-  paragraph: Financia tu futuro con diversas opciones de financiación educativa, desde becas hasta métodos de pago inclusivos. Explore nuestra plataforma para encontrar soluciones de financiación inclusivas adaptadas a su trayectoria académica.
+  title: Financia Tu Futuro en Tech, A Tu Manera
+  paragraph: |
+      Ofrecemos varias formas de financiar tu educación, para que puedas concentrarte en construir tu carrera sin preocuparte por el costo. Hay una opción para cada necesidad:
+      <br/>
+      <br/>
+      • Planes de pago flexibles
+      <br/>
+      • Préstamos asequibles
+      <br/>
+      • Becas
   tagline: CELEBRA EL MEJOR PRECIO DE LA CIUDAD
   sub_heading: Nunca dejamos de trabajar para construir un programa verdaderamente 'premium', pero asequible. Nuestra filosofía se basa en hacer que la educación en programación esté disponible para todas las personas.
   image: "../../../static/images/Group-6663.png"
@@ -125,12 +132,12 @@ two_column:
     background: "veryLightBlue"
     heading:
       style: '{ "fontWeight": 700 }'
-      text: "Need extra confidence? Add a Job Guarantee"
+      text: "¿Necesitas más confianza? Añade una Garantía de Trabajo"
       font_size: ["38px", "38px", "38px", "30px", "28px"]
     sub_heading:
       style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
-      text: 'For additional peace of mind, enroll with a Job Guarantee. If you don’t get hired after 9 months of graduation you’ll receive 
-            a <strong style="text-decoration: none; color: #000000; font-weight: 700;">full tuition refund</strong>. The job guarantee can also be financed.'
+      text: 'Para mayor tranquilidad, inscríbete con una Garantía de Trabajo. Si no consigues trabajo después de 9 meses de graduarte, recibirás 
+            un <strong style="text-decoration: none; color: #000000; font-weight: 700;">reembolso completo de la matrícula</strong>. La garantía de trabajo también se puede financiar.'
       font_size: ["20px", "20px", "20px", "18px", "16px"]
     content:
       text: " "  
@@ -139,11 +146,11 @@ two_column:
       items:
         - heading: ""
     button:
-      text: "MORE DETAILS HERE"
+      text: "MÁS DETALLES AQUÍ"
       color: "white"
       background: "black"
       hover_color: "white"
-      path: "/us/job-guarantee"
+      path: "/es/trabajo-garantizado"
 
 partners:
   paragraph: "¡No te pierdas los increíbles aliados de 4Geeks Academy! Aquí hay algunos de ellos."
@@ -214,7 +221,7 @@ data_table:
     - title: "Modalidad"
     - title: "Pago Total"
     - title: "Cuotas Flexibles (TFC)"
-    - title: "Financiamiento (Ascent/Climb)"
+    - title: "Financiamiento (Ascent/ Climb)"
     - title: "Paga Cuando Ganes (Edly)"
   rows:
     - cells:
@@ -270,7 +277,7 @@ data_table:
             bottom: "-1px"
           }
           html: false
-        - content: "Required"
+        - content: "Requerido"
           icon: "check"
           gap: "4px"
           size: "16px"
@@ -322,18 +329,18 @@ data_table:
           html: false
 
 cta:
-  title: "Da el Próximo Paso en tu Carrera Profesional"
+  title: "Da el Próximo Paso en tu Carrera Tech"
   description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
   primary:
     title: "Agenda una Consulta Gratuita de 15 Minutos"
-    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tecnológico que se ajusta a tus objetivos y explora opciones flexibles de financiamiento."
+    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tech que se ajusta a tus objetivos y explora opciones flexibles de financiamiento."
     image: "../../../static/images/Group-6617.webp"
     action_text: "¡Agendar ahora!"
     action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
     footer_text: "✨ Sesión gratuita de 15 minutos • Sin compromiso requerido"
   secondary:
     title: "Comienza tu viaje hoy"
-    description: "Da el siguiente paso hacia tu carrera tecnológica. Completa el formulario para obtener todos los detalles del programa y conectar con nuestro equipo de admisiones."
+    description: "Da el siguiente paso hacia tu carrera tech. Completa el formulario para obtener todos los detalles del programa y conectar con nuestro equipo de admisiones."
     image: "../../../static/images/woman-glasses-laptop.png"
     action_text: "Aplicar ahora"
     action_url: "/es/aplica"

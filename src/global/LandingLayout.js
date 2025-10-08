@@ -80,6 +80,7 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
           node {
             navbar {
               name
+              id
               link
               sub_menu {
                 icon
@@ -87,6 +88,10 @@ const Layout = ({ children, seo, context, landingFooter, landingNavbar }) => {
                 link
                 paragraph
                 width
+                program_comparison_cta {
+                  text
+                  link
+                }
                 links {
                   title
                   level

@@ -1,11 +1,11 @@
 full_time:
 ## USA Full-time
   - slug: 'usa-upfront-ft'
-    academies: ['downtown-miami', 'dallas-usa']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $10,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. O divídela sin intereses hasta en 6 meses."
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
@@ -16,11 +16,25 @@ full_time:
       - "/images/ethereum.png"
       - "/images/bitcoin.png"
 
-
+  - slug: 'edly-payment-ft'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
+    recomended: "Plan de pago accesible"
+    recommended_color: "yellow"
+    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
+    description: "Comienza a pagar una vez contratado"
+    price: "IBR"
+    bullets:
+      - "Préstamos asequibles con pagos basados en ingresos (IBR) ofrecidos a través de EDLY"
+      - "Solo comienzas a pagar una vez que estés ganando al menos $35,000/año"
+      - "Los pagos mensuales se ajustan según tu salario"
+      - "Amigable con codeudor: aplica con alguien que pueda ayudarte a calificar o asegurar mejores términos"
+    icons:
+      - "/images/edly.png"
+      
   - slug: 'usa-financed-ft'
-    academies: ['dallas-usa', 'downtown-miami']
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "Pagos mensuales bajos"
-    recommended_color: "veryLightBlue"
+    recommended_color: "blue"
     scholarship: "Financiado"
     description: "Pago en 3, 4 o 5 años"
     price: "Desde $349/mes"
@@ -35,20 +49,7 @@ full_time:
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
 
-  - slug: 'edly-payment-ft'
-    academies: ['dallas-usa', 'downtown-miami']
-    recomended: "Plan de pago accesible"
-    recommended_color: "yellow"
-    scholarship: "Préstamo de Pago Basado en Ingresos (IBR)"
-    description: "Comienza a pagar una vez contratado"
-    price: "IBR"
-    bullets:
-      - "Préstamos asequibles con pagos basados en ingresos (IBR) ofrecidos a través de EDLY"
-      - "Solo comienzas a pagar una vez que estés ganando al menos $35,000/año"
-      - "Los pagos mensuales se ajustan según tu salario"
-      - "Amigable con codeudor: aplica con alguien que pueda ayudarte a calificar o asegurar mejores términos"
-    icons:
-      - "/images/edly.png"
+
 
   - slug: 'usa-fs-ft'
     academies: ['']
@@ -207,8 +208,8 @@ part_time:
     recomended: "★ ¡Mejor precio!"
     academies: ['downtown-miami', 'orlando', 'atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago Completo"
-    description: "La matrícula regular es de $10,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $12,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $10,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $12,999. O divídela sin intereses hasta en 6 meses."
     price: "$9,899"
     original_price: "$10,999"
     offer: "10% DE DESCUENTO"

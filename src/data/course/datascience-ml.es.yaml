@@ -189,7 +189,7 @@ details:
     - module_name: "Python"
       title: "Introducción a Python"
       description: >
-        Comenzando desde un Prework (2 semanas antes), te introducimos al mundo de la programación y aprendes los fundamentos de Python y Algoritmos; Este módulo te ayudará a prepararte para programar y desarrollar los diferentes entrenamientos y evaluaciones de modelos de IA y Machine Learning para el siguiente paso.
+        Comenzando desde un <a class='link' href='/es/curso-preparatorio'>Prework</a> (2 semanas antes), te introducimos al mundo de la programación y aprendes los fundamentos de Python y Algoritmos; Este módulo te ayudará a prepararte para programar y desarrollar los diferentes entrenamientos y evaluaciones de modelos de IA y Machine Learning para el siguiente paso.
       projects: "Recolecta, almacena y mide con Numpy, Pandas, Matplotlib, etc."
       slug: "python-intro"
       duration: "2 sem"

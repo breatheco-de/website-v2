@@ -2,7 +2,7 @@ import React from "react";
 // import "./Stepper.css";
 import { Div } from "../Sections";
 import { H2, H3, Paragraph } from "../Heading";
-import { Icon } from "../Icon";
+import Icon from "../Icon";
 import { Colors } from "../Styling";
 
 const StepCard = ({ step, index, steps }) => {
@@ -50,17 +50,15 @@ const StepCard = ({ step, index, steps }) => {
               textAlign="left"
               fontSize="1.5rem"
               margin="0 0 0.5rem 0"
-            >
-              {step.title}
-            </H3>
+              dangerouslySetInnerHTML={{ __html: step?.title }}
+            />
             <Paragraph
               textAlign="left"
               fontSize="1.125rem"
               fontFamily="var(--font-sans)"
               lineHeight="1.6"
-            >
-              {step.description}
-            </Paragraph>
+              dangerouslySetInnerHTML={{ __html: step?.description }}
+            />
             {step.sub_items && (
               <Div margin="1rem 0 0 0.5rem">
                 <Div as="ul" display="flex" flexDirection="column" gap="0.5rem">

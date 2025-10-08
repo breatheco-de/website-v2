@@ -7,8 +7,8 @@ meta_info:
   keywords: ""
   redirects: ["/alumnos"]
 
-seo_title: "Alumnos y Proyectos"
+seo_title: "Proyectos y Alumnos del Coding Bootcamp"
 header:
-  title: "Conoce a nuestros exalumnos y sus proyectos"
-  paragraph: "Conoce a nuestros egresados y algunos de los proyectos que construyeron durante el programa."
+  title: "Mira lo que han construido nuestros estudiantes"
+  paragraph: "Explora los proyectos finales de los graduados de 4Geeks Academy: aplicaciones reales y soluciones que muestran las habilidades, la creatividad y el talento listo para el mercado laboral de nuestros alumnos del bootcamp."
   # image: "../../../static/images/outcomes/outcomes.png"

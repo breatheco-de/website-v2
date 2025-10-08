@@ -4,8 +4,8 @@ full_time:
     academies: ['downtown-miami', 'orlando']
     recomended: "★ Best Deal!"
     scholarship: "Full Payment"
-    description: "Regular tuition is $10,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $12,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
+    description: "Regular tuition is $10,999. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $12,999. Or spread interest-free over 6 months."
     price: "$10,999"
     original_price: "$11,999"
     offer: "10% OFF"
@@ -55,19 +55,34 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
     scholarship: "Pay upfront"
-    description: "Regular tuition is $9,899. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $12,999. Pay upfront and get 10% off. Or spread interest-free over 6 months."
-    price: "$9,899"
+    description: "Regular tuition is $10,999. Or spread interest-free over 6 months."
+    job_guarantee_description: "Regular tuition is $12,999. Or spread interest-free over 6 months."
+    price: "$10,999"
     original_price: "$10,999"
     offer: "10% OFF"
     bullets:
       - Pay upfront and save 10%
-      - Regular tuition is $9,899 and can be financed interest free-up to 6 months.
+      - Regular tuition is $10,999 and can be financed interest free-up to 6 months.
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
+
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
+    recomended: "Learn now, pay later"
+    recommended_color: "#FF9800"
+    scholarship: "Income-Based Payments (IBR)"
+    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
+    price: "IBR"
+    bullets:
+      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
+      - "Only make payments once you land a job and earn the minimum income."
+      - "Flexible payments adjust based on your income"
+      - "Tuition paid directly to your school"
+    icons:
+      - "/images/edly.png"
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'tampa-usa', 'losangeles-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
@@ -114,20 +129,7 @@ part_time:
     icons: 
       - "/images/visa-mastercard.png" 
       
-  - slug: 'edly-payment'
-    academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'dallas-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'tampa-usa', 'toronto-canada', 'newyork-usa', 'orlando', 'online']
-    recomended: "Learn now, pay later"
-    recommended_color: "#FF9800"
-    scholarship: "Income-Based Payments (IBR)"
-    description: "Offered through EDLY. Start paying only once you earn $35K/year. Payments scale with income, and total repayment is capped"
-    price: "IBR"
-    bullets:
-      - "Edly is proud to help 4Geeks Academy provide affordable, income-based repayment (IBR) loans to its students"
-      - "Only make payments once you land a job and earn the minimum income."
-      - "Flexible payments adjust based on your income"
-      - "Tuition paid directly to your school"
-    icons:
-      - "/images/edly.png"
+
 
 
 ## Spain & Europe

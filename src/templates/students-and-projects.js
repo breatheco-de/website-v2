@@ -15,7 +15,7 @@ const StudentAndProjects = (props) => {
   let projects = data.allAlumniProjectsYaml.edges[0].node.projects;
 
   return (
-    <Div margin="0 0 75px 0" flexDirection="column">
+    <Div margin="4rem 0 4rem 0" flexDirection="column">
       <Header
         padding="0 10px"
         margin_md={isCustomBarActive(session) ? "70px 0 0 0" : "0"}

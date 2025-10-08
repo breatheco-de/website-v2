@@ -4,154 +4,173 @@ meta_info:
   visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
   description: "With 4Geeks Academy’s Career Support, we’ll help you find the right tech job. Get resume tips, interview prep, and access to our job network."
   image: null
-  keywords: "Geekforce, a 4Geeks Academy system"
+  keywords: null
   redirects: ["/career-support", "/geekforce", "/us/geekforce"]
 
 seo_title: "Career Support"
 header:
   title: |
-    <strong style='color:black; font-family: Archivo-Black;'>Geek</strong>
-    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong> <br>
-    <strong style='font-family: Archivo;'>the collective process of Career Support at the Academy</strong>
+    Welcome to <strong style='color:black; font-family: Archivo-Black;'> <br>Geek</strong>
+    <strong style = 'color:rgba(255, 183, 24, 1); font-family: Archivo-Black;'>FORCE</strong>:<br>
+    <strong style='font-family: Archivo;'>Career Development <br>for the AI Era</strong>
   image: "../../../static/images/bg/companies-bg.jpg"
-  image_alt: "GeekForce - Coding bootcamp with unlimited carreer support."
+  image_alt: "GeekForce - Coding bootcamp with unlimited career support."
   paragraph: |
-    The "force" stands For Career Empowerment and it is a lifetime membership. It provides you job placement assistance so you get ready to get a job in tech.
+    Get unlimited 1:1 career support designed for your unique profile and goals—for life. From resume and portfolio building to interviews and AI-driven hiring platforms, we’ll give you the personalized mentorship you need to land your first job and keep thriving in today’s tech.
   image_logo: "/images/geekforce.png"
+  bullets:
+    - " "
   
 # Introduction Video here
 geekForce:
-  - videoId: "ln3bQsV1BaQ"
-    image: ../../../static/images/staff/hernan-new.webp
+  - videoId: "-2ZvlgDnltc"
+    image: ../../../static/images/landing/geekforce-thumbnail.webp
 
-# Banner of icons
-iconogram:
-  heading:
-    text: "Benefits"
-    style: '{ "textAlign": "center"}'
-  swipable: false
-  icons:
-    - icon: "briefcase-new"
-      content: "86% of our students hired"
-    - icon: "four_persons" #"group"
-      content: "Post program labor support"
-    - icon: "teacher_teaching"
-      content: "Preparing for interviews"
-    - icon: "resume"
-      content: "+1500 life sheets created"
+who_is_hiring:
+  position: 13
+  heading: "WHO’S HIRING OUR GRADUATES?"
+  sub_heading: |
+    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:
+    <br/>
+    <br/>
+    "I’m continually impressed by the depth of knowledge possessed by 4Geeks students. One of my hires ended up becoming a team leader." - CodeNinjas.
+  
+  featured: 
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
 
-list:
-  - title: "Unlimited Professional Support"
-    image: "../../../static/images/Group-6618-2.png"
-    position: "right"
-    sub:
-      - title: "Advice and creation of professional profile"
-        text: "At 4Geeks we will help you perfect your professional profile. You will have personalized advice with our experts to improve your CV, LinkedIn, GitHub and Portfolio."
+# Dynamic Components Array
+components:
+
+  - name: "unlimited_support"
+    position: 3
+    layout: "two_column_left"
+    background: "lightYellow"
+    proportions: [5, 7]
+    image:
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/Group-6663.png"
+      shadow: false
+    heading:
+      text: "Unlimited Career Support – Always Ahead of Job Market Trends"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "fontWeight": "700", "lineHeight": "36px" }'
+    sub_heading:
+      text: "Geekforce is built into every 4Geeks program to make sure you don’t just learn tech, but launch a successful career. Through unlimited 1:1 mentorship and group coaching, you’ll gain insights, resources, and strategies designed to keep you ahead in the AI-powered job market."
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
+    bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: " "
+          text: "Receive tailored guidance aligned with your goals, context, and challenges."
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: " "
+          text: "Meet mentors online or in-person whenever you need support—unlimited, for life."
+          icon: "check"
+          icon_color: '#25BF6C'
+        - heading: " "
+          text: "Access proven tools and strategies to make smarter career moves and stay relevant as the tech industry evolves."
+          icon: "check"
+          icon_color: '#25BF6C'
+
+  - name: "career_development"
+    position: 7
+    layout: iconogram
+    swipable: true
+    heading: 
+      text: "Get Hired with Our 3-Step Career Development Process"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "35px", "textAlign": "center", "width": "90%" }'
+    sub_heading:
+      text: "Once you’ve mastered the technical skills, our structured process helps you build a lasting career in tech — taking you from learning to landing the job."
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "90%"}'    
+    icons:
+        - icon: "stairswflag"
+          title: "Profile Optimization"
+          content: |
+            <ul>
+              <li style="margin-top: 8px;">• Polish LinkedIn, GitHub, and portfolio to attract recruiters and pass AI-based filters.</li>
+              <li style="margin-top: 8px;">• Build a resume that clears applicant tracking systems (ATS) and highlights your strengths.</li>
+              <li style="margin-top: 8px;">• Showcase your skills with a recruiter-ready portfolio.</li>
+            </ul>
+          color: '#0084FF'
+        - icon: "contract-2"
+          title: "2. Interview Preparation"
+          content: |
+            <ul>
+              <li style="margin-top: 8px;">• Gain confidence with mock technical and behavioral interviews.</li>
+              <li style="margin-top: 8px;">• Practice coding and problem-solving with auto-graded exercises.</li>
+              <li style="margin-top: 8px;">• Develop tailored strategies for upcoming interviews.</li>
+            </ul>
+          color: '#0084FF'
+        - icon: "briefcase-2"
+          title: "3. Strategic Job Search"
+          content: |
+            <ul>
+              <li style="margin-top: 8px;">• Create a personalized job search plan aligned with your goals.</li>
+              <li style="margin-top: 8px;">• Navigate AI-driven hiring platforms, from resume scanners to automated interviews.</li>
+              <li style="margin-top: 8px;">• Connect with our extensive network of global hiring partners.</li>
+            </ul>
+          color: '#EB5757'
+
+  - name: "lifetime_mentoring"
+    position: 9
+    layout: "two_column_left"
+    proportions: [6, 6]
+    image:
+      style: '{"backgroundSize": "contain"}'
+      src: "/images/bg/community.png"
+      shadow: false
+    heading:
+      text: "Accelerate Your Results with Hyperpersonalized Career Support"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "fontWeight": "700", "lineHeight": "36px" }'
+    sub_heading:
+      text: "Combine unlimited 1:1 human mentorship with AI-powered tools to launch your career faster and smarter:"
+      font_size: ["18px", "18px", "16px", "16px", "16px"]
+      style: '{ "margin":"15px 0", "font-weight":"400" }'
+    content:
+      text: |
+        •  <strong style="text-decoration: none; color: #000000; font-weight: 700;">Rigobot, our custom AI</strong>, gives instant feedback on your resume, portfolio, and projects.<br /><br />
+        •  Practice technical interviews and behavioral questions with <strong style="text-decoration: none; color: #000000; font-weight: 700;">AI-guided exercises.</strong><br /><br />
+        •  Get <strong style="text-decoration: none; color: #000000; font-weight: 700;">expert coaching from our mentors</strong> who tailor advice to your unique profile and goals.</strong><br /><br />  
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
 
 
-  - title: "Interview Simulation"
-    image: "../../../static/images/landing/two-womans-and-laptop.webp" 
-    position: "left"
-    text: |
-      We will hold mock interviews to assess your strengths and weaknesses to create a stronger profile before the actual interviews. Every time you have an interview, we will practice using different technologies.
-      We have our very own pool of auto-graded exercises, so you can practice until you master the skills to get the job you want.
-    button:
-      link: "/"
-      text: ""
-      color: "black"
 
-  - title: "Lifetime Mentoring"
-    image: "../../../static/images/Group-6617.webp"
-    position: "right"
-    text: |
-      Launching a career in tech involves assessing your current situation and making informed decisions about the future.
-      It requires assessment of yourself, your context, and ACTION. You can do this alone; or you can rely on a mentor's experience which can give you
-      Perspective, information and access to the right resources. In 4Geeks we adjust the sessions according to your calendar,
-      We also give you the opportunity to have them online or in-person.
-      In any case, we assure you that you have the opportunity for constant mentoring whenever you need it.
+  - name: how-it-works
+    position: 11
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Does Our Career Support Deliver Results You Can Count On?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: 'Yes — and we’ve got the numbers to back it up.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Average time to get hired"
+        content: "3-6 months after graduation"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Salary Increase"
+        content: "55% higher at new job"
 
-# Two Columns - Rigo
-two_columns:
-  proportions: [5, 7]
-  justify: "center" #start,end,center
-  image:
-    style: '{"backgroundSize": "contain", "background-position": "center", "border-radius": "4px"}'
-    src: "/images/landing/ai-mentor.jpg"
-    shadow: true
-  video: "6m1Jyya7eCc"
-  heading: 
-    text: "Our AI-powered features make all the difference!"
-    font_size: ["33px", "33px", "33px", "33px", "33px"]
-    style: '{ "lineHeight": "30px" }'
-    heading_image:
-      src: "/images/rigobot-logo.png"
-  sub_heading:
-    text: "Through years of research and experience, we've perfected the strategies and tools to ensure your constant and efficient progress. To optimize your learning curve and empower you to tackle challenges with confidence, we've now incorporated the power of AI."
-    font_size: ["16px","16px","16px","16px","16px"]
-    style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"300" }'
-  content:
-    style: '{ "font-size":"16px", "margin":"15px 0" }'
-    text: "Experience the difference our AI-powered features make. Our tried-and-tested approach keeps you engaged, motivated, and on the fast track to achieving your coding goals!"
-  bullets:
-    item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
-    items:
-      - heading: "Meet Rigobot, our AI coding assistant:"
-        text: |
-          • Instant tutoring as you code.
-          <br />
-          • Skill evaluations to track your progress.
-          <br />
-          • Expert bug fixing assistance.
-          <br /><br />
-          It perfectly complements our human mentorship program!
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-      - heading: "Learnpack, our interactive learning software, provides:"
-        text: |
-          • There are hundreds of interactive exercises to help you master and retain skills.
-          <br />
-          • Automated tests to help track your progress.
-          <br />
-          • Structured practice.
-        icon: "check" #string with icon for example ['check', 'cicle', etc]
-        icon_color: '#25BF6C'
-        
-# benefits:
-#   - p:
-#     heading: "Get Interviews"
-#     items:
-#       - title: Resume Preparation
-#         sub_title: (up to 8 students per class)
-#       - title: LinkedIn Preparation
-#         sub_title: (one mentor for every 4 students)
-#       - title: Github Preparation
-#         sub_title: (unlimited sessions)
-#       - title: Personal Portfolio
-#         sub_title: (based on each job opportunity)
-#       - title: Final Project
-#         sub_title: (based on each job opportunity)
-#   - a:
-#     heading: "Get Job Offers"
-#     items:
-#       - title: Get Job offers from our partners
-#         sub_title: Referrals coming from our own network of hundreds of partners
-#       - title: Mock Interview Trainings
-#         sub_title: Several mock interviews to assess your weaknesses and create a stronger profile before the actual interviews.
-#       - title: Target Coaching per Interview 
-#         sub_title: Intensive individual coaching. Each time you have an important interview, we will practice using and working with different technologies.
-#       - title: Thousands of tailored exercises
-#         sub_title: Our very own pool of thousands of auto-graded exercises will let you practice until you can master those skills.
-#   - l:
-#     heading: "Keep your job forever"
-#     items:
-#       - title: The coaching never ends
-#         sub_title: Once you land the job, you get help to keep at it.
-#       - title: Change your job
-#         sub_title: Our referral system never ends; you can always come back to look for better jobs.
-#       - title: Continue Growing
-#         sub_title: Private invites to career fairs, events and networking sessions.
-#       - title: Become a mentor
-#         sub_title: Get paid to help other students; become a part of the mentoring network forever.
 
-# image1: "../../../static/images/geeksinfo/geeksinfo.png"
-# image2: "../../../static/images/bg/community.png"
+

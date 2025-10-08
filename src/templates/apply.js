@@ -44,6 +44,21 @@ const Apply = (props) => {
   const { data, pageContext, yml } = props;
   const captcha = useRef(null);
   const { session } = useContext(SessionContext);
+
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
+
   const [formStatus, setFormStatus] = useState({
     status: "idle",
     msg: "Apply",
@@ -569,7 +584,7 @@ const Apply = (props) => {
                   if (showPhoneWarning && regionVal !== "online") {
                     setShowModal(true);
                   } else {
-                    const token = await captcha.current.executeAsync();
+                    const token = await executeRecaptcha();
                     submitForm({ token });
                   }
                 }

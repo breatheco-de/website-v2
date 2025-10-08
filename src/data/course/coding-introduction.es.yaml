@@ -174,7 +174,7 @@ details:
       step: 3
     - module_name: "DOMINA JAVASCRIPT"
       title: "Domina JavaScript"
-      description: "La sección final de nuestro curso de prework tiene como objetivo fortalecer y mejorar tus habilidades en JavaScript a través de la práctica intensiva. A medida que te preparas para avanzar a posiciones de desarrollo más avanzadas, este ejercicio en particular te desafía a mejorar tus técnicas de programación, enfrentar problemas difíciles y fortalecer tu comprensión de JavaScript en preparación para la próxima etapa de tu educación en programación."
+      description: "La sección final de nuestro <a class='link' href='/es/curso-preparatorio'>curso de prework</a> tiene como objetivo fortalecer y mejorar tus habilidades en JavaScript a través de la práctica intensiva. A medida que te preparas para avanzar a posiciones de desarrollo más avanzadas, este ejercicio en particular te desafía a mejorar tus técnicas de programación, enfrentar problemas difíciles y fortalecer tu comprensión de JavaScript en preparación para la próxima etapa de tu educación en programación."
       projects: "Participa en 'Más Práctica en JS'—un ejercicio integral que te desafía a aplicar todas las habilidades de JavaScript que has aprendido en una serie de tareas de codificación intrincadas. Este proyecto final está dirigido a mejorar tus habilidades de resolución de problemas y asegurar que tengas un sólido dominio de los fundamentos de JavaScript."
       slug: "domina-javascript"
       duration: "1 actividad"

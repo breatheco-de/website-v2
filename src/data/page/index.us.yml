@@ -217,3 +217,40 @@ testimonial_header:
   heading: "86% of our graduates successfully land a job after completing our program."
   button_text: "See all testimonials"
   button_link: ""
+
+## DOUBLE ACTION CTA SECTION
+double_action_cta:
+  title: "Take the Next Step in Your Tech Career"
+  description: "Join thousands of students who have transformed their careers with 4Geeks Academy. Get personalized guidance and stay updated with the latest in tech."
+  locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+  primary:
+    title: "Book a Free 15-Minute Consultation"
+    description: "Get personalized guidance from our admissions team. Discover the tech program that fits your goals and explore flexible financing options."
+    image: "../../../static/images/Group-6617.webp"
+    action_text: "Schedule now!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    benefits:
+      - "Personalized career roadmap"
+      - "Program recommendations"
+      - "Industry insights & salary expectations"
+    footer_text: "✨ Free 15-minute session • No commitment required"
+  secondary:
+    title: "Start Your Journey Today"
+    description: "Take the next step toward your tech career. Fill out the form to get full program details and connect with our admissions team."
+    image: "../../../static/images/woman-glasses-laptop.png"
+    action_text: "Apply now"
+    action_url: "/us/apply"
+    benefits:
+      - "Industry trends & job market insights"
+      - "Student success stories"
+      - "Exclusive course discounts & early access"
+    footer_text: "📧 Weekly updates • Unsubscribe anytime • No spam, ever"
+  newsletter_form:
+    placeholder_email: "Email *"
+    error_email: "Please enter a valid email"
+    button_submit: "Subscribe"
+    button_loading: "Loading..."
+    status_idle: "Request"
+    status_error: "There are errors in your form"
+    status_correct_errors: "Correct the errors"
+    success_message: "🎉 Thank you! You've been successfully subscribed to our newsletter."

@@ -1,11 +1,15 @@
 navbar:
   - name: "Programas"
+    id: "programs"
     link: "/es/coding-bootcamps/desarrollador-full-stack"
     sub_menu:
       icon: ""
       title: "Programas"
-      paragraph: "Conviértete en desarrollador Full Stack con IA. Domina las tecnologías más demandadas y asegura tu primer empleo en tech."
+      paragraph: "Desde principiante a listo para el trabajo en tiempo récord. Entrena en los campos tecnológicos más demandados hoy en día y lanza una carrera duradera."
       width: "950px"
+      program_comparison_cta:
+        text: "¿No estás seguro qué programa se adapta mejor a ti? Mira nuestra comparación de programas <a class='link' href='/es/comparar-programas'>aquí.</a>"
+        link: "/es/comparar-programas"
       links:
 
         - title: "Desarrollador Full Stack con IA"
@@ -41,7 +45,7 @@ navbar:
       icon: "awards"
       title: "Por qué 4Geeks Academy"
       link: "/es/porque-4geeks"
-      paragraph: "Este es el lugar para impulsar tu carrera aprendiendo a codificar. Piensa de manera diferente, ten más confianza en ti mismo, da vida a tus ideas y gana más dinero."
+      paragraph: "Lanza tu carrera tech con el apoyo ilimitado de mentores expertos, herramientas impulsadas por IA y orientación profesional personalizada. Con excelentes resultados y reconocimiento global, hemos ayudado a miles a triunfar en tecnología."
       width: "950px"
       links:
         - title: "Acompañamiento"
@@ -80,7 +84,7 @@ navbar:
     sub_menu:
       icon: "hat"
       title: "Academia"
-      paragraph: "Estamos constantemente fortaleciendo nuestro ecosistema para aprender y evolucionar juntos, usando tecnología y usando código."
+      paragraph: "Únete a una comunidad global de aprendizaje donde la tecnología, la comunidad y la innovación se unen para acelerar carreras."
       width: "500px"
       links:
         - title: ""
@@ -103,7 +107,7 @@ navbar:
     sub_menu:
       icon: "campus"
       title: "Nuestros Campus"
-      paragraph: "Aprende en persona o elije un programa completamente remoto. Inscríbete y forma parte de una comunidad de programación global."
+      paragraph: "Estudia presencialmente en uno de nuestros campus globales, o únete de forma remota y accede a la misma formación y comunidad de clase mundial."
       width: "610px"
       links:
         - title: "US & CANADA"
@@ -125,10 +129,6 @@ navbar:
               link_to: "/es/coding-campus/bootcamp-programacion-losangeles"
             - title: "New York, USA"
               link_to: "/es/coding-campus/bootcamp-programacion-nyc"
-            - title: "Orlando, USA"
-              link_to: "/es/coding-campus/bootcamp-programacion-orlando"
-            - title: "Tampa, USA"
-              link_to: "/es/coding-campus/bootcamp-programacion-tampa"
             - title: "Toronto, Canada"
               link_to: "/es/coding-campus/bootcamp-programacion-toronto-canada"
             - title: "Remoto, USA"

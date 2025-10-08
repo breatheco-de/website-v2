@@ -116,6 +116,8 @@ const Badges = ({
   bottom_paragraph,
   imageBackground,
   imageBorder,
+  paragraphStyles,
+  bg_full = false,
   variant,
 }) => {
   const data = useStaticQuery(graphql`
@@ -193,7 +195,7 @@ const Badges = ({
           id={id}
           containerColumns_tablet="repeat(12, 1fr)"
           gridColumn_tablet="1/ span 12"
-          background={background}
+          background={bg_full ? "transparent" : background}
           padding={padding}
           padding_tablet={padding_tablet}
           rows={paragraph && "3"}
@@ -211,6 +213,7 @@ const Badges = ({
                 color={Colors.darkGray}
                 dangerouslySetInnerHTML={{ __html: paragraph }}
                 margin="15px 0 0 0"
+                {...paragraphStyles}
               />
             </Div>
           )}

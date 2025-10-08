@@ -118,7 +118,7 @@ const ProgramDetails = (props) => {
                     <strong style={{ fontWeight: "700" }}>
                       {item.label}:{" "}
                     </strong>
-                    {item.content}
+                    <span dangerouslySetInnerHTML={{ __html: item?.content }} />
                   </H4>
                 </Div>
                 {item.link_text && (
@@ -275,9 +275,8 @@ const ProgramDetails = (props) => {
                         textAlign="left"
                         color={Colors.darkGray}
                         margin="0 0 10px 0"
-                      >
-                        {detail}
-                      </Paragraph>
+                        dangerouslySetInnerHTML={{ __html: detail }}
+                      />
                     ))}
                 </Div>
               </Div>

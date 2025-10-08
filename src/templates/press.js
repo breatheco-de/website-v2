@@ -8,12 +8,39 @@ import News from "../components/News";
 import TestimonialCard from "../components/TestimonialCard";
 import { Colors, Img } from "../components/Styling";
 import { Div, Header } from "../components/Sections";
+import { H2 } from "../components/Heading";
+import TwoColumn from "../components/TwoColumn";
+import Marquee from "../components/Marquee";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+const ImageItem = ({ item, style }) => (
+  <GatsbyImage
+    key={item.title}
+    style={{
+      minWidth: "120px",
+      maxWidth: "150px",
+      maxHeight: "170px",
+      border: 0,
+      ...style,
+    }}
+    height="80px"
+    objectFit="contain"
+    alt={item.title}
+    image={getImage(item.image.childImageSharp.gatsbyImageData)}
+  />
+);
 
 const Press = (props) => {
   const { data, pageContext, yml } = props;
   const { session } = React.useContext(SessionContext);
   let content = data.allPageYaml.edges[0].node.content;
+  const awardsList = data.awardsData.edges[0].node.awards_list;
+  const ctaData = yml.cta;
   let position = 0;
+  // getting half images of awards list for double carousel
+  const halfAwardsList = awardsList.slice(0, awardsList.length / 2);
+  const secondHalfAwardsList = awardsList.slice(awardsList.length / 2);
+
   return (
     <Div
       margin={
@@ -91,7 +118,7 @@ const Press = (props) => {
         //margin={isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"}
         margin="0"
         paragraphMargin="26px 20px"
-        paragraphMargin_Tablet="26px 22%"
+        paragraphMargin_Tablet="26px 18%"
         paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
@@ -120,6 +147,12 @@ const Press = (props) => {
         padding_md="20px 80px 70px 80px"
         padding_lg="20px 0 70px 0"
       />
+
+      <Div margin="3rem auto 3rem auto">
+        <H2 fontSize="44px" fontFamily="Archivo-Black">
+          {content.heading}
+        </H2>
+      </Div>
       <Div
         display="column"
         columns="3"
@@ -171,6 +204,105 @@ const Press = (props) => {
             );
           })}
       </Div>
+
+      <TwoColumn
+        left={{
+          heading: {
+            style: {
+              "font-family": "Archivo-Black",
+              "line-height": "normal",
+              margin: "0 0 20px 0",
+            },
+            ...ctaData.heading,
+          },
+          footerText: ctaData.footerText,
+          sub_heading: ctaData.sub_heading,
+          bullets: ctaData.bullets,
+          content: ctaData.content,
+          button: ctaData.button,
+        }}
+        right={{
+          justify: "center",
+          children: (
+            <Div
+              display="flex"
+              overflow="hidden"
+              height="56vh"
+              gap="1rem"
+              gap_tablet="3rem"
+              mask="
+                linear-gradient(transparent, white var(--buff) calc(100% - var(--buff)), transparent),
+                linear-gradient(90deg, transparent, white var(--buff) calc(100% - var(--buff)), transparent),
+                radial-gradient(circle at center, white 60%, rgba(0,0,0,0.3) 100%)"
+              style={{
+                "--buff": "3rem",
+                "mask-composite": "intersect",
+              }}
+              justifyContent="center"
+              margin="0 auto"
+              width="70vw"
+              width_tablet="100%"
+            >
+              <Marquee
+                config={{
+                  duration: 30,
+                  images: halfAwardsList.map((item) => (
+                    <ImageItem
+                      item={item}
+                      style={{
+                        width: "150px",
+                        height: item.height || "140px",
+                        maxWidth: "170px",
+                      }}
+                    />
+                  )),
+                  variant: "vertical",
+                  width: "auto",
+                  height: "75vh",
+                  gap: "1rem",
+                  containerStyle: {
+                    top: "-3rem",
+                    left: "0rem",
+                  },
+                  itemStyle: {
+                    aspectRatio: "8 / 3",
+                  },
+                }}
+              />
+              <Marquee
+                config={{
+                  reverse: true,
+                  duration: 30,
+                  images: secondHalfAwardsList.map((item) => (
+                    <ImageItem
+                      item={item}
+                      style={{
+                        width: "200px",
+                        maxWidth: "200px",
+                        height: item.height || "140px",
+                      }}
+                    />
+                  )),
+                  variant: "vertical",
+                  width: "auto",
+                  height: "75vh",
+                  gap: "1rem",
+                  containerStyle: {
+                    top: "-5.5rem",
+                    left: "0rem",
+                  },
+                  itemStyle: {
+                    aspectRatio: "6 / 3",
+                  },
+                }}
+              />
+            </Div>
+          ),
+        }}
+        alignment={ctaData.alignment}
+        proportions={ctaData.proportions}
+        // session={session}
+      />
     </Div>
   );
 };
@@ -221,6 +353,63 @@ export const query = graphql`
               textUrl
               url
             }
+          }
+          cta {
+            proportions
+            background
+            section_heading {
+              text
+              style
+            }
+            heading {
+              text
+              font_size
+            }
+            sub_heading {
+              text
+              font_size
+            }
+            footerText
+            button {
+              text
+              color
+              hover_color
+              background
+              hover
+              path
+            }
+            content {
+              text
+              font_size
+              path
+            }
+            bullets {
+              items {
+                heading
+                text
+                icon
+              }
+            }
+          }
+        }
+      }
+    }
+    awardsData: allPageYaml(
+      filter: {
+        fields: { file_name: { regex: "/^awards/" }, lang: { eq: $lang } }
+      }
+    ) {
+      edges {
+        node {
+          awards_list {
+            image {
+              childImageSharp {
+                gatsbyImageData(layout: FULL_WIDTH, width: 700, quality: 100)
+              }
+            }
+            title
+            link
+            height
           }
         }
       }

@@ -7,8 +7,7 @@ meta_info:
   visibility: "visible"
   template: "application-process"
   redirects: []
-  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
-
+ 
 seo_title: "Application Process - Join 4Geeks Academy"
 header:
   title: "Your Path to Joining 4Geeks and Kickstarting Your New Career"
@@ -46,7 +45,7 @@ stepper:
       description: "Once you feel confident about your choices, pick your start date, sign your Enrollment Agreement, and complete your enrollment with a deposit (if required)."
     - title: "Welcome to 4Geeks!"
       description: "You'll get access to 4Geeks.com, our Slack community, and your prework checklist."
-    - title: "Start Your Prework"
+    - title: "Start Your <a class='link' href='/us/prework'>Prework</a>"
       description: "Get familiar with fundamental tools and concepts so you start strong from day one."
 
 iconogram:

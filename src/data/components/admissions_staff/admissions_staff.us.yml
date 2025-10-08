@@ -1,8 +1,10 @@
 heading: "📞 Contact Us Directly"
 sub_heading: "Have questions or want to chat now? Meet Eli, your Admissions Developer. He’s ready to help you take the next step. "
+assignment_algo: "ROUND_ROBIN"
 staff:
   - name: "Eli"
     last_name: "Pilowsky"
+    priority: 1
     locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
     job_title: "Admissions Advisor"
     phone: "(786) 305-5288"

@@ -44,9 +44,7 @@ const PaymentPlans = (props) => {
   if (plans) plans = plans.node;
   if (!plans) return null;
 
-  const [selected, setSelected] = React.useState(
-    plans.options && plans.options.length > 0 ? plans.options[0] : null
-  );
+  const [selected, setSelected] = React.useState(null);
 
   const optionsForSelect = (plans.options || []).map((opt) => ({
     value: opt.id,

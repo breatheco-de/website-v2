@@ -662,6 +662,23 @@ export const MegaMenu = ({
                         </React.Fragment>
                       );
                     })}
+                  {menu[status.itemIndex].id === "programs" && (
+                    <Div
+                      width="100%"
+                      margin="20px 0 0 0"
+                      padding="15.5px 0 0 0"
+                      borderTop={`1px solid ${Colors.lightGray}`}
+                    >
+                      <Paragraph
+                        margin="0"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            menu[status.itemIndex].sub_menu
+                              .program_comparison_cta.text,
+                        }}
+                      ></Paragraph>
+                    </Div>
+                  )}
                 </>
               )}
           </Div>

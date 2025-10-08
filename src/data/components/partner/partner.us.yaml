@@ -2,6 +2,13 @@
 ## PARTNERS - CODING - INFLUENCERS - FINANCIALS
 ## THIS COMPONENT IS USED IN "/partners" and "/pricing"
 
+partnership_in_action:
+  tagline: "Partnerships in Action"
+  sub_heading: |
+    Our collaborations go beyond formal agreements; they transform careers and communities.
+    At 4Geeks Academy we are committed to closing the gap between job opportunities and tech talent by providing high-quality, careeer oriented coding education backed by unlimited support.
+    Through partnerships with leading educational institutions, nonprofits, and government initiatives, we’ve already supported hundreds of students worldwide — and we’re just getting started.
+
 partners:
   tagline: "WHO’S HIRING OUR GRADUATES?"
   sub_heading: |
@@ -121,16 +128,18 @@ partners:
       featured: false
 
 coding:
-  tagline: "Global Actors in the Coding World"
-  sub_heading: "We are immersed in the coding ecosystem partnering with global tech actors that helps us organize or participate in initiatives to further impact the coding industry"
+  tagline: "A Global Network Transforming Tech:"
+  sub_heading: |
+    4Geeks Academy is part of a worldwide ecosystem of organizations driving change in technology.
+    Together, we co-create initiatives that make tech skills and career opportunities more inclusive and widely accessible.
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
-      featured: true
+      featured: false
       #locations: ["miami-downtown"]
     - name: "Facebook Developer Circle"
       image: "../../../../static/images/coding/developer-circles-2.png"
-      featured: true
+      featured: false
       #locations: ["miami-downtown"]
     - name: "Bloktech"
       image: "../../../../static/images/coding/blockchain-center.png"
@@ -146,7 +155,7 @@ coding:
       #locations: ["miami-downtown"]
     - name: "Women Who Code"
       image: "../../../../static/images/coding/woman-who-code.jpeg"
-      featured: true
+      featured: false
       #locations: ["miami-downtown"]
     - name: "Worldcamp"
       image: "../../../../static/images/coding/worldcamp.png"
@@ -170,7 +179,12 @@ coding:
       link: "https://www.grammerhub.org"
       follow: true
       #locations: ["miami-downtown"]
-      
+    - name: "Bite-Con"
+      image: "../../../../static/images/coding/bite-con.png"
+      featured: false
+      link: "https://www.bite-con.org"
+      follow: true
+
 influencers:
   tagline: "IN PARTNERSHIP WITH THE CITY'S BIGGEST INFLUENCERS"
   sub_heading: "We actively organize and/or participate in the biggest coding initiatives."
@@ -205,33 +219,36 @@ influencers:
       #locations: ["miami-downtown"]
 
 financials:
-  tagline: "Partners making education possible"
-  sub_heading: "We are making a huge effort to make premium coding education accessible to everyone."
+  tagline: "Making Education Possible"
+  sub_heading: "These organizations provide the financial solutions that open doors to tech education. By reducing barriers to entry, they help more students access high-quality training and launch meaningful careers."
   images:
     - name: "ASOTTTECH"
       image: "../../../../static/images/partner/assotech.png"
-      featured: false
+      featured: true
       locations: ["madrid-spain", "barcelona-spain", "malaga-spain", "valencia-spain"]
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Leif"
       image: "../../../../static/images/leif_main.png"
-      featured: false
+      featured: true
     - name: "Flevo"
       image: "../../../../static/images/flevo-new.png"
-      featured: false
+      featured: true
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
     - name: "Ascent"
       image: "../../../../static/images/ascent_logo.png"
       featured: false
+    - name: "Edly"
+      image: "../../../../static/images/edly.png"
+      featured: false
 
 work_together:
-  title: "How to work together"
-  description: "4Geeks Academy is an awarded global coding academy that will allow you to focus in one or more of the following areas:"
+  title: "Why Partner with 4Geeks?"
+  description: "Every collaboration is designed to drive measurable results for both organizations and communities. Our partnerships span across:"
   image_list:
     - alt: "4Geeks Academy Student"
       image: "../../../../static/images/students/student1.jpg"
@@ -244,21 +261,24 @@ work_together:
     - alt: "4Geeks Academy Student"
       image: "../../../../static/images/students/student5.jpg"
   features:
-    - title: "Reskilling and Upskilling"
-      icon: "screen"
-      description: "Invest in your own talent. Grow together and make them part of your future."
+    - title: "Scholarships & Funding"
+      icon: "handmoney-new"
+      description: "Break down financial barriers and make coding education accessible to underserved communities."
 
-    - title: "Community Impact"
+    - title: "Reskilling & Upskilling Programs"
       icon: "community"
-      description: "Make a meaningful impact on diversity, reduce the tech gap and empower people from all walks of life!"
+      description: "Invest in your workforce and prepare employees for the digital-first future."
 
-    - title: "Outreach"
+    - title: "Community Impact Initiatives"
       icon: "chat-2"
-      description: "Join 4Geeks Academy's global community of expert speakers and be part of innovative events!"
+      description: "Support diversity in tech and create opportunities for people from all walks of life."
 
-    - title: "Recruitment"
+    - title: "Recruitment & Hiring Pipelines"
       icon: "notes-2"
-      description: "Your go-to partner for tech candidates, have a constant flow of high- quality candidates with our amazing talent pipeline!"
+      description: "Gain direct access to job-ready developers, data scientists, and cybersecurity specialists."
+    - title: "Events & Outreach"
+      icon: "calendar-2"
+      description: "Partner on hackathons, speaker series, and innovation initiatives that amplify your brand and mission."
 
 benefits_and_charts:
   title: "BECOME A PARTNER"
@@ -276,17 +296,19 @@ benefits_and_charts:
     - Enhance brand recognition and add value by sponsoring significant events.
 
   charts:
-    title: "Some Numbers worth Considering:"
+    title: "Impact by the Numbers"
     list:
-      - icon: "job"
+      - icon: "handmoney-new"
         description: |
-          According to a study by the Society for Human Resource Management, it costs an average of $4,129 to hire a new employee, with an average of 42 days to find a suitable candidate.
-      - icon: "chart-62"
-        description: "62% of executives believe they will need to retrain or replace more than a quarter of their workforce between now and 2023 due to advancing automation and digitization (McKinsey report, 2018)."
+          $20M+ in scholarships and grants awarded
+      - icon: "group"
+        description: "6,000+ students supported worldwide"
       - icon: "notes-2"
-        description: "Coding bootcamp graduates and college graduates exhibit strikingly similar employment rates."
-      - icon: "chart-72"
-        description: "72% of employers say that hiring bootcamp graduates is comparable to hiring a college graduate."
+        description: "84% hiring rate within 6 months of graduation"
+      - icon: "job"
+        description: "55% average salary increase in the U.S. ｜ 233% in LATAM ｜ 30% in Spain"
+      - icon: "handshake"
+        description: "5,000+ hiring partners"
 
 partners_in_education:
   title: "Partners in education"

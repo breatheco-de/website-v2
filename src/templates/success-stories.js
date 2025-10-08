@@ -6,7 +6,7 @@ import SuccessStoriesComponent from "../components/SuccessStories";
 import OurPartners from "../components/OurPartners";
 import BaseRender from "./_baseLayout";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { isCustomBarActive } from "../actions";
+import { isCustomBarActive, tagManager } from "../actions";
 import { SessionContext } from "../session";
 import { H2, Paragraph } from "../components/Heading";
 import StarRating from "../components/StarRating";
@@ -192,7 +192,7 @@ const SuccessStories = (props) => {
           paragraph={yml.partners.sub_heading}
           showFeatured={false}
           props={partnersData.partners}
-          gray={true}
+          // gray={true}
         />
       </Div>
       <Div
@@ -208,7 +208,18 @@ const SuccessStories = (props) => {
         </Div>
 
         <Div margin="3rem auto 5rem auto" justifyContent="center">
-          <Link to={yml.cta.button.path} style={{ width: "auto" }}>
+          <Link
+            to={`${yml.cta.button.path}${
+              session?.utm?.utm_plan ? `?utm_plan=${session.utm.utm_plan}` : ""
+            }`}
+            state={{
+              utm_source: "success-stories",
+              utm_medium: "cta",
+              prevUrl:
+                typeof window !== "undefined" ? window.location.href : "",
+            }}
+            style={{ width: "auto" }}
+          >
             <Button
               display="block"
               color="#000"
@@ -222,6 +233,30 @@ const SuccessStories = (props) => {
               fontSize="22px"
               textTransform="uppercase"
               boxShadow="10px 10px 0px 0px rgba(0,0,0,1)"
+              onClick={() => {
+                // Track the CTA click for analytics
+                tagManager("success_stories_cta_click", {
+                  button_text: yml.cta.button.text,
+                  button_path: yml.cta.button.path,
+                  page_location:
+                    typeof window !== "undefined"
+                      ? window.location.pathname
+                      : "",
+                });
+
+                // Update session with UTM parameters
+                if (session?.setSession) {
+                  session.setSession({
+                    ...session,
+                    utm: {
+                      ...session.utm,
+                      utm_source: "success-stories",
+                      utm_medium: "cta",
+                      utm_campaign: "student_stories",
+                    },
+                  });
+                }
+              }}
             >
               {yml.cta.button.text}
             </Button>

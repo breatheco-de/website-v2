@@ -48,6 +48,20 @@ const Footer = ({ yml }) => {
   const { session } = React.useContext(SessionContext);
   let socials = session && session.location ? session.location.socials : [];
 
+  // Safe captcha execution with defensive checks
+  const executeRecaptcha = async () => {
+    if (captcha.current && typeof captcha.current.executeAsync === "function") {
+      try {
+        return await captcha.current.executeAsync();
+      } catch (error) {
+        console.warn("ReCAPTCHA execution failed:", error);
+        return null;
+      }
+    }
+    console.warn("ReCAPTCHA not available, proceeding without token");
+    return null;
+  };
+
   const [formStatus, setFormStatus] = useState({
     status: "idle",
     msg: "Request",
@@ -80,7 +94,10 @@ const Footer = ({ yml }) => {
         margin="0 0 60px 0"
         childMargin="auto"
         childMaxWidth="1280px"
+        flexDirection="column"
+        flexDirection_tablet="row"
       >
+        {/* Academy Logo - Mobile: Full width, Tablet: Grid area */}
         <Div
           justifyContent="center"
           alignItems="center"
@@ -90,6 +107,8 @@ const Footer = ({ yml }) => {
           height_tablet="100%"
           borderRadius="3px"
           gridArea_tablet="1/1/2/3"
+          margin="0 0 20px 0"
+          margin_tablet="0"
         >
           <RoundImage
             url="/images/4geeksacademy-logo-old.png"
@@ -100,62 +119,22 @@ const Footer = ({ yml }) => {
             bsize="contain"
           />
         </Div>
-        <Div
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-          height="43px"
-          width="100%"
-          width_tablet="100%"
-          height_tablet="100%"
-          borderRadius="3px"
-          gridArea_tablet="1/10/2/13"
-        >
-          <H4 margin="0 0 10px 0" display="none" display_md="block">
-            {yml.newsletter.heading}
-          </H4>
-          <Div id="icons-container" alignItems="center" gap="8px">
-            {(socials || yml.socials).map((ln, i) => {
-              if (!ln.icon) return null;
-              return (
-                <Anchor
-                  key={i}
-                  cursor="pointer"
-                  to={ln.link}
-                  // textAlign="left"
-                  margin="0"
-                  fontSize="13px"
-                  // lineHeight="22px"
-                  fontWeight="400"
-                  // textTransform="uppercase"
-                  color={Colors.black}
-                >
-                  <Icon
-                    icon={ln.icon}
-                    style={{ margin: "0" }}
-                    color={Colors.black}
-                    fill={Colors.black}
-                    height="32px"
-                    width="32px"
-                  />
-                </Anchor>
-              );
-            })}
-          </Div>
-        </Div>
 
+        {/* Newsletter Form - Mobile: Full width, Tablet: Grid area */}
         <Div
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
           padding="0 40px"
-          height="43px"
+          height="auto"
           width="100%"
           borderRadius="3px"
           width_tablet="100%"
           height_tablet="100%"
           gridArea_tablet="1/3/2/10"
           borderRight_tablet={`1px solid ${Colors.lightGray}`}
+          margin="0 0 20px 0"
+          margin_tablet="0"
         >
           {formStatus.status === "thank-you" ? (
             <Div alignItems="center">
@@ -174,7 +153,7 @@ const Footer = ({ yml }) => {
               <H4
                 margin="0 0 10px 0"
                 textAlign="left"
-                display="none"
+                display="block"
                 display_tablet="block"
               >
                 {yml.newsletter.heading}
@@ -198,9 +177,12 @@ const Footer = ({ yml }) => {
                       });
                     } else {
                       setFormStatus({ status: "loading", msg: "Loading..." });
-                      const token = await captcha.current.executeAsync();
+                      const token = await executeRecaptcha();
                       newsletterSignup(
-                        { ...formData, token: { value: token, valid: true } },
+                        {
+                          ...formData,
+                          token: { value: token || "", valid: !!token },
+                        },
                         session
                       )
                         .then((data) => {
@@ -334,7 +316,6 @@ const Footer = ({ yml }) => {
                     </Link>
                   </label>
                 </Div>
-
                 {formData.privacyPolicy.valid === false &&
                   formStatus.status === "error" && (
                     <Div
@@ -352,6 +333,51 @@ const Footer = ({ yml }) => {
               </Div>
             </>
           )}
+        </Div>
+
+        {/* Social Icons - Mobile: Full width, Tablet: Grid area */}
+        <Div
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          height="auto"
+          width="100%"
+          width_tablet="100%"
+          height_tablet="100%"
+          borderRadius="3px"
+          gridArea_tablet="1/10/2/13"
+        >
+          <H4 margin="0 0 10px 0" display="none" display_md="block">
+            {yml.newsletter.heading}
+          </H4>
+          <Div id="icons-container" alignItems="center" gap="8px">
+            {(socials || yml.socials).map((ln, i) => {
+              if (!ln.icon) return null;
+              return (
+                <Anchor
+                  key={i}
+                  cursor="pointer"
+                  to={ln.link}
+                  // textAlign="left"
+                  margin="0"
+                  fontSize="13px"
+                  // lineHeight="22px"
+                  fontWeight="400"
+                  // textTransform="uppercase"
+                  color={Colors.black}
+                >
+                  <Icon
+                    icon={ln.icon}
+                    style={{ margin: "0" }}
+                    color={Colors.black}
+                    fill={Colors.black}
+                    height="32px"
+                    width="32px"
+                  />
+                </Anchor>
+              );
+            })}
+          </Div>
         </Div>
         {yml.footer.map((item, i) => {
           return (

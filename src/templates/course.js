@@ -19,6 +19,7 @@ import OurPartners from "../components/OurPartners";
 import Icon from "../components/Icon";
 import Overlaped from "../components/Overlaped";
 import Loc from "../components/Loc";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 import ScholarshipProjects from "../components/ScholarshipProjects";
 import TwoColumn from "../components/TwoColumn/index.js";
 
@@ -258,6 +259,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
         showMoreRedirect
       />
       <PricesAndPayment
@@ -296,6 +298,7 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };

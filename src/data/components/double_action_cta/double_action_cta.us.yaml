@@ -1,5 +1,6 @@
 cta:
-  title: Take the Next Step in Your Tech Career
+  title: 
+  locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
   description: "Join thousands of students who have transformed their careers with 4Geeks Academy. Get personalized guidance and stay updated with the latest in tech."
   primary:
     title: "Book a Free 15 Minute Career Consultation"

@@ -10,7 +10,7 @@ meta_info:
   keywords: ""
   redirects: []
   related_clusters: ["trends-and-tech"]
-  duration: "P16W"  # 14 weeks duration in ISO 8601 format
+  duration: "P16W"  # 16 weeks duration in ISO 8601 format
   job_guarantee: true
 
 apply_form:
@@ -55,42 +55,6 @@ instructors:
 
 badges:
   paragraph: "Prepare to thrive in today's AI-powered tech industry with hyperpersonalized learning, unlimited 1:1 mentorship, and career support for life. Recognized by Course Report as one of the world's top <a href='/us/coding-bootcamp'> coding bootcamps</a>, chosen by Forbes as best bootcamp for students on a budget (2024), and rated 4.9/5 on SwitchUp. Licensed by the Florida Department of Education. "
-
-two_columns_first:
-  proportions: [6, 6]
-  #IMPORTANT: Only the locations listed here will be able to see this section
-  available_locations: ["madrid-spain", "malaga-spain", "barcelona-spain", "valencia-spain"]
-  image:
-    style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-alonso.webp"
-    link: "https://www.mypublicinbox.com/chemaalonso"
-    shadow: false
-  heading:
-    text: "Our Cybersecurity Bootcamp is backed by Chema Alonso, the Most Recognized Hacker in Spain"
-    font_size: ["25px", "25px", "25px", "23px", "23px"]
-  sub_heading:
-    text: |-
-      With over 20 years of experience and recognition from industry giants like Microsoft, Chema Alonso brings unparalleled expertise to our program. His endorsement ensures cutting-edge content, alignment with ISO and NIST standards, and practical insights into essential areas such as data loss prevention (DLP) techniques and penetration testing.
-      As part of our partnership, students from our campus in Spain will gain access to:  
-    font_size: ["16px", "16px", "16px", "16px", "16px"]
-  disclosure: 
-    text: '* These benefits related to our partnership with Chema Alonso are <span style="font-weight: 600;" >only available</span> for our students attending classes at any of our campuses in 🇪🇸 Spain.'
-    style: '{"margin-top": "0px"}'
-  button:
-    text: "APPLY NOW"
-    color: "white"
-    background: "black"
-    path: "#prices_and_payment"
-  bullets:
-    items:
-    - text: |-
-        Chat Room with the professor and Chema Alonso on <a href="https://www.mypublicinbox.com/" target="_blank">MyPublicInbox</a> + 2000 Tempos to spend on the platform
-    - text: |-
-        4 Cybersecurity books from <a href="https://0xword.com/" target="_blank">0xWORD</a>, the publisher of Chema Alonso.
-    - text: "Chema Alonso has validated the content and instructors of this course."
-    - text: "Career guidance and help finding a job in collaboration with Chema Alonso. And of course, our unlimited and lifelong mentorship."
-    - text: |-
-        1 Exam from <a href="https://singularity-experts.com/es/l/hackers" target="_blank">Singularity Hackers</a>, the training platform for cybersecurity experts by Chema Alonso.
 
 two_columns_second:
   proportions: [6, 6]
@@ -168,7 +132,7 @@ two_columns:
   proportions: [6, 6]
   image:
     style: '{"border" : "0px solid black", "backgroundSize": "contain", "background-position": "center" }'
-    src: "../../images/staff/chema-daniela.webp"
+    src: "../../images/staff/daniela-maissi-bg.jpg"
     shadow: false
   heading:
     text: "Be part of the Next Generation of Cybersecurity Professionals"
@@ -187,8 +151,6 @@ two_columns:
       - text: ""
   content:
     text: |
-      • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Chema Alonso</strong>, international cybersecurity leader, supports and co-leads the program.<br>
-      <br>
       • <strong style="text-decoration: none; color: #000000; font-weight: 700;">Daniela Maissi</strong>, EC-Council member and malware specialist with 12+ certifications in cloud security, <strong style="text-decoration: none; color: #000000; font-weight: 700;">OSINT</strong>, and <strong style="text-decoration: none; color: #000000; font-weight: 700;">IT systems</strong>, co-designed the syllabus to ensure industry alignment.
       <br><br>
       <strong style="text-decoration: none; color: #000000; font-weight: 700;">What you’ll learn:</strong>

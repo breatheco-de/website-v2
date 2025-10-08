@@ -122,7 +122,7 @@ components:
           text: "Realiza una prueba para evaluar tu adecuación al programa."
           icon: "circle"
         - heading: "📚 Completa el Prework"
-          text: "Si apruebas el test, recibirás acceso al Prework, el cual debes completar en 10 días."
+          text: "Si apruebas el test, recibirás acceso al <a class='link' href='/es/curso-preparatorio'>Prework</a>, el cual debes completar en 10 días."
           icon: "circle"
         - heading: "🎤 Entrevista con nuestro equipo"
           text: "Tendrás una entrevista con nuestro equipo para conocerte mejor y asegurarnos de que el programa es adecuado para ti."

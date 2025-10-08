@@ -43,9 +43,8 @@ navbar:
 header_data:
   tagline: "Hey Texans! Your Life in Tech Starts Here!"
   sub_heading: |
-    <span style="font-size: 32px;">Get Ready for a Tech Career with a Scholarship.</span>
+    <span style="font-size: 32px;">Get Ready for a Tech Career with a 50% Scholarship.</span>
   background: "#ffffff"
-  partner_logo_url: "../../../static/images/partner/4geeks-n-kosmos-logo.webp"
   tagline_color: "#1c1c1c"
   form_styles:
     background: "#0084FF"
@@ -61,7 +60,6 @@ features:
   bullets:
     - "For residents of Texas ONLY."
     - "Get a high-paying, future-proof tech-job, right in your state."
-    - "Award-winning tech education and transformative life skills."
     - "Spots are limited - act now!"
   styles: '{ "color": "black", "fontWeight":"400" }'
 
@@ -99,7 +97,7 @@ follow_bar:
     # devices:   XL      LG    MD      SM    XS
     font_size: ["22px", "22px", "22px", "16px", "16px"]
   button:
-    text: "Apply Now"
+    text: "Learn More"
     path: "#leadform_header"
   phone:
     text: ""
@@ -120,7 +118,7 @@ who_is_hiring:
 
 rating_reviews:
   background: "#fff"
-  position: 9
+  position: 11
   heading: "AWARDS AND RECOGNITIONS"
   rating_list:
     - alt: "Career Karma"
@@ -141,7 +139,7 @@ rating_reviews:
       url: ""
 
 why_4geeks:
-  position: 8
+  position: 9
   heading: "Hear it from our students"
   sub_heading: " "
 
@@ -166,7 +164,7 @@ components:
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       style: '{ "padding": "10px", "border-radius": "3px" }'
-      text: "Apply Now"
+      text: "Learn More"
       color: white
       hover_color: "white"
       background: "blue"
@@ -269,10 +267,10 @@ components:
     bullets:
       items:
         - heading: "Duration"
-          text: "15 weeks + Pre work"
+          text: "20 Weeks of live classes + 2-4 weeks of <a class='link' href='/us/prework'>self-paced pre-work</a>"
           icon: "check"
         - heading: "Classes"
-          text: "Live on Google Meet. Monday to Thursday 6pm-9pm CT"
+          text: "3 classes a week"
           icon: "check"
         - heading: "Class size"
           text: "Ratio of 1 teacher per 7 students"
@@ -281,7 +279,7 @@ components:
           text: "Full-Stack Developer <a href='https://certificate.4geeks.com/4ae7a46bba78dc19b823e124fea120c17b45e044'><span class='span-blue'>(See example)</span></a>"
           icon: "check"
         - heading: "Requisites"
-          text: "No previous coding skills or advanced math are required."
+          text: "No previous coding skills or advanced math required."
           icon: "check"
         - heading: "Language"
           text: "You can choose between English and Spanish for the syllabus and content. Live classes are taught in the language of your campus."
@@ -294,6 +292,34 @@ components:
       background: "blue"
       path: "#leadform_bottom"
 
+
+  - name: how-it-works
+    position: 7
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: 'Yes — and we’ve got the numbers to back it up.'
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Avergage time to get hired"
+        content: "3-6 months after graduation"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Salary Increase"
+        content: "55% higher at new job"
+
   - name: two_colum_full_stack
     position: 4
     layout: two_column_right
@@ -304,7 +330,7 @@ components:
       src: "/images/landing/blonde-girl-laptop.png"
       shadow: false
     section_heading:
-      text: "Transform your life with 4Geeks Academy and Kosmos: A Comprehensive Approach to Career Readiness"
+      text: "Launch a Future-Proof Career with our Award-Winning Coding Bootcamp"
       style: '{ "font-size": "30px" }'
     heading:
       style: '{ "margin-top": "0px", "font-weight": "300"  }'
@@ -337,50 +363,40 @@ components:
       background: "blue"
       path: "#leadform_bottom"
 
-  - name: pay
+
+
+  - name: two-column-rigobot
     position: 5
+    proportions: [5, 7]
+    background: "#FFFFFF" # Name of the color(from components/Styling/index.js) or color code ex: #C9F9F9 .
     layout: two_column_left
-    background: "#F4F9FF"
-    proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain", "backgroundPosition": "center", "margin": "10px" }'
-      src: "/images/partner/kosmos-work.webp"
-      shadow: false
+      style: '{"backgroundSize": "cover"}'
+      src: "../../../../static/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
     heading:
-      style: '{ "margin-top": "0px" }'
-      text: "Why are we partnering with Kosmos?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      text: "Learn AI-powered Full Stack Development Faster — With Hyper-Personalized Support That Adapts to You"
+        #           xl      lg      md      sm      xs
+      font_size: ["30px", "30px", "28px", "28px", "24px"]
     sub_heading:
-      font_size: ["18px", "18px", "18px", "18px", "18px"]
-      style: '{ "font-weight": "100" }'
-      text: "Recognizing that technical skills alone aren’t enough for long-term success, Kosmos developed its proprietary ‘Switch’ workshops to equip you  with essential career and life skills, including:"
+      text: |-
+        Live instruction, unlimited mentorship, and AI tools built for smarter, faster progress.
     content:
-      font_size: ["16px"]
       text: ""
+      font_size: ["16px"]
+   
     bullets:
       items:
-        - heading: "Gamified Application Process – "
-          text: "An engaging assessment helps you identify your best career path based on your interests & passion."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Goal-Setting & Career Alignment – "
-          text: "A structured personal approach to ensure students are a good fit for the tech field and positioned for success."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Financial Literacy Training – "
-          text: "Supported by leading financial institutions, it equips students with essential money management skills."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: "Strength & Potential Identification – "
-          text: "Creative exercises and guest speakers help participants rewrite limiting narratives and unlock hidden talents."
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-    button:
-      style: '{ "padding": "10px", "border-radius": "3px" }'
-      text: "Apply Now"
-      color: white
-      hover_color: "white"
-      background: "blue"
-      path: "#leadform_bottom"
+      - text: "Rigobot, our custom-built AI coding assistant, follows your progress and gives tailored feedback exactly when you need it."
+        icon: "check" 
+      - text: "Get unmatched personal attention with our 7:1 student teacher ratio, plus unlimited access to 1:1 sessions with our expert mentors and career coaches."
+        icon: "check" 
+      - text: "With the combined support of our human mentors and AI tools, you’ll master AI-integrated full stack development faster, smarter, and with more confidence than ever."
+        icon: "check"
 
   - name: start_your_journey
-    position: 6
+    position: 8
     layout: two_column_left
     background: "#F4F9FF"
     proportions: [7, 5]

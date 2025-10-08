@@ -28,6 +28,8 @@ const BaseHeading = styled(Heading)`
   width: ${(props) => props.width || "100%"};
   max-width: ${(props) => props.maxWidth};
   min-width: ${(props) => props.minWidth};
+  flex: ${(props) => props.flex};
+  flex-direction: ${(props) => props.flexDirection};
   font-family: "Lato", sans-serif;
   letter-spacing: ${(props) => props.letterSpacing};
   font-weight: ${(props) => props.fontWeight};

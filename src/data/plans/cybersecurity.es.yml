@@ -6,19 +6,34 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada']
     scholarship: "Paga de contado"
-    description: "La matrícula regular es de $8,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $11,999. Paga de contado y obtén 10% de descuento. O divídela sin intereses hasta en 6 meses."
-    price: "$8,999"
+    description: "La matrícula regular es de $9,999. O divídela sin intereses hasta en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $11,999. O divídela sin intereses hasta en 6 meses."
+    price: "$9,999"
     original_price: "$9,999"
     offer: "10% DE DESCUENTO"
     bullets:
       - Paga por adelantado y ahorra un 10%
-      - La matrícula regular es de $8,999 y se puede financiar sin intereses hasta en 6 meses.
+      - La matrícula regular es de $9,999 y se puede financiar sin intereses hasta en 6 meses.
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
       - "/images/tfc-logo.png"
       - "/images/climb-logo.png"
+      
+  - slug: 'edly-payment'
+    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
+    recomended: "Aprende ahora, paga después"
+    recommended_color: "#FF9800"
+    scholarship: "Pagos Basados en Ingresos (IBR)"
+    description: "Ofrecido a través de EDLY. Comienza a pagar solo cuando ganes $35K/año. Los pagos se ajustan según tus ingresos y el reembolso total tiene un límite"
+    price: "IBR"
+    bullets:
+      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes"
+      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo"
+      - "Pagos flexibles que se ajustan según tus ingresos"
+      - "La matrícula se paga directamente a la academia"
+    icons:
+      - "/images/edly.png"
 
   - slug: 'usa-financed-pt'
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online']
@@ -64,21 +79,7 @@ part_time:
       - "Si no consigues empleo en los 9 meses posteriores a la graduación, te reembolsamos el 100% de la matrícula."
     icons: 
       - "/images/visa-mastercard.png" 
-      
-  - slug: 'edly-payment'
-    academies: ['atlanta-usa', 'tampa-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'dallas-usa']
-    recomended: "Aprende ahora, paga después"
-    recommended_color: "#FF9800"
-    scholarship: "Pagos Basados en Ingresos (IBR)"
-    description: "Ofrecido a través de EDLY. Comienza a pagar solo cuando ganes $35K/año. Los pagos se ajustan según tus ingresos y el reembolso total tiene un límite"
-    price: "IBR"
-    bullets:
-      - "Edly se enorgullece de ayudar a 4Geeks Academy a ofrecer préstamos asequibles con pagos basados en ingresos (IBR) a sus estudiantes"
-      - "Solo comienzas a pagar una vez que consigas un trabajo y alcances el ingreso mínimo"
-      - "Pagos flexibles que se ajustan según tus ingresos"
-      - "La matrícula se paga directamente a la academia"
-    icons:
-      - "/images/edly.png"
+
 
 ## Spain & Europe
   - slug: 'spain-scholarships-cs-pt'

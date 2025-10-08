@@ -108,7 +108,7 @@ details:
       title: "Prework"
       description: >
         We start with the basics: HTML5 + CSS3 + JavaScript. We review programming fundamentals and ensure everyone is on the same page.
-        During prework, you'll review how to create a website with HTML and CSS, then develop several projects, and finally, dive into the world of JavaScript, learning about variables, loops, conditionals, and functions.
+        During <a class='link' href='/us/prework'>prework</a>, you'll review how to create a website with HTML and CSS, then develop several projects, and finally, dive into the world of JavaScript, learning about variables, loops, conditionals, and functions.
       projects: "Build your first web page, a minimal version of Instagram, an excuse generator, among others."
       slug: "prework"
       duration: "~ 60 hours"

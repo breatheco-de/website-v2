@@ -111,15 +111,25 @@ const LandingHeader = (props) => {
                   height="auto"
                   padding="0 0 25px 0"
                 >
-                  <GatsbyImage
-                    loading="eager"
-                    imgStyle={{ objectFit: "contain", objectPosition: "left" }}
-                    image={getImage(
-                      yml.header_data.partner_logo_url.childImageSharp
-                        .gatsbyImageData
-                    )}
-                    alt="4Geeks Logo"
-                  />
+                  {typeof yml.header_data.partner_logo_url === "string" ? (
+                    <Img
+                      src={yml.header_data.partner_logo_url}
+                      alt="Partner Logo"
+                      height="70px"
+                      backgroundSize="contain"
+                      width="auto"
+                    />
+                  ) : (
+                    <GatsbyImage
+                      loading="eager"
+                      imgStyle={{ objectFit: "contain", objectPosition: "left" }}
+                      image={getImage(
+                        yml.header_data.partner_logo_url.childImageSharp
+                          .gatsbyImageData
+                      )}
+                      alt="Partner Logo"
+                    />
+                  )}
                 </Div>
 
                 <Div

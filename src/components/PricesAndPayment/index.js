@@ -441,49 +441,46 @@ const FinancialOptionsDesktop = ({
           {availablePlans?.some((p) => p.price) &&
             shouldShowJobGuarantee(currentLocation, info) &&
             schedule !== "full_time" && (
-              <Div margin="16px 0 0 0" display="block">
-                <Div alignItems="center">
-                  <label
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      cursor: "pointer",
-                      userSelect: "none",
-                    }}
+              <Div
+                margin="16px 0 0 0"
+                display="block"
+                background="#f8f9fa"
+                padding="16px"
+                borderRadius="8px"
+                border="1px solid #e9ecef"
+              >
+                <Div alignItems="left" display="flex">
+                  <Toggle
+                    width="42px"
+                    height="22px"
+                    margin="0 0 0 12px"
+                    b_radius="9999px"
+                    bg={jobGuarantee ? Colors.blue : Colors.lightGray}
                     onClick={() =>
                       setJobGuarantee && setJobGuarantee(!jobGuarantee)
                     }
                   >
-                    <Toggle
-                      width="42px"
-                      height="22px"
-                      b_radius="9999px"
-                      bg={jobGuarantee ? Colors.blue : Colors.lightGray}
-                      as="div"
-                    >
-                      <Div position="relative" width="42px" height="22px">
-                        <Div
-                          position="absolute"
-                          top="2px"
-                          left={jobGuarantee ? "22px" : "2px"}
-                          width="18px"
-                          height="18px"
-                          borderRadius="9999px"
-                          background={Colors.white}
-                          transition="left 0.2s ease-in-out"
-                        />
-                      </Div>
-                    </Toggle>
-                    <H4
-                      fontSize_tablet="18px"
-                      fontSize_xs="16px"
-                      margin="0 0 0 10px"
-                      width="auto"
-                      as="span"
-                    >
-                      {jobGuaranteeInfo?.title}
-                    </H4>
-                  </label>
+                    <Div position="relative" width="42px" height="22px">
+                      <Div
+                        position="absolute"
+                        top="2px"
+                        left={jobGuarantee ? "22px" : "2px"}
+                        width="18px"
+                        height="18px"
+                        borderRadius="9999px"
+                        background={Colors.white}
+                        transition="left 0.2s ease-in-out"
+                      />
+                    </Div>
+                  </Toggle>
+                  <H4
+                    fontSize_tablet="18px"
+                    fontSize_xs="16px"
+                    margin="0"
+                    padding="0"
+                  >
+                    {getJobGuaranteeConfig(currentLocation, info)?.title}
+                  </H4>
                 </Div>
                 <Paragraph
                   textAlign="left"
@@ -536,7 +533,7 @@ const FinancialOptionsDesktop = ({
             margin="0 0 12px 0"
             textAlign="left"
           >
-            {"Other payment options"}
+            {info.other_payment_options}
           </H3>
           {(paymentOptions || []).map((option) => {
             return (
@@ -544,9 +541,8 @@ const FinancialOptionsDesktop = ({
                 key={option.id}
                 border="none"
                 background={Colors.verylightGray3}
-                padding="16px"
+                padding="8px"
                 borderRadius="8px"
-                margin="0 0 12px 0"
                 cursor="default"
               >
                 <Div display="block" width="100%">
@@ -961,6 +957,7 @@ const PricesAndPayment = (props) => {
             contact_carrer_advisor
             contact_link
             we_accept
+            other_payment_options
             top_label
             top_label_2
             plans_title
@@ -1080,9 +1077,19 @@ const PricesAndPayment = (props) => {
 
   const getCurrentPlans = () => {
     // If we're on a specific course page, use defaultCourse directly
-    const courseToUse = props.financial
+    const rawCourse = props.financial
       ? course?.value || props.defaultCourse
       : props.defaultCourse;
+
+    // Normalize course slug to match plan filenames
+    const courseToUse = (() => {
+      const lower = (rawCourse || "").toLowerCase();
+      const aliasMap = {
+        "full-stack-ft": "full-stack", // full-time uses same plans as part-time
+        "cyber-security": "cybersecurity",
+      };
+      return aliasMap[lower] || lower;
+    })();
 
     let _plans = data.allPlansYaml.edges
       .filter(({ node }) => node.fields.lang === props.lang)

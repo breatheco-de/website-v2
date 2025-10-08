@@ -1,141 +1,124 @@
-import React, { useEffect } from "react";
-import { window } from "browser-monads";
-import styled, { keyframes } from "styled-components";
-import { Break, Devices } from "../Responsive";
-import { Colors } from "../Styling";
-import { Div } from "../Sections";
-import DragScrollProvider from "../DragScrollProvider";
-
-let datos = {};
-
-//Conversion px-vw
-const pxTOvw = (valuePx) => {
-  var result = (100 / window.innerWidth) * valuePx;
-  return result;
-};
-
-//Conversion px-vh
-const pxTOvh = (valuePx) => {
-  var result = (100 * valuePx) / window.innerHeight;
-  return result;
-};
+import React from "react";
+import styled, { keyframes, css } from "styled-components";
 
 const Marquee = (props) => {
-  //Images to display
-  let images = props.config.images;
+  const {
+    images,
+    duration = 50,
+    gap = "2rem",
+    variant = "horizontal",
+    reverse = false,
+    pauseOnHover = true,
+    width,
+    height,
+    containerStyle,
+    itemStyle,
+  } = props.config;
 
-  //transition duration in seconds
-  let duration = props.config.duration.toString() + "s";
-
-  /*Keyframes
-    ** goes ok **
-    let scrolling = keyframes`
-      0% { transform: translateX(40%); }
-      100%{ transform: translateX( -100%); }
-    `;
-    */
-  let scrolling = keyframes`
-     0% { transform: translateX(5%); }
-    100%{ transform: translateX( -95%); }
-  `;
-
-  let M = styled(Div)`
-    overflow: hidden;
-    width: 100vw;
-    height: 12vh;
-    background: transparent;
-    position: relative;
-    margin: "0 0 0 0";
-  `;
-
-  let MC = styled(Div)`
-    list-style: none;
-    height: 100%;
-    width: auto;
-    display: flex;
-    background-color: transparent;
-    padding: 0 0 0 0;
-    animation: ${scrolling} ${props.config.duration}s linear infinite;
-    &:hover {
-      animation-play-state: paused;
+  const trackHorizontal = keyframes`
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
     }
   `;
 
-  let UL = styled.ul`
-    list-style: none;
-    height: 100%;
+  const trackVertical = keyframes`
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(0, -50%, 0);
+    }
+  `;
+
+  const Container = styled.div`
+    width: ${width || "100vw"};
+    flex: ${width ? "none" : "1 1 45%"};
+    height: ${height || "12vh"};
+    overflow: hidden;
+    position: relative;
+    ${variant === "vertical" &&
+    `
+      transform:
+        rotateX(20deg)
+        rotateZ(-20deg)
+        skewX(20deg);
+    `}
+    ${(props) => props.containerStyle && css(props.containerStyle)}
+  `;
+
+  const UL = styled.ul`
+    display: flex;
+    width: fit-content;
     padding: 0;
     margin: 0;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+    list-style-type: none;
+    height: 100%;
+    align-items: center;
 
-    @media ${Devices.xxs} {
-    }
-    @media ${Devices.xs} {
-    }
-    @media ${Devices.sm} {
-    }
-    @media ${Devices.tablet} {
-      margin: ${(props) => props.margin_tablet};
-      width: ${(props) => props.width_tablet};
-      height: ${(props) => props.height_tablet};
-    }
-    @media ${Devices.md} {
-      width: ${(props) => props.width_md};
-      height: ${(props) => props.height_md};
-      margin: ${(props) => props.margin_md};
-    }
-    @media ${Devices.lg} {
-    }
-    @media ${Devices.xl} {
-    }
+    animation-name: ${variant === "vertical" ? trackVertical : trackHorizontal};
+    animation-duration: var(--duration, ${duration}s);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: ${reverse ? "reverse" : "normal"};
+
+    ${variant === "vertical" &&
+    `
+      flex-direction: column;
+      width: 100%;
+      height: fit-content;
+    `}
+
+    ${pauseOnHover &&
+    css`
+      &:hover {
+        animation-play-state: paused;
+      }
+    `}
   `;
 
-  let LI = styled.li`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    width: datos.pxTOvw(150);
-    margin-right: 3.5rem;
-    max-height: 100%;
-    font-size: 0rem;
-    white-space: nowrap;
+  const LI = styled.li`
+    height: 80%;
+    aspect-ratio: 4 / 3;
+    display: grid;
+    place-items: center;
+    margin: 0 var(--gap, ${gap});
 
-    border: 0px solid green;
-    color: black;
+    ${variant === "vertical" &&
+    `
+      margin: var(--gap, ${gap}) 0;
+      width: 100%;
+      height: auto;
+    `}
 
-    @media ${Break.md} {
-      font-size: ${(props) => props.fontSize || "10px"};
+    img,
+    svg {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
-    @media ${Break.sm} {
-      font-size: 16px;
-    }
-    @media ${Break.xs} {
-      font-size: 16px;
-    }
+    ${itemStyle && css(itemStyle)}
   `;
 
   return (
-    <>
-      {/* margin o margin_tablet */}
-      <M>
-        {/* <DragScrollProvider className="testimonial-slider"> */}
-
-        <MC>
-          <UL>
-            {
-              //add images to display to ul.
-              images.map((image, i) => {
-                return <LI key={i}>{image}</LI>;
-              })
-            }
-          </UL>
-        </MC>
-        {/* </DragScrollProvider> */}
-      </M>
-    </>
+    <Container
+      containerStyle={containerStyle}
+      style={{
+        "--duration": `${duration}s`,
+        "--gap": gap,
+      }}
+    >
+      <UL>
+        {images.map((image, i) => (
+          <LI key={`a-${i}`}>{image}</LI>
+        ))}
+        {images.map((image, i) => (
+          <LI key={`b-${i}`}>{image}</LI>
+        ))}
+      </UL>
+    </Container>
   );
 };
 

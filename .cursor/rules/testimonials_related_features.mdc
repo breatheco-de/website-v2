@@ -1,0 +1,126 @@
+# Related Features for Testimonials Filtering
+
+This document contains the complete list of valid `related_features` for the testimonials filtering system, based on the implementation in `src/data/components/testimonials/testimonials.us.yaml`.
+
+## Valid Related Features List
+
+```
+['online-platform', 'mentors-and-teachers', 'price', 'career-support', 'content-and-syllabus', 'job-guarantee', 'full-stack', 'cibersecurity', 'data-science', 'applied-ai', 'outcomes', 'scolarships', 'rigobot', 'learnPack', 'certification']
+```
+
+## Feature Descriptions and Usage Guidelines
+
+### **online-platform**
+- **Description**: Relates to 4Geeks Academy's online learning platform, remote learning experience, and digital tools
+- **Use for**: Students who highlight the online learning experience, platform usability, remote accessibility
+- **Example testimonials**: Students who mention the convenience of online learning, platform features, or remote study experience
+
+### **mentors-and-teachers**
+- **Description**: Focuses on the quality of instruction, mentorship, and teacher support
+- **Use for**: Students who specifically praise instructors, mentors, or teaching quality
+- **Example testimonials**: Students who mention great teachers, helpful mentors, or quality of instruction
+
+### **price**
+- **Description**: Cost-effectiveness, value for money, affordable pricing compared to alternatives
+- **Use for**: Students who mention affordability, good value, or cost benefits
+- **Example testimonials**: Students who highlight how affordable the bootcamp was compared to other options
+
+### **career-support**
+- **Description**: Career transition assistance, job placement help, career guidance and support
+- **Use for**: Career changers, students who received job placement assistance
+- **Example testimonials**: Students who got help with career transitions, job search support, or career guidance
+
+### **content-and-syllabus**
+- **Description**: Quality of curriculum, course content, learning materials, and syllabus structure
+- **Use for**: Students who praise the curriculum quality, course structure, or learning materials
+- **Example testimonials**: Students who mention comprehensive curriculum, well-structured content, or quality materials
+
+### **job-guarantee**
+- **Description**: Employment guarantee program, job placement success, guaranteed employment outcomes
+- **Use for**: Students who benefited from job guarantee program or got jobs through it
+- **Example testimonials**: Students who secured jobs through the guarantee program or mention employment assurance
+
+### **full-stack**
+- **Description**: Full-stack development program, comprehensive web development skills
+- **Use for**: Full-stack developers, students who completed full-stack programs
+- **Example testimonials**: Students who became full-stack developers or mention comprehensive web development training
+
+### **cibersecurity**
+- **Description**: Cybersecurity program, security-focused training and roles
+- **Use for**: Students in cybersecurity roles, security-focused programs
+- **Example testimonials**: Students who work in cybersecurity or completed security-focused training
+
+### **data-science**
+- **Description**: Data science program, analytics, data analysis skills and roles
+- **Use for**: Students in data science roles, data analysis positions
+- **Example testimonials**: Data scientists, data analysts, students who work with data
+
+### **applied-ai**
+- **Description**: Artificial Intelligence applications, machine learning, AI-related roles and training
+- **Use for**: Students working with AI/ML, AI-focused roles
+- **Example testimonials**: Students in AI/ML roles, those who mention AI training or applications
+
+### **outcomes**
+- **Description**: Successful job placement results, career advancement, professional achievements
+- **Use for**: Students with impressive job outcomes, career growth, or professional success
+- **Example testimonials**: Students at major companies, significant salary increases, career advancement stories
+
+### **scolarships**
+- **Description**: Financial assistance, scholarship programs, funding support
+- **Use for**: Students who received scholarships or financial aid
+- **Example testimonials**: Students who mention receiving scholarships or financial assistance
+
+### **rigobot**
+- **Description**: AI-powered learning assistant and automated learning tools
+- **Use for**: Students who specifically mention or benefited from AI learning tools
+- **Example testimonials**: Students who highlight AI-assisted learning, automated feedback, or smart learning tools
+
+### **learnPack**
+- **Description**: Interactive learning packages and hands-on learning experiences
+- **Use for**: Students who mention interactive learning, practical exercises, or hands-on experience
+- **Example testimonials**: Students who highlight practical learning approach, hands-on projects, or interactive content
+
+### **certification**
+- **Description**: Professional certifications, credentials, and certification programs
+- **Use for**: Students who obtained certifications or mention credential value
+- **Example testimonials**: Students who highlight certifications received or mention credential importance
+
+## Assignment Guidelines by Student Profile
+
+### Students at Major Tech Companies
+**Recommended features**: `['job-guarantee', 'outcomes', 'career-support']`
+- Prioritize job guarantee and outcomes for placement success
+- Include career support for transition assistance
+
+### Full-Stack Developers
+**Recommended features**: `['full-stack', 'content-and-syllabus']`
+- Highlight the full-stack program
+- Include curriculum quality for comprehensive training
+
+### Career Changers
+**Recommended features**: `['job-guarantee', 'career-support', 'price']`
+- Emphasize career transition support
+- Include job guarantee for employment security
+- Mention price for value proposition
+
+### Bootcamp Experience Focused
+**Recommended features**: `['mentors-and-teachers', 'online-platform']`
+- Highlight teaching quality and mentorship
+- Include platform experience for learning environment
+
+### Data Science Roles
+**Recommended features**: `['data-science', 'applied-ai']`
+- Focus on data science program
+- Include AI applications for advanced skills
+
+### Security Roles
+**Recommended features**: `['cibersecurity', 'full-stack']`
+- Highlight cybersecurity specialization
+- Include full-stack for comprehensive technical foundation
+
+## Priority and Ranking Notes
+
+- **Features listed first in the array get higher priority** in search results
+- **Order matters** for testimonial ranking when filtering
+- **Use 2-4 features per testimonial** for optimal categorization
+- **Prioritize the most relevant feature first** in the array

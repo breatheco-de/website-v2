@@ -8,10 +8,10 @@ meta_info:
   redirects: ["/geeks"]
 
 ## 4GEEKS VS OTHERS  HEADING
-seo_title: "Comparison: 4Geeks vs Other Bootcamps"
+seo_title: "Why 4Geeks Stands Out"
 header:
   title: 4Geeks Academy vs Other Bootcamps
-  sub_title: "Why 4Geeks Stands Out"
+  sub_title: " "
   paragraph: "Discover why 4Geeks Academy is different. Our AI-integrated curriculum, hands-on projects, and personalized mentorship help students launch high-demand, future-proof tech careers—no prior experience needed. With lifetime mentorship and career support, we make sure you keep thriving long after graduation."
 
 section_heading: 
@@ -36,30 +36,30 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
     sub_heading:
-      text: "Most bootcamps give you a handful of mentorship hours and generic resources — and then leave you on your own. At 4Geeks, we built an entire support system around personalization:"
+      text: "Most bootcamps give you a limited number of mentorship hours and generic resources — and leave you once you get hired. At 4Geeks, we built an entire support system around personalization:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
     content:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-      text: "👉 The result: a truly hyperpersonalized experience that combines human mentorship with AI intelligence — something no other bootcamp offers."
+      text: "👉 The result: a truly hyperpersonalized learning experience that combines human mentorship with AI intelligence and that’s yours for life — something no other bootcamp offers."
     bullets:
-      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      item_style: '{ "padding": "10px 0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: "Unlimited 1:1 Mentorship with Real Humans"
           text: |
            Get as much personal guidance as you need, for life. From debugging code to preparing for a senior role years down the line, our mentors are always just a message away.
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
         - heading: "AI-Powered Progress Tracking & Feedback"
           text: |
             Rigobot + LearnPack adapt to your learning style, giving instant feedback, helping you debug faster, and tracking your skill growth over time. You're never left wondering where you stand.
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
         - heading: "Career Support That Grows With You "
           text: |
             GeekFORCE isn't just for your first job. It's personalized, ongoing career coaching you can tap into again and again, whether you're changing roles, freelancing, or leveling up into leadership.
           icon: "check"
-          icon_color: '#25BF6C'
+          icon_color: '#F4F9FF'
 
   - name: learning_tools
     position: 5
@@ -78,28 +78,28 @@ components:
       font_size: ["33px", "33px", "33px", "33px", "33px"]
       style: '{ "lineHeight": "30px" }'
     sub_heading:
-      text: "We don’t just say we’re different — others say it too:"
+      text: "We don’t just say we deliver— recognition from trusted sources proves our worth:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600" }'
     content:
       style: '{ "font-size":"16px", "margin":"15px 0", "font-weight":"600"}'
-      text: "When you choose 4Geeks, you’re joining one of the most respected coding schools in the world."
+      text: "When you choose 4Geeks, you’re joining one of the most respected coding schools worldwide."
     bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
       items:
         - heading: " "
           text: |
-            ⭐ Rated among the <strong style="font-weight: 800;">Top 5 Coding Bootcamps worldwide</strong> (Newsweek, Forbes, SwitchUp, Course Report)
+            Rated among the <strong style="font-weight: 800;">Top 5 Coding Bootcamps worldwide</strong> (Newsweek, Forbes, SwitchUp, Course Report)
           icon: "check"
           icon_color: '#25BF6C'
         - heading: " "
           text: |
-            🏆 Consistently recognized for Best Student Support and Best Value for Money
+            Consistently recognized for <strong style="font-weight: 800;">Best Student Support and Best Value for Money</strong>
           icon: "check"
           icon_color: '#25BF6C'
         - heading: " "
           text: |
-            🌍 Trusted by 20,000+ students across the globe
+            Trusted by 20,000+ students across the globe
           icon: "check"
           icon_color: '#25BF6C'
 
@@ -119,7 +119,7 @@ components:
     sub_heading:
       text: "Tech careers change lives, and we believe finances should never hold anyone back. That's why we've built some of the most flexible, student-friendly options in the industry:"
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600" }'
+      style: '{ "margin": "15px 0", "font-weight": "600" }'
     content:
       text: " "
       style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "600"}'
@@ -127,16 +127,16 @@ components:
       item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
       items:
         - heading: " "
-          text: "💸 Among the most affordable tuition of any top-ranked bootcamp (recognized by Forbes)."
+          text: 'Among the <strong style="font-weight: 800;"> most affordable tuition</strong> of any top-ranked bootcamp (recognized by Forbes).'
           icon: "check"
         - heading: " "
-          text: "📉 Financing up to $299/month, so you can start learning now without the stress."
+          text: '<strong style="font-weight: 800;">Financing options start below $299/month</strong>, so you can learn without financial stress.'
           icon: "check"
         - heading: " "
-          text: "📊 Income-based payment options, where you only pay once you're earning. "
+          text: '<strong style="font-weight: 800;">Income-based payment options</strong>, where you only pay once you’re earning.'
           icon: "check"
         - heading: " "
-          text: "🎓 Scholarships available for eligible students."
+          text: "Scholarships available for eligible students."
           icon: "check"
     button:
       text: "See financing options"
@@ -152,26 +152,26 @@ components:
     justify: "center"
     heading:
       text: "The Confidence of a Job Guarantee"
-      font_size: ["33px", "30px", "26px", "22px", "20px"]
-      style: '{ "lineHeight": "30px", "font-weight": "700" }'
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px"}'
     sub_heading:
       text: |
         The strongest proof that we believe in our model? We back it with a Job Guarantee.
         Most schools promise "career support." At 4Geeks, we promise results: get hired within 9 months, or we refund your tuition in full.
         We can do this because:
-      font_size: ["20px", "20px", "20px", "20px", "20px"]
-      style: '{ "margin": "0", "font-weight": "400" }'
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "margin": "15px 0", "font-weight": "600" }'
     content:
       style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
-      text: "Follow the program, lean on your mentors, and if you still don't land a job, we stand by you — financially."
+      text: "Follow the program, lean on your mentors, and if you still don’t land a job, we take full responsibility— that’s the level of trust we have in the effectiveness of our bootcamp."
     bullets:
       item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
       items:
-        - text: "Our curriculum is industry-aligned and AI-ready"
+        - text: 'Our <strong style="font-weight: 800;">curriculum is industry-aligned and AI-ready</strong>'
           icon: "check"
-        - text: "Our mentorship is unlimited and personalized"
+        - text: 'Our <strong style="font-weight: 800;">mentorship is unlimited and personalized</strong>'
           icon: "check"
-        - text: "Our career support never expires"
+        - text: 'Our <strong style="font-weight: 800;">career support never expires</strong>'
           icon: "check"
     image:
       style: '{"backgroundSize": "contain", "background-position": "center"}'
@@ -188,27 +188,23 @@ components:
     layout: iconogram
     swipable: true
     heading:
-      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      text: "Results You Can Count On"
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:
-      text: 'Yes — and we’ve got the numbers to back it up.'
+      text: 'Numbers matter — and ours speak for themselves.'
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:
       - icon: "graduation-2"
         color: "#0084FF"
-        title: "84% hiring rate"
-        content: "Graduates land jobs within 6 months on average."
+        title: "Job placement rate"
+        content: "84% of graduates were hired"
       - icon: "briefcase-2"
         color: "#FF0000"
-        title: "+55% Average Salary Increase"
-        content: "Most students see a life-changing boost after their first tech rol"
+        title: "Average time to get hired"
+        content: "6 months after graduation"
       - icon: "stairswflag"
         color: "#BE8BFF"
-        title: "3-6 Months to Get Hired"
-        content: "On average, our grads secure their first tech job in 3-6 months."
-      - icon: "network"
-        color: "#EB5757"
-        title: "20,000+ Graduates"
-        content: "A global network of developers, data scientists, and cybersecurity professionals."
+        title: "Salary increase"
+        content: "55% higher at new job"

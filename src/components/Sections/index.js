@@ -321,6 +321,7 @@ export const HR = styled.hr`
 `;
 
 export const Div = styled.div`
+  mask: ${(props) => props.mask};
   flex: ${(props) =>
     props.flex || props.size ? `0 0 ${(props.size / 12) * 100}%` : null};
   max-width: ${(props) =>
@@ -745,6 +746,7 @@ export const Header = ({
   svg_image,
   seo_title,
   title,
+  htmlTitle,
   paragraph,
   paragraph_html,
   paragraphMargin,
@@ -863,9 +865,10 @@ export const Header = ({
             zindex={zIndex}
             color={colors.text}
             textWrap={textWrap}
-          >
-            {multilineTitle}
-          </H2>
+            {...(htmlTitle
+              ? { dangerouslySetInnerHTML: { __html: htmlTitle } }
+              : { children: multilineTitle })}
+          />
           {(paragraph || paragraph_html) && (
             <SubTitle
               width="auto"

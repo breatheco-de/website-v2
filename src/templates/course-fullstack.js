@@ -19,7 +19,6 @@ import OurPartners from "../components/OurPartners/index.js";
 import Icon from "../components/Icon/index.js";
 import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
-import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -290,6 +289,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
         showMoreRedirect
       />
 
@@ -303,15 +303,6 @@ const Program = ({ data, pageContext, yml }) => {
         title={yml.prices.heading}
         paragraph={yml.prices.sub_heading}
       />
-
-      {pageContext.lang === "es" && (
-        <ScholarshipProjects
-          content={data.allScholarshipProjectsYaml.edges[0].node}
-          lang={pageContext.lang}
-        />
-      )}
-
-      {/*<OurPartners images={hiring.partners.images} marquee/>*/}
 
       <OurPartners
         images={hiring.partners.images}
@@ -331,6 +322,7 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
@@ -582,12 +574,9 @@ export const query = graphql`
               items {
                 heading
                 text
-                icon
-                icon_color
               }
             }
           }
-
           two_columns_info {
             proportions
             image {
@@ -652,65 +641,6 @@ export const query = graphql`
             geeks_vs_other
             pricing
             alumni
-          }
-        }
-      }
-    }
-    allScholarshipProjectsYaml(filter: { fields: { lang: { eq: $lang } } }) {
-      edges {
-        node {
-          title
-          description
-          project_name
-          project_details
-          total_cost
-          geeks_benefited
-          institutions
-          press
-          see_project
-          projects {
-            name
-            image {
-              alt
-              src {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
-            }
-            description
-            details {
-              cost
-              geeks_benefited
-            }
-            institutions {
-              name
-              logo {
-                childImageSharp {
-                  gatsbyImageData(
-                    layout: CONSTRAINED # --> CONSTRAINED || FIXED || FULL_WIDTH
-                    width: 700
-                    quality: 100
-                    placeholder: NONE # --> NONE || DOMINANT_COLOR || BLURRED | TRACED_SVG
-                    breakpoints: [200, 340, 520, 890]
-                  )
-                }
-              }
-            }
-            press {
-              name
-              link
-            }
-            pdf
-          }
-          fields {
-            lang
           }
         }
       }
@@ -925,7 +855,62 @@ export const query = graphql`
         }
       }
     }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
+          }
+        }
+      }
+    }
   }
 `;
-
 export default BaseRender(Program);

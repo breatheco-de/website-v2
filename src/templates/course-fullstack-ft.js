@@ -18,6 +18,7 @@ import OurPartners from "../components/OurPartners/index.js";
 import Icon from "../components/Icon/index.js";
 import Overlaped from "../components/Overlaped/index.js";
 import Loc from "../components/Loc/index.js";
+import DoubleActionCTA from "../components/DoubleActionCTA";
 import ScholarshipProjects from "../components/ScholarshipProjects/index.js";
 import TwoColumn from "../components/TwoColumn/index.js";
 import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases";
@@ -30,7 +31,7 @@ const Program = ({ data, pageContext, yml }) => {
   const hiring = data.allPartnerYaml.edges[0].node;
   const landingHiring = yml.partners;
 
-  const defaultCourse = "full-stack";
+  const defaultCourse = "full-stack-ft";
   const program_schedule = yml.meta_info.slug.includes("full-time")
     ? "full_time"
     : "part_time";
@@ -262,6 +263,7 @@ const Program = ({ data, pageContext, yml }) => {
         message={courseDetails.upcoming.no_dates_message}
         actionMessage={courseDetails.upcoming.actionMessage}
         locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
         showMoreRedirect
       />
       <PricesAndPayment
@@ -299,6 +301,7 @@ const Program = ({ data, pageContext, yml }) => {
       />
 
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
+      <DoubleActionCTA />
     </>
   );
 };
@@ -963,6 +966,62 @@ export const query = graphql`
             cohort_more_details_text
             syllabus_button_text
             syllabus_submit_text
+          }
+        }
+      }
+    }
+    allDoubleActionCtaYaml(filter: { fields: { lang: { eq: $lang } } }) {
+      edges {
+        node {
+          cta {
+            title
+            description
+            primary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            secondary {
+              title
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    layout: CONSTRAINED
+                    width: 900
+                    quality: 100
+                    placeholder: NONE
+                  )
+                }
+              }
+              action_text
+              action_url
+              benefits
+              footer_text
+            }
+            newsletter_form {
+              placeholder_email
+              error_email
+              button_submit
+              button_loading
+              status_idle
+              status_error
+              status_correct_errors
+              success_message
+            }
           }
         }
       }

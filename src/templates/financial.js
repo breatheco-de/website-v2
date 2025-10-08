@@ -83,9 +83,12 @@ const Financial = (props) => {
           >
             {header.title}
           </H2>
-          <Paragraph color={Colors.black} textAlign="left" fontSize="21px">
-            {header.paragraph}
-          </Paragraph>
+          <Paragraph
+            color={Colors.black}
+            textAlign="left"
+            fontSize="21px"
+            dangerouslySetInnerHTML={{ __html: header.paragraph }}
+          />
           <Button
             background={Colors.blue}
             lineHeight="26px"
@@ -177,10 +180,15 @@ const Financial = (props) => {
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
       <DoubleActionCTA
-        disableRestriction
-        location={session?.location}
-        ctaData={yml.cta}
         disableBullets
+        lang={pageContext.lang}
+        title={yml.cta?.title || yml.double_action_cta?.title}
+        description={yml.cta?.description || yml.double_action_cta?.description}
+        primary={yml.cta?.primary || yml.double_action_cta?.primary}
+        secondary={yml.cta?.secondary || yml.double_action_cta?.secondary}
+        newsletter_form={
+          yml.cta?.newsletter_form || yml.double_action_cta?.newsletter_form
+        }
       />
     </>
   );
@@ -198,7 +206,6 @@ export const query = graphql`
             description
             image
             keywords
-            hideGlobalCTA
           }
           seo_title
           header {

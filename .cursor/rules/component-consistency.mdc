@@ -1,13 +1,11 @@
 ---
-description: This rule standardizes component structure in /src/components folder, data handling, styling, multilingual support, and accessibility across all 4Geeks project components to ensure consistency, maintainability, and scalability.
-
+globs: src/components/**
 alwaysApply: false
 ---
 # Rule: Component Consistency and Scalability
 
 **Purpose:**
 Ensure all components in the 4Geeks project are consistent in data handling, styling, multilingual support, accessibility, and scalability. This rule standardizes how components fetch/display dynamic data, enforce design, handle translations, and support accessibility, making it easier to maintain and extend the codebase.
-
 
 ---
 
@@ -22,7 +20,6 @@ Ensure all components in the 4Geeks project are consistent in data handling, sty
 ## 1. Purpose
 Standardize component structure and behavior for maintainability, scalability, and a cohesive user experience across the project.
 
-
 ---
 
 ## 2. Scope
@@ -35,9 +32,7 @@ Standardize component structure and behavior for maintainability, scalability, a
 
 ### Data Fetching & Static Data
 - **Fetch dynamic data using GraphQL queries directly inside the component file, as in `Staff`.**
-
 - **Store static data in `.yml` files in `/src/data/components/`, following the `Staff` format (e.g., name, role, image, contact).**
-
 - **Do not use extra data fetchers or external data files for component data.**
 - **Example:**
     - ✅ `useStaticQuery` with a GraphQL query in the component file.
@@ -46,7 +41,6 @@ Standardize component structure and behavior for maintainability, scalability, a
 ### Styling & Features
 - **Match the styling (typography, colors, layout) and features of the `Staff` component.**
 - **Use horizontal swipeable carousels for lists, as in `Staff` (e.g., with the Carousel component).**
-
 - **Use Styled Components and project design tokens for all styling.**
 - **Do not use inline styles except for dynamic values.**
 - **Example:**
@@ -55,7 +49,6 @@ Standardize component structure and behavior for maintainability, scalability, a
 
 ### Language-Based Rendering
 - **Show components and data based on the selected language (English/Spanish), using the same setup as `Staff`.**
-
 - **Use language from context or props, and filter data by language key in `.yml` files.**
 - **Use the same keys in both language files.**
 - **Example:**
@@ -64,7 +57,6 @@ Standardize component structure and behavior for maintainability, scalability, a
 
 ### Reusable Query Hooks
 - **Use or create reusable query hooks in `/utils` or `/hooks` for common data fetching patterns, as in `Staff`.**
-
 - **Document new hooks/utilities in the codebase.**
 - **Example:**
     - ✅ `const { t } = useTranslation();`
@@ -80,32 +72,25 @@ Standardize component structure and behavior for maintainability, scalability, a
 
 ### Modularity & Reusability
 - **Each component must be modular and reusable, following the structure of `Staff` for easy future additions.**
-
 - **Each component in its own folder, main file as `index.js`.**
 - **Follow naming conventions: lowercase, hyphen-separated for folders.**
 - **Document any exceptions in the component folder.**
 
 ### Gatsby Node Integration (Critical!)
 - **Whenever you add a new YAML type/component (e.g., `AdmissionsStaffYaml`), you MUST update `gatsby-node.js` to add the new type to the list in `onCreateNode` so that `fields.lang` and related fields are created.**
-
 - **If this is not done, GraphQL queries for language-based filtering will fail, causing hard-to-debug build errors.**
-
 - **This step is mandatory for all new YAML-driven components.**
 
 ### YAML File Requirements
 - **Every component that uses YAML data must have both an English (`us`) and Spanish (`es`) YAML file, even if only one language is used.**
-
 - **YAML filenames must be all lowercase and use underscores (`_`) for multi-word names (e.g., `admissions_staff.us.yml`, `admissions_staff.es.yml`).**
-
 - **This ensures future-proofing and prevents missing translation or build errors.**
 
 ---
 
 ## 4. Examples
 - `/src/components/Staff/index.js` (fetches staff data with GraphQL, renders by language, uses styled components, accessible carousel)
-
 - `/src/components/AdmissionsStaff/index.js` (static data, language-based rendering, Staff-style layout)
-
 
 ---
 

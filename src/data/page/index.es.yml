@@ -209,3 +209,40 @@ testimonial_header:
   heading: "El 86% de nuestros graduados consigue trabajo tras completar el programa."
   button_text: "Ver todos los testimonios"
   button_link: ""
+
+## DOUBLE ACTION CTA SECTION
+double_action_cta:
+  title: "Da el siguiente paso en tu carrera tech"
+  description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
+  locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
+  primary:
+    title: "Agenda una consulta gratuita de 15 minutos"
+    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tech que se ajusta a tus objetivos y explora opciones de financiamiento flexibles."
+    image: "../../../static/images/Group-6617.webp"
+    action_text: "¡Agenda ahora!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    benefits:
+      - "Hoja de ruta personalizada"
+      - "Recomendaciones de programas"
+      - "Perspectivas de la industria y salarios"
+    footer_text: "✨ Sesión gratuita de 15 minutos • Sin compromiso"
+  secondary:
+    title: "Comienza tu viaje hoy"
+    description: "Da el siguiente paso hacia tu carrera tech. Completa el formulario para obtener detalles completos del programa y conectar con nuestro equipo de admisiones."
+    image: "../../../static/images/woman-glasses-laptop.png"
+    action_text: "Aplica ahora"
+    action_url: "/es/apply"
+    benefits:
+      - "Tendencias de la industria"
+      - "Historias de éxito de estudiantes"
+      - "Descuentos exclusivos y acceso anticipado"
+    footer_text: "📧 Actualizaciones semanales • Cancela cuando quieras • Sin spam"
+  newsletter_form:
+    placeholder_email: "Email *"
+    error_email: "Por favor ingresa un email válido"
+    button_submit: "Suscribirme"
+    button_loading: "Cargando..."
+    status_idle: "Solicitud"
+    status_error: "Hay errores en tu formulario"
+    status_correct_errors: "Corrige los errores"
+    success_message: "🎉 ¡Gracias! Te has suscrito exitosamente a nuestro boletín."

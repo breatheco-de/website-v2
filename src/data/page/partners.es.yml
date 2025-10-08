@@ -8,20 +8,25 @@ meta_info:
   redirects: ["/aliados", "/es/aliados"]
 
 
-seo_title: "Partnerships"
+seo_title: "Asociarse con 4Geeks Academy"
 header:
-  title: "Queremos ser tu aliado!"
+  title: "Construyendo Juntos el Futuro de la Tecnología"
   image: "../../../static/images/partner/partnership-image.png"
-  image_alt: "Partnership header"
-  paragraph: "En 4Geeks creemos en el poder de la colaboración y el impacto positivo que crea una comunidad activa. Buscamos constantemente más formas de atraer talento y organizaciones que puedan ayudarnos y unirse a nuestra visión de crear la comunidad más relevante para los programadores futuros y presentes."
-  button: HAZTE HIRING PARTNER
+  image_alt: "Encabezado de alianzas"
+  paragraph: "En 4Geeks Academy, creemos en el poder de la colaboración para generar un impacto real. Nos asociamos con universidades, organizaciones sin fines de lucro, iniciativas de desarrollo laboral y organizaciones globales para expandir el acceso a la educación tecnológica y crear trayectorias profesionales más sólidas. Juntos, formamos y colocamos talento diverso, reducimos la brecha de habilidades digitales y construimos la fuerza laboral tecnológica del futuro."
+  button: Únete a Nuestra Red de Aliados
 
 form:
-  title: "Conviértete en Partner de 4Geeks"
-  paragraph: "Contáctenos y lo conectaremos directamente con los candidatos adecuados que se gradúan de 4Geeks Academy todos los días.
-  Nuestros graduados tienen éxito en sus propios negocios, startups y grandes empresas por igual.
+  title: "Únete a un Líder Mundial en Educación Tecnológica"
+  paragraph: |
+    Cuando te asocias con 4Geeks, te unes a una academia de programación en la que confían instituciones y organizaciones líderes en todo el mundo:
+    <li style='margin: 0 0 0 1.4rem'>Nombrada entre los 5 Mejores Bootcamps de Programación del Mundo por Forbes</li>
+    <li style='margin: 0 0 0 1.4rem'>Calificada con 4.9/5 en SwitchUp, Course Report y Career Karma</li>
+    <li style='margin: 0 0 0 1.4rem'>Licenciada por el Departamento de Educación de Florida</li>
+    <li style='margin: 0 0 0 1.4rem'>Seleccionada por instituciones como BID, UTEC y United Way como su proveedor de formación</li>
+    Con un historial comprobado en la transformación de carreras y la obtención de resultados medibles en la fuerza laboral, tu alianza gana tanto credibilidad como impacto.
 
-  Nuestros programas preparan a los estudiantes para trabajar y prosperar en cualquier organización tecnológica y con visión de futuro."
+    👉 Completa el formulario y ayuda a formar la fuerza laboral tecnológica del mañana.
 footer_data:
   image: "../../../static/images/partner/partnership.png"
   alt: ""

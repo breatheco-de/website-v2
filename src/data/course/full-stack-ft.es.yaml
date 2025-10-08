@@ -26,12 +26,12 @@ meta_info:
 apply_form:
   label: Full Stack Developer - Full Time
 
-seo_title: "Bootcamp Full Stack Presencial con IA"
+seo_title: "Bootcamp Full Stack con IA"
 header:
   title: "Full Stack Development \ncon IA"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "FullStack"
-  paragraph: "Conviértete en Desarrollador Full Stack con IA en solo 12 semanas—con entrenamiento presencial y full-time que acelera tu progreso. Vive la experiencia práctica, un currículo integrado con IA, mentoría personalizada ilimitada y una garantía de empleo que lo respalda."
+  paragraph: "Conviértete en Desarrollador Full Stack con IA en solo 12 semanas—con entrenamiento full-time que acelera tu progreso. Vive la experiencia práctica, un currículo integrado con IA, mentoría personalizada ilimitada y una garantía de empleo que lo respalda."
 
 button:
   syllabus_heading: "Descarga el Syllabus"
@@ -72,7 +72,7 @@ two_columns_rigo:
     heading_image:
       src: "/images/rigobot-logo.png"
   sub_heading:
-    text: "Clases presenciales, mentoría ilimitada y herramientas de IA para avanzar más rápido y mejor."
+    text: "Mentoría ilimitada y herramientas de IA para avanzar más rápido y mejor."
     font_size: ["24px","24px","22px","22px","20px"]
     style: '{"margin":"0", "font-weight":"300", "text-align": "justify" }'
   content:
@@ -298,7 +298,7 @@ geek_data:
   heading: "Y disfruta de Career Support... ¡de por vida!"
   geek_pal:
     - Un profe cada siete estudiantes (1:7).
-    - Mentoría ilimitada presencial u online bajo demanda.
+    - Mentoría ilimitada online.
     - Miles de ejercicios autoevaluados.
     - Tutoriales interactivos y autoevaluados.
     - Soluciones en video para feedback instantáneo.

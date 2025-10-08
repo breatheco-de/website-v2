@@ -12,7 +12,31 @@ meta_info:
 
 seo_title: Job Opportunities
 header:
-  title: "OPEN JOBS AT 4GEEKS ACADEMY"
-  paragraph: ""
-  image: "../../../static/images/bg/pricing-bg.jpg"
-  alt: ""
+  title: "Careers at 4Geeks Academy"
+  paragraph: "Join a global coding academy recognized for quality, impact, and innovation. At 4Geeks, you won't just work — you'll help thousands of students worldwide launch tech careers in coding, data, AI, and cybersecurity."
+  image: "../../../static/images/landing/comunity-support.png"
+  image_alt: "4Geeks Academy Jobs Header"
+
+work_together:
+  title: "Why Work at 4Geeks"
+  features:
+    - title: "Remote-first, flexible roles across the U.S., Europe, and LATAM."
+      icon: "screen"
+      description: " "
+    
+    - title: "Make a measurable impact on tech education and the future workforce."
+      icon: "community"
+      description: " "
+    
+    - title: "Collaborate with a global, mission-driven team recognized by Forbes and trusted by institutions like IDB, UTEC, and United Way."
+      icon: "chat-2"
+      description: " "
+    
+    #- title: "Career Development"
+    #  icon: "notes-2"
+    # description: "Grow your career with opportunities for professional development, leadership roles, and skill advancement."
+
+form:
+  title: "Didn’t find the right fit?"
+  paragraph: "We’re always looking for passionate educators, mentors, and innovators to join our network. Reach out and send your CV."
+

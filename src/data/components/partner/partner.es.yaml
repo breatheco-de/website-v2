@@ -1,16 +1,22 @@
 ## THE PARTNERS ARE DIVIDED IN 4 CATEGORIES:
 ## PARTNERS - CODING - INFLUENCERS - FINANCIALS
 ## THIS COMPONENT IS USED IN "/partners" and "/pricing"
+partnership_in_action:
+  tagline: "Alianzas en Acción"
+  sub_heading: |
+    Nuestras colaboraciones van más allá de acuerdos formales; transforman carreras y comunidades.
+    En 4Geeks Academy estamos comprometidos a cerrar la brecha entre las oportunidades laborales y el talento tecnológico proporcionando educación en programación de alta calidad orientada a la carrera profesional y respaldada por apoyo ilimitado.
+    A través de alianzas con instituciones educativas líderes, organizaciones sin fines de lucro e iniciativas gubernamentales, ya hemos apoyado a cientos de estudiantes en todo el mundo — y esto es solo el comienzo.
 
 partners:
-  tagline: "¿Quién contrata a nuestros estudiantes?"
+  tagline: "¿QUIÉN CONTRATA A NUESTROS GRADUADOS?"
   sub_heading: |
-    Gracias a nuestra creciente lista de aliados, tenemos ofertas de trabajo locales e internacionales para nuestros estudiantes a diario.
-
-    Junto con nuestro servicio GeekFORCE (Career Support), nos complace tener ~ 86% de nuestros estudiantes contratados dentro de los 100 días o menos desde el día de graduación.
+    Las mejores empresas contratan graduados de 4Geeks, con 84% consiguiendo trabajo en 6 meses después de graduarse gracias a sus habilidades y nuestro apoyo profesional personalizado. Nuestros graduados no solo consiguen trabajo—lanzan carreras exitosas y consistentemente ganan reconocimiento por su experiencia técnica y profesionalismo:   
+    <br/>
+     "Continuamente estoy impresionado por la profundidad del conocimiento que poseen los estudiantes de 4Geeks. Una de mis contrataciones terminó convirtiéndose en líder de equipo." - CodeNinjas.
   
-  footer_tagline: 438 EMPRESAS
-  footer_button: Revisa nuestra lista de aliados
+  footer_tagline: "438 EMPRESAS"
+  footer_button: "Revisa nuestras últimas contrataciones"
   footer_link: "/es/aliados"
   images:
     - name: "Facebook"
@@ -96,8 +102,10 @@ partners:
     
       
 coding:
-  tagline: "Actores globales en el mundo de la codificación"
-  sub_heading: "Estamos inmersos en el ecosistema de codificación al asociarnos con actores tecnológicos globales que nos ayuda a organizar o participar en iniciativas para impactar aún más la industria de la codificación"
+  tagline: "Una Red Global Transformando la Tecnología:"
+  sub_heading: |
+    4Geeks Academy es parte de un ecosistema mundial de organizaciones impulsando el cambio en la tecnología.
+    Juntos, co-creamos iniciativas que hacen que las habilidades tecnológicas y las oportunidades profesionales sean más inclusivas y ampliamente accesibles.
   images:
     - name: "Google Developers"
       image: "../../../../static/images/coding/google-developers.png"
@@ -127,6 +135,11 @@ coding:
       image: "../../../../static/images/coding/worldcamp.png"
       featured: false
       #locations: ["madrid-spain"]
+    - name: "Bite-Con"
+      image: "../../../../static/images/coding/bite-con.png"
+      featured: false
+      link: "https://www.bite-con.org"
+      follow: true
       
 influencers:
   tagline: "ASOCIADOS CON ACTORES GLOBALES EN EL MUNDO DEL CÓDIGO"
@@ -174,29 +187,36 @@ influencers:
       #locations: ["madrid-spain"]
 
 financials:
-  tagline: "Socios que hacen posible la educación"
-  sub_heading: "Organizamos y/o participamos activamente en las mayores iniciativas de programación."
+  tagline: "Haciendo Posible la Educación"
+  sub_heading: "Estas organizaciones proporcionan las soluciones financieras que abren las puertas a la educación tecnológica. Al reducir las barreras de entrada, ayudan a más estudiantes a acceder a una formación de alta calidad y lanzar carreras significativas."
   images:
+    - name: "ASOTTTECH"
+      image: "../../../../static/images/partner/assotech.png"
+      featured: true
+      locations: ["madrid-spain", "barcelona-spain", "malaga-spain", "valencia-spain"]
     - name: "Quotanda"
       image: "../../../../static/images/quotanda-logo.png"
-      featured: false
+      featured: true
       #locations: ["miami-downtown"]
     - name: "Leif"
       image: "../../../../static/images/leif_main.png"
-      featured: false
+      featured: true
     - name: "Flevo"
       image: "../../../../static/images/flevo-new.png"
-      featured: false
+      featured: true
     - name: "Climb"
       image: "../../../../static/images/climb-logo.png"
       featured: false
     - name: "Ascent"
       image: "../../../../static/images/ascent_logo.png"
       featured: false
+    - name: "Edly"
+      image: "../../../../static/images/edly.png"
+      featured: false
 
 work_together:
-  title: "¿Cómo podemos trabajar juntos?"
-  description: "4Geeks Academy es una academia de programación premiada globalment lo cual te permitirá concentrarte en una o más de las siguientes áreas:"
+  title: "¿Por qué asociarse con 4Geeks?"
+  description: "Cada colaboración está diseñada para impulsar resultados medibles tanto para las organizaciones como para las comunidades. Nuestras alianzas abarcan:"
   image_list:
     - alt: "Estudiante 4Geeks Academy"
       image: "../../../../static/images/students/student1.jpg"
@@ -209,21 +229,21 @@ work_together:
     - alt: "Estudiante 4Geeks Academy"
       image: "../../../../static/images/students/student5.jpg"
   features:
-    - title: "Capacitación profesional"
-      icon: "screen"
-      description: "Invierte en tu propio talento. Crezcan juntos y convierte a tu equipo en el futuro de tu empresa."
-
-    - title: "Impacto en la comunidad"
+    - title: "Becas y Financiamiento"
+      icon: "handmoney-new"
+      description: "Elimina las barreras financieras y haz que la educación en programación sea accesible para comunidades desatendidas."
+    - title: "Programas de Recapacitación y Actualización"
       icon: "community"
-      description: "¡Tengamos un impacto significativo en la diversidad, reduzcamos la brecha tecnológica y empoderemos a personas de todos los ámbitos de la vida!"
-   
-    - title: "Difusión"
+      description: "Invierte en tu fuerza laboral y prepara a los empleados para el futuro digital."
+    - title: "Iniciativas de Impacto Comunitario"
       icon: "chat-2"
-      description: "¡Únete a nuestra comunidad global de oradores expertos de 4Geeks Academy y se parte de eventos innovadores!"
-   
-    - title: "Reclutamiento"
+      description: "Apoya la diversidad en tecnología y crea oportunidades para personas de todos los orígenes."
+    - title: "Canales de Reclutamiento y Contratación"
       icon: "notes-2"
-      description: "Somos tu partner de referencia  para candidatos, te ofrecemes un flujo constante de candidatos de alta calidad con nuestra increíble cartera de talentos."
+      description: "Obtén acceso directo a desarrolladores, científicos de datos y especialistas en ciberseguridad listos para trabajar."
+    - title: "Eventos y Alcance"
+      icon: "calendar-2"
+      description: "Colabora en hackathons, series de conferencias e iniciativas de innovación que amplifican tu marca y misión."
 
 benefits_and_charts:
   title: "Forma parte de nuestra red de socios"
@@ -241,17 +261,19 @@ benefits_and_charts:
     - Construcción comunitaria.
 
   charts:
-    title: "Los números"
+    title: "Nuestro Impacto en Números"
     list:
-      - icon: "chart-62"
+      - icon: "handmoney-new"
         description: |
-          El 62% de los ejecutivos "cree que necesitarán volver a capacitar o reemplazar a más de una cuarta parte de su fuerza laboral de aquí a 2023 debido al avance de la automatización y la digitalización" Un estudio de 2018 del informe McKinsey.
-      - icon: "job"
-        description: "Según un estudio de 2016 realizado por la Society for Human Resource Management, cuesta un promedio de $ 4,129 contratar a un nuevo empleado, y se tarda un promedio de 42 días en encontrar un nuevo empleado."
+          Más de $20M otorgados en becas y subvenciones
+      - icon: "group"
+        description: "Más de 6,000 estudiantes apoyados globalmente"
       - icon: "notes-2"
-        description: "Los bootcamps de programación y las universidades  tienen un porcentaje casi idéntico de exalumnos empleados"
-      - icon: "chart-72"
-        description: "72% de los empleadores dicen que contratar a alguien egresado de un Bootcamp es más o menos lo mismo que un graduado universitario"
+        description: "84% de tasa de colocación laboral en los primeros 6 meses"
+      - icon: "job"
+        description: "Aumento salarial promedio: 55% en EE.UU. ｜ 233% en LATAM ｜ 30% en España"
+      - icon: "handshake"
+        description: "Más de 5,000 empresas aliadas contratantes"
 
 partners_in_education:
   title: "Aliados en educación"

@@ -149,13 +149,70 @@ const VariantCarousel = ({
   );
 };
 
+// Function to filter and prioritize testimonials by categories
+const filterTestimonialsByCategories = (testimonials, categories) => {
+  if (!categories || categories.length === 0 || !Array.isArray(categories)) {
+    return testimonials;
+  }
+
+  // Filter testimonials that have at least one matching related_feature
+  const matchingTestimonials = testimonials.filter((item) => {
+    return (
+      Array.isArray(item.related_features) &&
+      item.related_features.some((feature) => categories.includes(feature))
+    );
+  });
+
+  // If no testimonials match the categories, return empty array
+  if (matchingTestimonials.length === 0) {
+    return [];
+  }
+
+  // Create priority scores for each testimonial based on feature order
+  const testimonialsWithPriority = matchingTestimonials.map((testimonial) => {
+    let highestPriority = Infinity;
+
+    // Find the highest priority (lowest index) among matching categories
+    categories.forEach((category, categoryIndex) => {
+      const featureIndex = testimonial.related_features?.indexOf(category);
+      if (featureIndex !== -1) {
+        // Priority score combines category priority and feature position in testimonial
+        const priorityScore = categoryIndex * 1000 + featureIndex;
+        if (priorityScore < highestPriority) {
+          highestPriority = priorityScore;
+        }
+      }
+    });
+
+    return {
+      ...testimonial,
+      priority: highestPriority,
+    };
+  });
+
+  // Sort by priority (lower numbers = higher priority)
+  return testimonialsWithPriority
+    .sort((a, b) => a.priority - b.priority)
+    .map(({ priority, ...testimonial }) => testimonial);
+};
+
 const Testimonials = (props) => {
   let testimonialsArray = props.lang[0].node;
-  let testimonialsFiltered = testimonialsArray.testimonials.filter(
-    (item) =>
-      (item.hidden !== true || item.include_in_marquee === true) &&
-      item.student_thumb
+
+  // First apply the existing filter for hidden/marquee logic
+  let baseFilteredTestimonials = testimonialsArray.testimonials.filter(
+    (item) => item.hidden !== true || item.include_in_marquee === true
   );
+
+  // Then apply category filtering and prioritization if categories are provided
+  let testimonialsFiltered = props.categories
+    ? filterTestimonialsByCategories(baseFilteredTestimonials, props.categories)
+    : baseFilteredTestimonials;
+
+  // Safety check: if no testimonials match the categories, fall back to base filtered testimonials
+  if (testimonialsFiltered.length === 0) {
+    testimonialsFiltered = baseFilteredTestimonials;
+  }
 
   if (props.variant === "carousel")
     return (
@@ -293,4 +350,5 @@ const Testimonials = (props) => {
     </Fragment>
   );
 };
+
 export default Testimonials;

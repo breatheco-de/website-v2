@@ -34,8 +34,12 @@ const ScholarshipProjects = ({ content, maxWidth }) => {
       padding_md="50px 80px"
       padding_lg="70px 0px"
     >
-      <H2 margin="0 0 10px 0">{content.title}</H2>
-      <SubTitle margin="0 0 25px 0">{content.description}</SubTitle>
+      <H2 fontSize="45px" margin="0 0 25px 0">
+        {content.title}
+      </H2>
+      <SubTitle fontSize="18px" margin="0 0 25px 0">
+        {content.description}
+      </SubTitle>
       <Button
         display="none"
         display_tablet="block"

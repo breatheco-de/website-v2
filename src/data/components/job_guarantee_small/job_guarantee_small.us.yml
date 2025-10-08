@@ -29,7 +29,7 @@ locations:
 - "toronto-canada"
 icons:
   - icon: "mortar-board-icon"
-    title: We both commit to your future career
+    title: We both commit to your future career.
   - icon: "stage-dots-icon"
     title: Complete all stages of our career support process.
   - icon: "people-group-icon"
@@ -39,4 +39,4 @@ icons:
 link:
   url: /us/job-guarantee
   label: Check out the Full Details Here
-text: "*Conditions apply based on your U.S. State"
+text: "*Does not apply to all locations"

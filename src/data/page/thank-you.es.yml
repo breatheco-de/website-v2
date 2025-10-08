@@ -10,13 +10,92 @@ banner:
   tagline: "Gracias!"
   sub_heading: ""
 content:
-  title: "Revisa tu correo electrónico! :)"
-  message: "Hemos recibido tu solicitud. Nuestro Geeky Advisor se pondrá en contacto contigo en breve. ¡Espera Atento!
-    Mientras tanto, lea nuestro blog. Está lleno de información importante que estamos seguros de que le resultará útil. :)"
+  title: "🎉 ¡Felicidades! Acabas de dar el primer paso hacia tu carrera tech!"
+  message: "Un email de confirmación debería llegar a tu bandeja de entrada pronto, y nuestro Equipo de Admisiones ya está revisando tu información. \n¡Uno de nuestros Geeky Advisors se pondrá en contacto contigo muy pronto! Mientras tanto, aquí tienes algunas formas de comenzar tu viaje ahora mismo:"
 
-  articles_title: "Algunos artículos que te pueden interesar:"
-  button: "Lea nuestro blog"
-social: 
-  title: "Siguenos en nuestras redes"
-  message: "Elige donde te gustaría seguirnos"
-  button_text: "Llévame a..."
+    
+  articles_title: " "
+  button: "Lee nuestro blog"
+
+
+title:
+  heading:
+    text: "Explora Recursos Gratuitos"
+    
+components:
+
+  - name: free_resources
+    layout: two_column_left
+    position: 2
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/4geekasacademy.webp"
+      shadow: false
+    heading:
+      text: "💻 Comienza a Programar Hoy"
+    content:
+      text: "¡Comienza a programar hoy! Revisa ejercicios y tutoriales en 4Geeks.com para practicar tus habilidades mientras esperas."
+    button:
+      text: "👉 Comienza a Practicar"
+      path: "https://4geeks.com/"
+      background: "blue"
+      color: "white"
+
+  - name: builidng_relationships
+    layout: two_column_left
+    position: 3
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/PeopleStudying.jpeg"
+      shadow: false
+    heading:
+      text: "📚 Optimiza tus Habilidades de Networking"
+    content:
+      text: "Prueba cómo ayudamos a los estudiantes a navegar el networking, el crecimiento profesional y las estrategias laborales del mundo real — incluso antes del primer día."
+    button:
+      text: "👉 Obtén la Guía"
+      path: "https://storage.googleapis.com/media-breathecode/f5db5a88c24d96a753a27d5fde198a3932717b2741cde56417db76b4842d6b98"
+      background: "blue"
+      color: "white"
+
+  - name: salary_negotiation
+    layout: two_column_left
+    position: 5
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/feliz-empresario-laptop.png"
+      shadow: false
+    heading:
+      text: "💰 Descubre Estrategias de Negociación Salarial"
+    content:
+      text: "Aprende cómo negociar tu salario y obtener la mejor oferta por tus habilidades y experiencia."
+    button:
+      text: "👉 Obtén la Guía"
+      path: "https://storage.googleapis.com/media-breathecode/caf84c93e43000deb02356389ff3bf9ea1cd59e8744c5e2ab2170ace27523f7a"
+      background: "blue"
+      color: "white"
+
+  - name: job_guarantee
+    layout: two_column_left
+    position: 7
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/programs-heading.webp"
+      shadow: false
+    heading:
+      text: "🚀 Conoce Nuestra Garantía de Empleo"
+    content:
+      text: "Ve cómo esta opción adicional te da confianza extra mientras construyes tu carrera tech."
+    button:
+      text: "👉 Aprende Más"
+      path: "https://4geeksacademy.com/es/job-guarantee"
+      background: "blue"
+      color: "white"

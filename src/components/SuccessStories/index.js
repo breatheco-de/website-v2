@@ -84,11 +84,11 @@ const SuccessStoriescomponent = ({ filterIndexes, lang, variant }) => {
   const [testimonials, setTestimonials] = useState([]);
 
   // Find featured testimonial and split the list
-  const featuredTestimonial = filteredData?.find(
+  const featuredTestimonial = testimonials?.find(
     (t) => t.featured_on_section === true
   );
   const regularTestimonials =
-    filteredData?.filter(
+    testimonials?.filter(
       (t) => t.featured_on_section !== true && t.hidden == false
     ) || [];
 

@@ -1,10 +1,13 @@
 heading: "Admissions Staff"
 sub_heading: "Contact our admissions team for any questions or guidance."
+assignment_algo: "ROUND_ROBIN"
 staff:
   - name: "Eli"
     last_name: "Pilowsky"
+    priority: 1
     job_title: "Admissions Advisor"
-    locations: [""]
+    locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]
     phone: "(786) 305-5288"
     email: "epilowsky@4geeksacademy.com"
+    calendly_link: "https://calendly.com/epilowsky-4geeksacademy/30min"
     image: "../../../../static/images/staff/eli-pilowsky.webp"

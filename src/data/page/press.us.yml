@@ -7,14 +7,13 @@ meta_info:
   keywords: "4Geeks academy News"
   redirects: []
 
-seo_title: "Press: On the News"
+seo_title: "Press & Media"
 header:
-  title: "Press"
-  paragraph: "This report is meant to show our outcomes, achievements and what we consider needs to be improved. It's our story and our way to let you know that we are working harder every time in order to get better."
+  title: "Our Story,\nMaking News"
   image: "../../../static/images/outcomes/outcomes.png"
 
 content:
-  heading: "Read about this coding bootcamp in the news..."
+  heading: "Press Highlights"
   limit: 9
   news:
     - name: "Global Miami"
@@ -90,3 +89,39 @@ content:
       text: "Profundizamos a un nivel avanzado principios específicos de desarrollo, llevando tu carrera a otro nivel."
       textUrl: "Leer Artículo"
       url: "https://www.newsweek.com/insights/coding-career-and-you-top-coding-schools-2017/4geeks-academy"
+
+cta:
+  proportions: [6, 6]
+  background: "verylightGray"
+  section_heading:
+    text: ""
+    style: '{ "font-size": "30px" }'
+  heading:
+    text: "Recognitions & Awards"
+    font_size: ["40px", "50px", "50px", "50px", "50px"]
+  sub_heading:
+    text: "Our work continues to be recognized by leading platforms:"
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  content:
+    text: ""
+    font_size: ["16px"]
+    path: ""
+  bullets:
+    items:
+      - heading: ""
+        text: "Named a Top 5 Coding Bootcamp by Forbes"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: ""
+        text: "Top ranked in Fortune, Course Report and Switchup"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: ""
+        text: "Consistently named among the best coding schools worldwide"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+  button:
+    text: "See all awards & recognitions"
+    color: white
+    hover_color: "white"
+    background: "blue"
+    hover: "blue"
+    path: "/us/awards"
+  footerText: "Want to feature 4Geeks Academy in your publication? <a href='/us/contact'>Contact our press team</a>"

@@ -28,9 +28,9 @@ form:
   # posible fields: "first_name", "last_name", "full_name", "phone", "email"
   # always the first_name, email and phone will be mandatory if added.
   fields: ["full_name", "phone", "email"]
-  heading: "Get More Information"
-  motivation: "Fill out the form to receive detailed information about our Data Science and Machine Learning bootcamp, delivered straight to your inbox."
-  button_label: Get More Info
+  heading: "Get Started" 
+  motivation: "Fill out the form to receive the full program information and get in touch with one of our advisors."
+  button_label: "START MY JOURNEY"
   redirect: null #you can redirect to another url or entirely diffrent website
 
 apply_schollarship: # form that is displayed at the end of the landing
@@ -40,7 +40,7 @@ apply_schollarship: # form that is displayed at the end of the landing
 # jumbotron on the top (cannot be commented out)
 header_data:
   background: "#ffffff"
-  tagline: The Data Science Boom is Here. <br> We're here to get you in
+  tagline: "Break into Data Science with our Bootcamp: <br> High Salaries. Huge Demand. Just 16 Weeks."
   sub_heading: " "
   tagline_color: "#1c1c1c"
   form_styles:
@@ -55,9 +55,9 @@ features:
   marginTop: 0px #<-- separation between tagline and the bullets
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
-    - Become an AI-fluent Data Scientist or Machine Learning Engineer!
-    - Affordable tuition and unbeatable financing plans
-    - Unlimited mentorship and 1:1 career support to help you succeed. For life!
+    - "High earning potential: Train for one of the highest-paying roles in tech ($120K+ avg. salary)."
+    - "Future-proof demand: 36% job growth by 2033—companies everywhere are racing to hire data talent."
+    - "Job-ready in 16 weeks: Learn Python, machine learning, and data storytelling through real-world projects. With unlimited mentorship."
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -317,41 +317,3 @@ components:
      color: "white"
      background: "blue"
      path: "#leadform_bottom"
-
-# Example of how to add a new component:
-# rating_reviews:
-#   background: "#FBFBFB"
-#   position: 4
-#   heading: "What Our Students Say"
-#   rating_list:
-#     - alt: "Platform name"
-#       image: "../../../static/images/badges/platform.png"
-#       rating: 4.89
-#       url: ""
-
-# Example of how to add custom components:
-# components:
-#   - name: course_overview
-#     position: 1
-#     layout: two_column_left
-#     proportions: [6, 6]
-#     background: "#FFFFFF"
-#     image:
-#       src: "/images/landing/data-science-course.jpg"
-#       style: '{ "backgroundSize": "contain" }'
-#     heading:
-#       text: "Master Data Science and Machine Learning"
-#       font_size: ["40px", "34px", "34px", "25px", "25px"]
-#     sub_heading:
-#       text: "Learn Python, statistics, machine learning algorithms, and data visualization"
-#       font_size: ["16px"]
-#     bullets:
-#       items:
-#         - text: "Python programming fundamentals"
-#           icon: "check"
-#         - text: "Statistical analysis and probability"
-#           icon: "check"
-#         - text: "Machine learning algorithms"
-#           icon: "check"
-#         - text: "Data visualization with tools like Tableau"
-#           icon: "check" 

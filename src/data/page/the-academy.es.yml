@@ -9,25 +9,18 @@ meta_info:
 
 seo_title: "Sobre 4Geeks Academy"
 header:
-  title: "Empoderamos Talentos, impulsando sus carreras profesionales con programación"
-  paragraph: "Somos especialistas en código. 4Geeks es el lugar donde los desarrolladores crecen y prosperan."
+  title: "Impulsando el Talento para la Era de la IA"
+  paragraph: "4Geeks Academy es una academia tecnológica global con 8 sedes en EE. UU., América Latina y Europa, formando a la próxima generación de profesionales en Desarrollo Full-Stack con IA, Ciencia de Datos y ML, y Ciberseguridad. Hemos ayudado a más de 7.000+ estudiantes a lanzar exitosas carreras tecnológicas a través de programas prácticos, mentoría humana ilimitada y herramientas impulsadas por IA como Rigobot."
   image: "../../../static/images/the-academy/the-academy-header.png"
   image_alt: "Sobre 4Geeks Academy"
 
 ## BADGES SECTION
 badges:
-  paragraph: "4Geeks Academy es el lugar donde los desarrolladores crecen y prosperan.
-    Estamos autorizados por el Departamento de Educación de Florida.
-    Elegido como uno de los 35 mejores bootcamps del mundo según y también. bootcamp de codificación en Miami según SwitchUp.
-    Reconocido como uno de los 10 mejores bootcamps de codificación en los Estados Unidos según Newsweek."
+  paragraph: "Prepárate para prosperar en la industria tecnológica actual, dominada por la IA, con aprendizaje hiperpersonalizado impulsado por inteligencia artificial, mentoría 1:1 y soporte profesional de por vida. Reconocido por Course Report como uno de los mejores <a class='link' href='https://4geeksacademy.com/us/blog/coding-bootcamp'>coding bootcamps</a> del mundo, elegido por Forbes como el mejor <a class='link' href='https://4geeksacademy.com/us/trends-and-tech/celebrating-forbes-doble-recognition'>bootcamp para estudiantes con presupuesto limitado (2024)</a> y calificado con 4.9/5 en SwitchUp. Licenciado por el Departamento de Educación de Florida."
 
 what_is_4geeks:
-  title: "¿Qué es 4Geeks?"
-  paragraph: "Somos especialistas en código. 4Geeks es el lugar donde los desarrolladores crecen y prosperan.
-    4Geeks Academy nació en 2015. Hoy 4Geeks tiene más de 7 campus repartidos por Estados Unidos, América Latina y Europa. Contamos con más de 1500 graduados y toneladas de cosas de las que estar orgullosos.
-    Estamos muy orgullosos de nuestros programas y metodología para capacitar a los desarrolladores de software en solo unos meses y ayudarlos a impulsar sus carreras profesionales. En 4Geeks Academy ofrecemos una gran plataforma de aprendizaje y una excelente educación en codificación para nuestros estudiantes.
-    Nuestra misión es contribuir a reducir la tasa de desempleo, brindar accesibilidad a la tecnología y aumentar la cantidad de talento digital disponible mientras se desarrolla una comunidad global sólida de desarrolladores de software."
-    
+  title: "Nuestra Misión y Enfoque"
+  paragraph: "Desde 2015, 4Geeks Academy tiene la misión de ampliar el acceso a carreras tecnológicas. Capacitamos a los estudiantes para prosperar en la fuerza laboral impulsada por la IA mediante bootcamps de Desarrollo Full-Stack con IA, Ciencia de Datos y ML, y Ciberseguridad. Las carreras tecnológicas transforman vidas, y nuestro enfoque las hace accesibles: aprendizaje hiperpersonalizado centrado en el ser humano que combina formación práctica, mentoría 1:1, comunidad y herramientas de IA, brindando a los estudiantes la orientación, las habilidades y la confianza para lanzar carreras tecnológicas duraderas."
   image: "../../../static/images/the-academy/what-is-4geeks.jpg"
   image_alt: "¿Qué es 4Geeks Academy?"
 
@@ -84,21 +77,74 @@ outcomes:
 
 ## OUR FOUR CORNERSTONES SECTION DATA
 cornerstones:
-  title: Nuestras Piedras Angulares
+  title: Lo Que Nos Hace Diferentes
   paragraph: ""
   cornerstones_list:
-    - title: SALÓN DE CLASES INVERTIDO
-      content: La teoría se entrega a través de vídeos, animación, imágenes e infografías. El tiempo en clase se utiliza para debatir, crear y construir proyectos, y orientar sobre ejercicios prácticos.
-      icon: laptop_new
-    - title: 1 MENTOR POR CADA 7 ESTUDIANTES
-      content: Un ambiente cercano proporciona la oportunidad de adaptarse al ritmo particular de cada estudiante.
-      icon: teacher_new
-    - title: MENTORÍA 1:1
-      content: Cada estudiante tiene la oportunidad de tener conversaciones regulares con un mentor.
-      icon: chat
-    - title: ÁRBOL DE TALENTOS
-      content: El programa de estudios establece 44 habilidades; los estudiantes ganan puntos por cada una de ellas de forma lúdica.
-      icon: notes
+    - title: Programas Orientados a la Carrera
+      content: Formación práctica, intensiva y centrada en el mundo real, diseñada para lanzar carreras tecnológicas.
+      icon: briefcase-2
+      color: "#E3F9FE"
+    - title: Aprendizaje Hiperpersonalizado
+      content: Rigobot ofrece retroalimentación instantánea 24/7 mientras aprendes, mientras que las clases pequeñas y la mentoría 1:1 garantizan que recibas exactamente la orientación que necesitas.
+      icon: graduation-2
+      color: "#0084FF"
+    - title: Mentoría Humana Ilimitada
+      content: Mentores y coaches de carrera brindan apoyo personalizado cuando lo necesites—durante el programa y para siempre.
+      icon: handshake
+    - title: Habilidades para el Futuro
+      content: Un plan de estudios actualizado continuamente asegura que los estudiantes aprendan las herramientas y tecnologías más recientes que impulsan la industria tech.
+      icon: rocket-2
+      color: "#FFECBF"
+
+two_column:
+  - image:
+      style: '{ "backgroundSize": "cover", "box-shadow": "black 12px 10px 0 0px", "border-radius": "5px" }'
+      src: "/images/crusa-forte-scholarship.webp"
+    background: "veryLightBlue"
+    heading:
+      style: '{ "fontWeight": 700 }'
+      text: "Dando Forma al Ecosistema Tecnológico Global"
+      font_size: ["38px", "38px", "38px", "30px", "28px"]
+    sub_heading:
+      style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
+      text: |
+        En 4Geeks Academy creemos que la colaboración genera un impacto real. Trabajamos con universidades, organizaciones sin fines de lucro, iniciativas de desarrollo laboral, organismos globales y comunidades tecnológicas locales para ampliar el acceso a la mejor educación en tecnología y fortalecer las vías de desarrollo profesional. Juntos, formamos y colocamos talento diverso, cerramos la brecha de habilidades digitales y construimos la fuerza laboral tecnológica del futuro.
+        También estamos activos en la comunidad, colaborando en hackatones, retos tecnológicos y eventos de la industria que conectan el talento con oportunidades y muestran las habilidades de nuestros estudiantes y graduados.
+      font_size: ["20px", "20px", "20px", "18px", "16px"]
+    content:
+      text: " "  
+    bullets:
+      item_style: ""
+      items:
+        - heading: ""
+    button:
+      text: "Explora Nuestros Programas"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "/es/programas"
+
+partner_images:
+  - name: "United Way Miami"
+    image: "../../../static/images/partner/united_way_mini.PNG"
+  - name: "Clark University"
+    image: "../../../static/images/clarkuniversity.png"
+  # - name: "Texas workforce development"
+  #   image: ""
+  - name: "CINDE + IDB"
+    image: "../../../static/images/allies/cinde.png"
+  - name: "UTEC + IDB"
+    image: "../../../static/images/allies/utec.png"
+  - name: "FORTE + CRUSA"
+    image: "../../../static/images/partner/crusa-logo.webp"
+  - name: "Miami tech coalition"
+    image: "../../../static/images/landing/miamitech-logo-sidetext.png"
+  - name: "South florida tech hub"
+    image: "../../../static/images/badges/south-florida-tech-hub.jpeg"
+  - name: "Bite-con"
+    image: "../../../static/images/coding/bite-con.png"
+  - name: "Kosmos"
+    image: "../../../static/images/partner/kosmos-logo.png"
 
 ## STAFF SECTION
 staff:

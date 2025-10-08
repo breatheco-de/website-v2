@@ -10,67 +10,67 @@ export default (props) => (
   >
     <path
       d="M4.5 2.5H0.5V23.5H23.5V2.5H19.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M7.5 0.5H4.5V4.5H7.5V0.5Z"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M19.5 0.5H16.5V4.5H19.5V0.5Z"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M7.5 2.5H16.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M0.5 7.5H23.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M6.5 9.5V21.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M11.5 9.5V21.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M16.5 9.5V21.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M2.5 11.5H21.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M2.5 15.5H21.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />
     <path
       d="M2.5 19.5H21.5"
-      stroke={props.stroke || "#A4A4A4"}
+      stroke={props.color || "#A4A4A4"}
       strokeLinecap="round"
       strokeLinejoin="round"
     />

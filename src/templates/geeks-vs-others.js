@@ -10,6 +10,7 @@ import { Div } from "../components/Sections";
 import { Colors } from "../components/Styling";
 import { H2, H4 } from "../components/Heading";
 import { landingSections } from "../components/Landing";
+import { Circle } from "../components/BackgroundDrawing";
 
 const View = (props) => {
   const { data, pageContext, yml } = props;
@@ -28,27 +29,18 @@ const View = (props) => {
   return (
     <>
       <Header
-        margin="10px 0 0 0"
-        margin_md={
-          isCustomBarActive(session) ? "120px 0 40px 0" : "70px 0 40px 0"
-        }
+        margin="10px auto 60px auto"
+        margin_md="72px auto 80px auto"
+        padding="90px 20px 42px 20px"
+        padding_tablet="72px 130px 72px 130px"
+        position="relative"
+        background={Colors.lightYellow}
+        display="block"
         fontFamily={"Archivo-Black"}
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={
           <>
-            <span
-              style={{
-                display: "block",
-                fontFamily: "Lato, sans-serif",
-                fontWeight: "300",
-                color: "#606060",
-                marginBottom: "16px",
-                fontSize: "26px",
-              }}
-            >
-              {yml.header.sub_title}
-            </span>
             <span
               style={{
                 fontFamily: "Roboto, sans-serif",
@@ -60,10 +52,192 @@ const View = (props) => {
             />
           </>
         }
-      />
+      >
+        {/* Decorative Circles */}
+        <Circle
+          color="yellow"
+          width="17px"
+          height="17px"
+          top="87px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="116px"
+          left="74px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="172px"
+          left="74px"
+          zIndex="-1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="17px"
+          height="17px"
+          top="216px"
+          left="74px"
+          zIndex="-1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="298px"
+          left="74px"
+          zIndex="-1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="116px"
+          left="106px"
+          zIndex="-1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="145px"
+          left="106px"
+          zIndex="-1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="182px"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="17px"
+          height="17px"
+          top="246px"
+          left="106px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="30px"
+          height="30px"
+          top="120px"
+          right="83px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="170px"
+          right="50px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="black"
+          width="17px"
+          height="17px"
+          top="170px"
+          right="89px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="white"
+          width="17px"
+          height="17px"
+          top="170px"
+          right="128px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="yellow"
+          width="21px"
+          height="21px"
+          top="10px"
+          right="320px"
+          zIndex="1"
+          display="none"
+          display_tablet="inline"
+        />
+        <Circle
+          color="blue"
+          width="57px"
+          height="57px"
+          top="32px"
+          right="61px"
+          display="none"
+          display_tablet="inline"
+        />
+        {/* Mobile decorative elements */}
+        <Circle
+          color="blue"
+          width="15px"
+          height="15px"
+          top="92px"
+          left="9px"
+          zIndex="1"
+          display="inline"
+          display_tablet="none"
+        />
+        <Circle
+          color="white"
+          width="15px"
+          height="15px"
+          top="130px"
+          left="10px"
+          zIndex="1"
+          display="inline"
+          display_tablet="none"
+        />
+        <Circle
+          color="darkGray"
+          width="15px"
+          height="15px"
+          top="195px"
+          left="5px"
+          zIndex="1"
+          display="inline"
+          display_tablet="none"
+        />
+      </Header>
 
       {/* Section Title */}
-      <Div display="block">
+      <Div display="block" margin="25px auto">
         <H2 type="h2" textAlign_tablet="center">
           {yml.section_heading?.text}
         </H2>
@@ -71,7 +245,7 @@ const View = (props) => {
         <Div
           style={{
             maxWidth: "1280px",
-            margin: "0 auto",
+            margin: "25px auto",
             padding: "0 20px",
           }}
         >

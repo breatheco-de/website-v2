@@ -9,12 +9,12 @@ meta_info:
 
 seo_title: "Menciones en medios y prensa"
 header:
-  title: "Prensa"
-  paragraph: "Este informe está destinado a mostrar nuestros resultados, logros y lo que consideramos que debe mejorarse. Es nuestra historia y nuestra manera de hacerle saber que trabajamos más duro cada vez para mejorar.."
+  title: "Nuestra Historia,\nen las Noticias"
+  paragraph: "En 4Geeks Academy, nuestra historia es de innovación, impacto y crecimiento. Desde Forbes hasta medios locales, la prensa ha destacado cómo estamos transformando el acceso a carreras tecnológicas y preparando a los estudiantes para la era de la IA."
   image: "../../../static/images/outcomes/outcomes.png"
 
 content:
-  heading: "Lea sobre este bootcamp de codificación en las noticias..."
+  heading: "Destacados en Prensa"
   limit: 7
   news:
     - name: "Global Miami"
@@ -101,5 +101,40 @@ content:
       text: "Su método potencia el 'learning by doing' y utiliza la programación como medio para que los alumnos 'transformen sus vidas'. Ha formado a más de 600 personas en España desde 2020 y cosechado múltiples premios."
       textUrl: "Ver Entrevista"
       url: "https://www.elespanol.com/invertia/disruptores-innovadores/disruptores/startups/20230304/no-academia-vuelco-programacion-chatgpt-quitara-trabajo/745675491_0.html"
-      
 
+
+cta:
+  proportions: [6, 6]
+  background: "verylightGray"
+  section_heading:
+    text: ""
+    style: '{ "font-size": "30px" }'
+  heading:
+    text: "Reconocimientos y Premios"
+    font_size: ["40px", "50px", "50px", "50px", "50px"]
+  sub_heading:
+    text: "Nuestro trabajo continúa siendo reconocido por plataformas líderes:"
+    font_size: ["18px", "18px", "18px", "18px", "18px"]
+  content:
+    text: ""
+    font_size: ["16px"]
+    path: ""
+  bullets:
+    items:
+      - heading: ""
+        text: "Reconocido como uno de los 5 mejores bootcamps de programación por Forbes"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: ""
+        text: "Clasificado entre los primeros en Fortune, Course Report y Switchup"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+      - heading: ""
+        text: "Reconocido constantemente entre las mejores escuelas de programación del mundo"
+        icon: "check" #string with icon for example ['check', 'cicle', etc]
+  button:
+    text: "Ver todos los premios y reconocimientos"
+    color: white
+    hover_color: "white"
+    background: "blue"
+    hover: "blue"
+    path: "/es/premios"
+  footerText: "¿Quieres destacar a 4Geeks Academy en tu publicación? <a href='/es/contactanos'>Contacta a nuestro equipo de prensa</a>"

@@ -109,7 +109,7 @@ details:
       title: "Prework"
       description: >
         Empezamos por lo básico: HTML5 + CSS3 + Javascript. Revisamos los fundamentos de la programación y nos aseguramos de que todos estamos en la misma página.
-        Durante el prework revisarás cómo hacer un sitio web con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciarás en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
+        Durante el <a class='link' href='/es/curso-preparatorio'>prework</a> revisarás cómo hacer un sitio web con HTML y CSS, luego desarrollarás varios proyectos y por último te iniciarás en el mundo de Javascript, aprendiendo sobre variables, loops, condicionales, y funciones.
       projects: "Construye tu primera página web, y una versión mínima de Instagram, un generador de excusas, entre otros."
       slug: "prework"
       duration: "~ 60 horas"

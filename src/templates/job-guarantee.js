@@ -457,10 +457,13 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           width_tablet="100%"
           maxWidth="1280px"
           we_trust={yml.we_trust_section}
+          titleProps={{
+            textAlign: "center",
+          }}
         />
       </div>
       {/* Video: 2. See How one graduate turned our JG into a real career */}
-      <Container
+      {/* <Container
         id="two_column_right"
         flexDirection="column"
         margin="0"
@@ -486,7 +489,8 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
           proportions={yml.two_columns_video?.proportions}
           session={session}
         />
-      </Container>
+      </Container> */}
+
       {/* Eligibility: 3. Who's Eligible? */}
       <TwoColumn
         padding="30px 20px"
@@ -712,7 +716,7 @@ const JobGuarantee = ({ data, pageContext, yml }) => {
                   fontSize={step.highlight ? "16px" : "14px"}
                   fontSize_tablet={step.highlight ? "22px" : "20px"}
                   fontSize_md={step.highlight ? "22px" : "20px"}
-                  color={step.highlight ? "#FFB718" : "#000"}
+                  color={step?.highlight ? "#FFB718" : "#000"}
                   opacity="1"
                   maxWidth="100px"
                   maxWidth_tablet="120px"
@@ -912,7 +916,6 @@ export const query = graphql`
             steps {
               icon
               title
-              highlight
             }
             link {
               url

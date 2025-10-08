@@ -100,8 +100,7 @@ who_is_hiring:
   limit: 4
   heading: "Más de 500 empresas contratan a nuestros graduados"
   sub_heading: "Trabajamos con empresas nacionales e internacionales que apuestan por talento junior."
-  # LA PROPIEDAD CUSTOM_LOGOS ES PARA AGREGAR LOGOS PERSONALIZADOS, SI NO SE AGREGA, SE USAN LOS LOGOS POR DEFECTO. SI SE AGREGA, SE USAN SOLO ESOS LOGOS.
-  custom_logos:
+  featured:
     - name: "Sanitas"
       image: "../../../static/images/partner/sanitas.webp"
     - name: "Vargroup"

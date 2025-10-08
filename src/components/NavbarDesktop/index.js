@@ -448,9 +448,9 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
           className="megamenu-container"
           width={menu[status.itemIndex].sub_menu.width}
           display="none"
-          maxHeight="500px"
+          maxHeight="auto"
           background="white"
-          padding_tablet="30px 30px 45px 30px"
+          padding_tablet="30px 30px 17px 30px"
           position="absolute"
           borderRadius="3px"
           minHeight_tablet="347px"
@@ -619,6 +619,25 @@ export const MegaMenu = ({ status, setStatus, menu }) => {
               </Grid>
             </Div>
           </Grid>
+          {menu[status.itemIndex].id === "programs" && (
+            <Div
+              width="100%"
+              justifyContent="center"
+              margin="20px 0 0 0"
+              padding="15.5px 0 0 0"
+              borderTop={`1px solid ${Colors.lightGray}`}
+            >
+              <Paragraph
+                margin="0"
+                textAlign="center"
+                width="auto"
+                dangerouslySetInnerHTML={{
+                  __html:
+                    menu[status.itemIndex].sub_menu.program_comparison_cta.text,
+                }}
+              />
+            </Div>
+          )}
           {menu[status.itemIndex].name === "Campus" && (
             <CampusMenu status={status} setStatus={setStatus} menu={menu} />
           )}

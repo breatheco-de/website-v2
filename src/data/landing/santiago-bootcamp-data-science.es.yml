@@ -57,6 +57,7 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 10px 0px" }'
   bullets:
+    - Desde $100 al mes, planes de pago que siempre se ajustan a tu historial crediticio
     - No se requiere experiencia previa
     - Horario part-time 
     - Mentorías y career support de por vida
