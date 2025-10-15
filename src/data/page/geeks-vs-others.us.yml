@@ -174,8 +174,8 @@ components:
         - text: 'Our <strong style="font-weight: 800;">career support never expires</strong>'
           icon: "check"
     image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
-      src: "/images/landing/feliz-empresario-laptop.png" 
+      style: '{"backgroundSize": "cover", "background-position": "center", "border" : "4px solid #000"}'
+      src: "/images/landing/feliz-empresario-laptop.png"
     button:
       text: "Learn More"
       color: "white"

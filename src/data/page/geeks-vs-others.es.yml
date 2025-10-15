@@ -174,7 +174,7 @@ components:
         - text: 'Nuestro <strong style="font-weight: 800;">apoyo de carrera nunca expira</strong>'
           icon: "check"
     image:
-      style: '{"backgroundSize": "contain", "background-position": "center"}'
+      style: '{"backgroundSize": "cover", "background-position": "center", "border" : "3px solid #000"}'
       src: "/images/landing/feliz-empresario-laptop.png"
     button:
       text: "Más información"
