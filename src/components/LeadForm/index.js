@@ -4,7 +4,6 @@ import { Row, Column, Div, GridContainer } from "../Sections";
 import { H4, Paragraph } from "../Heading";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import ReCAPTCHA from "react-google-recaptcha";
 import { SessionContext } from "../../session";
 import { Button, Colors } from "../Styling";
 import { Break, Devices } from "../Responsive";
@@ -12,6 +11,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql, navigate } from "gatsby";
 import { SelectRaw } from "../Select";
 import PhoneInput from "./PhoneInput";
+import SafeReCAPTCHA from "../SafeReCAPTCHA";
 
 const formIsValid = (formData = null) => {
   if (!formData) return null;
@@ -678,9 +678,8 @@ const LeadForm = ({
               </Alert>
             )}
             <Div width="fit-content" margin="10px auto 0 auto">
-              <ReCAPTCHA
+              <SafeReCAPTCHA
                 ref={captcha}
-                sitekey={process.env.GATSBY_CAPTCHA_KEY}
                 // onChange={captchaChange}
                 size="invisible"
               />

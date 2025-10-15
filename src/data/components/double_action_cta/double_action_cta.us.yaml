@@ -1,0 +1,34 @@
+cta:
+  title: Take the Next Step in Your Tech Career
+  description: "Join thousands of students who have transformed their careers with 4Geeks Academy. Get personalized guidance and stay updated with the latest in tech."
+  primary:
+    title: "Book a Free 15 Minute Career Consultation"
+    description: "Get personalized guidance from our career experts. Discover the perfect tech path for your goals and learn about our programs."
+    image: "../../../../static/images/Group-6617.webp"
+    action_text: "Schedule now!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    benefits:
+      - "Personalized career roadmap"
+      - "Program recommendations"
+      - "Industry insights & salary expectations"
+    footer_text: "✨ Free 15-minute session • No commitment required"
+  secondary:
+    title: "Subscribe to our Newsletter"
+    description: "Get the latest tech industry insights, course updates, success stories, and exclusive content delivered to your inbox."
+    image: "../../../../static/images/woman-glasses-laptop.png"
+    action_text: "Subscribe"
+    action_url: ""
+    benefits:
+      - "Industry trends & job market insights"
+      - "Student success stories"
+      - "Exclusive course discounts & early access"
+    footer_text: "📧 Weekly updates • Unsubscribe anytime • No spam, ever"
+  newsletter_form:
+    placeholder_email: "Email *"
+    error_email: "Please enter a valid email"
+    button_submit: "Subscribe"
+    button_loading: "Loading..."
+    status_idle: "Request"
+    status_error: "There are errors in your form"
+    status_correct_errors: "Correct the errors"
+    success_message: "🎉 Thank you! You've been successfully subscribed to our newsletter."

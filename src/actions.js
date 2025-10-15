@@ -201,40 +201,48 @@ export const apply = async (data, session) => {
   const tag = body.tag || "website-lead";
   const automation = body.automation || "strong";
 
-  if (!session || !session.utm || !session.utm.utm_test) {
-    const _data = await save_form(
-      body,
-      [tag.value || tag],
-      [automation.value || automation],
-      session
-    );
+  try {
+    if (!session || !session.utm || !session.utm.utm_test) {
+      const _data = await save_form(
+        body,
+        [tag.value || tag],
+        [automation.value || automation],
+        session
+      );
 
-    // save conversion info to GTM
-    tagManager("student_application", {
-      email: _data.email,
-      formentry_id: _data.id,
-      attribution_id: _data.attribution_id?.toString(),
-      referral_key: _data.referral_key,
-    });
+      // save conversion info to GTM
+      tagManager("student_application", {
+        email: _data.email,
+        formentry_id: _data.id,
+        attribution_id: _data.attribution_id?.toString(),
+        referral_key: _data.referral_key,
+      });
 
-    // referral program integration
-    if (
-      _data &&
-      typeof _data.referral_key == "string" &&
-      _data.referral_key.length > 0
-    ) {
-      // save conversion info to First Promoter API
-      if (window && window.fpr) {
-        console.log("Triggered referral program action");
-        window.fpr("referral", { email: _data.email });
-      } else
-        console.error(
-          "Global object for firstpromoter API not found (referral program)"
-        );
+      // referral program integration
+      if (
+        _data &&
+        typeof _data.referral_key == "string" &&
+        _data.referral_key.length > 0
+      ) {
+        // save conversion info to First Promoter API
+        if (window && window.fpr) {
+          console.log("Triggered referral program action");
+          window.fpr("referral", { email: _data.email });
+        } else
+          console.error(
+            "Global object for firstpromoter API not found (referral program)"
+          );
+      }
+      return _data;
     }
-    return _data;
+    return true;
+  } catch (error) {
+    console.error("Error in apply:", error);
+    return {
+      error: true,
+      message: error.message || "Failed to submit application",
+    };
   }
-  return true;
 };
 
 export const requestSyllabus = async (data, session) => {
@@ -246,27 +254,35 @@ export const requestSyllabus = async (data, session) => {
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
 
-  //tag                automation
-  if (!session || !session.utm || !session.utm.utm_test) {
-    const _data = await save_form(
-      body,
-      [tag.value || tag],
-      [automation.value || automation],
-      session
-    );
+  try {
+    //tag                automation
+    if (!session || !session.utm || !session.utm.utm_test) {
+      const _data = await save_form(
+        body,
+        [tag.value || tag],
+        [automation.value || automation],
+        session
+      );
 
-    // save conversion info to GTM
-    tagManager("request_more_info", {
-      email: _data.email,
-      formentry_id: _data.id,
-      attribution_id: _data.attribution_id?.toString(),
-      referral_key: _data.referral_key,
-    });
+      // save conversion info to GTM
+      tagManager("request_more_info", {
+        email: _data.email,
+        formentry_id: _data.id,
+        attribution_id: _data.attribution_id?.toString(),
+        referral_key: _data.referral_key,
+      });
 
-    return _data;
+      return _data;
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error in requestSyllabus:", error);
+    return {
+      error: true,
+      message: error.message || "Failed to request syllabus",
+    };
   }
-
-  return true;
 };
 export const openGuidebook = (url) => {
   tagManager("financing_guide_download");
@@ -324,35 +340,55 @@ export const applyJob = async (data, session) => {
 export const contactUs = async (data, session) => {
   console.log("Succesfully contact us", data);
   let body = {};
-  for (let key in data) body[key] = data[key].value;
 
-  //                                                                                      tag       automation
-  if (!session || !session.utm || !session.utm.utm_test)
-    return await save_form(body, ["contact-us"], ["soft"], session);
-  return true;
+  Object.keys(data).forEach((key) => {
+    if (typeof data[key] === "object") body[key] = data[key].value;
+    else body[key] = data[key];
+  });
+
+  try {
+    //                                                                                      tag       automation
+    if (!session || !session.utm || !session.utm.utm_test)
+      return await save_form(body, ["contact-us"], ["soft"], session);
+    return true;
+  } catch (error) {
+    console.error("Error in contactUs:", error);
+    return {
+      error: true,
+      message: error.message || "Failed to send contact form",
+    };
+  }
 };
 export const newsletterSignup = async (data, session) => {
   console.log("Succesfully newsletter signup", data);
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
-  //                                                                                      tag          automation
-  if (!session || !session.utm || !session.utm.utm_test) {
-    const _data = await save_form(
-      body,
-      ["newsletter"],
-      ["newsletter"],
-      session
-    );
-    tagManager("newsletter_signup", {
-      email: _data.email,
-      formentry_id: _data.id,
-      attribution_id: _data.attribution_id?.toString(),
-      referral_key: _data.referral_key,
-    });
-    return _data;
+  try {
+    //                                                                                      tag          automation
+    if (!session || !session.utm || !session.utm.utm_test) {
+      const _data = await save_form(
+        body,
+        ["newsletter"],
+        ["newsletter"],
+        session
+      );
+      tagManager("newsletter_signup", {
+        email: _data.email,
+        formentry_id: _data.id,
+        attribution_id: _data.attribution_id?.toString(),
+        referral_key: _data.referral_key,
+      });
+      return _data;
+    }
+    return true;
+  } catch (error) {
+    console.error("Error in newsletterSignup:", error);
+    return {
+      error: true,
+      message: error.message || "Failed to signup for newsletter",
+    };
   }
-  return true;
 };
 
 export const outcomesReport = async (data, session) => {
@@ -360,23 +396,31 @@ export const outcomesReport = async (data, session) => {
   let body = {};
   for (let key in data) body[key] = data[key].value;
 
-  //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test) {
-    const _data = await save_form(
-      body,
-      ["download_outcome"],
-      ["download_outcome"],
-      session
-    );
-    setDataLayer({
-      email: _data.email,
-      formentry_id: _data.id,
-      attribution_id: _data.attribution_id?.toString(),
-      referral_key: _data.referral_key,
-    });
-    return _data;
+  try {
+    //                                                                                      tag                automation
+    if (!session || !session.utm || !session.utm.utm_test) {
+      const _data = await save_form(
+        body,
+        ["download_outcome"],
+        ["download_outcome"],
+        session
+      );
+      setDataLayer({
+        email: _data.email,
+        formentry_id: _data.id,
+        attribution_id: _data.attribution_id?.toString(),
+        referral_key: _data.referral_key,
+      });
+      return _data;
+    }
+    return true;
+  } catch (error) {
+    console.error("Error in outcomesReport:", error);
+    return {
+      error: true,
+      message: error.message || "Failed to request outcomes report",
+    };
   }
-  return true;
 };
 
 export const getCohorts = async (_query = {}) => {
@@ -423,28 +467,36 @@ export const processFormEntry = async (data, session) => {
   const tag = body.tag || "request_more_info";
   const automation = body.automation || "soft";
 
-  //                                                                                      tag                automation
-  if (!session || !session.utm || !session.utm.utm_test) {
-    const _data = await save_form(
-      body,
-      [tag.value || tag],
-      [automation.value || automation],
-      session
-    );
-
-    if (data.form_type.value === "landing") {
-      tagManager("request_more_info", {
-        email: _data.email,
-        formentry_id: _data.id,
-        attribution_id: _data.attribution_id?.toString(),
-        referral_key: _data.referral_key,
-      });
-    } else
-      console.log(
-        `No tagManager("...") was because type is: ${data.form_type.value}`
+  try {
+    //                                                                                      tag                automation
+    if (!session || !session.utm || !session.utm.utm_test) {
+      const _data = await save_form(
+        body,
+        [tag.value || tag],
+        [automation.value || automation],
+        session
       );
 
-    return _data;
+      if (data.form_type.value === "landing") {
+        tagManager("request_more_info", {
+          email: _data.email,
+          formentry_id: _data.id,
+          attribution_id: _data.attribution_id?.toString(),
+          referral_key: _data.referral_key,
+        });
+      } else
+        console.log(
+          `No tagManager("...") was because type is: ${data.form_type.value}`
+        );
+
+      return _data;
+    }
+    return true;
+  } catch (error) {
+    console.error("Error in processFormEntry:", error);
+    return {
+      error: true,
+      message: error.message || "Failed to process form entry",
+    };
   }
-  return true;
 };

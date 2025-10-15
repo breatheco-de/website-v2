@@ -77,12 +77,17 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
       "ScholarshipProjectsYaml",
       "ScholarshipSuccessCasesYaml",
       "JobGuaranteeSmallYaml",
+      "PaymentPlansYaml",
       "FaqYaml",
       "AdmissionsStaffYaml",
+      "DoubleActionCtaYaml",
+      "DynamicFormYaml",
     ].includes(node.internal.type)
   ) {
     let url = null;
     if (node.internal.type == "MarkdownRemark") {
+      // IMPORTANT: Any /src/**/*.md file will attempt to be created as a page or blog post
+
       // skip without formatting
       if (!node.frontmatter) {
         logger.error("Missing frontmatter on node: " + node.id);
@@ -104,7 +109,7 @@ exports.onCreateNode = ({ node, getNode, actions, ...rest }) => {
         });
       }
 
-      const slug = node.frontmatter.slug.replace(/\.[a-z]{2,2}/, "");
+      const slug = node.frontmatter.slug?.replace(/\.[a-z]{2,2}/, "");
       url = `/data/blog/${slug}.${node.frontmatter.lang || "us"}/`;
     } else url = createFilePath({ node, getNode });
 
@@ -777,51 +782,14 @@ exports.createSchemaCustomization = ({ actions }) => {
       academies: [String]
       slug: String
     }
-    type LandingYamlHeader_data {
-      background: String
-      tagline: String
-      tagline_color: String
-      sub_heading: String
-      image_filter: String
-      partner_logo_url: File @fileByRelativePath
-      background_image: File @fileByRelativePath
-      badge: File @fileByRelativePath
-      form_styles: LandingYamlHeaderFormStyles
+    type CourseYamlCourse_instructorsInstructors {
+      image: File
     }
-    type LandingYamlHeaderFormStyles {
-      background: String
-      color: String
-      button: LandingYamlHeaderFormStylesButton
+    type DataScienceYamlCourse_instructorsInstructors {
+      image: File
     }
-    type LandingYamlHeaderFormStylesButton {
-      background: String
-    }
-    
-    type LandingYaml implements Node {
-      header_data: LandingYamlHeader_data
-    }
-    type DownloadableYamlHeader_data {
-      background: String
-      tagline: String
-      tagline_color: String
-      sub_heading: String
-      image_filter: String
-      partner_logo_url: File @fileByRelativePath
-      background_image: File @fileByRelativePath
-      badge: File @fileByRelativePath
-      form_styles: DownloadableYamlHeaderFormStyles
-    }
-    type DownloadableYamlHeaderFormStyles {
-      background: String
-      color: String
-      button: DownloadableYamlHeaderFormStylesButton
-    }
-    type DownloadableYamlHeaderFormStylesButton {
-      background: String
-    }
-    
-    type DownloadableYaml implements Node {
-      header_data: DownloadableYamlHeader_data
+    type EngineeringYamlCourse_instructorsInstructors {
+      image: File
     }
   `;
   createTypes(typeDefs);

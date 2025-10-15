@@ -4,6 +4,10 @@
 * :focus {
   outline: none !important;
 }
+:root {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
 html,
 body {
   width: 100% !important;
@@ -12,6 +16,10 @@ body {
   overflow-x: clip !important;
   scroll-behavior: smooth;
   scroll-padding: 10%;
+}
+
+strong {
+  font-weight: 700 !important;
 }
 
 .set-overflow {
@@ -96,6 +104,27 @@ body {
 .MuiToggleButton-root.Mui-selected {
   color: #ffffff !important;
   background-color: #e6ba1f !important;
+}
+
+.link {
+  color: #0097ce;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+.cta_card {
+  transition: all 0.3s;
+}
+.cta_card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px #0000001a;
+}
+.scale_hover:hover {
+  transform: scale(1.02);
 }
 
 .nav__item--active a.nav-item.nav-link.side {
@@ -560,6 +589,17 @@ button.active p {
   -webkit-text-fill-color: rgb(0 0 0 / 0%);
   -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color: rgb(169 169 169);
+}
+
+/* Primary button hover effect for comparison table */
+.button-DEFAULT:hover {
+  background-color: #339dff !important;
+}
+.button-OUTLINE:hover {
+  background-color: #e6f3ff !important;
+}
+.button-LINK:hover {
+  text-decoration: underline;
 }
 .star-rating div.off {
   background: #ffffff;

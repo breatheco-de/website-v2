@@ -60,11 +60,33 @@ features:
   #                                         up   left down  right
   styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
   bullets:
-    - Get career-ready with our award-winning method.
-    - Access our unmatched career support services.
-    - Secure a job within 9 months of graduation, or we’ll refund your tuition
+    - Get job-ready for today’s Ai-driven job market!
+    - Unlimited career support and mentorship - for life!
+    - Gain future-proof skills and the mindset recruiters are looking
 
     # - "Part-time: Immerse yourself in a flexible schedule, perfect for busy professionals and students."
+
+we_trust_section:
+  position: 1
+  title: Does the Job Guarantee Deliver Results You Can Count On?
+  bg_full: true
+  text: |
+    Yes — and we've got the numbers to back it up.
+    <br><br>
+    These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
+    <br><br>
+    We don't just teach you how to code — we help you build a career you're proud of.
+  boxes:
+    - icon: briefcase-2
+      title: "84%"
+      text: Job placement rate
+    - icon: graduation-2
+      title: "3 - 6"
+      label: "months"
+      text: Average time to get hired
+    - icon: chart
+      title: "55%"
+      text: Salary increase after graduation
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -108,10 +130,17 @@ follow_bar:
 #
 # ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
 #
+## BADGES SECTION /components/Badges
+badges:
+  position: 4
+  heading: |-
+    Ranked Among the World's Top Coding Bootcamps. 
+    Trusted by Thousands.
+  sub_heading: "Licensed by the Florida Department of Education, recognized by Forbes as a top 5 Coding School, and consistently ranked among the world's best coding bootcamps by major independent listings."
+
 rating_reviews:
   background: "#FBFBFB"
-  position: 4
-  heading: "Top rated on all available review sites"
+  position: 5
   rating_list:
     - alt: "Career Karma"
       image: "../../../static/images/badges/career-karma.png"
@@ -154,76 +183,56 @@ rating_reviews:
 #   position: 5
 #   heading: "4Geeks Academy has awards and recognitions that validate its excellence"
 
+choose_program:
+  title: "Our Job Guarantee is Available for Our Top Tech Programs "
+  paragraph: "Choose your career path. Master the skills and get hired."
+  position: 3
+
 who_is_hiring:
   position: 9
   limit: 4
-  heading: "Who is hiring our students?"
-  sub_heading: "550+ hiring partners, and 50+ job openings right now for software development"
+  margin: '0 auto'
+  padding: '0'
+  padding_tablet: '60px 0'
+  background: '#FBFCFC'
+  heading: "WHO’S HIRING OUR GRADUATES?"
+  sub_heading: |
+    Top companies hire 4Geeks graduates, with 84% landing jobs within 6 months of graduation thanks to their skills and our personalized career support. Our grads don’t just get hired—they launch successful careers and consistently earn recognition for their technical expertise and professionalism:   
+    <br/>
+     "I’m continually impressed by the depth of knowledge possessed by 4Geeks students. One of my hires ended up becoming a team leader." - CodeNinjas.
 
 components:
-  - name: why_coding-two-columns
-    position: 1
-    proportions: [7, 5]
-    layout: two_column_right
+  - name: we_offer_a_job_guarantee
+    position: 2
+    layout: two_column_left
+    proportions: [6, 6]
     image:
-      style: '{ "backgroundSize": "contain"}'
-      src: "/images/landing/blonde-girl-laptop.png"
-      shadow: false
-    # video: "https://www.youtube.com/watch?v=TCHASxvkhpI"
+      style: '{ "backgroundSize": "contain", "background-position": "center" }'
+      src: "/images/landing/hombre-joven-con-laptop.webp"
     heading:
-      text:
-        "Why do we offer a job guarantee?"
-        #xl      lg     md     sm    xs
-      font_size: ["40px", "34px", "34px", "25px", "20px"]
+      text: "Why We Have the Confidence to Offer a Job Guarantee"
+      font_size: ["42px", "34px", "34px", "34px", "34px"]
+      style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
     sub_heading:
-      text:
-        "Our bootcamps go beyond teaching relevant skills; they are designed to launch rewarding tech careers.
-        From our industry-aligned syllabus to our comprehensive, personalized career support service, every one of our features has been tried and tested to optimize your learning journey."
+      text: "Our goal is more than teaching skills — we're here to launch successful tech careers. With an industry-aligned curriculum, hands-on teaching methodology  and personalized career support, we have a proven track record of preparing students for the tech job market."
+      font_size: ["20px", "20px", "18px", "18px", "16px"]
+      style: '{ "font-weight": "400", "text-align": "justify", "color": "#333", "padding": "10px"}'
     content:
-      text: "Let’s shape your future together!"
-      font_size: ["16px"]
+      text: |
+        <span style="color: #0097CD; ">✓   </span> Our program's effectiveness is backed by strong placement rates
+        <br><br>
+        <span style="color: #0097CD; ">✓   </span> The tech industry continues to grow with high demand for talent
+        <br><br>
+        <span style="color: #0097CD; ">✓   </span> We believe in our teaching approach and your commitment to succeed
+        <br><br>
+      font_size: ["20px", "20px", "18px", "16px", "14px"]
+      style: '{ "text-align": "left", "color": "#444", "line-height": "1.1", "padding": "10px"}'
     button:
       text: "Apply"
-      background: black
-      color: white
-      hover_color: "#white"
-      path: "#leadform_header"
-    bullets:
-      items:
-        - text: "Proven effectiveness of our program"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "The tech industry is booming"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "We trust the process"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - text: "We trust you"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-
-  - name: how-it-works-programs
-    position: 2
-    background: "veryLightBlue"
-    layout: iconogram
-    swipable: True
-    heading:
-      text: "Why choose 4Geeks?"
-      font_size: ["30px", "30px", "30px", "30px", "30px"]
-    sub_heading:
-      text: "With a proven track record of success and industry recognition, our program empowers students to turn their career goals into reality
-        The numbers speak for themselves:"
-      font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
-    icons:
-      - icon: "briefcase-2"
-        title: "84%"
-        content: "Job placement rate"
-
-      - icon: "chart"
-        title: "60K"
-        content: "Avg. Income at a new job"
-
-      - icon: "graduation-2"
-        title: "130"
-        content: "Average days to get hired"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "/us/apply"
 
   - name: geekinfo_2
     position: 7
@@ -231,18 +240,18 @@ components:
     proportions: [6, 6]
     background: "veryLightBlue2"
     image:
-      style: '{ "backgroundSize": "cover" }'
-      src: "/images/testimonials/james-testimonial-jg.jpg"
+      style: '{"border": "3px solid #2b2b2b", "border-radius": "3px", "backgroundSize": "contain", "background-position": "center"}'
+      src: "../../images/testimonials/daniel-pena-testimonial.jpg"
       shadow: true
-    video: "KgBpH_eDtVU"
+    video: "z8L4yGdP5xM"
     section_heading:
       text: ""
       style: '{ "font-size": "30px" }'
     heading:
-      text: "James' Experience"
+      text: "See How One Graduate Turned Our Job Guarantee Into a Real Tech Career"
       font_size: ["40px", "40px", "40px", "40px", "40px"]
     sub_heading:
-      text: "James highlights how 4Geeks Academy changed his life, providing ongoing mentorship and a job guarantee that ensured he landed a tech position. The academy supports students post-graduation, offering career assistance to secure employment within two years or a full refund."
+      text: "Daniel Peña launched his tech career with 4Geeks Academy and the added security of a Job Guarantee. With the right skills for today’s tech jobs and the personalized guidance of our mentors and Career Support team, he landed a role he loves showing that the Job Guarantee isn’t just a promise, it’s a real path to a new career. Watch his story and see how it can work for you."
       font_size: ["16px", "16px", "16px", "16px", "16px"]
     button:
       text: "Get More Info"
@@ -258,7 +267,7 @@ components:
     bullets:
       items:
       - heading: "Transition to Tech Without a Degree"
-        text: "James found the perfect path to tech, despite lacking a formal degree."
+        text: "Daniel found the perfect path to tech, despite lacking a formal degree."
         icon: "circle"
       - heading: "Lifetime Mentorship & Career Support"
         text: "4Geeks Academy provides continuous guidance, even after graduation."
@@ -267,7 +276,7 @@ components:
         text: "If students don't secure a job within two years, tuition is refunded."
         icon: "circle"
       - heading: "Success Through Hands-On Learning"
-        text: "James landed a tech job thanks to 4Geeks' structured training."
+        text: "Daniel landed a tech job thanks to 4Geeks' structured training."
         icon: "circle"
 
   # - name: why-4geeks-icons

@@ -1,0 +1,244 @@
+meta_info:
+  slug: program-comparison
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  title: "Compare our programs"
+  description: "Compare 4Geeks Academy programs and find your best path into tech. Explore key differences between our bootcamps to make the right choice for your career."
+  image: null
+  keywords: "4Geeks Academy programs comparison, bootcamp comparison, tech career paths"
+  redirects: []
+
+## PROGRAM COMPARISON HEADING
+seo_title: "Compare our programs"
+header:
+  title: Find Your Best Path Into Tech
+  sub_title: ""
+  paragraph: "Choosing a bootcamp is a big decision — but we make it simple. At 4Geeks, every program is built to launch successful tech careers, whether you're switching paths or just starting out. The difference lies in where each path takes you and the skills you'll need. Keep reading to explore the key differences side by side."
+
+choose_program:
+  hide_empty_content: true
+  title: ''
+  paragraph: ''
+
+data_table:
+  title:
+    text: "Which Path Fits You Best?"
+  sub_title: "Compare programs to see which one aligns with your interests, strengths, and goals. Every 4Geeks bootcamp will equip you with the skills, mentorship, and career support to thrive in the career of your choice."
+
+
+  columns:
+    - title: "Category"
+    - title: "Full Stack Development with AI"
+    - title: "Data Science & Machine Learning with AI"
+    - title: "Cybersecurity"
+
+  rows:
+    - cells:
+        - content: "What It Is"
+        - content: "Learn to build websites, apps, and software from scratch with front-end, back-end, and AI tools."
+          html: false
+        - content: "Learn to gather, analyze, and model data using Python, machine learning, and AI."
+          html: false
+        - content: "Learn to protect systems, networks, and data from cyber threats."
+          html: false
+
+    - cells:
+        - content: "Why It Matters"
+        - content: "Companies need scalable digital solutions. Full Stack Developers power operations, marketing, and customer experiences. With AI, they automate processes and build smarter products."
+          html: false
+        - content: "Businesses rely on data to drive decisions. Data Scientists turn raw data into insights, while machine learning automates predictions and personalizes experiences."
+          html: false
+        - content: "Every business faces cyber risks. Cybersecurity experts defend data, ensure compliance, and prevent costly attacks in today's digital-first world."
+          html: false
+
+    - cells:
+        - content: "What You'll Learn"
+        - content: "<strong>HTML, CSS, JavaScript, Python, React</strong>, databases, APIs, GitHub workflows, and AI tools like <strong>OpenAI/GPT, Cursor, Vercel v0</strong>."
+          html: true
+        - content: "<strong>Python, SQL</strong>, statistics, data visualization, <strong>machine learning</strong>, AI tools, and real-world modeling techniques."
+          html: true
+        - content: "<strong>Network security, ethical hacking</strong>, risk assessment, threat analysis, incident response, tools like <strong>Wireshark & Splunk</strong>."
+          html: true
+
+    - cells:
+        - content: "Ideal For"
+        - content: "Creative problem-solvers who enjoy building and seeing results come to life."
+          html: false
+        - content: "Analytical thinkers who love numbers, trends, and solving patterns."
+          html: false
+        - content: "Detail-oriented people who enjoy puzzles, rules, and outsmarting threats."
+          html: false
+
+    - cells:
+        - content: "Day-to-Day Work"
+        - content: "Build and test websites/apps, integrate APIs, collaborate with designers, and launch features."
+          html: false
+        - content: "Clean and analyze data, build models, create dashboards, and deliver insights."
+          html: false
+        - content: "Monitor networks, test defenses, respond to incidents, and develop security policies."
+          html: false
+
+    - cells:
+        - content: "Job Titles"
+        - content: "Full Stack Developer, Front-End/Back-End Developer, AI Software Engineer, Web Developer."
+          html: false
+        - content: "Data Analyst, Data Scientist, Machine Learning Engineer, BI Analyst."
+          html: false
+        - content: "Cybersecurity Analyst, SOC Analyst, Penetration Tester, Security Consultant."
+          html: false
+
+    - cells:
+        - content: "Average U.S. Salary"
+        - content: "<strong>$75K–$110K</strong>"
+          text_align: "center"
+          html: true
+        - content: "<strong>$85K–$130K</strong>"
+          text_align: "center"
+          html: true
+        - content: "<strong>$80K–$120K</strong>"
+          text_align: "center"
+          html: true
+
+    - cells:
+        - content: "Bootcamp Schedule"
+        - content: "<strong>Full-Time (12 weeks)</strong> or <strong>Part-Time (20 weeks)</strong>."
+          text_align: "center"
+          html: true
+        - content: "<strong>Part-Time (16 weeks)</strong>."
+          text_align: "center"
+          html: true
+        - content: "<strong>Part-Time (16 weeks)</strong>."
+          text_align: "center"
+          html: true
+
+    - cells:
+        - content: "Course Delivery"
+        - content: "Online or In-Person (select cities)."
+          text_align: "center"
+          html: false
+        - content: "Online."
+          text_align: "center"
+          html: false
+        - content: "Online."
+          text_align: "center"
+          html: false
+
+    - cells:
+        - content: "Cost"
+        - content: "<strong>$10,999</strong> (discounts & scholarships available)."
+          html: true
+        - content: "<strong>$10,999</strong> (discounts & scholarships available)."
+          html: true
+        - content: "<strong>$9,999</strong> (discounts & scholarships available)."
+          html: true
+
+    - cells:
+        - content: "Payment Plans"
+        - content: "Monthly plans, upfront discounts, loans, and income-based options."
+          html: false
+        - content: "Monthly plans, upfront discounts, loans, and income-based options."
+          html: false
+        - content: "Monthly plans, upfront discounts, loans, and income-based options."
+          html: false
+
+    - cells:
+        - content: "Job Guarantee"
+        - content: "Available for additional <strong>$2,000</strong>, <strong>Included in the full time course option at no extra cost</strong>."
+          html: true
+        - content: "Available for additional <strong>$2,000</strong>"
+          html: true
+        - content: "Available for additional <strong>$2,000</strong>"
+          html: true
+
+    - cells:
+        - content: "Best For You If…"
+        - content: "You love creating things from scratch — websites, apps, or tools. You enjoy problem-solving and AI-powered software engineering. Great for career-switchers, freelancers, or those aiming for startup/tech jobs."
+          html: false
+        - content: "You enjoy working with data, spotting patterns, and solving real-world problems. Ideal if you want to break into AI or data-driven roles. A math/business background helps, but isn't required."
+          html: false
+        - content: "You want a future-proof career protecting data and systems. Perfect if you enjoy strategy, puzzles, or compliance work — or dream of working in IT security, law enforcement, or defense."
+          html: false
+
+    - cells:
+        - content: "Ready to start?"
+        - content: ""
+          html: false
+          primary_action:
+            text: "Apply Now"
+            path: "/us/apply"
+            variant: "default"
+            link_state:
+            course: "full-stack"
+          secondary_action:
+            text: "Learn More"
+            path: "/us/coding-bootcamps/full-time-full-stack-developer"
+            variant: "link"
+            link_state:
+            course: ""
+
+        - content: ""
+          html: false
+          primary_action:
+            text: "Apply Now"
+            path: "/us/apply"
+            variant: "default"
+            link_state:
+            course: "datascience-ml"
+          secondary_action:
+            text: "Learn More"
+            path: "/us/coding-bootcamps/datascience-machine-learning"
+            variant: "link"
+            link_state:
+        - content: ""
+          html: false
+          primary_action:
+            text: "Apply Now"
+            path: "/us/apply"
+            variant: "default"
+            link_state:
+              course: "cybersecurity"
+          secondary_action:
+            text: "Learn More"
+            variant: "link"
+            path: "/us/coding-bootcamps/cybersecurity"
+            link_state:
+
+two_columns_third:
+  proportions: [6, 6]
+  justify: "center"
+  heading:
+    text: "Still Not Sure Which Program Is Right for You?"
+    font_size: ["33px", "30px", "26px", "22px", "20px"]
+    style: '{ "lineHeight": "30px", "font-weight": "700" }'
+  sub_heading:
+    text: |
+      Talk to our admissions team. 
+      We'll help you choose the perfect program based on your goals, schedule, and career aspirations.
+      Here's what we'll cover:
+    font_size: ["20px", "20px", "20px", "20px", "20px"]
+    style: '{ "margin": "0", "font-weight": "400" }'
+  content:
+    style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
+    text: "Book a free consultation and get personalized guidance from our experts."
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
+    items:
+      - text: "Your career goals and interests"
+        icon: "check"
+      - text: "Time availability and schedule preferences"
+        icon: "check"
+      - text: "Previous experience and background"
+        icon: "check"
+      - text: "Financing options and scholarships"
+        icon: "check"
+      - text: "Job market insights for each field"
+        icon: "check"
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/hombre-joven-con-laptop.webp" 
+  button:
+    text: "Schedule Free Consultation"
+    color: "white"
+    background: "black"
+    path: "/us/apply"
+    link_state:
+      course: "consultation"

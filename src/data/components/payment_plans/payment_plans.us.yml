@@ -1,0 +1,66 @@
+title: "Launch your tech career, with payment plans that fit your budget"
+sub_title: "Explore our financing paths — from low monthly payments to income-based plans — and choose the option that works for you."
+options:
+  - id: pay_upfront
+    title: "Pay Upfront– Save 10%"
+    description: "Best value!"
+    bullets:
+      items:
+        - text: "Pay your tuition upfront and save 10%"
+        - text: "Available for all programs"
+
+  - id: installments
+    title: "Pay in Installments- Interest-Free over 6 months"
+    description: "Pay the regular tuition cost in interest-free installments."
+    bullets:
+      items:
+        - text: "Spread tuition across 6 months"
+        - text: "Available for all programs"
+
+  - id: edly
+    title: "Income-Based Payments"
+    description: "If you prefer to pay only after you land a job, we offer an e income-based loan option through Edly:"
+    cta: "👉 <a class='link' href='https://student.edly.co/sign-up/4geeks-academy' target='_blank' rel='noopener noreferrer'>Learn more at Edly</a>"
+    bullets:
+      items:
+        - text: "Pay only after you’re earning at least $35K/year "
+        - text: "Monthly payments adjust with your income "
+        - text: "No payments during unemployment or underemployment"
+        - text: "Cosigner-friendly"
+
+  - id: loans
+    title: "Payment Plans & Loans"
+    description: "We partner with trusted providers to offer simple, accessible, financing options tailored to your needs:"
+    bullets:
+      items:
+        - text: "Ascent Funding"
+          cta: "👉 <a class='link' href='https://partner.ascentfunding.com/4geeksacademy/' target='_blank' rel='noopener noreferrer'>Use the loan calculator</a>"
+          sub_items:
+            - text: "3 to 5-year loan terms"
+            - text: "Interest rates based on credit profile"
+            - text: "Defer payments until up to 9 months after graduation"
+            - text: "Possibility of including living expenses"
+            - text: "Cosigner release and 1% auto-pay discount available"
+        - text: "Climb Credit"
+          cta: "👉 <a class='link' href='https://climbcredit.com/resources/4geeks-academy-all-payment-options/' target='_blank' rel='noopener noreferrer'>Explore Climb’s options</a>"
+          sub_items:
+            - text: "3 to 5-year loan options with fixed monthly payments"
+            - text: "Monthly payments may start as low as $160+ (depending on loan & credit score)"
+            - text: "No prepayment penalties"
+
+        - text: "TFC Tuition"
+          sub_items:
+            - text: "Custom payment plans ranging from 1 to 3 years"
+            - text: "Great option for students with <strong>limited or low credit</strong>"
+            - text: "Low entry barrier and easy approval"
+            - text: "Competitive interest rates"
+  - id: scholarships
+    title: "Scholarships"
+    description: "Partial and full scholarships are available through mission-aligned organizations and location-based programs."
+    bullets:
+      items:
+        - text: "Amount covered varies by eligibility and availability."
+        - text: "Merit-based scholarship opportunities"
+        - text: "Need-based financial assistance"
+        - text: "Special programs through 4Geeks Scholarships"
+        - text: "Application support available"

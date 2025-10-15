@@ -1,0 +1,65 @@
+title: "Lanza tu carrera tecnológica con planes de pago que se ajusten a tu presupuesto"
+sub_title: "Explora nuestras opciones de financiamiento — desde pagos mensuales bajos hasta planes basados en ingresos — y elige la opción que funcione para ti."
+options:
+  - id: pay_upfront
+    title: "Pago Anticipado – Ahorra 10%"
+    description: "¡La mejor oferta!"
+    bullets:
+      items:
+        - text: "Paga tu matrícula por adelantado y ahorra 10%"
+        - text: "Disponible para todos los programas"
+
+  - id: installments
+    title: "Pago en Cuotas – Sin intereses durante 6 meses"
+    description: "Paga el costo regular de la matrícula en cuotas sin intereses."
+    bullets:
+      items:
+        - text: "Distribuye la matrícula en 6 meses"
+        - text: "Disponible para todos los programas"
+
+  - id: edly
+    title: "Pagos Basados en Ingresos"
+    description: "Si prefieres pagar solo después de conseguir un trabajo, ofrecemos una opción de préstamo basado en ingresos a través de Edly:"
+    cta: "👉 <a class='link' href='https://student.edly.co/sign-up/4geeks-academy' target='_blank' rel='noopener noreferrer'>Conoce más en Edly</a>"
+    bullets:
+      items:
+        - text: "Paga solo después de ganar al menos $35K/año"
+        - text: "Los pagos mensuales se ajustan con tus ingresos"
+        - text: "Sin pagos durante desempleo o subempleo"
+        - text: "Acepta co-firmantes"
+
+  - id: loans
+    title: "Planes de Pago y Préstamos"
+    description: "Nos asociamos con proveedores confiables para ofrecer opciones de financiamiento simples y accesibles, adaptadas a tus necesidades:"
+    bullets:
+      items:
+        - text: "Ascent Funding"
+          cta: "👉 <a class='link' href='https://partner.ascentfunding.com/4geeksacademy/' target='_blank' rel='noopener noreferrer'>Usa la calculadora de préstamos</a>"
+          sub_items:
+            - text: "Términos de préstamo de 3 a 5 años"
+            - text: "Tasas de interés basadas en perfil crediticio"
+            - text: "Diferir pagos hasta 9 meses después de graduación"
+            - text: "Posibilidad de incluir gastos de manutención"
+            - text: "Liberación de co-firmante y descuento del 1% por pago automático disponible"
+        - text: "Climb Credit"
+          cta: "👉 <a class='link' href='https://climbcredit.com/resources/4geeks-academy-all-payment-options/' target='_blank' rel='noopener noreferrer'>Explora las opciones de Climb</a>"
+          sub_items:
+            - text: "Opciones de préstamo de 3 a 5 años con pagos mensuales fijos"
+            - text: "Los pagos mensuales pueden comenzar desde $160+ (dependiendo del préstamo y puntaje crediticio)"
+            - text: "Sin penalidades por pago anticipado"
+        - text: "Opciones adicionales vía TFC Tuition"
+          sub_items:
+            - text: "Planes de pago personalizados de 1 a 3 años"
+            - text: "Excelente opción para estudiantes con **crédito limitado o bajo**"
+            - text: "Baja barrera de entrada y aprobación fácil"
+            - text: "Tasas de interés competitivas"
+  - id: scholarships
+    title: "Becas"
+    description: "Becas parciales y completas están disponibles a través de organizaciones alineadas con nuestra misión y programas basados en ubicación."
+    bullets:
+      items:
+        - text: "El monto cubierto varía según elegibilidad y disponibilidad."
+        - text: "Oportunidades de becas por mérito"
+        - text: "Asistencia financiera basada en necesidad"
+        - text: "Programas especiales a través de Becas 4Geeks"
+        - text: "Apoyo para aplicaciones disponible"

@@ -299,6 +299,7 @@ const VariantCarousel = ({
     <CarouselV2
       background={background || "#FBFCFC"}
       padding="40px 0"
+      padding_tablet="30px 0 80px 0"
       heading={title}
       content={paragraph}
       settings={{

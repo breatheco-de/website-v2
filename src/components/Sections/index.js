@@ -172,9 +172,10 @@ export const Container = styled(Fragment)`
         : null};
     align-self: ${(props) => props.alignSelf_tablet};
     order: ${(props) => props.order_tablet};
-    gap: ${(props) => (props) => props.gap_tablet};
+    gap: ${(props) => props.gap_tablet};
     column-count: ${(props) => props.columnCount_tablet};
     place-self: ${(props) => props.placeSelf_tablet};
+    grid-template-columns: ${(props) => props.gridTemplateColumns_tablet};
     background: ${(props) => props.background_tablet};
     display: ${(props) => props.display_tablet};
     position: ${(props) => props.position_tablet};
@@ -326,6 +327,7 @@ export const Div = styled.div`
     props.size ? `${(props.size / 12) * 100}%` : props.maxWidth || null};
   max-height: ${(props) => (props.maxHeight ? props.maxHeight : "none")};
   overflow: ${(props) => props.overflow};
+  box-shadow: ${(props) => props.boxShadow};
   overflow-wrap: ${(props) => props.overflowWrap};
   overflow-x: ${(props) => props.overflowX};
   grid-area: ${(props) => props.gridArea};
@@ -513,6 +515,7 @@ export const Div = styled.div`
     grid-column: ${(props) => props.gridColumn_tablet};
     grid-row: ${(props) => props.gridRow_tablet};
     justify-self: ${(props) => props.justifySelf_tablet};
+    grid-template-columns: ${(props) => props.gridTemplateColumns_tablet};
     justify-content: ${(props) =>
       justifyContentOptions[props.justifyContent_tablet]};
     z-index: ${(props) => props.zIndex_tablet};
@@ -743,6 +746,7 @@ export const Header = ({
   seo_title,
   title,
   paragraph,
+  paragraph_html,
   paragraphMargin,
   paragraphMargin_Tablet,
   height,
@@ -780,10 +784,26 @@ export const Header = ({
   fontFamily,
   zIndex,
   id,
+  textWrap,
+  colorVariant,
+  containerStyle,
 }) => {
   const multilineTitle = title
     .split("\n")
     .map((l) => <span className="d-block">{l}</span>);
+
+  const colorConfig = {
+    white: {
+      text: Colors.white,
+      seo: Colors.verylightGray2,
+    },
+    default: {
+      text: Colors.black,
+      seo: Colors.darkGray2,
+    },
+  };
+
+  const colors = colorConfig[colorVariant] || colorConfig.default;
   return (
     <Grid
       background={background}
@@ -807,6 +827,7 @@ export const Header = ({
         gridArea_tablet="1/1/1/15"
         maxWidth="1280px"
         margin="auto"
+        style={containerStyle}
       >
         {/* hacer cambios aqui ... remover svg en mobile */}
         <Div
@@ -819,8 +840,9 @@ export const Header = ({
             textAlign_tablet={textAlign_tablet}
             margin="0 0 11px 0"
             padding={paddingTitle || "0 20px"}
-            color={Colors.darkGray2}
+            color={colors.seo}
             fontSize={fontSize_seo}
+            textWrap="balance"
           >
             {seo_title}
           </H1>
@@ -837,27 +859,33 @@ export const Header = ({
             lineHeight_tablet={lineHeight_tablet || "60px"}
             fontFamily={fontFamily_title}
             textTransform={uppercase && "uppercase"}
+            fontWeight={fontWeight_title}
             zindex={zIndex}
-            color={Colors.black}
+            color={colors.text}
+            textWrap={textWrap}
           >
             {multilineTitle}
           </H2>
-          <SubTitle
-            width="auto"
-            letterSpacing="0.05em"
-            padding={paddingParagraph || "20px"}
-            padding_tablet={
-              paddingParagraph_tablet || paddingParagraph || "0 20px"
-            }
-            textAlign_tablet={textAlign_tablet}
-            margin={paragraphMargin || "26px 0"}
-            margin_tablet={paragraphMargin_Tablet}
-            fontSize={fontSize_paragraph}
-            fontWeight={fontWeight_paragraph}
-            color={Colors.black}
-          >
-            {paragraph}
-          </SubTitle>
+          {(paragraph || paragraph_html) && (
+            <SubTitle
+              width="auto"
+              letterSpacing="0.05em"
+              padding={paddingParagraph || "20px"}
+              padding_tablet={
+                paddingParagraph_tablet || paddingParagraph || "0 20px"
+              }
+              textAlign_tablet={textAlign_tablet}
+              margin={paragraphMargin || "26px auto"}
+              margin_tablet={paragraphMargin_Tablet}
+              fontSize={fontSize_paragraph}
+              fontWeight={fontWeight_paragraph}
+              maxWidth="64rem"
+              color={colors.text}
+              {...(paragraph_html
+                ? { dangerouslySetInnerHTML: { __html: paragraph_html } }
+                : { children: paragraph })}
+            />
+          )}
           {children}
         </Div>
         {svg_image ? (
@@ -865,7 +893,7 @@ export const Header = ({
             width="100%"
             display={display_mobile || "none"}
             display_tablet="flex"
-            gridArea_tablet="1/8/1/17"
+            gridArea_tablet="1/7/1/13"
           >
             {svg_image}
           </Div>

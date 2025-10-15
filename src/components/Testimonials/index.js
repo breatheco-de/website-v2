@@ -198,10 +198,10 @@ const filterTestimonialsByCategories = (testimonials, categories) => {
 
 const Testimonials = (props) => {
   let testimonialsArray = props.lang[0].node;
-
-  // First apply the existing filter for hidden/marquee logic
-  let baseFilteredTestimonials = testimonialsArray.testimonials.filter(
-    (item) => item.hidden !== true || item.include_in_marquee === true
+  let testimonialsFiltered = testimonialsArray.testimonials.filter(
+    (item) =>
+      (item.hidden !== true || item.include_in_marquee === true) &&
+      item.student_thumb
   );
 
   // Then apply category filtering and prioritization if categories are provided

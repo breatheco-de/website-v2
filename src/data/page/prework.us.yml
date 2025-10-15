@@ -1,0 +1,94 @@
+meta_info:
+  slug: prework
+  title: "Prework - Your Head Start into Tech | 4Geeks Academy"
+  description: "Start your coding journey with 4Geeks Academy Prework. Learn programming fundamentals, master GitHub, get mentor support, and build confidence before bootcamp."
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: ""
+  keywords: "coding bootcamp preparation"
+  redirects: ["/prework"]
+  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
+
+## BANNER - HEADER
+seo_title: "What is Prework"
+header:
+  title: "Prework at 4Geeks: Your Head Start into Tech"
+  paragraph: |
+    <span>Prework is the first step of every bootcamp. It combines self-paced study with live mentor support, so you're never on your own. You'll cover essential concepts, practice with our platforms, and build the habits that carry you through the program.</span>
+
+    <span>By the time your bootcamp begins, you'll already feel comfortable with the pace, the tools, and the support system that sets 4Geeks apart.</span>
+  tagline: "PREWORK AT 4GEEKS"
+  sub_heading: "By the time your bootcamp begins, you'll already feel comfortable with the pace, the tools, and the support system that sets 4Geeks apart."
+  image: "../../../static/images/woman-laptop-smile-bg.webp"
+  alt: "Students learning to code in prework"
+  button: "Start Your Journey"
+
+## WHAT YOU'LL LEARN SECTION
+what_you_will_learn:
+  title: "🔍 What You'll Learn & Do"
+  paragraph: |
+    Prework isn't just about content — it's about learning how to learn in a coding environment. You'll:
+  bullets:
+    - text: "Navigate platforms like <a href='https://4geeks.com/?utm_source=chatgpt.com' target='_blank'>4Geeks.com</a> and Slack"
+    - text: "Get familiar with GitHub and GitHub CodeSpaces"
+    - text: "Start using Rigobot and Learnpack for instant feedback"
+    - text: "Practice submitting projects"
+    - text: "Learn when and how to ask for help"
+    - text: "Use public support channels effectively"
+
+## HOW IT WORKS SECTION
+how_it_works:
+  title: "How It Works"
+  content: |
+    <li>Prework usually takes about 2 weeks, but you set the pace — some finish earlier, others may need a little longer. You do need to complete it before the bootcamp begins.</li>
+    <li>Once you enroll, you'll have immediate access to prework materials and slack support channels so you can start right away.</li>
+    <li>Attending Live Prework Classes (study halls) is mandatory. You'll work through exercises, share your screen, and get real-time help from a mentor.</li>
+  image: "../../../static/images/Group-6617.webp"
+  schedule:
+    title: "Prework Class Schedule (EST)"
+    classes:
+      - program: "Full Stack Development"
+        schedule: "Mon, Wed, Fri – 6:00 to 9:00 PM"
+        icon: fullstack_2
+      - program: "Data Science & Machine Learning"
+        schedule: "Mon, Wed – 6:00 to 9:00 PM"
+        icon: machine_2
+      - program: "Cybersecurity"
+        schedule: "Wed – 6:00 to 9:00 PM"
+        icon: cyber-security
+  note: "Joining early is optional but strongly encouraged — it's the best way to get ahead, ask questions in real time, and ease into the program."
+
+## WHY PREWORK MATTERS SECTION
+why_prework_matters:
+  title: "Why Prework Matters"
+  bullets:
+    - text: "Builds your confidence before class begins"
+      icon: rocket
+      style:
+        background: "linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%)"
+        shadow: "rgba(59, 130, 246, 0.14)"
+    - text: "Helps you master the basics so you can focus on advanced skills during the bootcamp"
+      icon: users
+      style:
+        background: "linear-gradient(135deg, #10b981 0%, #059669 100%)"
+        shadow: "rgba(16, 185, 129, 0.14)"
+    - text: "Gets you familiar with the tools, support systems, and learning style at 4Geeks"
+      icon: chart
+      style:
+        background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+        shadow: "rgba(245, 158, 11, 0.14)"
+    - text: "Makes your transition into tech smoother and less overwhelming"
+      icon: trophy
+      style:
+        background: "linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%)"
+        shadow: "rgba(139, 92, 246, 0.14)"
+
+## CTA SECTION
+cta:
+  title: "Ready to Start Your Prework?"
+  subtitle: "Enroll today and get instant access to Prework — your first step into a new tech career."
+  primary_button:
+    text: "Apply Now"
+    link: "/us/apply"
+  secondary_button:
+    text: "Learn More About Programs"
+    link: "/us/programs"

@@ -1,0 +1,34 @@
+cta:
+  title: "Toma el Próximo Paso en tu Carrera Profesional"
+  description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
+  primary:
+    title: "Agenda una Consulta gratuita de 15 Minutos"
+    description: "Obtén orientación personalizada de nuestros expertos en carreras. Descubre el camino tecnológico perfecto para tus objetivos y conoce nuestros programas."
+    image: "../../../../static/images/Group-6617.webp"
+    action_text: "¡Agendar ahora!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    benefits:
+      - "Hoja de ruta personalizada de carrera"
+      - "Recomendaciones de programas"
+      - "Perspectivas de la industria y expectativas salariales"
+    footer_text: "✨ Sesión gratuita de 15 minutos • Sin compromiso requerido"
+  secondary:
+    title: "Suscríbete a nuestro Boletín"
+    description: "Recibe las últimas perspectivas de la industria tecnológica, actualizaciones de cursos, historias de éxito y contenido exclusivo en tu bandeja de entrada."
+    image: "../../../../static/images/woman-glasses-laptop.png"
+    action_text: "Suscribirse"
+    action_url: ""
+    benefits:
+      - "Tendencias de la industria y perspectivas del mercado laboral"
+      - "Historias de éxito de estudiantes"
+      - "Descuentos exclusivos en cursos y acceso anticipado"
+    footer_text: "📧 Actualizaciones semanales • Cancela en cualquier momento • Sin spam, nunca"
+  newsletter_form:
+    placeholder_email: "Email *"
+    error_email: "Por favor ingresa un email válido"
+    button_submit: "Suscribirme"
+    button_loading: "Cargando..."
+    status_idle: "Solicitud"
+    status_error: "Hay errores en tu formulario"
+    status_correct_errors: "Corrige los errores"
+    success_message: "🎉 ¡Gracias! Te has suscrito exitosamente a nuestro boletín."

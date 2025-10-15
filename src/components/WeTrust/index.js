@@ -5,6 +5,9 @@ import { Div } from "../Sections";
 import { Colors } from "../Styling";
 
 const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
+  const backgroundColor = background || Colors.lightBlue;
+  const isBgFull = !!we_trust?.bg_full;
+
   return (
     <Div
       id="we-trust"
@@ -12,6 +15,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
       margin="0 auto"
       padding="0"
       padding_lg="0"
+      background={isBgFull && backgroundColor}
       padding_tablet="40px 40px"
       width="100%"
     >
@@ -21,7 +25,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
         padding_lg="40px"
         padding_tablet="40px 0"
         margin="0 auto"
-        background={background || Colors.lightBlue}
+        background={!isBgFull && backgroundColor}
         display="block"
         maxWidth="1280px"
       >
@@ -52,7 +56,7 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
               width_md="320px"
               height_md="320px"
               width_tablet="200px"
-              height_tablet="240px"
+              height_tablet="auto"
               boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
               boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
               flexDirection_tablet="column"
@@ -62,7 +66,13 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
               alignItems_tablet="normal"
               overflow="hidden"
             >
-              <Icon icon={box.icon} width="89px" height="89px" color={null} />
+              <Icon
+                style={{ flexShrink: 0 }}
+                icon={box.icon}
+                width="89px"
+                height="89px"
+                color={null}
+              />
               <Div
                 margin="0 0 0 15px"
                 margin_tablet="30px 0 0 0"
@@ -72,12 +82,39 @@ const WeTrust = ({ we_trust, background, titleProps, paragraphProps }) => {
               >
                 <H3
                   textAlign="left"
+                  width="auto"
                   fontSize="35px"
                   fontSize_tablet="65px"
                   fontFamily="Archivo-Black"
                   margin="0 0 30px 0"
+                  style={{
+                    display: "flex",
+                    flexWrap: "wrap",
+                    gap: "0",
+                    alignItems: "baseline",
+                    lineHeight: "1.2",
+                  }}
                 >
-                  {box.title}
+                  <span>{box.title}</span>
+                  {box?.label && (
+                    <Paragraph
+                      color="currentColor"
+                      fontSize="24px"
+                      width="auto"
+                      fontWeight="700"
+                      lineHeight="1.3"
+                      position="relative"
+                      top="-1px"
+                      letterSpacing="0.05em"
+                      style={{
+                        flex: "0 0 auto",
+                        whiteSpace: "nowrap",
+                        minWidth: "0",
+                      }}
+                    >
+                      {box.label}
+                    </Paragraph>
+                  )}
                 </H3>
                 <Paragraph
                   textAlign="left"

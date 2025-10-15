@@ -14,6 +14,8 @@ const ChooseYourProgram = ({
   landingTemplate,
   id,
   background,
+  containerStyles,
+  hideEmptyContent = false,
 }) => {
   const data = useStaticQuery(graphql`
     {
@@ -44,7 +46,13 @@ const ChooseYourProgram = ({
 
   if (info) info = info.node;
   return (
-    <Div id={id} ref={chooseProgramRef} background={background} padding="40px">
+    <Div
+      id={id}
+      ref={chooseProgramRef}
+      background={background}
+      padding="40px"
+      {...containerStyles}
+    >
       <Div
         display="block"
         background_tablet={landingTemplate ? Colors.white : "transparent"}
@@ -52,12 +60,23 @@ const ChooseYourProgram = ({
         margin_tablet="0 auto"
         margin_lg="0 auto"
       >
-        <Div textAlign="center" flexDirection="column" width="100%" zIndex="1">
-          <H2 padding="0 0 32px 0">{title || info.title}</H2>
-          <SubTitle padding="0 0 32px 0">
-            {paragraph || info.paragraph}
-          </SubTitle>
-        </Div>
+        {(!hideEmptyContent || title || paragraph) && (
+          <Div
+            textAlign="center"
+            flexDirection="column"
+            width="100%"
+            zIndex="1"
+          >
+            {(!hideEmptyContent || title) && (
+              <H2 padding="0 0 32px 0">{title || info.title}</H2>
+            )}
+            {(!hideEmptyContent || paragraph) && (
+              <SubTitle padding="0 0 32px 0">
+                {paragraph || info.paragraph}
+              </SubTitle>
+            )}
+          </Div>
+        )}
         <Div
           gap="15px"
           flexWrap="wrap"
@@ -114,46 +133,50 @@ const ChooseYourProgram = ({
                         />
                       </Div>
                     </Div>
-                    <Div
-                      display="flex"
-                      flexDirection="column"
-                      width="100%"
-                      alignContent="flex-start"
-                      // margin_tablet={landingTemplate ? "0 0 50px 0" : "0"}
-                      // margin_xs={landingTemplate ? "0 0 50px 0" : "0"}
-                      padding="20px 0px 30px 0px"
-                    >
-                      {program.description &&
-                        program.description
-                          .split("\n")
-                          .map((paragraph, index) => (
-                            <Paragraph
-                              key={index}
-                              letterSpacing="0.05em"
-                              display_tablet="inline"
-                              display_xs="inline"
-                              textAlign="left"
-                              fontSize="14px"
-                              lineHeight="22px"
-                              dangerouslySetInnerHTML={{ __html: paragraph }}
-                            />
-                          ))}
+                    {(!hideEmptyContent ||
+                      program.description ||
+                      program.description_mobile) && (
+                      <Div
+                        display="flex"
+                        flexDirection="column"
+                        width="100%"
+                        alignContent="flex-start"
+                        // margin_tablet={landingTemplate ? "0 0 50px 0" : "0"}
+                        // margin_xs={landingTemplate ? "0 0 50px 0" : "0"}
+                        padding="20px 0px 30px 0px"
+                      >
+                        {program.description &&
+                          program.description
+                            .split("\n")
+                            .map((paragraph, index) => (
+                              <Paragraph
+                                key={index}
+                                letterSpacing="0.05em"
+                                display_tablet="inline"
+                                display_xs="inline"
+                                textAlign="left"
+                                fontSize="14px"
+                                lineHeight="22px"
+                                dangerouslySetInnerHTML={{ __html: paragraph }}
+                              />
+                            ))}
 
-                      {program.description_mobile && (
-                        <Paragraph
-                          letterSpacing="0.05em"
-                          display="block"
-                          display_tablet="none"
-                          textAlign="left"
-                          fontSize="15px"
-                          lineHeight="19px"
-                          fontWeight="400"
-                          opacity="1"
-                        >
-                          {program.description_mobile}
-                        </Paragraph>
-                      )}
-                    </Div>
+                        {program.description_mobile && (
+                          <Paragraph
+                            letterSpacing="0.05em"
+                            display="block"
+                            display_tablet="none"
+                            textAlign="left"
+                            fontSize="15px"
+                            lineHeight="19px"
+                            fontWeight="400"
+                            opacity="1"
+                          >
+                            {program.description_mobile}
+                          </Paragraph>
+                        )}
+                      </Div>
+                    )}
                   </Div>
 
                   <Div

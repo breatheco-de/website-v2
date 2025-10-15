@@ -37,10 +37,10 @@ const convertToBgImage = (imageData) => {
 
 export const Colors = {
   blue: "#0084FF",
+  blue2: "#00698F",
   lightBlue: "#BBEAFC",
   lightBlue2: "rgba(199, 243, 253, 0.5)",
   darkBlue: "#2E2E38",
-  blue2: "#0097CD",
   veryLightBlue: "#C7F3FD",
   veryLightBlue2: "#E3F9FE",
   veryLightBlue3: "#F4F9FF",
@@ -53,8 +53,10 @@ export const Colors = {
   verylightGray3: "#F9F9F9",
   lightGray: "#ebebeb",
   lightGray2: "#C4C4C4",
+  lightGray3: "oklch(.556 0 0)",
   lightGreen: "#c4f7b7",
   green: "#20630d",
+  green2: "#10b981",
   darkGray: "#3A3A3A",
   darkGray2: "#606060",
   darkGray3: "#4D4D5C",
@@ -167,7 +169,7 @@ export const Span = styled.div`
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  font-weight: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
   ${Tooltip}:hover {
@@ -504,6 +506,7 @@ export const Button = styled(SmartButton)`
   font-size: ${(props) => props.fontSize};
   font-family: "Lato", sans-serif;
   text-transform: ${(props) => props.textTransform};
+  gap: ${(props) => props.gap};
   text-decoration: ${(props) => props.textDecoration || "none"};
   text-decoration-line: ${(props) => props.textDecorationLine || "none"};
   font-weight: ${(props) => props.fontWeight || "700"};
@@ -539,7 +542,8 @@ export const Button = styled(SmartButton)`
   justify-self: ${(props) => props.justifySelf};
   justify-content: ${(props) => props.justifyContent};
   box-shadow: ${(props) => props.boxShadow};
-  transition: ${(props) => props.transition || "all 0.3s ease"};
+  transition: ${(props) =>
+    props.transition || "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)"};
 
   /* Apply variant styles */
   ${(props) => {
@@ -552,6 +556,33 @@ export const Button = styled(SmartButton)`
   }}
 
   &:hover {
+    ${(props) => {
+      if (props.boxShadow) {
+        const transform = props.transform
+          ? `${props.transform} translateY(-2px)`
+          : "translateY(-2px)";
+        return `transform: ${transform};`;
+      }
+      return props.transform ? `transform: ${props.transform};` : "";
+    }}
+    ${(props) => {
+      if (props.boxShadow) {
+        const currentShadow = props.boxShadow;
+        // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
+        const solidShadowMatch = currentShadow.match(
+          /(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/
+        );
+        if (solidShadowMatch) {
+          const [, x, y, color] = solidShadowMatch;
+          const newX = Math.min(parseInt(x) + 2, parseInt(x) * 1.2);
+          const newY = Math.min(parseInt(y) + 2, parseInt(y) * 1.2);
+          return `box-shadow: ${newX}px ${newY}px 0px 0px ${color};`;
+        }
+        // For other shadows, add a soft additional shadow
+        return `box-shadow: ${currentShadow}, 0 4px 12px rgba(0, 0, 0, 0.15);`;
+      }
+      return "";
+    }}
     ${(props) =>
       props.variant === "outline"
         ? css`
@@ -562,6 +593,48 @@ export const Button = styled(SmartButton)`
             ${props.colorHover ? `background-color: ${props.colorHover};` : ""}
             ${props.colorHoverText ? `color: ${props.colorHoverText};` : ""}
           `}
+  }
+
+  &:active {
+    ${(props) => {
+      if (props.boxShadow) {
+        const transform = props.transform
+          ? `${props.transform} translateY(1px)`
+          : "translateY(1px)";
+        return `transform: ${transform};`;
+      }
+      return props.transform ? `transform: ${props.transform};` : "";
+    }}
+    ${(props) => {
+      if (props.boxShadow) {
+        const currentShadow = props.boxShadow;
+        // Detect if it's a solid shadow (format: Xpx Ypx 0px 0px color)
+        const solidShadowMatch = currentShadow.match(
+          /(\d+)px\s+(\d+)px\s+0px\s+0px\s+(.+)/
+        );
+        if (solidShadowMatch) {
+          const [, x, y, color] = solidShadowMatch;
+          const newX = Math.max(parseInt(x) - 2, parseInt(x) * 0.8);
+          const newY = Math.max(parseInt(y) - 2, parseInt(y) * 0.8);
+          return `box-shadow: ${newX}px ${newY}px 0px 0px ${color};`;
+        }
+        // For other shadows, reduce the intensity
+        return "box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);";
+      }
+      return "";
+    }}
+    transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: ${(props) => {
+      const focusShadow = "0 0 0 3px rgba(0, 132, 255, 0.3)";
+      if (props.boxShadow) {
+        return `${props.boxShadow}, ${focusShadow}`;
+      }
+      return focusShadow;
+    }};
   }
   @media ${Devices.xxs} {
     padding: ${(props) => props.padding_xxs};

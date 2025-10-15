@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import ReCAPTCHA from "react-google-recaptcha";
+import SafeReCAPTCHA from "../SafeReCAPTCHA";
 import { Container, Div, GridContainer } from "../Sections";
 import { Colors, RoundImage, Anchor, Button } from "../Styling";
 import { H3, H4 } from "../Heading";
@@ -312,11 +312,7 @@ const Footer = ({ yml }) => {
                   )}
               </Div>
               <Div width="fit-content" margin="10px auto 0 auto">
-                <ReCAPTCHA
-                  ref={captcha}
-                  sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                  size="invisible"
-                />
+                <SafeReCAPTCHA ref={captcha} size="invisible" />
               </Div>
             </>
           )}

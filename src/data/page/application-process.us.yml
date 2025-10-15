@@ -1,0 +1,75 @@
+meta_info:
+  slug: "application-process"
+  title: "Application Process | 4Geeks Academy"
+  description: "Learn how to join 4Geeks Academy and kickstart your new tech career. Simple application process with guidance every step of the way."
+  keywords: "4Geeks application, coding bootcamp application, join 4Geeks, tech career, coding academy"
+  image: "/images/4geeks-application-process.jpg"
+  visibility: "visible"
+  template: "application-process"
+  redirects: []
+  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
+
+seo_title: "Application Process - Join 4Geeks Academy"
+header:
+  title: "Your Path to Joining 4Geeks and Kickstarting Your New Career"
+  paragraph: "Applying is simple — and we'll guide you every step of the way. Here's how you go from curious to officially part of the 4Geeks community:"
+  image: "../../../static/images/career_launch.png"
+  alt: "Career Launch"
+
+apply_button:
+  text: "Apply Now"
+  path: "/us/apply"
+
+stepper:
+  title: "Your Application Journey"
+  sub_title: "Follow these simple steps to join 4Geeks Academy and start your tech career"
+  steps:
+    - title: "Apply Online"
+      description: "It only takes a few minutes to tell us about yourself."
+    - title: "Instant Next Steps"
+      description: "Right after you apply, you'll see a Thank You page with resources to get ahead:"
+      className: "accent"
+      sub_items:
+        - "📞 Call or text our Admissions Team right away (real people, real photos)."
+        - "📅 Book a 1:1 Google Meet with an advisor."
+        - "💻 Try free coding resources."
+        - "📘 Download our Career Guide."
+        - "✅ Learn about our Job Guarantee."
+    - title: "We Reach Out"
+      description: "Within 1 business day, an Admissions Rep will connect with you."
+      sub_items:
+    - title: "Chat About Your Goals"
+      description: "We'll talk about your background, start dates, tuition, and career outcomes — and answer all your questions so you know which program fits you best."
+    - title: "Choose Your Payment Plan"
+      description: "Explore financing, scholarships, income-based payments and the Job Guarantee with our team — and find the plan that works for you."
+    - title: "Secure Your Spot"
+      description: "Once you feel confident about your choices, pick your start date, sign your Enrollment Agreement, and complete your enrollment with a deposit (if required)."
+    - title: "Welcome to 4Geeks!"
+      description: "You'll get access to 4Geeks.com, our Slack community, and your prework checklist."
+    - title: "Start Your Prework"
+      description: "Get familiar with fundamental tools and concepts so you start strong from day one."
+
+iconogram:
+  heading:
+    text: "Do Our Bootcamps Deliver Results You Can Count On?"
+    style: '{ "textAlign": "center" }'
+  sub_heading:
+    text: "Yes - and we've got the numbers to back it up."
+  swipable: false
+  background: veryLightBlue3
+  icons:
+    - icon: "graduation-2"
+      title: "Job Placement Rate"
+      content: "84% of graduates were hired"
+      color: "#0084FF"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "briefcase-new"
+      title: "Average time to get hired"
+      content: "6 months after graduation"
+      color: "#E12D39"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "handmoney-new"
+      title: "Salary Increase"
+      content: "55% higher at new job"
+      color: "#0084FF"
+      content_style: '{ "fontSize": "20px" }'

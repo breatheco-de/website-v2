@@ -1,0 +1,74 @@
+meta_info:
+  slug: "proceso-de-aplicacion"
+  title: "Proceso de Aplicación | 4Geeks Academy"
+  description: "Aprende cómo unirte a 4Geeks Academy y comenzar tu nueva carrera en tecnología. Proceso de aplicación simple con orientación en cada paso."
+  keywords: "aplicación 4Geeks, aplicación bootcamp programación, unirse 4Geeks, carrera tecnológica, academia programación"
+  image: "/images/4geeks-application-process.jpg"
+  visibility: "visible"
+  template: "application-process"
+  redirects: []
+  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
+
+seo_title: "Proceso de Aplicación - Únete a 4Geeks Academy"
+header:
+  title: "Tu Camino para Unirte a 4Geeks e Impulsar Tu Nueva Carrera"
+  paragraph: "Aplicar es simple — y te guiaremos en cada paso del camino. Así es como pasas de curioso a ser oficialmente parte de la comunidad 4Geeks:"
+  image: "../../../static/images/career_launch.png"
+  alt: "Career Launch"
+
+apply_button:
+  text: "Inscríbete ahora"
+  path: "/es/aplica"
+
+stepper:
+  title: "Tu Proceso de Aplicación"
+  sub_title: "Sigue estos simples pasos para unirte a 4Geeks Academy e iniciar tu carrera tecnológica"
+  steps:
+    - title: "Aplica en Línea"
+      description: "Solo toma unos minutos contarnos sobre ti."
+    - title: "Siguientes Pasos Inmediatos"
+      description: "Justo después de aplicar, verás una página de Agradecimiento con recursos para avanzar:"
+      className: "accent"
+      sub_items:
+        - "📞 Llama o envía un mensaje a nuestro Equipo de Admisiones de inmediato (personas reales, fotos reales)."
+        - "📅 Agenda una reunión 1:1 por Google Meet con un asesor."
+        - "💻 Prueba recursos gratuitos de programación."
+        - "📘 Descarga nuestra Guía de Carrera."
+        - "✅ Conoce sobre nuestra Garantía de Trabajo."
+    - title: "Nos Ponemos en Contacto"
+      description: "Dentro de 1 día hábil, un Representante de Admisiones se conectará contigo."
+      sub_items:
+    - title: "Conversamos Sobre Tus Objetivos"
+      description: "Hablaremos sobre tu experiencia, fechas de inicio, matrícula y resultados profesionales — y responderemos todas tus preguntas para que sepas qué programa se ajusta mejor a ti."
+    - title: "Elige Tu Plan de Pago"
+      description: "Explora financiamiento, becas, pagos basados en ingresos y la Garantía de Trabajo con nuestro equipo — y encuentra el plan que funcione para ti."
+    - title: "Asegura Tu Lugar"
+      description: "Una vez que te sientas seguro sobre tus decisiones, elige tu fecha de inicio, firma tu Acuerdo de Inscripción y completa tu inscripción con un depósito (si es requerido)."
+    - title: "¡Bienvenido a 4Geeks!"
+      description: "Tendrás acceso a 4Geeks.com, nuestra comunidad de Slack y tu lista de verificación de trabajo previo."
+    - title: "Comienza Tu Trabajo Previo"
+      description: "Familiarízate con herramientas y conceptos fundamentales para que comiences fuerte desde el primer día."
+
+iconogram:
+  heading:
+    text: "¿Nuestros Bootcamps Entregan Resultados Comprobables?"
+    style: '{ "textAlign": "center" }'
+  sub_heading:
+    text: "Sí - y tenemos los números para respaldarlo."
+  swipable: false
+  background: veryLightBlue3
+  icons:
+    - icon: "graduation-2"
+      title: "Tasa de Contratación"
+      content: "84% de graduados fueron contratados"
+      color: "#0084FF"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "briefcase-new"
+      title: "Tiempo promedio para ser contratado"
+      content: "6 meses después de graduarse"
+      color: "#E12D39"
+      content_style: '{ "fontSize": "20px" }'
+    - icon: "handmoney-new"
+      title: "Aumento Salarial"
+      content: "55% de mejora salarial al egresar"
+      content_style: '{ "fontSize": "20px" }'

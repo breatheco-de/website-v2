@@ -1,6 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
 import { graphql, Link } from "gatsby";
-import ReCAPTCHA from "react-google-recaptcha";
 import BaseRender from "./_baseLayout";
 import { SessionContext } from "../session.js";
 import { contactUs } from "../actions.js";
@@ -12,6 +11,7 @@ import { Colors, Button } from "../components/Styling";
 import { Input, Alert, TextArea } from "../components/Form";
 import { H1, H2, H3, Paragraph } from "../components/Heading";
 import { HR, Grid, Div, Old_Grid } from "../components/Sections";
+import SafeReCAPTCHA from "../components/SafeReCAPTCHA";
 
 const Contact = (props) => {
   const { data, pageContext, yml } = props;
@@ -338,11 +338,7 @@ const Contact = (props) => {
                     />
                   </Div>
                   <Div width="fit-content" margin="10px auto 0 auto">
-                    <ReCAPTCHA
-                      ref={captcha}
-                      sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                      size="invisible"
-                    />
+                    <SafeReCAPTCHA ref={captcha} size="invisible" />
                   </Div>
                   <Div
                     direction="rtl"

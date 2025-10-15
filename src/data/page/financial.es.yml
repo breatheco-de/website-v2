@@ -6,6 +6,7 @@ meta_info:
   image: "/images/og-preview/finantial.es.png"
   keywords: "Financiacion 4Geeks Academy, Financiamiento 4Geeks Academy"
   redirects: ["/financiacion"]
+  hideGlobalCTA: true # Hides the global CTA because this page has its own DoubleActionCTA
 
 ## BANNER - HEADER
 seo_title: "Financiación y formas de pago en 4Geeks Academy"
@@ -60,6 +61,7 @@ iconogram:
     style: '{ "textAlign": "center", "width": "60%" }'
   sub_heading:
     text: ""
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
     style: '{ "textAlign": "center", "width": "60%" }'
   text_link: "#"
   swipable: false
@@ -115,114 +117,33 @@ who_is_hiring:
     - '/images/partner/blackstone.png'
     - '/images/partner/cemex.png'
 
+# translate this
 two_column:
   - image:
-      style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/Group-6626-with-border.webp
-    heading:
-      style: '{ "fontWeight": 400 }'
-      text: $20 millones en becas
-      font_size:
-        - 38px
-        - 38px
-        - 38px
-        - 21px
-        - 21px
-    sub_heading:
-      text: 1.456 personas se han beneficiado de nuestros programas de becas, de todos los orígenes posibles, lee aquí historias de los beneficiarios y proyectos.
-      font_size:
-        - 24px
-        - 24px
-        - 24px
-        - 16px
-        - 16px
-    button:
-      text: VER MÁS
-      color: white
-      background: black
-      hover_color: white
-      path: "/es/20-millones"
-    boxes:
-    - icon: rocket-2
-      title: "14"
-      text: Proyectos completados
-    - icon: handsheart
-      title: "1465"
-      text: Beneficiarios hasta ahora
-
-  - image:
-      style: '{ "backgroundSize": "contain" }'
-      src: /images/landing/20-million-column-4geeks.png
-    heading:
-      text: El 62% de los solicitantes de bootcamps son rechazados por razones financieras.
-      font_size:
-        - 38px
-        - 38px
-        - 38px
-        - 21px
-        - 21px
-    sub_heading:
-      text: 4Geeks está comprometido a eliminar el costo como un factor posible para evitar que individuos talentosos se conviertan en programadores.
-      font_size:
-        - 24px
-        - 24px
-        - 24px
-        - 16px
-        - 16px
-    content:
-      font_size:
-        - 16px
-      text: |
-        Gracias a una profunda red de más de 2000 socios y donantes de instituciones gubernamentales, organizaciones sin fines de lucro y empresas privadas, nuestra plataforma de becas se convierte en una de las más grandes del mundo.
-    button:
-      text: ÚNETE AL PROGRAMA
-      color: white
-      background: "blue"
-      hover_color: white
-      path: "#prices_and_payment"
-
-  - image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{ "backgroundSize": "contain"}'
       src: "/images/pretty-woman-in-a-computer.png"
+    background: "veryLightBlue"
     heading:
-      style: '{ "fontWeight": 400 }'
-      text: "¿Por qué ofrecemos garantía de empleo?"
-      font_size:
-        - 38px
-        - 38px
-        - 38px
-        - 21px
-        - 21px
+      style: '{ "fontWeight": 700 }'
+      text: "Need extra confidence? Add a Job Guarantee"
+      font_size: ["38px", "38px", "38px", "30px", "28px"]
     sub_heading:
-      style: '{ "color": "#4D4D5C", "fontWeight": 400 }'
-      text: "Estamos desafiando el modelo educativo tradicional. No se trata sólo de enseñar las habilidades relevantes; se trata de las oportunidades que crearemos para tu carrera. *No aplica para todos los mercados, países o estados donde opera 4Geeks"
-      font_size:
-        - 16px
-        - 16px
-        - 16px
-        - 16px
-        - 16px
+      style: '{ "color": "#4D4D5C", "fontWeight": 400, "textAlign": "justify" }'
+      text: 'For additional peace of mind, enroll with a Job Guarantee. If you don’t get hired after 9 months of graduation you’ll receive 
+            a <strong style="text-decoration: none; color: #000000; font-weight: 700;">full tuition refund</strong>. The job guarantee can also be financed.'
+      font_size: ["20px", "20px", "20px", "18px", "16px"]
+    content:
+      text: " "  
     bullets:
       item_style: ""
       items:
         - heading: ""
-          text: "Confiamos en la eficacia del programa"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Confiamos en la industria"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Confiamos en el proceso"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
-        - heading: ""
-          text: "Confiamos en ti"
-          icon: "check" #string with icon for example ['check', 'cicle', etc]
     button:
-        text: "APLICAR"
-        color: "white"
-        background: "blue"
-        hover_color: "white"
-        path: "/es/aplica"
+      text: "MORE DETAILS HERE"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "/us/job-guarantee"
 
 partners:
   paragraph: "¡No te pierdas los increíbles aliados de 4Geeks Academy! Aquí hay algunos de ellos."
@@ -247,25 +168,175 @@ partners:
       url: ""
       image: "../../../static/images/allies/idb.png"
       alt: "Inter-American Development Bank"
-  link_text: "See all parthers"
-  link_to: "/us/partners"
+  link_text: "Ver todos los partners"
+  link_to: "/es/alianzas"
 
 we_trust_section:
-  title: Los números que nos respaldan
+  title: Educación Tecnológica Asequible con Resultados Comprobados
   text: |
-    Este es un programa sostenible comprobado, funciona y seguirá funcionando.
+    Nuestros programas ofrecen el mayor valor con la menor inversión en educación tecnológica. Por eso Forbes nos reconoció en 2024 como el Mejor Bootcamp Full-Stack Online y el Mejor Bootcamp de Ciencia de Datos Online para Estudiantes con Presupuesto Limitado.
   boxes:
     - icon: briefcase-2
-      title: 82%
-      text: Tasa de inserción laboral
-    - icon: chart
-      title: "60K"
-      text: Ingreso promedio
+      title: "84%"
+      text: Tasa de colocación laboral
     - icon: graduation-2
-      title: "20MM"
-      text: Millones en becas y contando
+      title: "3-6"
+      label: "meses"
+      text: Tiempo promedio para conseguir empleo
+    - icon: chart
+      title: "55%"
+      text: Aumento salarial después de graduarse
 
+data_table:
+  title:
+    text: "BENEFICIOS Y REQUISITOS DE FINANCIAMIENTO EN UN VISTAZO"
+  sub_title: ""
+  table_styling:
+    header_style:
+      fontSize: "16px"
+      fontSize_tablet: "16px"
+      fontWeight: "700"
+      fontFamily: "var(--font-sans)"
+    cell_style:
+      fontSize: "16px"
+      fontSize_tablet: "16px"
+      fontWeight: "400"
+      fontFamily: "var(--font-sans)"
+      lineHeight: "1.5"
+    table_style:
+      borderRadius: "12px"
+      boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)"
+    # DataTable behavior props
+    table_props:
+      stickyHeaders: true
+      withBorder: true
+  columns:
+    - title: "Modalidad"
+    - title: "Pago Total"
+    - title: "Cuotas Flexibles (TFC)"
+    - title: "Financiamiento (Ascent/Climb)"
+    - title: "Paga Cuando Ganes (Edly)"
+  rows:
+    - cells:
+        - content: "Descuento"
+        - content: "10% off"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+    - cells:
+        - content: "Verificación de Crédito"
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: "Fácil Acceso"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+        - content: "Requerido"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+        - content: "Required"
+          icon: "check"
+          gap: "4px"
+          size: "16px"
+          icon_position: "left"
+          icon_color: "#28a745"
+          icon_style: {
+            position: "relative",
+            bottom: "-1px"
+          }
+          html: false
+    - cells:
+        - content: "Diferir Pagos"
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "check"
+          size: "22px"
+          icon_color: "#28a745"
+          html: false
+        - content: ""
+          icon: "check"
+          size: "22px"
+          icon_color: "#28a745"
+          html: false
+    - cells:
+        - content: "Pagar Una Vez Contratado"
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "cross"
+          icon_color: "#dc3545"
+          html: false
+        - content: ""
+          icon: "check"
+          size: "22px"
+          icon_color: "#28a745"
+          html: false
 
+cta:
+  title: "Da el Próximo Paso en tu Carrera Profesional"
+  description: "Únete a miles de estudiantes que han transformado sus carreras con 4Geeks Academy. Obtén orientación personalizada y mantente actualizado con lo último en tecnología."
+  primary:
+    title: "Agenda una Consulta Gratuita de 15 Minutos"
+    description: "Obtén orientación personalizada de nuestro equipo de admisiones. Descubre el programa tecnológico que se ajusta a tus objetivos y explora opciones flexibles de financiamiento."
+    image: "../../../static/images/Group-6617.webp"
+    action_text: "¡Agendar ahora!"
+    action_url: "https://calendly.com/epilowsky-4geeksacademy/30min"
+    footer_text: "✨ Sesión gratuita de 15 minutos • Sin compromiso requerido"
+  secondary:
+    title: "Comienza tu viaje hoy"
+    description: "Da el siguiente paso hacia tu carrera tecnológica. Completa el formulario para obtener todos los detalles del programa y conectar con nuestro equipo de admisiones."
+    image: "../../../static/images/woman-glasses-laptop.png"
+    action_text: "Aplicar ahora"
+    action_url: "/es/aplica"
 
 ## PAYMENT GUIDE SECTION
 # payment_guide:

@@ -7,12 +7,34 @@ meta_info:
   keywords: null
   redirects: []
 
-seo_title: "Testimonios e historias de éxito de 4Geeks Academy"
+seo_title: "Testimonios de estudiantes y historias de éxito"
 header:
-  title: "¿QUÉ DICEN NUESTROS ALUMNOS?"
-  paragraph: "Aprender a codificar puede llevar a diferentes caminos. Nuestros graduados se inscribieron con un objetivo: cambiar su futuro. Estos son algunos de nuestros ex alumnos que tomaron la decisión de impulsar sus carreras."
+  title: "Lo que dicen nuestros graduados: del bootcamp a la carrera profesional"
+  paragraph: "En 4Geeks Academy, los estudiantes no solo adquieren habilidades tecnológicas — transforman sus vidas. Estas historias de éxito de nuestra comunidad global muestran cómo los graduados pasaron del bootcamp a una carrera profesional, demostrando que con el apoyo adecuado, la tecnología es para todos."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   image_alt: "Personas que cambiaron sus carreras al Aprender a Programar"
+
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Top Reviews on Switchup, Course Report and More"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
 
 images:
   - name: "Facebook"
@@ -31,4 +53,12 @@ images:
     image: "../../../static/images/partner/discord-gray.png"
 
 partners:
-  title: Las mejores empresas contratan a nuestros estudiantes
+  title: "¿Quiénes contratan a nuestros graduados?"
+  sub_heading: "Desde startups emergentes hasta empresas Fortune 500, nuestros alumnos hoy impulsan la innovación en compañías líderes del sector tecnológico."
+
+cta:
+  title: "¿Listo para Escribir tu Propia Historia?"
+  paragraph: "El próximo testimonio podría ser tuyo. Únete a miles de estudiantes que han transformado sus vidas con 4Geeks — tú también puedes."
+  button:
+    text: "Aplicar Ahora"
+    path: "/es/apply"

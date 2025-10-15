@@ -897,10 +897,12 @@ export const query = graphql`
 
           we_trust_section {
             title
+            bg_full
             text
             boxes {
               icon
               title
+              label
               text
             }
           }

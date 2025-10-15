@@ -1,6 +1,5 @@
 import React, { useState, useContext, useRef } from "react";
 import { graphql, navigate } from "gatsby";
-import ReCAPTCHA from "react-google-recaptcha";
 import { Div, GridContainer, Header, Grid } from "../components/Sections";
 import { H3, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
@@ -13,6 +12,7 @@ import { apply, tagManager } from "../actions";
 import PhoneInput from "../components/LeadForm/PhoneInput";
 import Modal from "../components/Modal_v2";
 import { isWindow } from "../utils/utils";
+import SafeReCAPTCHA from "../components/SafeReCAPTCHA";
 
 const us = {
   "(In-person and from home available)": "(In-person and from home available)",
@@ -327,6 +327,8 @@ const Apply = (props) => {
         padding_tablet="64px 0 "
         seo_title={yml.seo_title}
         title={yml.header.title}
+        paragraph_html={yml.header.paragraph}
+        fontSize_paragraph="20px"
         margin="90px 0 0 0"
         position="relative"
       >
@@ -795,11 +797,7 @@ const Apply = (props) => {
                   </Div>
                 ))}
             <Div width="fit-content" margin="10px auto 0 auto">
-              <ReCAPTCHA
-                ref={captcha}
-                sitekey={process.env.GATSBY_CAPTCHA_KEY}
-                size="invisible"
-              />
+              <SafeReCAPTCHA ref={captcha} size="invisible" />
             </Div>
             <Div
               flexDirection_tablet="column"
@@ -908,9 +906,12 @@ const Apply = (props) => {
           </H3>
           {yml.right.content_section.map((m, i) => {
             return (
-              <Paragraph textAlign="left" margin="20px 0" key={i}>
-                {m}
-              </Paragraph>
+              <Paragraph
+                textAlign="left"
+                margin="20px 0"
+                key={i}
+                dangerouslySetInnerHTML={{ __html: m }}
+              />
             );
           })}
         </Div>

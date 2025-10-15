@@ -69,8 +69,9 @@ two_column_left:
 
 we_trust_section:
   title: Does the Job Guarantee Deliver Results You Can Count On?
+  bg_full: true
   text: |
-    Yes — and we've got the numbers to back it up    
+    Yes — and we've got the numbers to back it up.
     <br><br>
     These stats reflect our full graduate community and demonstrate the proven impact of our programs across the board.
     <br><br>
@@ -80,8 +81,9 @@ we_trust_section:
       title: "84%"
       text: Job placement rate
     - icon: graduation-2
-      title: "3 - 6"
-      text: Months on avg. to get hired
+      title: "3-6"
+      label: "months"
+      text: Average time to get hired
     - icon: chart
       title: "55%"
       text: Salary increase after graduation

@@ -1,0 +1,154 @@
+---
+globs: src/templates/*
+alwaysApply: false
+---
+
+### Rule: Template Architecture and YAML-Driven Rendering
+- **Purpose**: Maximize flexibility via YAML configuration while minimizing direct code edits to ensure maintainable, readable code for AI systems and human developers.
+- **Scope**: All files in `src/templates/` except foundational base templates (`_baseLayout.js`, `_baseLandingLayout.js`, `_baseBlogLayout.js`).
+- **Exclusions**: Do not enforce these rules on `_base*` templates; they serve as shared dependencies.
+- **Version**: v1.0, 2025-08-21
+
+### 1) YAML-First Composition
+- **Single source of truth**: All visual content, order, and most styling must come from YAML.
+- **Components array (preferred)**: Templates SHOULD support a `components` array in their page YAML to describe page sections and order.
+```yaml
+components:
+  - name: "hero"
+    position: 1 #EXAMPLE
+    layout: "header"
+    heading: { text: "Title", font_size: ["40px","34px","30px","26px","22px"] }
+    sub_heading: { text: "Subtitle", style: '{"textAlign":"left"}' }
+
+  - name: "selling_points"
+    position: 3 #NON-SECUENCIAL NUMBERS TO ENSURE QUICK ADDITIONS
+    layout: "two_column"
+    proportions: [6, 6]
+    background: "veryLightBlue3"  # resolves Color token or raw CSS color
+    left:
+      image: { src: "/images/example.png", style: '{"backgroundSize":"contain"}' }
+    right:
+      heading: { text: "Why us", style: '{"fontWeight":700}' }
+      sub_heading: { text: "Clear value" }
+      bullets:
+        item_style: ''
+        items:
+          - { text: "First point" }
+          - { text: "Second point" }
+      button: { text: "Learn more", path: "/path", background: "black", color: "white" }
+```
+- **Fallback support**: If a template historically uses named blocks (e.g., `two_column`, `iconogram`), continue to support them, but prioritize migration to `components`.
+- **Language**: Pages should have `.us.yml` and `.es.yml` with mirrored keys when both languages exist.
+
+### 2) Dynamic Component Management (landing_a.js as the model)
+- **Registry-based rendering**: Use a layout registry (e.g., `landingSections`) that maps `layout` → React component.
+- **Dynamic loop**: Render components by iterating the YAML `components` array sorted by `position`.
+```javascript
+// Pseudocode pattern for templates
+import { landingSections } from "../components/Landing"; // shared registry
+
+{yml.components
+  ?.slice()
+  .sort((a, b) => (a.position || 0) - (b.position || 0))
+  .map((section, idx) => {
+    const layout = section.layout;
+    const Renderer = landingSections[layout];
+    if (!Renderer) return null; // Guard unknown layouts
+    return (
+      <Renderer
+        key={section.name || `${layout}-${idx}`}
+        yml={section}
+        session={session}
+      />
+    );
+  })}
+```
+- **Props pass-through**: Prefer passing the entire section via `yml={section}` rather than reconstructing props in the template.
+- **Avoid hardcoding**: Do not hardcode component ordering, margins, or colors; default these in components and allow YAML overrides.
+
+### 3) Styling Standards (design system only)
+- **Use design system**: Import from `components/Styling` and `components/Heading`.
+  - Typography: `H1..H5`, `Paragraph`, `Small`
+  - UI primitives: `Button`, `Anchor`, `Img`, `ImgV2`, `StyledBackgroundSection`
+  - Tokens: `Colors`
+- **Inline style policy**:
+  - YAML may include a `style` field (JSON string) passed to `style` for per-page variations.
+  - Do not author ad-hoc style objects in templates; prefer component props and design tokens.
+- **Color resolution**: Components must resolve color tokens as `Colors[value] || value` to accept both semantic tokens and raw CSS (e.g., `#F4F9FF`).
+- **Variants**: Where applicable, implement object/function-based variants (see `styling-component` rule) instead of if/else chains.
+
+### 4) GraphQL Query Standards
+- **Minimize overfetch**: Query only the fields used by components.
+- **Consistent keys**: Prefer `heading`, `sub_heading`, `bullets`, `content`, `button`, `image`, `background`, `proportions` across templates.
+- **Language scoping**: Always filter by `fields.lang`.
+- **Component-friendly queries**:
+  - With `components` arrays, query nested fields broadly enough for typical component props without page-specific coupling.
+```graphql
+# Example shape for a page with components
+allPageYaml(filter: { fields: { file_name: { eq: $file_name }, lang: { eq: $lang } } }) {
+  edges {
+    node {
+      seo_title
+      components {
+        name
+        position
+        layout
+        background
+        proportions
+        left { image { src style shadow link } heading { text font_size style } sub_heading { text font_size style } bullets { item_style items { heading text icon icon_color } } content { text font_size style path } button { text color background hover_color path } boxes { icon title text } }
+        right { image { src style shadow link } heading { text font_size style } sub_heading { text font_size style } bullets { item_style items { heading text icon icon_color } } content { text font_size style path } button { text color background hover_color path } boxes { icon title text } }
+      }
+    }
+  }
+}
+```
+- **Backwards compatibility**: If a template still uses named sections (e.g., `two_column`), include those fields until migrated.
+
+### 5) Component Contracts
+- **TwoColumn**:
+  - Accepts: `left`, `right`, `proportions`, `alignment`, `background`.
+  - Background: `background={Colors[background] || background}`.
+  - `left`/`right` accept: `image`, `heading`, `sub_heading`, `bullets`, `content`, `button`, `boxes`.
+  - Avoid hardcoded paddings/margins; expose YAML overrides (e.g., `gap_tablet`, `padding_tablet`).
+- **Iconogram, PricesAndPayment, PaymentPlans, etc.**:
+  - Map props 1:1 with YAML keys.
+  - Gracefully handle missing optional fields.
+
+### 6) Avoiding Hardcoded Values
+- No hardcoded colors, copy, or component order in templates.
+- Use `Colors` tokens; allow raw CSS fallback.
+- Spacing defaults live in components; override via YAML when needed.
+
+### 7) Error Tolerance and Defaults
+- Guard against missing keys:
+  - Use `Array.isArray(...)` before `.map`.
+  - Render nothing for absent optional blocks.
+  - Provide sensible defaults for sizes/spaces.
+
+### 8) Migration Guidance
+- New templates SHOULD adopt the `components` array pattern (see `landing_a.js`).
+- Existing templates MAY keep legacy sections but SHOULD migrate progressively.
+- When adding a new layout type, update the shared registry and document the YAML shape.
+
+### 9) Testing and Review
+- All changes must pass `npm run test`.
+- ESLint and accessibility checks must be green.
+- Review checklist:
+  - No hardcoded values replaceable by YAML.
+  - GraphQL queries fetch only needed fields.
+  - Color tokens resolved correctly (`Colors[token] || token`).
+
+### 10) Examples and Improvements (from landing_a.js)
+- Use `components` ordering via `position` for predictable rendering.
+- Pass entire section objects to components to reduce prop churn.
+- Improvements to replicate across templates:
+  - Centralize the component registry for reuse.
+  - Normalize prop names across layouts (`heading`, `sub_heading`, `bullets`, `content`, `button`).
+  - Ensure every layout supports `background` consistently.
+
+### Enforcement
+- **Tools**: Code review, ESLint, CI checks.
+- **Checks**:
+  - Templates render from YAML-driven inputs.
+  - No hardcoded values where YAML exists.
+  - GraphQL queries match component needs; no unused fields.

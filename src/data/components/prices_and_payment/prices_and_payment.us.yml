@@ -11,11 +11,11 @@ we_accept: "We Accept:"
 other_payment_options: "Other payment options"
 top_label: Location
 top_label_2: Program
-plans_title: Payment plans
-plan_details: "Pick your flexible payment plan."
-financing_message: "We work with trusted partners to offer flexible and affordable financing, so you can focus on your future, not your fees."
+plans_title: COURSE TUITION AND PAYMENT OPTIONS
+plan_details: "Pick your flexible payment plan and focus on your future, not your fees."
+financing_message: "We work with trusted partners to offer flexible and affordable financing—so you can focus on your future, not your fees."
 select: Select the location and payment option that suits you best.
-select_2: Select the location, program and payment option that best meets your needs
+select_2: Select your program and location
 job_guarantee:   
   - slug: usa_academies
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
@@ -79,7 +79,7 @@ cta:
     book_call: "Book a call →"
     apply_link: "https://calendly.com/epilowsky-4geeksacademy/30min?month=2025-08"
   international:
-    book_call: "Apply now"
+    book_call: "Request a Syllabus"
     apply_link: "/us/apply"
   more_details: More details
   more_details_link: /us/financials

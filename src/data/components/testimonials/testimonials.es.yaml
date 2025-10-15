@@ -3,6 +3,9 @@ button_text: Ver experiencias
 button_link: "/es/testimonios"
 source_url_text: "Ver reseña"
 
+title: "Historias de éxito de nuestros graduados"
+paragraph: "Cómo 4Geeks cambió sus carreras"
+
 testimonials:
   - student_name: Peter Schwarck
     include_in_marquee: true
@@ -559,7 +562,7 @@ testimonials:
     short_content: "Consultor de preventas en TCS"
     content: "Mi experiencia en 4Geeks ha sido increíble. No solo me brindaron una educación de calidad, sino que me dieron las herramientas necesarias para triunfar en el mercado actual. El equipo de la academia estuvo presente en cada etapa de mi aprendizaje, guiándome y apoyándome en todo momento. En un mundo post-COVID, donde la transformación digital es esencial, el valor de las soluciones tecnológicas se ha disparado. Gracias a 4Geeks, me siento preparado para enfrentar los desafíos y aprovechar las oportunidades que se presenten en este emocionante campo."
 
-  - student_name: Hernan García
+  - student_name: Hernán García
     slug: "her-gar"
     country:
       iso: us

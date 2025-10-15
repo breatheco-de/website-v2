@@ -7,12 +7,34 @@ meta_info:
   keywords: null
   redirects: []
 
-seo_title: "Testimonials"
+seo_title: "Student Testimonials & Success Stories"
 header:
-  title: "WHAT DO OUR STUDENTS SAY?"
-  paragraph: "Learning to code can lead to different paths. Our graduates enrolled with one goal: to change their futures. Here are some of our alumni who made the decision to boost their careers."
+  title: "What Our Graduates Say: From Bootcamp to Career"
+  paragraph: "At 4Geeks Academy, students don’t just learn tech skills — they transform their lives. These success stories from our global community highlight how graduates went from bootcamp to career, proving that with the right support, tech is for everyone."
   image: "../../../static/images/locations/caracas-loc-2.jpeg"
   image_alt: "Meet The People That Changed Their Careers With Code"
+
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Top Reviews on Switchup, Course Report and More"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
 
 images:
   - name: "Facebook"
@@ -31,4 +53,12 @@ images:
     image: "../../../static/images/partner/discord-gray.png"
 
 partners:
-  title: Top companies hiring our students
+  title: Who is hiring our Graduates?
+  sub_heading: "From startups to Fortune 500s, our students are now thriving at companies across the tech world."
+
+cta:
+  title: "Ready to Write Your Own Story?"
+  paragraph: "The next testimonial could be yours. Join thousands of students who have transformed their lives with 4Geeks — you can too."
+  button:
+    text: "Apply Now"
+    path: "/us/apply"

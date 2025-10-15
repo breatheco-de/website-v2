@@ -179,11 +179,15 @@ const Home = (props) => {
                   </Div>
                 ))}
               </Div>
-              <Div width="100%" justifyContent="start">
+              <Div
+                width="100%"
+                justifyContent_tablet="start"
+                justifyContent="center"
+              >
                 <Button
                   variant="full"
                   justifyContent="center"
-                  width="140px"
+                  width="100%"
                   width_tablet="fit-content"
                   color={Colors.blue}
                   margin="0 10px 0 0"

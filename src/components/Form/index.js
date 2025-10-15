@@ -17,7 +17,7 @@ const regex = {
 
 const StyledInput = styled.input`
   background-color: ${(props) => (props.valid ? props.bgColor : "#FAF0F0")};
-  height: 40px;
+  height: ${(props) => props.height || "40px"};
   width: ${(props) => props.width || "100%"};
   padding: 5px 10px;
   margin: ${(props) => props.margin || "5px 0px"};

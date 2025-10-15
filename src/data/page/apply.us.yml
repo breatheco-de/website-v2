@@ -10,10 +10,10 @@ meta_info:
 ## APPLY HEADING
 seo_title: "Apply to 4geeks Academy Bootcamp"
 header:
-  title: "Apply to 4Geeks"
+  title: "Your Future in Tech Starts Here"
   image:
   image_alt: "Apply to 4Geeks Academy, Coding Bootcamp"
-  paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  paragraph: "You’re one step closer to your new career in tech — congratulations! Fill out the form below, and our admissions team will walk you through the next steps.<br/><span style=\"color:#6E6B6B;font-size:18px\"> (And don’t worry — you won’t be committing to anything yet, just starting the conversation.)</span>"
   button:
 
 ## APPLY LEFT SECTION
@@ -55,13 +55,13 @@ left:
 ## APPLY RIGHT SECTION
 
 right:
-  heading: "What to expect after applying"
+  heading: "What Happens Next?"
   content_section:
-    - "1- Receive an email from an advisor"
-    - "2- Get more information about the program, campus, community, outcomes, and more."
-    - "3- Get detailed information about scholarships and financing options."
-    - "4- Receive the program syllabus and info about our unlimited mentorship and career support."
-    - "Now you're ready to make the best decision for your career!"
+    - "<strong>• Instant confirmation:</strong> We'll send you the syllabus by email right away."
+    - "<strong>• Personal follow-up:</strong> Our admissions team will reach out by text and phone to set up a quick call."
+    - "<strong>• Ask us anything:</strong> Programs, schedules, financing, career support — we'll walk you through your options and share all the details."
+    - "<strong>• Decide with confidence:</strong>  You'll have all the info you need to choose the path that's right for you. And we are here to help."
+    - "<strong>Now you're ready to make the best decision for your career!</strong>"
 
   ## TESTIMONIAL SECTION
 testimonial_header:

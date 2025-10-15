@@ -4,19 +4,18 @@ job_guarantee_courses: ["full-stack", "cybersecurity", "datascience-ml", "machin
 
 pricing_error: En este momento no estan disponibles los precios para
 pricing_error_contact: Para más información por favor contáctanos a info@4geeksacademy.com.
-get_notified: Pregunta por nuestras Becas. Siempre estamos trabajando y aliándonos para poder ofrecerte mejores opciones. 
-contact_carrer_advisor: Contáctanos para más información.
+get_notified: ¡Promociones adicionales y becas podrían estar disponibles! Ponte en contacto con uno de nuestros
+contact_carrer_advisor: asesores financieros para obtener más información.
 contact_link: /es/contactanos
 we_accept: "Aceptamos:"
 other_payment_options: "Otras opciones de pago"
 top_label: Sede
 top_label_2: Programa
-recomended: Recomendado
-plans_title: Planes de pago
-plan_details: Invierte en tu futuro, sin preocupaciones
-financing_message: "Elige un plan de pago flexible y enfócate en tu futuro, no en tus tarifas."
-select: Selecciona la ubicacion y el plan que mejor se ajusta a ti
-select_2: Selecciona la ubicación, el programa y la opción de pago que mejor se adapte a sus necesidades
+plans_title: OPCIONES DE MATRÍCULA Y PAGO DEL CURSO
+plan_details: "Elige tu plan de pago flexible y enfócate en tu futuro, no en tus tarifas."
+financing_message: "Trabajamos con socios de confianza para ofrecer financiamiento flexible y asequible, para que puedas enfocarte en tu futuro, no en tus tarifas."
+select: Selecciona la ubicación y la opción de pago que mejor te convenga.
+select_2: Selecciona tu programa y ubicación
 job_guarantee:   
   - slug: usa_academies
     academies: ['atlanta-usa', 'chicago-usa', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'toronto-canada', 'austin-usa', 'dallas-usa']
@@ -32,9 +31,6 @@ job_guarantee:
     monthly_label: "Desde $349 USD al mes"
   - slug: europe_academies
     academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain', 'berlin-germany', 'hamburg-germany', 'munich-germany', 'dublin-ireland', 'milan-italy', 'rome-italy', 'lisbon-portugal']
-    courses: ['full-stack', 'cybersecurity', 'datascience-ml', 'machine-learning']
-    title: "Inscríbete con Garantía de Empleo"   
-    description: "Obtén un empleo dentro de 9 meses de graduarte o te devolvemos tu dinero."   
     monthly_label: "Desde €200 al mes"
   - slug: all_academies_applied_ai
     academies: ['all']
@@ -71,7 +67,7 @@ not_available_job_guarantee: '<style type="text/css">p { font-family: "Lato",san
 button:
   button_text: Ver planes y precios
   button_link: "/es/financiacion"
-loading: Cargando Recursos...Elige un plan de pago flexible y enfócate en tu futuro, no en tus tarifas.
+loading: Cargando Recursos...
 
 cta:
   advisor_text: ¡Agenda una llamada con un asesor para encontrar una opción de pago u oferta especial que funcione para ti!
@@ -79,7 +75,7 @@ cta:
     book_call: "Agendar llamada →"
     apply_link: "https://calendly.com/epilowsky-4geeksacademy/30min?month=2025-08"
   international:
-    book_call: "Aplicar ahora"
+    book_call: "Solicitar Syllabus"
     apply_link: "/es/apply"
   more_details: Más detalles
   more_details_link: /es/financiacion

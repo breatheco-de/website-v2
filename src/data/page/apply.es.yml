@@ -10,10 +10,10 @@ meta_info:
 ## APPLY HEADING
 seo_title: "Aplica a 4Geeks Academy Bootcamp"
 header:
-  title: "Aplica a 4Geeks"
+  title: "Tu Futuro en Tecnología Comienza Aquí"
   image:
   image_alt: "Aplica a 4Geeks Academy Bootcamp"
-  paragraph: "Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+  paragraph: "Estás un paso más cerca de tu nueva carrera en tecnología — ¡felicitaciones! Completa el formulario a continuación, y nuestro equipo de admisiones te guiará a través de los siguientes pasos.<br/><span style=\"color:#6E6B6B\"> (Y no te preocupes — no te estarás comprometiendo a nada aún, solo comenzando la conversación.)</span>"
   button:
 
 ## APPLY LEFT SECTION
@@ -56,12 +56,13 @@ left:
 right:
   heading: "Una vez que hayas aplicado, Recibirás"
   content_section:
-    - "1- Un correo electrónico de nuestro equipo local."
-    - "2- Info y detalles sobre cómo funciona el programa y datos sobre nuestras sedes."
-    - "3- Información sobre las opciones de financiación de tu matrícula."
-    - "4- El contenido del programa y la asistencia de nuestros asesores para ayudarte a tomar la mejor decisión para tu carrera."
+    - "<strong>• Confirmación instantánea:</strong> Te enviaremos el plan de estudios por email de inmediato."
+    - "<strong>• Seguimiento personal:</strong> Nuestro equipo de admisiones se pondrá en contacto por mensaje de texto y teléfono para programar una llamada rápida."
+    - "<strong>• Pregúntanos lo que quieras:</strong> Programas, horarios, financiamiento, apoyo profesional — te explicaremos tus opciones y compartiremos todos los detalles."
+    - "<strong>• Decide con confianza:</strong> Tendrás toda la información que necesitas para elegir el camino que es correcto para ti. Y estamos aquí para ayudar."
+    - "<strong>¡Ahora estás listo para tomar la mejor decisión para tu carrera!</strong>"
 
   ## TESTIMONIAL SECTION
 testimonial_header:
-  heading: "TESTIMONIAL"
+  heading: "TESTIMONIO"
   sub_heading: ""

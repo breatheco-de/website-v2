@@ -1,0 +1,234 @@
+meta_info:
+  slug: comparar-programas
+  visibility: "visible" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  title: "Compara nuestros programas"
+  description: "Compara los programas de 4Geeks Academy y encuentra tu mejor camino hacia la tecnología. Explora las diferencias clave entre nuestros bootcamps."
+  image: null
+  keywords: "comparación programas 4Geeks Academy, comparación bootcamp, carreras tecnológicas"
+  redirects: []
+
+## PROGRAM COMPARISON HEADING
+seo_title: "Compara nuestros programas"
+header:
+  title: Encuentra Tu Mejor Camino Hacia la Tecnología
+  sub_title: ""
+  paragraph: "Elegir un bootcamp es una gran decisión, pero nosotros lo hacemos simple. En 4Geeks, cada programa está diseñado para lanzar carreras tecnológicas exitosas, ya sea que estés cambiando de rumbo o apenas comenzando. La diferencia radica en hacia dónde te lleva cada camino y las habilidades que necesitarás. Sigue leyendo para explorar las diferencias clave lado a lado."
+
+choose_program:
+  hide_empty_content: true
+  title: ''
+  paragraph: ''
+
+data_table:
+  title:
+    text: "¿Qué Camino Se Adapta Mejor a Ti?"
+  sub_title: "Compara programas para ver cuál se alinea con tus intereses, fortalezas y objetivos. Cada bootcamp de 4Geeks te equipará con las habilidades, mentoría y apoyo profesional para prosperar en la carrera de tu elección."
+
+  columns:
+    - title: "Categoría"
+    - title: "Desarrollo Full Stack con IA"
+    - title: "Ciencia de Datos e IA"
+    - title: "Ciberseguridad"
+
+  rows:
+    - cells:
+        - content: "Qué Es"
+        - content: "Aprende a construir sitios web, aplicaciones y software desde cero con herramientas de front-end, back-end e IA."
+          html: false
+        - content: "Aprende a recopilar, analizar y modelar datos usando Python, machine learning e IA."
+          html: false
+        - content: "Aprende a proteger sistemas, redes y datos de amenazas cibernéticas."
+          html: false
+
+    - cells:
+        - content: "Por Qué Importa"
+        - content: "Las empresas necesitan soluciones digitales escalables. Los Desarrolladores Full Stack impulsan operaciones, marketing y experiencias del cliente. Con IA, automatizan procesos y construyen productos más inteligentes."
+          html: false
+        - content: "Las empresas dependen de los datos para tomar decisiones. Los Científicos de Datos convierten datos en bruto en insights, mientras que el machine learning automatiza predicciones y personaliza experiencias."
+          html: false
+        - content: "Cada negocio enfrenta riesgos cibernéticos. Los expertos en Ciberseguridad defienden datos, aseguran cumplimiento y previenen ataques costosos en el mundo digital actual."
+          html: false
+
+    - cells:
+        - content: "Qué Aprenderás"
+        - content: "<strong>HTML, CSS, JavaScript, Python, React</strong>, bases de datos, APIs, flujos de GitHub, y herramientas de IA como <strong>OpenAI/GPT, Cursor, Vercel v0</strong>."
+          html: true
+        - content: "<strong>Python, SQL</strong>, estadísticas, visualización de datos, <strong>machine learning</strong>, herramientas de IA, y técnicas de modelado del mundo real."
+          html: true
+        - content: "<strong>Seguridad de redes, hacking ético</strong>, evaluación de riesgos, análisis de amenazas, respuesta a incidentes, herramientas como <strong>Wireshark y Splunk</strong>."
+          html: true
+
+    - cells:
+        - content: "Ideal Para"
+        - content: "Solucionadores creativos de problemas que disfrutan construir y ver resultados cobrar vida."
+          html: false
+        - content: "Pensadores analíticos que aman los números, tendencias y resolver patrones."
+          html: false
+        - content: "Personas orientadas al detalle que disfrutan puzzles, reglas y superar amenazas."
+          html: false
+
+    - cells:
+        - content: "Trabajo Día a Día"
+        - content: "Construir y probar sitios web/aplicaciones, integrar APIs, colaborar con diseñadores y lanzar funcionalidades."
+          html: false
+        - content: "Limpiar y analizar datos, construir modelos, crear dashboards y entregar insights."
+          html: false
+        - content: "Monitorear redes, probar defensas, responder a incidentes y desarrollar políticas de seguridad."
+          html: false
+
+    - cells:
+        - content: "Títulos de Trabajo"
+        - content: "Desarrollador Full Stack, Desarrollador Front-End/Back-End, Ingeniero de Software IA, Desarrollador Web."
+          html: false
+        - content: "Analista de Datos, Científico de Datos, Ingeniero de Machine Learning, Analista BI."
+          html: false
+        - content: "Analista de Ciberseguridad, Analista SOC, Tester de Penetración, Consultor de Seguridad."
+          html: false
+
+    - cells:
+        - content: "Salario Promedio EE.UU."
+        - content: "<strong>$75K–$110K</strong>"
+          html: true
+        - content: "<strong>$85K–$130K</strong>"
+          html: true
+        - content: "<strong>$80K–$120K</strong>"
+          html: true
+
+    - cells:
+        - content: "Horario del Bootcamp"
+        - content: "<strong>Tiempo Completo (12 semanas)</strong> o <strong>Medio Tiempo (20 semanas)</strong>."
+          html: true
+        - content: "<strong>Medio Tiempo (16 semanas)</strong>."
+          html: true
+        - content: "<strong>Medio Tiempo (16 semanas)</strong>."
+          html: true
+
+    - cells:
+        - content: "Modalidad del Curso"
+        - content: "Online o Presencial (ciudades selectas)."
+          html: false
+        - content: "Online."
+          html: false
+        - content: "Online."
+          html: false
+
+    - cells:
+        - content: "Costo"
+        - content: "<strong>$10,999</strong> (descuentos y becas disponibles)."
+          html: true
+        - content: "<strong>$10,999</strong> (descuentos y becas disponibles)."
+          html: true
+        - content: "<strong>$9,999</strong> (descuentos y becas disponibles)."
+          html: true
+
+    - cells:
+        - content: "Planes de Pago"
+        - content: "Planes mensuales, descuentos por pago adelantado, préstamos y opciones basadas en ingresos."
+          html: false
+        - content: "Planes mensuales, descuentos por pago adelantado, préstamos y opciones basadas en ingresos."
+          html: false
+        - content: "Planes mensuales, descuentos por pago adelantado, préstamos y opciones basadas en ingresos."
+          html: false
+
+    - cells:
+        - content: "Garantía de Trabajo"
+        - content: "Disponible por <strong>USD 2000</strong> adicionales, <strong>Incluida en la opción de tiempo completo sin costo extra</strong>."
+          html: true
+        - content: "Disponible por <strong>USD 2000</strong> adicionales"
+          html: true
+        - content: "Disponible por <strong>USD 2000</strong> adicionales"
+          html: true
+
+    - cells:
+        - content: "Mejor Para Ti Si…"
+        - content: "Amas crear cosas desde cero — sitios web, aplicaciones o herramientas. Disfrutas resolver problemas e ingeniería de software potenciada por IA. Genial para cambios de carrera, freelancers o quienes apuntan a trabajos en startups/tech."
+          html: false
+        - content: "Disfrutas trabajar con datos, detectar patrones y resolver problemas del mundo real. Ideal si quieres entrar en IA o roles basados en datos. Experiencia en matemáticas/negocios ayuda, pero no es requerida."
+          html: false
+        - content: "Quieres una carrera a prueba del futuro protegiendo datos y sistemas. Perfecto si disfrutas estrategia, puzzles o trabajo de cumplimiento — o sueñas con trabajar en seguridad IT, aplicación de la ley o defensa."
+          html: false
+
+    - cells:
+        - content: "¿Listo para empezar?"
+        - content: ""
+          html: false
+          primary_action:
+            text: "Aplicar Ahora"
+            path: "/es/aplica"
+            variant: "default"
+            link_state:
+              course: "full-stack"
+          secondary_action:
+            text: "Saber Más"
+            variant: "link"
+            path: "/es/coding-bootcamps/desarrollador-full-stack"
+            link_state:
+              course: ""
+        - content: ""
+          html: false
+          primary_action:
+            text: "Aplicar Ahora"
+            path: "/es/aplica"
+            variant: "default"
+            link_state:
+              course: "datascience-ml"
+          secondary_action:
+            text: "Saber Más"
+            variant: "link"
+            path: "/es/coding-bootcamps/curso-datascience-machine-learning"
+            link_state:
+        - content: ""
+          html: false
+          primary_action:
+            text: "Aplicar Ahora"
+            path: "/es/aplica"
+            variant: "default"
+            link_state:
+              course: "cybersecurity"
+          secondary_action:
+            text: "Saber Más"
+            variant: "link"
+            path: "/es/coding-bootcamps/curso-ciberseguridad"
+            link_state:
+
+
+two_columns_third:
+  proportions: [6, 6]
+  justify: "center"
+  heading:
+    text: "¿Aún No Estás Seguro de Qué Programa Es el Correcto para Ti?"
+    font_size: ["33px", "30px", "26px", "22px", "20px"]
+    style: '{ "lineHeight": "30px", "font-weight": "700" }'
+  sub_heading:
+    text: |
+      Habla con nuestro equipo de admisiones. 
+      Te ayudaremos a elegir el programa perfecto basado en tus objetivos, horario y aspiraciones profesionales.
+      Esto es lo que cubriremos:
+    font_size: ["20px", "20px", "20px", "20px", "20px"]
+    style: '{ "margin": "0", "font-weight": "400" }'
+  content:
+    style: '{ "font-size": "16px", "margin": "15px 0", "font-weight": "400"}'
+    text: "Agenda una consulta gratuita y obtén orientación personalizada de nuestros expertos."
+  bullets:
+    item_style: '{ "padding": "0", "font-weight": "100", "margin": "0" }'
+    items:
+      - text: "Tus objetivos profesionales e intereses"
+        icon: "check"
+      - text: "Disponibilidad de tiempo y preferencias de horario"
+        icon: "check"
+      - text: "Experiencia previa y antecedentes"
+        icon: "check"
+      - text: "Opciones de financiamiento y becas"
+        icon: "check"
+      - text: "Perspectivas del mercado laboral para cada campo"
+        icon: "check"
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "/images/landing/hombre-joven-con-laptop.webp" 
+  button:
+    text: "Agendar Consulta Gratuita"
+    color: "white"
+    background: "black"
+    path: "/es/aplicar"
+    link_state:
+      course: "consultation"

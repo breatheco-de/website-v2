@@ -24,6 +24,7 @@ const BaseRender = (Page) => (props) => {
       type="page"
       seo={{ ...yml.meta_info, seo_title: yml.seo_title }}
       context={pageContext}
+      metaInfo={yml?.meta_info}
     >
       {/* <StickyBar /> */}
       <Page {...props} yml={yml} />

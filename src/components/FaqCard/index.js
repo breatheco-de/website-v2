@@ -48,6 +48,7 @@ const FaqCard = ({ faqs, topicSlug, locationSlug, minPriority, template }) => {
       display="block"
       maxWidth="1280px"
       margin="0 auto"
+      width="45rem"
       padding_xxs="40px 20px"
       padding_md="40px 80px"
       padding_lg="40px 0px"

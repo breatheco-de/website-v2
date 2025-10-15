@@ -4,15 +4,15 @@ export default (props) => (
   <svg
     onClick={props.onClick}
     style={props.style}
-    width="14"
-    height="14"
+    width={props.width || "14"}
+    height={props.height || "14"}
     viewBox="0 0 14 14"
     fill="none"
     xmlns="https://www.w3.org/2000/svg"
   >
     <path
       d="M1 1L13.0001 13.0001"
-      stroke="black"
+      stroke={props.color || "black"}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -20,7 +20,7 @@ export default (props) => (
     />
     <path
       d="M13.0001 1L1 13.0001"
-      stroke="black"
+      stroke={props.color || "black"}
       strokeWidth="2"
       strokeMiterlimit="10"
       strokeLinecap="round"
