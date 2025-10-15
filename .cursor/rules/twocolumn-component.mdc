@@ -1,0 +1,1073 @@
+---
+description: Comprehensive guide for using the TwoColumn component in YAML configurations and templates
+globs: 
+  - src/data/page/**/*.yml
+  - src/data/landing/**/*.yml
+  - src/templates/**/*.js
+  - src/components/TwoColumn/**/*.js
+alwaysApply: false
+---
+
+# TwoColumn Component Usage Rule
+
+**Purpose:**
+This rule documents the TwoColumn component's architecture, YAML configuration patterns, and usage across landing pages and course templates. It ensures consistent implementation, proper GraphQL query setup, and effective use of responsive styling for all developers and AI assistants working with 4Geeks Academy's website.
+
+**Scope:**
+- `/src/components/TwoColumn/index.js` - Component implementation
+- `/src/templates/landing_a.js` - Landing page template with landingSections
+- `/src/templates/course*.js` - Course templates with direct usage
+- `/src/templates/geeks-vs-others.js` - Page template usage
+- `/src/data/page/**/*.yml` - Page YAML configurations
+- `/src/data/landing/**/*.yml` - Landing YAML configurations
+
+---
+
+## 1. Component Overview
+
+### What is TwoColumn?
+
+The TwoColumn component is a flexible, responsive layout component that displays content in a two-column format (left and right sides). Each side can contain:
+- **Media:** Images, videos, or Gatsby images
+- **Text Content:** Headings, sub-headings, paragraphs
+- **Interactive Elements:** Bullets with icons, buttons, boxes
+- **Custom Styling:** JSON-based inline styles for fine control
+
+### When to Use TwoColumn
+
+- Feature sections with image + description
+- Benefits/value propositions with visual support
+- Video demonstrations with explanatory text
+- Call-to-action sections with supporting media
+- Course information with promotional images
+
+### Component Architecture
+
+```javascript
+TwoColumn({
+  left: { /* Side props */ },
+  right: { /* Side props */ },
+  proportions: [6, 6],
+  alignment: "center",
+  background: "#FFFFFF",
+  session: session
+})
+
+Side({
+  // Media (choose one)
+  image: { src, style, shadow, link },
+  video: "video_id",
+  
+  // Content
+  heading: { text, font_size, style, heading_image },
+  sub_heading: { text, font_size, style },
+  content: { text, font_size, style, path },
+  bullets: { item_style, items },
+  disclosure: { text, style },
+  button: { text, color, background, hover_color, path },
+  boxes: [{ icon, title, text }]
+})
+
+SingleColumn({ column: { /* Same as Side props */ } })
+```
+
+---
+
+## 2. Usage Patterns
+
+### Pattern A: Landing Template via landingSections
+
+In landing pages (`landing_a.js`), TwoColumn is used through the `landingSections` object with layout names.
+
+**Available Layouts:**
+- `two_column_left` - Image/video on left, content on right
+- `two_column_right` - Content on left, image/video on right
+
+**YAML Example (geeks-vs-others.us.yml):**
+```yaml
+components:
+  - name: job-guarantee-section
+    position: 10
+    layout: two_column_right
+    background: "#FFFFFF"
+    proportions: [6, 6]
+    alignment: "center"
+    section_heading:
+      text: "Our Job Guarantee"
+      style: '{"textAlign": "center", "margin": "40px 0"}'
+    heading:
+      text: "Get Hired or Get Your Money Back"
+      font_size: ["40px", "34px", "30px", "24px", "20px"]
+    sub_heading:
+      text: "Industry-leading guarantee"
+      font_size: ["21px", "21px", "18px", "16px", "16px"]
+      style: '{"margin": "15px 0", "font-weight": "600"}'
+    bullets:
+      item_style: '{"padding": "0", "font-weight": "100", "margin": "0"}'
+      items:
+        - text: 'Curriculum is <strong>industry-aligned</strong>'
+          icon: "check"
+          icon_color: "#0084FF"
+        - text: 'Mentorship is <strong>unlimited</strong>'
+          icon: "check"
+    image:
+      src: "/images/landing/example.png"
+      style: '{"backgroundSize": "cover", "border": "4px solid #000"}'
+      shadow: false
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "/us/job-guarantee"
+```
+
+**How landingSections Maps to Component:**
+```javascript
+// In src/components/Landing/index.js
+two_column_right: ({ session, yml, index }) => (
+  <TwoColumn
+    left={{
+      heading: yml.heading,
+      sub_heading: yml.sub_heading,
+      bullets: yml.bullets,
+      content: yml.content,
+      button: yml.button,
+    }}
+    right={{
+      image: yml.image,
+      video: yml.video,
+      videoHeight: yml.videoHeight,
+      videoWidth: yml.videoWidth,
+      justify: yml.justify,
+    }}
+    alignment={yml.alignment}
+    proportions={yml.proportions}
+    session={session}
+  />
+)
+```
+
+### Pattern B: Direct Template Usage
+
+In course templates, TwoColumn is imported and used directly with explicit left/right prop objects.
+
+**Example (course.js):**
+```javascript
+import TwoColumn from "../components/TwoColumn";
+
+<TwoColumn
+  left={{
+    image: yml.two_columns_info?.image,
+    video: yml.two_columns_info?.video,
+  }}
+  right={{
+    heading: yml.two_columns_info?.heading,
+    sub_heading: yml.two_columns_info?.sub_heading,
+    bullets: yml.two_columns_info?.bullets,
+    content: yml.two_columns_info?.content,
+    button: yml.two_columns_info?.button,
+  }}
+  proportions={yml.two_columns_info?.proportions}
+  background={Colors.verylightGray2}
+  session={session}
+/>
+```
+
+**Corresponding YAML:**
+```yaml
+two_columns_info:
+  proportions: [6, 6]
+  heading:
+    text: "What You'll Learn"
+    font_size: ["40px", "34px", "30px", "24px", "20px"]
+  image:
+    src: "/images/course-image.png"
+    style: '{"backgroundSize": "contain"}'
+```
+
+---
+
+## 3. YAML Configuration Keys Reference
+
+### Top-Level Keys (for landingSections usage)
+
+| Key | Type | Description | Required | Example |
+|-----|------|-------------|----------|---------|
+| `name` | string | Unique identifier for the section | Yes | `"feature-section"` |
+| `position` | number | Render order (higher = later) | Yes | `10` |
+| `layout` | string | Layout type: `two_column_left` or `two_column_right` | Yes | `"two_column_right"` |
+| `background` | string | Background color (hex or color name) | No | `"#FFFFFF"` or `"lightGray"` |
+| `proportions` | array | Column widths [left, right] out of 12 | No | `[6, 6]` or `[7, 5]` |
+| `alignment` | string | Vertical alignment: `center`, `start`, `end` | No | `"center"` |
+| `section_heading` | object | Section title above columns | No | See below |
+
+### section_heading Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `text` | string | Heading text | `"Why Choose Us"` |
+| `style` | JSON string | Inline CSS styles | `'{"textAlign": "center"}'` |
+| `font_size` | array | Responsive sizes [xl, lg, md, sm, xs] | `["40px", "34px", "30px"]` |
+
+### Content Keys (Used in left/right sides)
+
+#### heading Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `text` | string | Heading text (supports `\n` for line breaks) | `"Get Hired\nor Get Refunded"` |
+| `font_size` | array | Responsive sizes [xl, lg, md, sm, xs] | `["40px", "34px", "30px", "24px", "20px"]` |
+| `style` | JSON string | Inline CSS styles | `'{"color": "#000", "fontWeight": "900"}'` |
+| `heading_image` | object | Icon/image next to heading | `{ src: "/icon.svg" }` |
+
+#### sub_heading Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `text` | string | Sub-heading text (HTML allowed) | `"Industry-leading <strong>guarantee</strong>"` |
+| `font_size` | array | Responsive sizes [xl, lg, md, sm, xs] | `["21px", "21px", "18px", "16px", "16px"]` |
+| `style` | JSON string | Inline CSS styles | `'{"margin": "15px 0", "fontWeight": "600"}'` |
+
+#### content Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `text` | string | Paragraph text (HTML allowed, `\n` for paragraphs) | `"We offer comprehensive support"` |
+| `font_size` | array | Responsive sizes [xl, lg, md, sm, xs] | `["18px", "18px", "16px", "14px", "14px"]` |
+| `style` | JSON string | Inline CSS styles | `'{"color": "#606060"}'` |
+| `path` | string | Link path for clickable content | `"/us/about"` |
+
+#### bullets Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `item_style` | JSON string | CSS for each bullet container | `'{"padding": "0", "margin": "0"}'` |
+| `items` | array | Array of bullet item objects | See below |
+
+**Bullet Item Object:**
+```yaml
+items:
+  - heading: "Feature Title"        # Optional bold heading
+    text: "Description text"        # Required text (HTML allowed)
+    icon: "check"                   # Icon name from Icon component
+    icon_color: "#0084FF"           # Hex color for icon
+```
+
+#### button Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `text` | string | Button label | `"Learn More"` |
+| `color` | string | Text color (hex or color name) | `"white"` or `"#FFFFFF"` |
+| `background` | string | Background color | `"black"` or `"#000000"` |
+| `hover_color` | string | Hover text color | `"blue"` or `"#0084FF"` |
+| `path` | string | Navigation path (internal or external) | `"/us/apply"` or `"https://..."` |
+
+#### disclosure Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `text` | string | Small print/disclaimer text (HTML allowed) | `"*Terms apply"` |
+| `style` | JSON string | Inline CSS styles | `'{"fontSize": "13px"}'` |
+
+#### boxes Array
+
+Array of box objects for displaying stats/features:
+```yaml
+boxes:
+  - icon: "graduation"
+    title: "2000+"
+    text: "Graduates hired"
+```
+
+### Media Keys
+
+#### image Object
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `src` | string | Image path (relative to `/static`) | `"/images/landing/hero.png"` |
+| `style` | JSON string | CSS styles (see Image Styling section) | `'{"backgroundSize": "cover"}'` |
+| `shadow` | boolean | Enable box-shadow effect | `true` or `false` |
+| `link` | string | Make image clickable | `"/us/course"` or `"https://..."` |
+
+#### Video Keys
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `video` | string | Video ID for ReactPlayer | `"dQw4w9WgXcQ"` |
+| `videoHeight` | string | Video player height | `"360px"` |
+| `videoWidth` | string | Video player width | `"100%"` |
+
+### Advanced Keys
+
+| Key | Type | Description | Example |
+|-----|------|-------------|---------|
+| `justify` | string | Content justification: `start`, `center`, `end` | `"start"` |
+| `gap` | string | Gap between columns (mobile) | `"20px"` |
+| `gap_tablet` | string | Gap between columns (tablet+) | `"40px"` |
+| `padding_tablet` | string | Side padding for tablet+ | `"10px 0px 0px 0px"` |
+
+---
+
+## 4. Image Styling Patterns
+
+### Critical Rule: JSON String Format
+
+Image styles MUST be valid JSON strings wrapped in single quotes:
+
+```yaml
+# ✅ CORRECT
+image:
+  style: '{"backgroundSize": "cover", "border": "2px solid #000"}'
+
+# ❌ INCORRECT - Missing quotes
+image:
+  style: {backgroundSize: "cover"}
+
+# ❌ INCORRECT - Double quotes on outside
+image:
+  style: "{'backgroundSize': 'cover'}"
+```
+
+### Common Image Style Properties
+
+| Property | Values | Description | Example |
+|----------|--------|-------------|---------|
+| `backgroundSize` | `cover`, `contain`, `100%` | How image fills container | `"cover"` |
+| `background-position` | `center`, `top`, `left 20%` | Image positioning | `"center"` |
+| `border` | CSS border syntax | Border around image | `"4px solid #000"` |
+| `width` | CSS width value | Image width | `"100%"` |
+| `height` | String or Array | Fixed or responsive height | See below |
+
+### Responsive Height Pattern
+
+Height can be a responsive array parsed by the component:
+
+```yaml
+image:
+  style: '{"height": ["500px", "450px", "400px", "350px", "300px"]}'
+  # Array format: [lg, md, tablet, sm, xs]
+```
+
+Component extracts these as:
+- `height_lg`: "500px"
+- `height_md`: "450px"  
+- `height_tablet`: "400px"
+- `height_sm`: "350px"
+- `height_xxs`: "300px"
+
+### Border and Gap Behavior
+
+**Understanding the Issue:**
+When using `backgroundSize: "contain"`, gaps appear because the image maintains aspect ratio:
+- **Desktop (landscape container):** Image scales to fit width → gaps on top/bottom
+- **Mobile (portrait container):** Image scales to fit height → gaps on sides
+
+**Solutions:**
+
+```yaml
+# Option 1: Use "cover" to fill container (may crop image)
+image:
+  style: '{"backgroundSize": "cover", "border": "2px solid #000"}'
+
+# Option 2: Use "contain" and accept gaps (border wraps container)
+image:
+  style: '{"backgroundSize": "contain", "border": "2px solid #000"}'
+
+# Option 3: Use shadow instead of border (no gap issue)
+image:
+  shadow: true  # Applies box-shadow without border gaps
+```
+
+### Shadow vs Border
+
+```yaml
+# Using shadow (built-in box-shadow)
+image:
+  src: "/images/example.png"
+  shadow: true
+  # Applies: boxShadow: "20px 15px 0px 0px rgba(0,0,0,1)"
+  # Also sets: backgroundSize: "cover" automatically
+
+# Using custom border
+image:
+  src: "/images/example.png"
+  style: '{"border": "4px solid #000", "backgroundSize": "cover"}'
+  shadow: false
+```
+
+---
+
+## 5. Responsive Font Size Arrays
+
+### Format
+
+All text elements support responsive font sizes as arrays:
+
+```yaml
+heading:
+  text: "Welcome to 4Geeks"
+  font_size: ["50px", "45px", "40px", "32px", "28px"]
+  # Array indexes: [xl,     lg,     md,     sm,     xs]
+```
+
+### Breakpoint Mapping
+
+The component maps array indexes to CSS media queries:
+
+| Array Index | Breakpoint | Typical Screen | Component Prop |
+|-------------|------------|----------------|----------------|
+| `[0]` | xl | >1200px | `fontSize_lg` |
+| `[1]` | lg | 992-1199px | `fontSize_lg` |
+| `[2]` | md | 768-991px | `fontSize_md` |
+| `[3]` | sm | 576-767px | `fontSize_sm` |
+| `[4]` | xs | <576px | `fontSize` / `fontSize_xs` |
+
+### Best Practices
+
+```yaml
+# ✅ GOOD: Mobile-first scaling
+heading:
+  font_size: ["48px", "42px", "36px", "28px", "24px"]
+  # Smoothly scales down for smaller screens
+
+# ✅ GOOD: Consistent large sizes
+sub_heading:
+  font_size: ["21px", "21px", "18px", "16px", "16px"]
+  # Same for xl/lg, then scales down
+
+# ❌ AVOID: Scaling up on mobile
+heading:
+  font_size: ["24px", "28px", "36px", "42px", "48px"]
+  # Counter-intuitive, breaks mobile-first principle
+```
+
+---
+
+## 6. GraphQL Query Requirements
+
+### Critical Rule: YAML + GraphQL Synchronization
+
+**Every YAML key you add MUST be added to the GraphQL query, or data won't load.**
+
+### GraphQL Query Location
+
+For landing pages: `/src/templates/landing_a.js` starting at line 507
+
+```graphql
+components {
+  name
+  position
+  swipable
+  background
+  proportions
+  alignment
+  layout
+  video
+  height
+  width
+  videoHeight
+  videoWidth
+  justify
+  
+  # Media
+  image {
+    src
+    style
+    shadow
+    link
+  }
+  
+  # Content
+  section_heading {
+    text
+    style
+  }
+  heading {
+    text
+    font_size
+    style
+    heading_image {
+      src
+    }
+  }
+  sub_heading {
+    text
+    style
+    font_size
+  }
+  content {
+    text
+    style
+    font_size
+    path
+  }
+  bullets {
+    item_style
+    items {
+      heading
+      text
+      icon
+      icon_color
+    }
+  }
+  button {
+    text
+    color
+    path
+    background
+    hover_color
+  }
+}
+```
+
+### Example: Adding a New Key
+
+**Step 1: Add to YAML**
+```yaml
+components:
+  - name: test-section
+    layout: two_column_right
+    disclosure:
+      text: "*Terms and conditions apply"
+      style: '{"fontSize": "12px"}'
+```
+
+**Step 2: Add to GraphQL** (MANDATORY)
+```graphql
+components {
+  # ... existing fields ...
+  disclosure {
+    text
+    style
+  }
+}
+```
+
+**Step 3: Test**
+```bash
+npm run test
+```
+
+### Debugging GraphQL Issues
+
+If data isn't appearing:
+
+1. **Check GraphQL query includes the field:**
+```bash
+# Search for your field name in the query
+grep -n "disclosure" src/templates/landing_a.js
+```
+
+2. **Test query compilation:**
+```bash
+npm run build
+```
+
+3. **Use GraphiQL interface:**
+```
+# Start dev server
+npm run develop
+
+# Visit http://localhost:8000/___graphql
+# Test your query there
+```
+
+---
+
+## 7. Complete Usage Examples
+
+### Example 1: Feature Section with Image and Bullets
+
+```yaml
+components:
+  - name: why-4geeks-feature
+    position: 8
+    layout: two_column_right
+    background: "#F5F5F5"
+    proportions: [6, 6]
+    alignment: "center"
+    
+    section_heading:
+      text: "Why 4Geeks Academy?"
+      style: '{"textAlign": "center", "margin": "60px 0 40px 0", "fontSize": "42px"}'
+    
+    heading:
+      text: "Learn to Code with Real Mentors"
+      font_size: ["40px", "36px", "32px", "26px", "22px"]
+      style: '{"fontWeight": "900", "lineHeight": "1.2"}'
+    
+    sub_heading:
+      text: "Unlimited mentorship and career support"
+      font_size: ["24px", "22px", "20px", "18px", "16px"]
+      style: '{"color": "#606060", "margin": "20px 0"}'
+    
+    content:
+      text: "Unlike other bootcamps, we don't limit your access to mentors. Get help whenever you need it, for as long as you need it."
+      font_size: ["18px", "18px", "16px", "15px", "14px"]
+    
+    bullets:
+      item_style: '{"margin": "8px 0"}'
+      items:
+        - text: '<strong>1-on-1 mentorship</strong> sessions available 24/7'
+          icon: "check"
+          icon_color: "#0084FF"
+        - text: '<strong>Lifetime access</strong> to career services'
+          icon: "check"
+          icon_color: "#0084FF"
+        - text: '<strong>Real projects</strong> in your portfolio'
+          icon: "check"
+          icon_color: "#0084FF"
+    
+    image:
+      src: "/images/landing/mentorship-session.jpg"
+      style: '{"backgroundSize": "cover", "borderRadius": "12px", "boxShadow": "0 4px 20px rgba(0,0,0,0.1)"}'
+      shadow: false
+    
+    button:
+      text: "Start Your Journey"
+      color: "white"
+      background: "#0084FF"
+      hover_color: "#FFB718"
+      path: "/us/apply"
+```
+
+### Example 2: Video Section with Call-to-Action
+
+```yaml
+components:
+  - name: student-testimonial-video
+    position: 12
+    layout: two_column_left
+    background: "white"
+    proportions: [7, 5]
+    alignment: "center"
+    
+    video: "dQw4w9WgXcQ"
+    videoHeight: "400px"
+    videoWidth: "100%"
+    
+    heading:
+      text: "Hear From Our Graduates"
+      font_size: ["36px", "32px", "28px", "24px", "20px"]
+    
+    content:
+      text: "Watch how Sarah went from retail manager to software developer in just 18 weeks."
+      font_size: ["18px", "18px", "16px", "15px", "14px"]
+      style: '{"margin": "20px 0"}'
+    
+    button:
+      text: "Watch More Success Stories"
+      color: "black"
+      background: "#FFB718"
+      path: "/us/outcomes"
+```
+
+### Example 3: Direct Template Usage (Course Page)
+
+**YAML (course.us.yml):**
+```yaml
+two_columns_info:
+  proportions: [5, 7]
+  section_heading:
+    text: "What You'll Build"
+  heading:
+    text: "Real-World Projects"
+    font_size: ["38px", "34px", "30px", "24px", "20px"]
+  sub_heading:
+    text: "Build a professional portfolio"
+  bullets:
+    items:
+      - text: "Full-stack web applications"
+        icon: "code"
+      - text: "Mobile-responsive designs"
+        icon: "mobile"
+  button:
+    text: "View Curriculum"
+    color: "white"
+    background: "black"
+    path: "/us/full-stack"
+  image:
+    src: "/images/projects-preview.png"
+    style: '{"backgroundSize": "contain"}'
+```
+
+**Template Usage (course.js):**
+```javascript
+<Div display="block" background={Colors.verylightGray2} padding="40px 0">
+  <H2 type="h2" textAlign_tablet="center">
+    {yml.two_columns_info.section_heading.text}
+  </H2>
+  <TwoColumn
+    right={{ image: yml.two_columns_info?.image }}
+    left={{
+      heading: yml.two_columns_info?.heading,
+      sub_heading: yml.two_columns_info?.sub_heading,
+      bullets: yml.two_columns_info?.bullets,
+      content: yml.two_columns_info?.content,
+      button: yml.two_columns_info?.button,
+    }}
+    proportions={yml.two_columns_info?.proportions}
+    session={session}
+  />
+</Div>
+```
+
+---
+
+## 8. Common Mistakes and Solutions
+
+### Mistake 1: Invalid JSON String
+
+```yaml
+# ❌ WRONG
+image:
+  style: {"backgroundSize": "cover"}
+
+# ✅ CORRECT
+image:
+  style: '{"backgroundSize": "cover"}'
+```
+
+**Error:** YAML parser treats unquoted `{...}` as YAML object, not JSON string.  
+**Solution:** Always wrap JSON in single quotes.
+
+### Mistake 2: Missing GraphQL Field
+
+```yaml
+# Added new field to YAML
+disclosure:
+  text: "Terms apply"
+```
+
+**Error:** Field renders as `undefined` on page.  
+**Solution:** Add `disclosure { text style }` to GraphQL query.
+
+### Mistake 3: Font Size Array Wrong Order
+
+```yaml
+# ❌ WRONG - Backwards scaling
+heading:
+  font_size: ["20px", "24px", "28px", "32px", "36px"]
+  # Mobile gets smallest, desktop gets largest - counter-intuitive!
+
+# ✅ CORRECT - Mobile-first scaling
+heading:
+  font_size: ["36px", "32px", "28px", "24px", "20px"]
+  # Desktop gets largest, mobile gets smallest
+```
+
+### Mistake 4: Using Wrapper Divs for Spacing
+
+```yaml
+# ❌ WRONG APPROACH - Don't do this in templates
+<Div margin="20px 0">
+  {landingSections[layout]({ ...props })}
+</Div>
+
+# ✅ CORRECT - Use component's built-in spacing
+components:
+  - name: my-section
+    background: "white"  # Component handles its own layout
+```
+
+**Reason:** TwoColumn manages its own responsive padding/margins. Wrapper divs break the YAML-driven architecture.
+
+### Mistake 5: Image Style Overcomplication
+
+```yaml
+# ❌ OVERLY COMPLEX
+image:
+  style: '{"backgroundSize": "cover", "width": "100%", "height": "500px", "minHeight": "300px", "maxHeight": "600px", "position": "relative", "top": "0"}'
+
+# ✅ SIMPLER AND BETTER
+image:
+  style: '{"backgroundSize": "cover", "height": ["500px", "450px", "400px", "350px", "300px"]}'
+  # Let component handle responsive behavior
+```
+
+### Mistake 6: Not Testing Both Language Files
+
+```bash
+# ❌ WRONG - Only updated .us.yml
+src/data/page/example.us.yml   # ✅ Updated
+src/data/page/example.es.yml   # ❌ Missing new fields
+
+# ✅ CORRECT - Both files synchronized
+src/data/page/example.us.yml   # ✅ Updated
+src/data/page/example.es.yml   # ✅ Updated with Spanish translations
+```
+
+---
+
+## 9. Best Practices
+
+### 1. Configuration-First Development
+
+Always prefer YAML configuration over hardcoded React props.
+
+```javascript
+// ❌ BAD - Hardcoded
+<TwoColumn
+  left={{ heading: { text: "Welcome", font_size: ["40px", "30px", "24px"] } }}
+  proportions={[6, 6]}
+/>
+
+// ✅ GOOD - YAML-driven
+<TwoColumn
+  left={{ heading: yml.heading }}
+  proportions={yml.proportions}
+/>
+```
+
+### 2. Mobile-First Responsive Design
+
+Design for mobile first, then enhance for larger screens.
+
+```yaml
+heading:
+  font_size: ["48px", "42px", "36px", "28px", "24px"]
+  #          Desktop ──────────────────> Mobile
+  # Start with what looks good on desktop, scale down gracefully
+```
+
+### 3. Semantic Color Names
+
+Use semantic color names from `Colors` object when possible.
+
+```yaml
+# ✅ PREFERRED
+background: "lightGray"      # Defined in Colors object
+button:
+  background: "blue"         # Defined in Colors object
+
+# ⚠️ ACCEPTABLE
+background: "#F5F5F5"        # When exact color needed
+button:
+  background: "#0084FF"      # Custom brand color
+```
+
+### 4. Consistent Proportions
+
+Use standard grid proportions for visual consistency.
+
+```yaml
+# Common proportion patterns:
+proportions: [6, 6]    # Equal columns - balanced
+proportions: [7, 5]    # Content-heavy left
+proportions: [5, 7]    # Content-heavy right
+proportions: [8, 4]    # Dominant left column
+proportions: [4, 8]    # Dominant right column
+```
+
+### 5. Accessibility Considerations
+
+```yaml
+# ✅ GOOD - Semantic HTML
+bullets:
+  items:
+    - heading: "Feature Title"  # Creates <h3> for screen readers
+      text: "Description"
+
+# ✅ GOOD - Clear button labels
+button:
+  text: "Apply Now to Full-Stack Program"  # Descriptive, not just "Click Here"
+```
+
+### 6. Test All Breakpoints
+
+After making changes:
+
+```bash
+# 1. Run automated tests
+npm run test
+
+# 2. Manual testing checklist:
+# - [ ] Desktop (>1200px)
+# - [ ] Laptop (992-1199px)
+# - [ ] Tablet (768-991px)
+# - [ ] Mobile landscape (576-767px)
+# - [ ] Mobile portrait (<576px)
+
+# 3. Test both orientations on mobile
+```
+
+### 7. Bilingual Synchronization
+
+```yaml
+# example.us.yml
+components:
+  - name: feature
+    heading:
+      text: "Get Hired or Get Your Money Back"
+
+# example.es.yml (Spanish translation)
+components:
+  - name: feature
+    heading:
+      text: "Consigue empleo o te devolvemos tu dinero"
+```
+
+**Checklist:**
+- [ ] Same `name` values in both files
+- [ ] Same structure (keys match)
+- [ ] Translated text content
+- [ ] Same styling (usually)
+- [ ] Same technical values (proportions, colors, etc.)
+
+---
+
+## 10. Enforcement and Validation
+
+### Code Review Checklist
+
+Before merging changes with TwoColumn:
+
+- [ ] **YAML files:** Both `.us.yml` and `.es.yml` updated
+- [ ] **GraphQL query:** All new YAML keys included in query
+- [ ] **Tests pass:** `npm run test` succeeds
+- [ ] **JSON strings:** All `style` properties have valid JSON syntax
+- [ ] **Font sizes:** Arrays in correct order [xl → xs]
+- [ ] **Responsive:** Tested on multiple breakpoints
+- [ ] **Commit message:** Follows format (ADD/UPDATE/FIX: Description)
+
+### Automated Checks
+
+```bash
+# 1. Lint YAML syntax
+npm run lint:yaml
+
+# 2. Run full test suite
+npm run test
+
+# 3. Build to catch GraphQL errors
+npm run build
+```
+
+### Manual Testing Procedure
+
+1. **Start dev server:**
+```bash
+npm run develop
+```
+
+2. **Test the page:**
+   - Navigate to page with TwoColumn section
+   - Open DevTools (F12)
+   - Check console for errors
+   - Verify data loads (not `undefined`)
+
+3. **Test responsive:**
+   - Use DevTools responsive mode (Ctrl+Shift+M)
+   - Test each breakpoint
+   - Verify font sizes scale correctly
+   - Check image sizing/positioning
+
+4. **Test both languages:**
+   - `/us/page-name` (English)
+   - `/es/page-name` (Spanish)
+   - Verify content matches language
+
+### Common Debugging Commands
+
+```bash
+# Find all TwoColumn usages
+grep -r "TwoColumn" src/templates/
+
+# Find all two_column layouts in YAML
+grep -r "layout: two_column" src/data/
+
+# Check GraphQL query
+cat src/templates/landing_a.js | grep -A 50 "components {"
+
+# Validate YAML syntax
+npm run test:yaml
+```
+
+---
+
+## 11. Version History
+
+- **Version:** v1.0
+- **Date:** 2025-10-15
+- **Author:** 4Geeks Academy Development Team
+- **Last Updated:** 2025-10-15
+
+### Changes
+- Initial comprehensive documentation
+- Documented both landingSections and direct usage patterns
+- Complete YAML key reference
+- Image styling patterns and border/gap solutions
+- GraphQL synchronization requirements
+- Responsive font size array patterns
+- Real-world examples from geeks-vs-others.us.yml
+
+### Future Updates
+- This rule should be updated when:
+  - New props are added to TwoColumn component
+  - New layouts are added to landingSections
+  - Breaking changes occur in component API
+  - New responsive breakpoints are added
+  - GraphQL schema changes
+
+---
+
+## 12. Quick Reference
+
+### Minimum Required YAML (Landing)
+
+```yaml
+components:
+  - name: "unique-name"
+    position: 10
+    layout: "two_column_right"
+    heading:
+      text: "Title"
+    image:
+      src: "/images/example.png"
+```
+
+### Minimum Required YAML (Direct Template)
+
+```yaml
+two_columns_info:
+  heading:
+    text: "Title"
+  image:
+    src: "/images/example.png"
+```
+
+### Most Common Pattern
+
+```yaml
+components:
+  - name: "feature-section"
+    position: 10
+    layout: "two_column_right"
+    background: "#FFFFFF"
+    proportions: [6, 6]
+    heading:
+      text: "Feature Title"
+      font_size: ["40px", "34px", "30px", "24px", "20px"]
+    sub_heading:
+      text: "Feature description"
+    bullets:
+      items:
+        - text: "Benefit one"
+          icon: "check"
+        - text: "Benefit two"
+          icon: "check"
+    image:
+      src: "/images/feature.png"
+      style: '{"backgroundSize": "cover"}'
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      path: "/us/page"
+```
+
+---
+
+**Note:** This rule should be reviewed and updated whenever the TwoColumn component receives significant changes or new features. All developers and AI assistants should reference this document when working with two-column layouts.
