@@ -12,7 +12,6 @@ banner:
 content:
   title: "🎉 Congratulations! You just took the first step toward your tech career!"
   message: "A confirmation email should be arriving in your inbox shortly, and our Admissions Team is already reviewing your info. \nOne of our Geeky Advisors will reach out very soon! In the meantime, here are a few ways to jump-start your journey right now:"
-
     
   articles_title: " "
   button: "Read our blog"
@@ -99,3 +98,7 @@ components:
       path: "https://4geeksacademy.com/us/job-guarantee"
       background: "blue"
       color: "white"
+      
+typeform:
+  message: "Please take a moment to <a href=\"https://marketing892162.typeform.com/to/DiwBH6ri?typeform-source=www.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">fill out this form</a> so we can support you even better!"
+  locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]

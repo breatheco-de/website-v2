@@ -170,9 +170,9 @@ const ThankYou = (props) => {
       <Div
         flexDirection="column"
         background={Colors.lightYellow}
-        padding="68px 0"
+        padding="40px 0"
+        padding_tablet="80px 0 40px 0"
         height="auto"
-        margin={isCustomBarActive(session) ? "140px 0 0 0" : "80px 0 0 0"}
       >
         <H1
           type="h1"
@@ -180,6 +180,7 @@ const ThankYou = (props) => {
           fontSize="13px"
           lineHeight="16px"
           fontWeight="700"
+          padding="20px 0"
           letterSpacing="0.05em"
           color={Colors.darkGray2}
         >
@@ -209,8 +210,40 @@ const ThankYou = (props) => {
             {m}
           </Paragraph>
         ))}
-      </Div>
 
+
+      {/* Location-filtered Typeform message */}
+      {(() => {
+        const locations = Array.isArray(yml?.typeform?.locations)
+          ? yml.typeform.locations
+          : [];
+        const candidates = [
+          session?.location?.breathecode_location_slug,
+          session?.location?.meta_info?.slug,
+          session?.location?.active_campaign_location_slug,
+        ].filter((s) => typeof s === "string" && s.length > 0);
+        const shouldRender = (() => {
+          if (session && candidates.length === 0) return false;
+          if (candidates.length === 0) return locations.length > 0;
+          for (const id of candidates) {
+            if (locations.includes(id) || locations.includes("all")) return true;
+          }
+          return false;
+        })();
+        if (!shouldRender || !yml?.typeform?.message) return null;
+        return (
+          <Div margin="24px 0" padding="0 20px">
+            <Paragraph
+              fontSize="18px"
+              lineHeight="26px"
+              align="center"
+              dangerouslySetInnerHTML={{ __html: yml.typeform.message }}
+            />
+          </Div>
+        );
+      })()}
+
+      </Div>
       <AdmissionsStaff />
 
       {/* Dynamic Components (YAML-driven) */}
@@ -274,6 +307,10 @@ export const query = graphql`
             title
             message
             button
+          }
+          typeform {
+            message
+            locations
           }
           title {
             heading {

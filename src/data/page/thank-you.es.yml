@@ -12,7 +12,6 @@ banner:
 content:
   title: "🎉 ¡Felicidades! Acabas de dar el primer paso hacia tu carrera tech!"
   message: "Un email de confirmación debería llegar a tu bandeja de entrada pronto, y nuestro Equipo de Admisiones ya está revisando tu información. \n¡Uno de nuestros Geeky Advisors se pondrá en contacto contigo muy pronto! Mientras tanto, aquí tienes algunas formas de comenzar tu viaje ahora mismo:"
-
     
   articles_title: " "
   button: "Lee nuestro blog"
@@ -99,3 +98,8 @@ components:
       path: "https://4geeksacademy.com/es/job-guarantee"
       background: "blue"
       color: "white"
+      
+typeform:
+  message: ""
+  locations: []
+
