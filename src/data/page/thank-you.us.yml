@@ -100,5 +100,5 @@ components:
       color: "white"
       
 typeform:
-  message: "Please take a moment to <a href=\"https://marketing892162.typeform.com/to/DiwBH6ri?typeform-source=www.google.com\" target=\"_blank\" rel=\"noopener noreferrer\">fill out this form</a> so we can support you even better!"
+  message: "Please take a moment to <a href=\"https://marketing892162.typeform.com/to/DiwBH6ri?typeform-source=www.google.com\" target=\"_blank\" rel=\"noopener noreferrer\" style=\"font-weight: 600; text-decoration: underline;\">fill out this form</a> so we can support you even better!"
   locations: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online", "online-spanish-usa", "tampa-usa"]

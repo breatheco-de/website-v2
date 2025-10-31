@@ -210,7 +210,7 @@ const ThankYou = (props) => {
             {m}
           </Paragraph>
         ))}
-
+      </Div>
 
       {/* Location-filtered Typeform message */}
       {(() => {
@@ -226,24 +226,34 @@ const ThankYou = (props) => {
           if (session && candidates.length === 0) return false;
           if (candidates.length === 0) return locations.length > 0;
           for (const id of candidates) {
-            if (locations.includes(id) || locations.includes("all")) return true;
+            if (locations.includes(id) || locations.includes("all"))
+              return true;
           }
           return false;
         })();
         if (!shouldRender || !yml?.typeform?.message) return null;
         return (
-          <Div margin="24px 0" padding="0 20px">
+          <Div
+            margin="32px 20px"
+            margin_tablet="32px auto"
+            padding="20px 24px"
+            padding_tablet="24px 32px"
+            background={Colors.lightYellow}
+            border="2px solid rgba(0, 0, 0, 0.95)"
+            borderRadius="8px"
+            maxWidth="800px"
+          >
             <Paragraph
-              fontSize="18px"
+              fontSize="20px"
               lineHeight="26px"
               align="center"
+              margin="0"
               dangerouslySetInnerHTML={{ __html: yml.typeform.message }}
             />
           </Div>
         );
       })()}
 
-      </Div>
       <AdmissionsStaff />
 
       {/* Dynamic Components (YAML-driven) */}
