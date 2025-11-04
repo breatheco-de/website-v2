@@ -68,7 +68,7 @@ badges:
 two_columns:
   proportions: [6, 6]
   image:
-    style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "right" }'
+    style: '{"border" : "3px solid black", "backgroundSize": "cover", "backgroundPosition": "center center" }'
     src: "../../../static/images/testimonials/alissa-datascience.jpg"
     shadow: true  
   video: "https://www.youtube.com/watch?v=snI-n8Ruvxg"
@@ -91,7 +91,7 @@ two_columns:
 two_columns_info:
   proportions: [6, 6]
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center"}' 
+    style: '{"backgroundSize": "contain", "backgroundPosition": "center center"}' 
     shadow: false 
     src: "/images/landing/grupo-ventanas.webp"
   section_heading: 
@@ -121,7 +121,7 @@ two_columns_info:
     - heading: "LEARN FASTER WITH HYPERPERSONALIZED SUPPORT."
       text: "Progress with instant AI feedback, personalized guidance, and small class sizes."
     - heading: "JOIN A GLOBAL TECH COMMUNITY."
-      text: "Receive unlimited advice, guidance, and training tailored to your unique profile and specific job offers."
+      text: "Connect with peers, mentors, and alumni and stay supported as you grow."
 
 upcoming:
   no_dates_message: "There are currently no upcoming dates for this program"
@@ -130,7 +130,7 @@ upcoming:
 ## PROGRAM DETAILS
 details:
   about:
-      title: "About Our Data Science & Machine Learning Course"
+      title: "About Our Data Science & Machine Learning with AI Course"
       sub_title: |
         Master the skills to turn data into powerful insights and AI-driven solutions. Build predictive models for real-world applications like fraud detection, natural language processing, and data-driven decision-making.
         Use industry-leading tools and libraries such as Python, TensorFlow, SQL, and Scikit-learn, and work with supervised and unsupervised learning models.  Explore key algorithms like K-Nearest Neighbors and Decision Trees.
@@ -250,7 +250,7 @@ two_columns_rigo:
   background: "#FFFFFF"
   justify: "center" #start,end,center
   image:
-    style: '{"backgroundSize": "contain", "background-position": "center", "border" : "2px solid black", "border-radius": "4px"}'
+    style: '{"backgroundSize": "contain", "backgroundPosition": "center center", "border" : "2px solid black", "border-radius": "4px"}'
     src: "/images/landing/ai-mentor.jpg"
     shadow: true
   video: "6m1Jyya7eCc"

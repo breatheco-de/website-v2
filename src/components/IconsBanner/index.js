@@ -16,32 +16,44 @@ export default ({
     <Div
       background="#FFF"
       border="3px solid #000"
+      border_xs="2px solid #000"
+      border_tablet="3px solid #000"
+      border_md="3px solid #000"
       width="100%"
       width_md="320px"
       width_tablet="200px"
       boxShadow="6px 6px 0px 0px rgba(0,0,0,1)"
+      boxShadow_xs="3px 3px 0px 0px rgba(0,0,0,1)"
       boxShadow_tablet="9px 8px 0px 0px rgba(0,0,0,1)"
       flexDirection_tablet="column"
       justifyContent_tablet="start"
       padding="15px"
+      padding_xs="10px"
+      padding_tablet="15px"
+      padding_md="15px"
       alignItems="center"
       alignItems_tablet="start"
       borderRadius="4px"
     >
-      {icon && (
-        <Icon
-          icon={icon}
-          width="56px"
-          height="56px"
-          color={Colors[color] || color}
-        />
-      )}
+      <Div flexShrink="0" width_xs="48px" width_tablet="56px">
+        {icon && (
+          <Icon
+            icon={icon}
+            width="56px"
+            width_xs="48px"
+            height="56px"
+            height_xs="48px"
+            color={Colors[color] || color}
+          />
+        )}
+      </Div>
       <Div
         margin="0 0 0 15px"
         margin_tablet="24px 0 0 0"
         display="flex"
         flexDirection="column"
         display_tablet="block"
+        flex="1"
       >
         {title && (
           <H3

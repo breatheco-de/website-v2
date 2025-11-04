@@ -5,8 +5,6 @@ import { H2, H3, H4, Paragraph } from "../components/Heading";
 import { Colors, Button } from "../components/Styling";
 import { Charts } from "../components/Chart";
 import Badges from "../components/Badges";
-import DraggableDiv from "../components/DraggableDiv";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import BaseRender from "./_baseLayout";
 import { StyledBackgroundSection } from "../components/Styling";
 import Modal from "../components/Modal";
@@ -328,116 +326,13 @@ const Outcomes = ({ data, pageContext, yml }) => {
                     {section.badges &&
                       badgesData &&
                       Array.isArray(badgesData.badges) && (
-                        <Div margin="30px 0">
-                          {/* Desktop Grid Layout - Only for large screens */}
-                          <Div
-                            width="100%"
-                            background={Colors.white}
-                            padding="20px 0"
-                            margin="0"
-                            display="none"
-                            display_tablet="block"
-                          >
-                            <Div
-                              width="100%"
-                              maxWidth="800px"
-                              margin="0 auto"
-                              padding="0"
-                            >
-                              <Div width="100%" style={{ overflowX: "auto" }}>
-                                <DraggableDiv gap="15px">
-                                  {badgesData.badges
-                                    .slice(0, 5)
-                                    .map((badge, index) => {
-                                      return (
-                                        <Div
-                                          key={badge.name}
-                                          width="140px"
-                                          height="100px"
-                                          background={Colors.white}
-                                          flexDirection="column"
-                                          justifyContent="center"
-                                          borderRadius="4px"
-                                          flexShrink="0"
-                                          border="1px solid #e5e5e5"
-                                        >
-                                          <GatsbyImage
-                                            style={{
-                                              height: "49px",
-                                              minWidth: "60px",
-                                              margin: "auto",
-                                              width: "100%",
-                                            }}
-                                            imgStyle={{
-                                              objectFit: "contain",
-                                            }}
-                                            loading="eager"
-                                            alt={badge.name}
-                                            draggable={false}
-                                            image={getImage(
-                                              badge.image.childImageSharp
-                                                .gatsbyImageData
-                                            )}
-                                          />
-                                        </Div>
-                                      );
-                                    })}
-                                </DraggableDiv>
-                              </Div>
-                            </Div>
-                          </Div>
-
-                          {/* Mobile Swipable Layout */}
-                          <Div
-                            width="100%"
-                            background={Colors.white}
-                            padding="20px 0"
-                            margin="0"
-                            display="block"
-                            display_tablet="none"
-                          >
-                            <Div width="100%" style={{ overflowX: "auto" }}>
-                              <DraggableDiv gap="15px">
-                                {badgesData.badges
-                                  .slice(0, 5)
-                                  .map((badge, index) => {
-                                    return (
-                                      <Div
-                                        key={badge.name}
-                                        width="140px"
-                                        height="90px"
-                                        background={Colors.white}
-                                        flexDirection="column"
-                                        justifyContent="center"
-                                        borderRadius="4px"
-                                        flexShrink="0"
-                                        border="1px solid #e5e5e5"
-                                      >
-                                        <GatsbyImage
-                                          style={{
-                                            height: "38px",
-                                            minWidth: "45px",
-                                            margin: "auto",
-                                            width: "100%",
-                                          }}
-                                          imgStyle={{
-                                            objectFit: "contain",
-                                          }}
-                                          loading="eager"
-                                          alt={badge.name}
-                                          draggable={false}
-                                          image={getImage(
-                                            badge.image.childImageSharp
-                                              .gatsbyImageData
-                                          )}
-                                        />
-                                      </Div>
-                                    );
-                                  })}
-                              </DraggableDiv>
-                            </Div>
-                          </Div>
-                        </Div>
+                        <Badges
+                          lang={pageContext.lang}
+                          badges={badgesData}
+                          background={Colors.white}
+                          padding="20px 0"
+                          margin="30px 0"
+                        />
                       )}
 
                     {/* Conditionally render sub_sections only if they exist */}

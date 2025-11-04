@@ -12,7 +12,7 @@ meta_info:
 
   # Set a particular course or location to the landing page
   # this UTM fields will be also included in the CRM contact
-  utm_course: ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity" ]
   utm_location: [
     "bogota-colombia",
     "buenosaires-argentina",

@@ -12,7 +12,7 @@ meta_info:
   redirects:
     []
   utm_course:
-    ["full-stack", "datascience-ml", "cybersecurity", "coding-introduction"]
+    ["full-stack", "datascience-ml", "cybersecurity" ]
   utm_location:
     [
       "atlanta-usa",

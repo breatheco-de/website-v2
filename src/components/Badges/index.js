@@ -1,8 +1,8 @@
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { Div, GridContainer } from "../Sections";
-import DraggableDiv from "../DraggableDiv";
-import { Paragraph, H2, SubTitle } from "../Heading";
+import { Div } from "../Sections";
+import CarouselV2 from "../CarouselV2";
+import { Paragraph } from "../Heading";
 import { Colors } from "../Styling";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
@@ -13,6 +13,7 @@ const SquaresVariant = ({
   background,
   padding,
   padding_tablet,
+  padding_md,
   margin,
   maxWidth,
   content,
@@ -20,79 +21,101 @@ const SquaresVariant = ({
   imageBorder,
 }) => {
   return (
-    <>
-      <Div
-        id={id}
-        width="100%"
-        margin_tablet="0 auto"
-        justifyContent="center"
-        background={background}
-        padding_xxs="0 20px"
-        padding_tablet="0 40px"
-        padding_md="0 80px"
-        padding_lg="0px"
-      >
-        <GridContainer
-          containerColumns_tablet="repeat(12, 1fr)"
-          gridColumn_tablet="1/ span 12"
-          background={background}
-          padding={padding}
-          padding_tablet={padding_tablet}
-          rows={paragraph && "3"}
-          margin={margin}
-          maxWidth={maxWidth}
-          childMaxWidth="1280px"
-        >
-          {title && (
-            <H2 type="h2">
-              {title.split("\n").map((line, idx) => (
-                <span key={idx} style={{ display: "block" }}>
-                  {line}
-                </span>
-              ))}
-            </H2>
-          )}
-          {paragraph && (
-            <Div margin="15px 0">
-              <SubTitle dangerouslySetInnerHTML={{ __html: paragraph }} />
-            </Div>
-          )}
-          <Div width="100%" style={{ overflowX: "auto" }}>
-            <DraggableDiv gap="20px">
-              {content.badges.slice(0, 5).map((l) => {
-                return (
-                  <Div
-                    width="240px"
-                    height="140px"
-                    background={imageBackground || Colors.white}
-                    flexDirection="column"
-                    justifyContent="center"
-                    borderRadius="4px"
-                    flexShrink="0"
-                    flexShrink_tablet="0"
-                    border={imageBorder}
-                  >
-                    <GatsbyImage
-                      key={l.name}
-                      style={{
-                        height: "65px",
-                        minWidth: "80px",
-                        margin: "auto",
-                      }}
-                      imgStyle={{ objectFit: "contain" }}
-                      loading="eager"
-                      alt={l.name}
-                      draggable={false}
-                      image={getImage(l.image.childImageSharp.gatsbyImageData)}
-                    />
-                  </Div>
-                );
-              })}
-            </DraggableDiv>
+    <CarouselV2
+      id={id}
+      background={background}
+      padding={padding || "80px 20px 40px 20px"}
+      padding_tablet={padding_tablet || "80px 40px 40px 40px"}
+      padding_md={padding_md || "80px 80px 40px 80px"}
+      margin={margin}
+      heading={title}
+      content={paragraph}
+      headingProps={{
+        fontSize: "30px",
+        fontSize_tablet: "34px",
+        textAlign: "center",
+      }}
+      contentProps={{
+        textAlign: "center",
+      }}
+      settings={{
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: false,
+        arrows: false,
+        dots: false,
+        responsive: [
+          {
+            breakpoint: 1124,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 4,
+              dots: true,
+              arrows: true,
+            },
+          },
+          {
+            breakpoint: 780,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              initialSlide: 0,
+              dots: true,
+              arrows: true,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 0,
+              dots: true,
+              arrows: true,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              initialSlide: 0,
+              dots: true,
+              arrows: true,
+              centerMode: false,
+            },
+          },
+        ],
+      }}
+    >
+      {content.badges.slice(0, 5).map((l) => (
+        <Div key={l.name} padding="0 10px">
+          <Div
+            width="240px"
+            height="140px"
+            background={imageBackground || Colors.white}
+            flexDirection="column"
+            justifyContent="center"
+            borderRadius="4px"
+            border={imageBorder}
+            margin="0 auto"
+          >
+            <GatsbyImage
+              style={{
+                height: "65px",
+                minWidth: "80px",
+                margin: "auto",
+              }}
+              imgStyle={{ objectFit: "contain" }}
+              loading="eager"
+              alt={l.name}
+              draggable={false}
+              image={getImage(l.image.childImageSharp.gatsbyImageData)}
+            />
           </Div>
-        </GridContainer>
-      </Div>
-    </>
+        </Div>
+      ))}
+    </CarouselV2>
   );
 };
 
@@ -109,6 +132,7 @@ const Badges = ({
   paddingText,
   paddingText_tablet,
   padding_tablet,
+  padding_md,
   margin,
   wrapped_images,
   maxWidth,
@@ -172,6 +196,7 @@ const Badges = ({
         background={background}
         padding={padding}
         padding_tablet={padding_tablet}
+        padding_md={padding_md}
         margin={margin}
         maxWidth={maxWidth}
         imageBackground={imageBackground}
@@ -179,148 +204,246 @@ const Badges = ({
       />
     );
 
-  return (
-    <>
-      <Div
-        width="100%"
-        margin_tablet="0 auto"
-        justifyContent="center"
+  // Wrapped images variant - using CarouselV2 as top container
+  if (wrapped_images === true) {
+    return (
+      <CarouselV2
+        id={id}
         background={background}
-        padding_xxs="0 20px"
-        padding_tablet="0 40px"
-        padding_md="0 80px"
-        padding_lg="0px"
+        padding={padding || "40px 20px"}
+        padding_tablet={padding_tablet || "40px 40px"}
+        margin={margin}
+        content={!bottom_paragraph ? paragraph : null}
+        contentProps={{
+          fontFamily: "Lato-Light",
+          lineHeight: short_link || short_text ? "29px" : "38px",
+          color: Colors.darkGray,
+          ...paragraphStyles,
+        }}
+        settings={{
+          slidesToShow: 5,
+          slidesToScroll: 5,
+          infinite: false,
+          arrows: false,
+          dots: false,
+          responsive: [
+            {
+              breakpoint: 1124,
+              settings: {
+                slidesToShow: 4,
+                slidesToScroll: 4,
+                dots: true,
+                arrows: true,
+              },
+            },
+            {
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                initialSlide: 0,
+                dots: true,
+                arrows: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 0,
+                dots: true,
+                arrows: true,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0,
+                dots: true,
+                arrows: true,
+                centerMode: true,
+                centerPadding: "40px",
+              },
+            },
+          ],
+        }}
       >
-        <GridContainer
-          id={id}
-          containerColumns_tablet="repeat(12, 1fr)"
-          gridColumn_tablet="1/ span 12"
-          background={bg_full ? "transparent" : background}
-          padding={padding}
-          padding_tablet={padding_tablet}
-          rows={paragraph && "3"}
-          margin={margin}
-          maxWidth={maxWidth}
-          childMaxWidth="1280px"
-        >
-          {!bottom_paragraph && paragraph && (
-            <Div className="badge-slider" justifyContent="between">
-              <Paragraph
-                fontFamily="Lato-Light"
-                padding={paddingText || "0 10px 45px 10px"}
-                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
-                lineHeight={short_link || short_text ? "29px" : "38px"}
-                color={Colors.darkGray}
-                dangerouslySetInnerHTML={{ __html: paragraph }}
-                margin="15px 0 0 0"
-                {...paragraphStyles}
+        {content.badges.map((l) => (
+          <Div key={l.name} padding="0 10px">
+            <Div margin="0 auto" width="fit-content">
+              <GatsbyImage
+                style={{
+                  height: "65px",
+                  minWidth: "150px",
+                  width: "min-content",
+                  margin: "0 auto",
+                }}
+                imgStyle={{ objectFit: "contain" }}
+                loading="eager"
+                alt={l.name}
+                image={getImage(l.image.childImageSharp.gatsbyImageData)}
               />
             </Div>
-          )}
+          </Div>
+        ))}
+      </CarouselV2>
+    );
+  }
 
-          {wrapped_images === true ? (
-            <Div
-              className="badge-slider hideOverflowX__"
-              justifyContent="center"
-              rowGap="3rem"
-              flexWrap="wrap"
-              columnGap="0rem"
-            >
-              {content.badges.map((l) => {
-                return (
+  // Default carousel mode - using CarouselV2 as top container
+  return (
+    <>
+      <CarouselV2
+        id={id}
+        background={background}
+        padding={padding || "40px 20px"}
+        padding_tablet={padding_tablet || "40px 40px"}
+        margin={margin}
+        content={!bottom_paragraph ? paragraph : null}
+        contentProps={{
+          fontFamily: "Lato-Light",
+          lineHeight: short_link || short_text ? "29px" : "38px",
+          color: Colors.darkGray,
+          ...paragraphStyles,
+        }}
+        settings={{
+          slidesToShow: short_link ? 4 : 5,
+          slidesToScroll: short_link ? 4 : 5,
+          infinite: false,
+          arrows: false,
+          dots: false,
+          responsive: [
+            {
+              breakpoint: 1124,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                dots: true,
+                arrows: true,
+              },
+            },
+            {
+              breakpoint: 780,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 0,
+                dots: true,
+                arrows: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 0,
+                dots: true,
+                arrows: true,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 0,
+                dots: true,
+                arrows: true,
+                centerMode: true,
+                centerPadding: "40px",
+              },
+            },
+          ],
+        }}
+      >
+        {short_link
+          ? content.badges.slice(0, 4).map((l) => (
+              <Div key={l.name} padding="0 10px">
+                <Div margin="0 auto" width="fit-content">
                   <GatsbyImage
-                    key={l.name}
                     style={{
                       height: "65px",
-                      minWidth: "150px",
-                      width: "min-content",
-                      margin: "0 20px",
+                      minWidth: "80px",
+                      margin: "0 auto",
                     }}
                     imgStyle={{ objectFit: "contain" }}
                     loading="eager"
                     alt={l.name}
                     image={getImage(l.image.childImageSharp.gatsbyImageData)}
                   />
-                );
-              })}
-            </Div>
-          ) : (
-            <Div width="100%" style={{ overflowX: "auto" }}>
-              <Div className="badge-slider hideOverflowX__" margin="auto">
-                {short_link
-                  ? content.badges.map((l, i) => {
-                      return (
-                        i < 4 && (
-                          <GatsbyImage
-                            key={l.name}
-                            style={{
-                              height: "65px",
-                              minWidth: "80px",
-                              margin: "0 20px",
-                            }}
-                            imgStyle={{ objectFit: "contain" }}
-                            loading="eager"
-                            alt={l.name}
-                            image={getImage(
-                              l.image.childImageSharp.gatsbyImageData
-                            )}
-                          />
-                        )
-                      );
-                    })
-                  : content.badges.map((l) => {
-                      return (
-                        <GatsbyImage
-                          key={l.name}
-                          style={{
-                            height: "85px",
-                            minWidth: "150px",
-                            margin: "0 14px",
-                          }}
-                          imgStyle={{ objectFit: "contain" }}
-                          loading="eager"
-                          draggable={false}
-                          alt={l.name}
-                          image={getImage(
-                            l.image.childImageSharp.gatsbyImageData
-                          )}
-                        />
-                      );
-                    })}
-
-                {short_link && (
-                  <Link to={content.link_to}>
-                    <Paragraph width="150px" color={Colors.blue}>
-                      {`${content.short_link_text} >`}
-                    </Paragraph>
-                  </Link>
-                )}
+                </Div>
               </Div>
-            </Div>
-          )}
+            ))
+          : content.badges.map((l) => (
+              <Div key={l.name} padding="0 10px">
+                <Div margin="0 auto" width="fit-content">
+                  <GatsbyImage
+                    style={{
+                      height: "85px",
+                      minWidth: "150px",
+                      margin: "0 auto",
+                    }}
+                    imgStyle={{ objectFit: "contain" }}
+                    loading="eager"
+                    draggable={false}
+                    alt={l.name}
+                    image={getImage(l.image.childImageSharp.gatsbyImageData)}
+                  />
+                </Div>
+              </Div>
+            ))}
+      </CarouselV2>
 
-          {bottom_paragraph && (
-            <Div className="badge-slider" justifyContent="between">
-              <Paragraph
-                fontFamily="Lato"
-                padding={paddingText || "0 10px 45px 10px"}
-                padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
-                color={Colors.black}
-                dangerouslySetInnerHTML={{ __html: paragraph }}
-                margin="15px 0 0 0"
-              />
-            </Div>
-          )}
+      {short_link && (
+        <Div
+          justifyContent="center"
+          margin="60px 0 20px 0"
+          margin_tablet="20px 0 20px 0"
+        >
+          <Link to={content.link_to}>
+            <Paragraph width="auto" color={Colors.blue}>
+              {`${content.short_link_text} >`}
+            </Paragraph>
+          </Link>
+        </Div>
+      )}
 
-          {link && (
-            <Div justifyContent="center" margin="50px 0 0 0">
-              <Link to={content.link_to}>
-                <Paragraph color={Colors.blue}>{content.link_text}</Paragraph>
-              </Link>
-            </Div>
-          )}
-        </GridContainer>
-      </Div>
+      {bottom_paragraph && paragraph && (
+        <Div
+          background={background}
+          padding="0 20px 20px 20px"
+          padding_tablet="0 40px 40px 40px"
+        >
+          <Div maxWidth="1280px" margin="0 auto">
+            <Paragraph
+              fontFamily="Lato"
+              padding={paddingText || "0 10px 45px 10px"}
+              padding_tablet={paddingText_tablet || "0 5% 55px 5%"}
+              color={Colors.black}
+              dangerouslySetInnerHTML={{ __html: paragraph }}
+              margin="15px 0 0 0"
+            />
+          </Div>
+        </Div>
+      )}
+
+      {link && (
+        <Div
+          background={background}
+          padding="0 20px 20px 20px"
+          padding_tablet="0 40px 40px 40px"
+        >
+          <Div maxWidth="1280px" margin="0 auto" justifyContent="center">
+            <Link to={content.link_to}>
+              <Paragraph color={Colors.blue}>{content.link_text}</Paragraph>
+            </Link>
+          </Div>
+        </Div>
+      )}
     </>
   );
 };

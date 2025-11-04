@@ -339,6 +339,23 @@ image:
   link: "/example"              # MODIFIABLE: Image click link
 ```
 
+#### Gold Standard Image Styling for Two Column Layouts
+**RECOMMENDED:** For `two_column_left` and `two_column_right` layouts, use this style to ensure images look great on both mobile and desktop screens:
+
+```yaml
+image:
+  style: '{"backgroundSize": "contain;", "align-self": "stretch", "margin": "0 auto", "background-position": "center center" }'
+  src: "/images/landing/image.webp"
+```
+
+**Why this works:**
+- `backgroundSize: contain;` - Scales image to fit without cropping
+- `align-self: stretch` - Makes image fill available vertical space
+- `margin: 0 auto` - Centers image horizontally
+- `background-position: center center` - Centers image within container
+
+This combination ensures images maintain proper aspect ratio and centering across all breakpoints.
+
 ### Video Support (Modifiable)
 ```yaml
 video: "VIDEO_ID"               # MODIFIABLE: YouTube video ID

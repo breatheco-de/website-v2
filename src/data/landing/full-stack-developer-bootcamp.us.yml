@@ -197,7 +197,7 @@ components:
     sub_heading:
       text: 'According to the U.S. Bureau of Labor Statistics, software developers in the U.S. have a higher-than-average job outlook and earn a median salary of <strong>$110,140 a year</strong>. Here’s how you can join the ranks of successful programmers!'
       font_size: ["16px", "16px", "16px", "16px", "16px"]
-      style: '{ "textAlign": "center", "width": "60%" }'
+      style: '{ "textAlign": "center", "width": "80%" }'
     text_link: "/"
     icons:
       - icon: "graduation-2"
@@ -216,7 +216,7 @@ components:
     proportions: [6, 6]
     background: ""
     image:
-      style: '{ "backgroundSize": "contain" }'
+      style: '{"backgroundSize": "contain;", "align-self": "stretch", "margin": "0 auto", "background-position": "center center" }'
       src: "/images/landing/Group-6626.webp"
       shadow: false
     section_heading:

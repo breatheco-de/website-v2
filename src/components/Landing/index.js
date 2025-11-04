@@ -379,24 +379,22 @@ export const landingSections = {
     const title = yml.heading?.text || yml.heading;
     const subHeading = yml.sub_heading?.text || yml.sub_heading;
     return (
-      <React.Fragment key={index}>
-        <Div width="100%">
-          <Badges
-            link
-            id="badges"
-            variant="squares"
-            lang={pageContext.lang}
-            title={title}
-            paragraph={subHeading}
-            imageBorder={`1px solid ${Colors.lightGray2}`}
-            short_text
-            padding="60px 0"
-            padding_tablet="68px 0"
-            margin_tablet="0 0 78px 0"
-            maxWidth="1280px"
-          />
-        </Div>
-      </React.Fragment>
+      <Badges
+        key={index}
+        link
+        id="badges"
+        variant="squares"
+        lang={pageContext.lang}
+        title={title}
+        paragraph={subHeading}
+        imageBorder={`1px solid ${Colors.lightGray2}`}
+        short_text
+        padding="60px 20px"
+        padding_tablet="68px 40px"
+        margin="0 auto"
+        margin_tablet="0 auto 78px auto"
+        maxWidth="1280px"
+      />
     );
   },
 

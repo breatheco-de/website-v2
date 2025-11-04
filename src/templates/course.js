@@ -65,7 +65,7 @@ const Program = ({ data, pageContext, yml }) => {
           isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
         }
         paragraphMargin="26px 20px"
-        paragraphMargin_Tablet="26px 22%"
+        paragraphMargin_Tablet="26px 16%"
         paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}

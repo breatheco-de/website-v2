@@ -63,15 +63,15 @@ const Program = ({ data, pageContext, yml }) => {
           isCustomBarActive(session) ? "120px auto 0 auto" : "90px auto 0 auto"
         }
         paragraphMargin="26px 20px"
-        paragraphMargin_Tablet="26px 22%"
+        paragraphMargin_Tablet="26px 16%"
         paddingParagraph_tablet="0 40px"
         seo_title={yml.seo_title}
         title={yml.header.title}
         paragraph={yml.header.paragraph}
-        padding_xxs="40px 20px"
-        padding_md="40px 80px"
-        padding_lg="40px 0px"
-        padding_tablet="40px 40px"
+        padding_xxs="40px 20px 0 20px"
+        padding_md="40px 80px 0 80px"
+        padding_lg="40px 0px 0 0px"
+        padding_tablet="40px 40px 0 40px"
         position="relative"
         fontSize_title="40px"
         fontSizeTitle_tablet="60px"
@@ -168,14 +168,21 @@ const Program = ({ data, pageContext, yml }) => {
             }}
           />
         </Modal>
-        <Badges
-          lang={pageContext.lang}
-          short_link={true}
-          short_text="12px"
-          margin="0 0 40px 0"
-          paragraph={yml.badges.paragraph}
-        />
       </Header>
+      <Badges
+        lang={pageContext.lang}
+        padding_tablet="0px 64px"
+        padding="0px"
+        short_link={true}
+        short_text="12px"
+        paragraphStyles={{
+          fontSize: "16px",
+          fontSize_tablet: "16px",
+          padding_tablet: "0px 64px 40px 64px",
+          padding: "0px 47px 0 47px",
+        }}
+        paragraph={yml.badges.paragraph}
+      />
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />

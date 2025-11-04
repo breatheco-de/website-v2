@@ -94,7 +94,6 @@ const Why = (props) => {
         lang={pageContext.lang}
         paragraph={yml.badges.paragraph}
         background="rgba(255, 183, 24, 0.2)"
-        bg_full
         link
         padding="58px 17px"
         padding_tablet="70px 0"

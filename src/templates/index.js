@@ -314,25 +314,18 @@ const Home = (props) => {
           />
         </Div>
       </Div>
-      <Div
+      <Badges
+        variant="squares"
+        lang={pageContext.lang}
+        short_text="15px"
         margin="0 auto"
-        padding="80px 0 40px 0"
-        margin_tablet="0 auto"
-        width="100%"
-        className="badge-slider hideOverflowX__"
+        title={yml.badges.title}
+        paragraph={yml.badges.paragraph}
         background={Colors.veryLightBlue3}
-      >
-        <Badges
-          variant="squares"
-          lang={pageContext.lang}
-          short_text="15px"
-          margin="0 auto"
-          title={yml.badges.title}
-          paragraph={yml.badges.paragraph}
-          maxWidth="1280px"
-          paddingText_tablet="0 10% 5px 10%"
-        />
-      </Div>
+        padding="80px 20px 40px 20px"
+        padding_tablet="80px 40px 40px 40px"
+        padding_md="80px 80px 40px 80px"
+      />
       <Div background={Colors.veryLightBlue3} display="block">
         <TwoColumn
           left={{ image: yml.why_4geeks?.image }}
