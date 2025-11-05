@@ -2,6 +2,29 @@ import { navigate } from "gatsby";
 
 export const isWindow = () => (window !== undefined ? true : false);
 
+const isPlainObject = (obj) =>
+  obj && typeof obj === "object" && !Array.isArray(obj);
+
+export const flattenFormData = (data = {}, { excludeKeys = [] } = {}) => {
+  // 1. Flattens form data: { name: { value: "John" }, age: 30 } → { name: "John", age: 30 }
+  // 2. With primitive value: { name: "John Doe", age: 30 } → { name: "John Doe", age: 30 }
+  // 3. Exclude keys: { name: "John Doe", age: 30, form_type: "apply" }
+  //    excludeKeys = ["form_type"] → { name: "John Doe", age: 30 }
+
+  const result = {};
+  if (!isPlainObject(data)) return result;
+
+  Object.keys(data).forEach((key) => {
+    if (excludeKeys.includes(key)) return;
+    const value = data[key];
+
+    if (isPlainObject(value) && "value" in value) {
+      result[key] = value.value;
+    } else result[key] = value;
+  });
+  return result;
+};
+
 export const smartRedirecting = (e, path) => {
   e.preventDefault();
   const linkRegex = new RegExp("(http)");
