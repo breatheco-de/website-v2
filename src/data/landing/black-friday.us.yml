@@ -1,0 +1,319 @@
+meta_info:
+  slug: black-friday-4geeks # <--- URL 4geeksacademy.com/us/landing/black-friday-4geeks
+
+  # This will show on social media when shared
+  title: "Black Friday: 30% OFF Tech Bootcamps | 4Geeks Academy"
+  description: "Get 30% OFF this Black Friday. Learn Full-Stack, Data Science, ML, or Cybersecurity. Offer ends Dec 2. Start your tech career today with unlimited mentorship."
+  visibility: "hidden" # visible (default), hidden (not indexed) or unlisted (listed but not in sitemap).
+  image: "/images/bg/the-academy-bg.jpg"
+  keywords: ""
+
+  template: "landing_a" # <--- choose your landing template
+  redirects:
+    [] # <--- URL redirections to avoid 404 errors
+
+
+    # Set a particular course or location to the landing page
+  # this UTM fields will be also included in the CRM contact
+  utm_course: ["full-stack", "datascience-ml", "cybersecurity"]
+  utm_location: ["atlanta-usa", "austin-usa", "chicago-usa", "downtown-miami", "houston-usa", "losangeles-usa", "newyork-usa", "orlando", "online"]
+  automation: soft # comma separated, "soft" is the default value
+  tag: request_more_info # comma separated, "request_more_info" is the default value
+
+navbar:
+  logoUrl: "#" # relative(/apply), absolute(https://google.com) or id(#componentName)
+  buttonText: "Secure my discount"
+  buttonUrl: "#leadform_bottom" # url accepts: relative(/apply), absolute(https://google.com), id(#componentName) or position(#top #bottom)
+
+form:
+  # posible fields: "first_name", "last_name", "full_name", "phone", "email"
+  # always the first_name, email and phone will be mandatory if added.
+  fields: ["full_name", "phone", "email"]
+  heading: "Get more Information"
+  motivation: "Fill out the form to receive detailed information about 4Geeks Academy and all the courses we offer, delivered straight to your inbox."
+  button_label: Get More Info
+  redirect: null #you can redirect to another url or entirely diffrent website
+
+apply_schollarship: # form that is displayed at the end of the landing
+  # title: "Apoyo Profesional Ilimitado"
+  imageSide: "left"
+  image: "../../../static/images/landing/hombre-joven-con-laptop-senalando.webp"
+
+# jumbotron on the top (cannot be commented out)
+header_data:
+  background: "#ffffff"
+  tagline: 30% OFF this<br> Black Friday.<br> Learn now. Profit for life.
+  sub_heading: " "
+  tagline_color: "#1c1c1c"
+  form_styles:
+    background: "#0084FF"
+    color: "white"
+    button:
+      background: "black"
+  # background_image: "../../../static/images/landing-background-men-w-laptop.webp"
+  badge: "../../../static/images/badges/Course-Report-Badge-2025.png"
+  image_filter: brightness(0.9)
+
+features:
+  marginTop: 0px #<-- separation between tagline and the bullets
+
+  #                                         up   left down  right
+  styles: '{ "fontSize": "20px", "margin": "10px 0px 0px 0px" }'
+  bullets:
+    - Go from 0 to tech pro in Full-Stack, Data Science, Machine Learning, or Cybersecurity.
+    - Get unlimited mentorship and lifelong career support.
+    - 100% practical, flexible programs designed to fit your schedule.
+    - Offer ends Dec 2 — don't miss it!
+
+short_badges:
+  - name: "Top Online Full-Stack Bootcamps Of 2024"
+    url: ""
+    image: "../../../static/images/badges/forbes-logo-award.png"
+    alt: "We have been selected as one of the Top Online Coding Bootcamps by Forbes."
+  - name: "Best for Spanish speakers Of 2024 by Fortune"
+    url: ""
+    image: "../../../static/images/badges/fortune-logo.png"
+    alt: "Recognized by Fortune as one of the Top Coding Bootcamps"
+  - name: "Top Coding Bootcamps Newsweek"
+    url: ""
+    image: "../../../static/images/badges/newsweek.webp"
+    alt: "Top Coding Bootcamps Newsweek"
+  - name: "Best Coding Bootcamp Course Report 2024"
+    url: ""
+    image: "../../../static/images/badges/Course-Report-Badge-2024.webp"
+    alt: "Best Coding Bootcamp Course Report 2024"
+  - name: "Licensed by the Florida Department of Education"
+    url: ""
+    image: "../../../static/images/badges/licensed.png"
+    alt: "Licensed by the Florida Department of Education"
+  - name: "ARP Certificate"
+    url: ""
+    image: "../../../static/images/badges/arp-logo-certification.png"
+    alt: "ARP Certificate"
+
+follow_bar:
+  position: "top" # top, bottom, hidden
+  content:
+    text: "30% OFF Black Friday Sale — Offer Ends Dec 2! Secure Your Discount Now"
+    text_mobile: "30% OFF Black Friday — Ends Dec 2!"
+    # devices:   XL      LG    MD      SM    XS
+    font_size: ["25px", "25px", "20px", "20px", "18px"]
+  button:
+    text: "Secure my discount"
+    path: "#leadform_header"
+  phone:
+    text: "Call "
+
+#
+# ⬇ FROM HERE ON YOU CAN COMMENT ANYTHING TO HIDE IT ON THE LANDING ⬇
+#
+rating_reviews:
+  background: "#FBFBFB"
+  position: 4
+  heading: "Consistently Ranked Among the Best by SwitchUp, Forbes and More"
+  rating_list:
+    - alt: "Career Karma"
+      image: "../../../static/images/badges/career-karma.png"
+      rating: 4.89
+      url: ""
+    - alt: "Switchup"
+      image: "../../../static/images/badges/switchup-img.png"
+      rating: 4.91
+      url: ""
+    - alt: "Course Report"
+      image: "../../../static/images/badges/course-report.png"
+      rating: 4.84
+      url: ""
+    - alt: "Google"
+      image: "../../../static/images/badges/google.png"
+      rating: 5
+      url: ""
+
+# program_details:
+#   position: 3
+#   background: "#faf2e1"
+#   heading: "Full-Stack Development One of our Coding Courses"
+#   sub_heading: "Dive deep into full-stack development with our detailed program that covers everything from HTML5 to advanced backend frameworks."
+
+# why_python:
+#   position: 5
+#   heading: "Why Python and React.js" # optional or set to white space to hide
+#   sub_heading: "JavaScript has 26x's more job vacancies than Ruby On Rails. Python has 10x's more job vacancies than Node.js" # optional or set to white space to hide
+
+geeks_vs_others:
+  position: 4
+  heading: "Compare our coding bootcamp to the competition"
+  # sub_heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+  total_rows: 5
+
+badges:
+  position: 5
+  heading: "Numerous Awards and Recognitions Celebrate Our Excellence"
+
+who_is_hiring:
+  position: 9
+  limit: 4
+  heading: "Who is hiring our students?"
+  sub_heading: "Top companies around the world trust 4Geeks graduates and they’re hiring. With 84% of grads landing jobs within 6 months, your next opportunity is closer than you think. Join a network of 550+ hiring partners and launch a career built to last."
+
+why_4geeks:
+  position: 6
+  heading: "Student Stories: How 4Geeks Helped Launch Their Tech Careers"
+  sub_heading: ""
+
+
+components:
+  - name: how-it-works-programs
+    position: 1
+    background: "#fbfcfc"
+    layout: iconogram
+    swipable: True
+    heading:
+      text: "Find the path that's right for you"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+    sub_heading:
+      text: ""
+      font_size: ["16px", "16px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%" }'
+    icons:
+      - icon: "fullstack"
+        title: "Full Stack Development with AI"
+        content: "Become an AI-fluent Full Stack Developer using tools like Cursor, Vercel v0, and more. Master the most sought-after skills and land a job as a developer."
+      - icon: "machine"
+        title: "Data Science and Machine Learning"
+        content: "Acquire the skills to analyze complex data and leverage machine learning techniques to automate decision-making and uncover actionable insights."
+      - icon: "cibersecurity"
+        title: "Cybersecurity"
+        content: "Become a cybersecurity specialist, equipped to identify, manage, and mitigate system vulnerabilities in compliance with ISO and other standards."
+    button:
+      text: "Get More Information"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#leadform_header"
+
+  - name: why-choose-4geeks
+    position: 2
+    layout: two_column_right
+    proportions: [6, 6]
+    background: "#FFFFFF"
+    justify: "center" #start,end,center
+    image:
+      style: '{ "backgroundSize": "contain", "background-position": "center", "margin": "10px" }'
+      src: "/images/landing/blonde-girl-laptop.png"
+    heading:
+      text: |-
+        What Sets 4Geeks Apart: 
+        AI-Forward Skills, Unlimited Mentorship and Career Support
+      font_size: ["38px", "34px", "34px", "34px", "34px"]
+      style: '{ "font-weight": "600", "text-align": "center", "color": "#000", "padding": "10px" }'
+    sub_heading:
+      text: "Everything You Need to Launch and Grow a Career in Tech"
+      font_size: ["26px", "26px", "24px", "24px", "22px"]
+      style: '{ "font-weight": "600", "text-align": "justify", "color": "#000", "padding": "10px"}'
+    bullets:
+      item_style: '{ "padding": "0 0 0 10px", "font-weight": "100" }'
+      items:
+        - heading: "Get ahead of the curve with next-gen tech skills."
+          text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
+          icon: "check"
+        - heading: "Access unlimited mentorship and career support."
+          text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+          icon: "check"
+        - heading: "Enjoy hyperpersonalized learning, at every level."
+          text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
+          icon: "check"
+        - heading: "Join an active tech community."
+          text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+          icon: "check"
+    button:
+      text: "Learn More"
+      color: "white"
+      background: "black"
+      hover_color: "white"
+      path: "#leadform_header"
+
+  # Two Columns - Rigo
+  - name: two_columns_rigo
+    position: 4
+    layout: two_column_right
+    proportions: [7, 5]
+    justify: "center" #start,end,center
+    image:
+      style: '{"backgroundSize": "contain", "background-position": "center", "border" : "10px solid black", "border-radius": "4px"}'
+      src: "/images/landing/ai-mentor.jpg"
+      shadow: true
+    video: "6m1Jyya7eCc"
+    heading: 
+      text: "Welcome to Hyperpersonalized Learning"
+      font_size: ["33px", "33px", "33px", "33px", "33px"]
+      style: '{ "lineHeight": "30px" }'
+      heading_image:
+        src: "/images/rigobot-logo.png"
+    sub_heading:
+      text: "Progress Like Never Before"
+      font_size: ["16px","16px","16px","16px","16px"]
+    content:
+      style: '{ "font-size":"16px", "margin":"15px 0" }'
+      text: |
+        <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
+        <br />
+        <ul>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+        </ul>
+        <br />
+        <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
+      bullets:
+      item_style: '{ "padding": "0", "font-weight": "100", "margin":"0" }'
+      items:
+        - heading: "Meet Rigobot, our AI coding assistant:"
+          text: |
+            ✓ Instant tutoring as you code.
+            <br />
+            ✓ Skill evaluations to track your progress.
+            <br />
+            ✓ Expert bug fixing assistance.
+            <br /><br />
+             It perfectly complements our human mentorship program!
+          icon: "check" #string with icon for example ['check', 'cicle', etc]
+          icon_color: '#25BF6C'
+        - heading: "Learnpack, our interactive learning software, provides:"
+          text: |
+             ✓ There are hundreds of interactive exercises to help you master and retain skills.
+             <br />
+             ✓ Automated tests to help track your progress.
+             <br />
+             ✓ Structured practice.
+             <br />
+
+
+  - name: how-it-works
+    position: 6
+    background: "#0084FF"
+    layout: iconogram
+    swipable: true
+    heading:
+      text: "Do our Bootcamps Deliver Results You Can Count On?"
+      font_size: ["30px", "30px", "30px", "30px", "30px"]
+      style: '{ "color": "white" }'
+    sub_heading:
+      text: "Yes — and we've got the numbers to back it up."
+      font_size: ["20px", "20px", "16px", "16px", "16px"]
+      style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
+    icons:
+      - icon: "graduation-2"
+        color: "#0084FF"
+        title: "Job Placement Rate"
+        content: "84% of graduates were hired"
+      - icon: "briefcase-2"
+        color: "#FF0000"
+        title: "Avergage time to get hired"
+        content: "3-6 months after graduation"
+      - icon: "stairswflag"
+        color: "#BE8BFF"
+        title: "Salary Increase"
+        content: "55% increase after graduation"
+
