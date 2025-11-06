@@ -63,7 +63,7 @@ features:
     - Go from 0 to tech pro in Full-Stack, Data Science, Machine Learning, or Cybersecurity.
     - Get unlimited mentorship and lifelong career support.
     - 100% practical, flexible programs designed to fit your schedule.
-    - Offer ends Dec 2 — don't miss it!
+    - Offer ends Dec 2. Don't miss it!
 
 short_badges:
   - name: "Top Online Full-Stack Bootcamps Of 2024"
@@ -94,8 +94,8 @@ short_badges:
 follow_bar:
   position: "top" # top, bottom, hidden
   content:
-    text: "30% OFF Black Friday Sale — Offer Ends Dec 2! Secure Your Discount Now"
-    text_mobile: "30% OFF Black Friday — Ends Dec 2!"
+    text: "30% OFF Black Friday Sale: Offer Ends Dec 2! Secure Your Discount Now"
+    text_mobile: "30% OFF Black Friday: Ends Dec 2!"
     # devices:   XL      LG    MD      SM    XS
     font_size: ["25px", "25px", "20px", "20px", "18px"]
   button:
@@ -218,13 +218,13 @@ components:
           text: "Master industry-relevant, AI-powered tools guided by a cutting-edge curriculum."
           icon: "check"
         - heading: "Access unlimited mentorship and career support."
-          text: "No need to learn alone — get 1:1 support from expert human mentors whenever you need it, for life."
+          text: "No need to learn alone. Get 1:1 support from expert human mentors whenever you need it, for life."
           icon: "check"
         - heading: "Enjoy hyperpersonalized learning, at every level."
           text: "Move faster and smarter with AI-powered feedback tailored to your journey, plus an unmatched student-to-teacher ratio."
           icon: "check"
         - heading: "Join an active tech community."
-          text: "Stay connected and supported through our Slack channels — with peers, mentors, and alumni ready to help you grow."
+          text: "Stay connected and supported through our Slack channels: with peers, mentors, and alumni ready to help you grow."
           icon: "check"
     button:
       text: "Learn More"
@@ -256,13 +256,13 @@ components:
     content:
       style: '{ "font-size":"16px", "margin":"15px 0" }'
       text: |
-        <p>We're all different—yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
+        <p>We're all different, yet education has always been one-size-fits-all. At 4Geeks, we've built a better way to learn: <strong style="text-decoration: none; color: #000000; font-weight: 700;">one that adapts to you.</strong></p>
         <br />
         <ul>
-          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps—delivering real-time feedback tailored to maximize your learning.</li>
-          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it—so you never get stuck or lose momentum.</li>
-          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy—helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
-          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention—so your questions get answered and your learning stays on track.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700; ">✓ Our custom-built AI</strong>, Rigobot, tracks your activity and identifies your strengths, struggles, and gaps, delivering real-time feedback tailored to maximize your learning.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Unlimited 1:1 sessions with expert mentors</strong> give you live human support whenever you need it, so you never get stuck or lose momentum.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ Career coaches work with you individually</strong> to build your confidence and strategy, helping you stand out on paper, in interviews, and on AI-filtered platforms like ATS systems and LinkedIn.</li>
+          <li style="margin-bottom: 8px;"><strong style="text-decoration: none; color: #000000; font-weight: 700;">✓ 1:7 teacher-student ratio in live classes</strong> means you get real attention, so your questions get answered and your learning stays on track.</li>
         </ul>
         <br />
         <p>That's the power of hyperpersonalized learning: you move faster, learn smarter, and gain the kind of real confidence that lasts beyond graduation.</p>
@@ -300,7 +300,7 @@ components:
       font_size: ["30px", "30px", "30px", "30px", "30px"]
       style: '{ "color": "white" }'
     sub_heading:
-      text: "Yes — and we've got the numbers to back it up."
+      text: "Yes, and we've got the numbers to back it up."
       font_size: ["20px", "20px", "16px", "16px", "16px"]
       style: '{ "textAlign": "center", "width": "60%", "color": "white"}'      
     icons:
