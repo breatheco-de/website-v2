@@ -13,29 +13,27 @@ navbar:
       links:
 
         - title: "Desarrollador Full Stack con IA"
-          level: "Desde cero"
+          level: " "
           icon: "fullstack_2"
           paragraph: "Conviértete en desarrollador Full Stack experto en IA. Domina tecnologías modernas con mentores y obtén apoyo hasta tu primer empleo."
           buttons:
-            - text: "Part-time"
+            - text: "Ver programa"
               link: "/es/coding-bootcamps/desarrollador-full-stack"
-            - text: "Full-time"
-              link: "/es/coding-bootcamps/full-stack-full-time"
 
         - title: "Data Science y Machine Learning con IA"
-          level: "Desde cero"
+          level: " "
           icon: "machine_2"
           paragraph: "Conviértete en científico de datos y domina Python, Machine Learning y AI. Crea modelos predictivos de alto impacto."
           buttons:
-            - text: "Part-time"
+            - text: "Ver programa"
               link: "/es/coding-bootcamps/curso-datascience-machine-learning"
               
         - title: "Ciberseguridad"
-          level: "Desde cero"
+          level: " "
           icon: "cyber-security"
           paragraph: "Conviértete en especialista en ciberseguridad. Aprende a identificar y proteger sistemas contra vulnerabilidades y amenazas."
           buttons:
-            - text: "Part-time"
+            - text: "Ver programa"
               link: "/es/coding-bootcamps/curso-ciberseguridad"
 
         - title: "Inteligencia Artificial Aplicada"
@@ -43,7 +41,7 @@ navbar:
           icon: "applied-ai"
           paragraph: "Explora a detalle la inteligencia artificial y cómo aplicarla en diferentes industrias, roles y en tu trabajo. ¡Maximiza tu productividad en solo 6 semanas!"
           buttons:
-            - text: "Part-time"
+            - text: "Ver programa"
               link: "/es/coding-bootcamps/curso-inteligencia-artificial"
 
 

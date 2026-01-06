@@ -16,17 +16,15 @@ navbar:
           icon: "fullstack_2"
           paragraph: "Become a Full Stack developer using AI tools like Cursor and Vercel v0. Master in-demand AI skills and land a job as a developer."
           buttons:
-            - text: "Part-time"
+            - text: "View program"
               link: "/us/coding-bootcamps/part-time-full-stack-developer"
-            - text: "Full-time"
-              link: "/us/coding-bootcamps/full-time-full-stack-developer"
 
         - title: "Data Science and Machine Learning with AI"
           level: " "
           icon: "machine_2"
           paragraph: "Master AI-powered data analysis with Python. Build intelligent models using cutting-edge Machine Learning and AI techniques to solve real-world problems."
           buttons:
-            - text: "Part-time"
+            - text: "View program"
               link: "/us/coding-bootcamps/datascience-machine-learning"
 
         - title: "Cybersecurity"
@@ -34,7 +32,7 @@ navbar:
           icon: "cyber-security"
           paragraph: "Become a cybersecurity specialist, equipped to identify and mitigate system vulnerabilities, aligned with ISO and other standards."
           buttons:
-            - text: "Part-time"
+            - text: "View program"
               link: "/us/coding-bootcamps/cybersecurity"
 
         - title: "Applied AI"
@@ -42,7 +40,7 @@ navbar:
           icon: "applied-ai"
           paragraph: "Explore in detail artificial intelligence and how to apply it in different industries, roles, and your work. Maximize your productivity in just 6 weeks!"
           buttons:
-            - text: "Part-time"
+            - text: "View program"
               link: "/us/coding-bootcamps/applied-ai-course"
 
 
