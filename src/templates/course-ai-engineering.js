@@ -191,8 +191,7 @@ const Program = ({ data, pageContext, yml }) => {
         <Iconogram
           yml={{
             ...yml.why_ai_engineering_now,
-            background:
-              yml.why_ai_engineering_now.background || "#FFFFFF",
+            background: yml.why_ai_engineering_now.background || "#FFFFFF",
           }}
           index={0}
         />
