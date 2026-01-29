@@ -271,31 +271,30 @@ prices:
     link: ""
 
 ## TWO COLUMNS SECTIONS
-two_columns:
-  proportions: [6, 6]
-  image:
-    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
-    src: "/images/landing/reservation-es.webp"
-  video: ""
+why_ai_engineering_now:
+  background: "#FFFFFF"
+  swipable: true
   heading:
     text: "Por Qué Ingeniería en IA Ahora"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
+    style: '{ "textAlign": "center", "width": "90%" }'
   sub_heading:
     text: "Según LinkedIn's Jobs on the Rise 2026, los Ingenieros en IA están entre los roles de más rápido crecimiento en los EE.UU. La demanda se está acelerando y las empresas están contratando activamente estas habilidades ahora."
-    style: '{"font-weight": "200"}'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  bullets:
-    item_style: '{ "padding": "16px 20px", "background-color": "#F4F9FF", "border-radius": "8px", "border": "2px solid #0084FF", "margin": "12px 0", "text-align": "center" }'
-    items:
-      - heading: "800,000 roles"
-        text: "relacionados con IA para 2026"
-      - heading: "30% de crecimiento"
-        text: "anual en trabajos de IA"
-      - heading: "20–40% de primas"
-        text: "para habilidades de Ingeniería en IA"
-  content:
-    text: ""
-    style: ""
+    style: '{"font-weight": "200", "textAlign": "center", "width": "90%"}'
+  icons:
+    - icon: "briefcase-2"
+      title: "800,000 roles"
+      content: "relacionados con IA para 2026"
+      color: "#0084FF"
+    - icon: "chart"
+      title: "30% de crecimiento"
+      content: "anual en trabajos de IA"
+      color: "#0084FF"
+    - icon: "money"
+      title: "20–40% de primas"
+      content: "para habilidades de Ingeniería en IA"
+      color: "#0084FF"
 
 two_column_program:
   proportions: [6, 6]

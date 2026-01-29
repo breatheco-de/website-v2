@@ -271,31 +271,30 @@ prices:
     link: ""
 
 ## TWO COLUMNS SECTIONS
-two_columns:
-  proportions: [5, 7]
-  image:
-    style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
-    src: "/images/landing/reservation-es.webp"
-  video: ""
+why_ai_engineering_now:
+  background: "#FFFFFF"
+  swipable: true
   heading:
     text: "Why AI Engineering Now"
     font_size: ["35px", "35px", "35px", "30px", "30px"]
+    style: '{ "textAlign": "center", "width": "90%" }'
   sub_heading:
     text: "According to LinkedIn’s Jobs on the Rise 2026, AI Engineers are among the fastest-growing roles in the U.S. Demand is accelerating, and companies are actively hiring for these skills now."
-    style: '{"font-weight": "200", "width": "60%"}'
     font_size: ["16px", "16px", "16px", "16px", "16px"]
-  bullets:
-    item_style: '{ "padding": "16px 20px", "background-color": "#F4F9FF", "border-radius": "8px", "border": "2px solid #0084FF", "margin": "12px 0", "text-align": "center" }'
-    items:
-      - heading: "800,000 roles"
-        text: "related to AI by 2026"
-      - heading: "30% growth"
-        text: "year-over-year in AI jobs"
-      - heading: "20–40% premiums"
-        text: "for AI Engineering skills"
-  content:
-    text: ""
-    style: ""
+    style: '{"font-weight": "200", "textAlign": "center", "width": "90%"}'
+  icons:
+    - icon: "briefcase-2"
+      title: "800,000 roles"
+      content: "related to AI by 2026"
+      color: "#0084FF"
+    - icon: "chart"
+      title: "30% growth"
+      content: "year-over-year in AI jobs"
+      color: "#0084FF"
+    - icon: "money"
+      title: "20–40% premiums"
+      content: "for AI Engineering skills"
+      color: "#0084FF"
 
 two_column_program:
   proportions: [6, 6]
@@ -363,7 +362,7 @@ what_sets_4geeks_apart:
     style: '{ "backgroundSize": "contain", "background-position": "center", "width": "auto"}'
     src: "/images/landing/hombre-con-laptop.png"
   heading:
-    text: "Why 4Geeks stands out"
+    text: "Why 4Geeks Stands Out"
     font_size: ["34px", "34px", "34px", "25px", "25px"]
   button:
     text: "Apply Now"

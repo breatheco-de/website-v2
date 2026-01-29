@@ -186,35 +186,17 @@ const Program = ({ data, pageContext, yml }) => {
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
 
-      {/* 5. Two Column Right */}
-      <TwoColumn
-        right={{ image: yml.two_columns?.image, video: yml.two_columns?.video }}
-        left={{
-          heading: {
-            ...yml.two_columns?.heading,
-            text:
-              yml.two_columns?.heading?.text_by_location &&
-              session?.location?.city?.toLowerCase() === "miami"
-                ? yml.two_columns.heading.text_by_location.miami
-                : yml.two_columns.heading.text_by_location?.default ||
-                  yml.two_columns.heading.text,
-          },
-          sub_heading: {
-            ...yml.two_columns?.sub_heading,
-            text:
-              yml.two_columns?.sub_heading?.text_by_location &&
-              session?.location?.city?.toLowerCase() === "miami"
-                ? yml.two_columns.sub_heading.text_by_location.miami
-                : yml.two_columns.sub_heading.text_by_location?.default ||
-                  yml.two_columns.sub_heading.text,
-          },
-          bullets: yml.two_columns?.bullets,
-          content: yml.two_columns?.content,
-          button: yml.two_columns?.button,
-        }}
-        proportions={yml.two_columns?.proportions}
-        session={session}
-      />
+      {/* 5. Why AI Engineering Now - Iconogram */}
+      {yml.why_ai_engineering_now && (
+        <Iconogram
+          yml={{
+            ...yml.why_ai_engineering_now,
+            background:
+              yml.why_ai_engineering_now.background || "#FFFFFF",
+          }}
+          index={0}
+        />
+      )}
 
       {/* 5. Milestones Component */}
       <Milestones
@@ -499,45 +481,24 @@ export const query = graphql`
               color
             }
           }
-          two_columns {
-            proportions
-            image {
-              style
-              src
-              shadow
-            }
-            video
+          why_ai_engineering_now {
+            background
+            swipable
             heading {
               text
               font_size
-              text_by_location {
-                miami
-                default
-              }
+              style
             }
             sub_heading {
               text
               font_size
-              text_by_location {
-                miami
-                default
-              }
-            }
-            button {
-              text
-              color
-              background
-              path
-            }
-            bullets {
-              items {
-                heading
-                text
-              }
-            }
-            content {
-              text
               style
+            }
+            icons {
+              icon
+              title
+              content
+              color
             }
           }
           two_column_program {
