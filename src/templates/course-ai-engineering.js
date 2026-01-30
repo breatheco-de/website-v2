@@ -171,22 +171,18 @@ const Program = ({ data, pageContext, yml }) => {
             }}
           />
         </Modal>
-        {/* 2. Badges */}
-        <Badges
-          lang={pageContext.lang}
-          short_link={true}
-          short_text="12px"
-          margin="0 0 40px 0"
-          paragraph={yml.badges.paragraph}
-        />
       </Header>
 
-      {/* 3. Job Guarantee Small */}
-      <JobGuaranteeSmall
-        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      {/* 2. Badges */}
+      <Badges
+        lang={pageContext.lang}
+        short_link={true}
+        short_text="12px"
+        margin="0 0 40px 0"
+        paragraph={yml.badges.paragraph}
       />
 
-      {/* 5. Why AI Engineering Now - Iconogram */}
+      {/* 3. Why AI Engineering Now - Iconogram */}
       {yml.why_ai_engineering_now && (
         <Iconogram
           yml={{
@@ -194,6 +190,22 @@ const Program = ({ data, pageContext, yml }) => {
             background: yml.why_ai_engineering_now.background || "#FFFFFF",
           }}
           index={0}
+        />
+      )}
+
+      {/* 4. Why 4Geeks stands out - What Sets 4Geeks Apart */}
+      {yml.what_sets_4geeks_apart && (
+        <TwoColumn
+          left={{
+            image: yml.what_sets_4geeks_apart?.image,
+          }}
+          right={{
+            heading: yml.what_sets_4geeks_apart?.heading,
+            bullets: yml.what_sets_4geeks_apart?.bullets,
+            button: yml.what_sets_4geeks_apart?.button,
+          }}
+          proportions={yml.what_sets_4geeks_apart?.proportions}
+          session={session}
         />
       )}
 
@@ -294,21 +306,10 @@ const Program = ({ data, pageContext, yml }) => {
         </Div>
       )}
 
-      {/* 7. What Sets 4Geeks Apart Component */}
-      {yml.what_sets_4geeks_apart && (
-        <TwoColumn
-          left={{
-            image: yml.what_sets_4geeks_apart?.image,
-          }}
-          right={{
-            heading: yml.what_sets_4geeks_apart?.heading,
-            bullets: yml.what_sets_4geeks_apart?.bullets,
-            button: yml.what_sets_4geeks_apart?.button,
-          }}
-          proportions={yml.what_sets_4geeks_apart?.proportions}
-          session={session}
-        />
-      )}
+      {/* 7. Job Guarantee Small */}
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
 
       {/* 8. How It Works - Iconogram */}
       {courseDetails.how_it_works && (
@@ -373,7 +374,7 @@ const Program = ({ data, pageContext, yml }) => {
         }
       />
 
-      {/* 11. Loc Component */}
+      {/* 13. Loc Component */}
       <Loc lang={pageContext.lang} allLocationYaml={data.allLocationYaml} />
 
       {/* 14. Footer - handled by Layout wrapper */}
