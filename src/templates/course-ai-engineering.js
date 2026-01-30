@@ -462,7 +462,6 @@ export const query = graphql`
             items {
               id
               title
-              description
               content
             }
           }

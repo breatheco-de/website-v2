@@ -69,15 +69,6 @@ const Milestones = (props) => {
                 </Div>
                 {isOpen && (
                   <Div flexDirection="column" margin="10px 0 0 0" gap="10px">
-                    {item.description && (
-                      <Paragraph
-                        textAlign="left"
-                        fontWeight="bold"
-                        fontSize="18px"
-                      >
-                        {item.description}
-                      </Paragraph>
-                    )}
                     {item.content && (
                       <Paragraph
                         textAlign="left"
