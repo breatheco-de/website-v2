@@ -51,6 +51,7 @@ const UpcomingDates = ({
               course_slug
               name
               duration_weeks
+              slug_variants
             }
             email_form_content {
               heading
@@ -150,13 +151,6 @@ const UpcomingDates = ({
   const getDisplayInfoFromCohortSlug = (cohortSlug) => {
     if (!cohortSlug || typeof cohortSlug !== "string") return null;
     const slug = cohortSlug.toLowerCase();
-    const slugVariantMap = {
-      cybersecurity: [
-        "cyber-security",
-        "ciberseguridad",
-        "curso-ciberseguridad",
-      ],
-    };
     const sorted = [...(syllabusAlias || [])].sort(
       (a, b) =>
         (b.default_course?.length ?? 0) - (a.default_course?.length ?? 0)
@@ -165,7 +159,7 @@ const UpcomingDates = ({
       const dc = syll.default_course?.toLowerCase();
       if (!dc) return false;
       if (slug.includes(dc)) return true;
-      const variants = slugVariantMap[dc] || [];
+      const variants = syll.slug_variants || [];
       return variants.some((v) => slug.includes(v));
     });
     return alias
@@ -642,7 +636,9 @@ const UpcomingDates = ({
                     );
                     const displayInfo =
                       getDisplayInfoFromCohortSlug(cohort.slug) ||
-                      getDisplayInfoFromCohortSlug(cohort.syllabus_version?.slug);
+                      getDisplayInfoFromCohortSlug(
+                        cohort.syllabus_version?.slug
+                      );
                     return (
                       i < 4 && (
                         <Div

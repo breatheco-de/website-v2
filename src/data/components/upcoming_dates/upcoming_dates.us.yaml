@@ -23,6 +23,10 @@ syllabus_alias:
     course_slug: cybersecurity
     name: Cybersecurity
     duration_weeks: 16 weeks
+    slug_variants:
+      - cyber-security
+      - ciberseguridad
+      - curso-ciberseguridad
 
   - default_course: full-stack-ft
     course_slug: full-stack-ft
