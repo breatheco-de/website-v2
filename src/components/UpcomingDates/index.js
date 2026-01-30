@@ -146,6 +146,31 @@ const UpcomingDates = ({
     return syllabus?.duration_weeks || null;
   };
 
+  // Cohort-slug fallback: match cohort.slug to syllabus_alias when syllabus_version missing or enrichment failed
+  const getDisplayInfoFromCohortSlug = (cohortSlug) => {
+    if (!cohortSlug || typeof cohortSlug !== "string") return null;
+    const slug = cohortSlug.toLowerCase();
+    const slugVariantMap = { cybersecurity: ["cyber-security"] };
+    const sorted = [...(syllabusAlias || [])].sort(
+      (a, b) =>
+        (b.default_course?.length ?? 0) - (a.default_course?.length ?? 0)
+    );
+    const alias = sorted.find((syll) => {
+      const dc = syll.default_course?.toLowerCase();
+      if (!dc) return false;
+      if (slug.includes(dc)) return true;
+      const variants = slugVariantMap[dc] || [];
+      return variants.some((v) => slug.includes(v));
+    });
+    return alias
+      ? {
+          name: alias.name,
+          duration_weeks: alias.duration_weeks,
+          course_slug: alias.course_slug,
+        }
+      : null;
+  };
+
   // Helper function to get regional remote text based on academy slug
   const getRegionalRemoteText = (academySlug) => {
     const regionMappings = {
@@ -676,12 +701,18 @@ const UpcomingDates = ({
                                 to={`/${lang}/coding-bootcamps/${cohort.syllabus_version.courseSlug}`}
                               >
                                 <Paragraph textAlign="left" color={Colors.blue}>
-                                  {cohort.syllabus_version?.name || "Program"}
+                                  {getDisplayInfoFromCohortSlug(cohort.slug)
+                                    ?.name ||
+                                    cohort.syllabus_version?.name ||
+                                    "Program"}
                                 </Paragraph>
                               </Link>
                             ) : (
                               <Paragraph textAlign="left" color={Colors.blue}>
-                                {cohort.syllabus_version?.name || "Program"}
+                                {getDisplayInfoFromCohortSlug(cohort.slug)
+                                  ?.name ||
+                                  cohort.syllabus_version?.name ||
+                                  "Program"}
                               </Paragraph>
                             )}
                           </Div>
@@ -713,6 +744,8 @@ const UpcomingDates = ({
                                 getDurationFromSyllabus(
                                   cohort?.syllabus_version?.courseSlug
                                 ) ||
+                                getDisplayInfoFromCohortSlug(cohort.slug)
+                                  ?.duration_weeks ||
                                 "Duration not available"}
                             </Paragraph>
                           </Div>
@@ -746,6 +779,8 @@ const UpcomingDates = ({
                                   getDurationFromSyllabus(
                                     cohort?.syllabus_version?.courseSlug
                                   ) ||
+                                  getDisplayInfoFromCohortSlug(cohort.slug)
+                                    ?.duration_weeks ||
                                   "Duration not available"}
                               </Paragraph>
                             </Div>
