@@ -174,8 +174,17 @@ milestones:
       title: "Real-Time Systems"
       content: "Streaming, sockets, pub/sub. Enable real-time interactions for data, customers, AI, or employees."
     - id: "capstone"
-      title: "Full AI‑Transformed Company"
+      title: "Capstone — Full AI‑Transformed Company"
       content: "Students deliver the complete transformation of their company:"
+      bullets:
+        items:
+          - text: "AI-generated frontend"
+          - text: "API + authentication"
+          - text: "Telemetry + reporting pipeline"
+          - text: "Workflow automation (agent-generated)"
+          - text: "RAG knowledge layer"
+          - text: "Agents with tool calling"
+          - text: "Real-time communication layer"
 
 ## RATING REVIEWS SECTION
 rating_reviews:

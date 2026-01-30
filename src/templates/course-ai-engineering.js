@@ -464,6 +464,11 @@ export const query = graphql`
               id
               title
               content
+              bullets {
+                items {
+                  text
+                }
+              }
             }
           }
           how_it_works {

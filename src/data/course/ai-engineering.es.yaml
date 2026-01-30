@@ -175,8 +175,17 @@ milestones:
       title: "Sistemas en Tiempo Real"
       content: "Streaming, sockets, pub/sub. Habilita interacciones en tiempo real para datos, clientes, IA o empleados."
     - id: "capstone"
-      title: "Empresa Completamente Transformada por IA"
+      title: "Capstone — Empresa Completamente Transformada por IA"
       content: "Los estudiantes entregan la transformación completa de su empresa:"
+      bullets:
+        items:
+          - text: "Frontend generado por IA"
+          - text: "API + autenticación"
+          - text: "Pipeline de telemetría e informes"
+          - text: "Automatización de flujos (generada por agentes)"
+          - text: "Capa de conocimiento RAG"
+          - text: "Agentes con llamadas a herramientas"
+          - text: "Capa de comunicación en tiempo real"
 
 ## RATING REVIEWS SECTION
 rating_reviews:
