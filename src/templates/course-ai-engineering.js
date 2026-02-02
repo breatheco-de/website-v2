@@ -7,6 +7,7 @@ import { Button, Colors, Img } from "../components/Styling/index.js";
 import { requestSyllabus, isCustomBarActive } from "../actions.js";
 import { SessionContext } from "../session.js";
 import PricesAndPayment from "../components/PricesAndPayment/index.js";
+import UpcomingDates from "../components/UpcomingDates/index.js";
 import Modal from "../components/Modal/index.js";
 import LeadForm from "../components/LeadForm/index.js";
 import Badges from "../components/Badges/index.js";
@@ -321,10 +322,19 @@ const Program = ({ data, pageContext, yml }) => {
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
       />
-      
+
       {/* 7. Job Guarantee Small */}
       <JobGuaranteeSmall
         content={data.allJobGuaranteeSmallYaml.edges[0].node}
+      />
+
+      <UpcomingDates
+        lang={pageContext.lang}
+        message={courseDetails.upcoming?.no_dates_message}
+        actionMessage={courseDetails.upcoming?.actionMessage}
+        locations={data.allLocationYaml.edges}
+        defaultCourse={defaultCourse}
+        showMoreRedirect
       />
 
       {/* 10. Payment Component */}
@@ -573,6 +583,10 @@ export const query = graphql`
               background
               path
             }
+          }
+          upcoming {
+            no_dates_message
+            actionMessage
           }
           prices {
             heading

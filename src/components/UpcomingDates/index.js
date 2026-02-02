@@ -362,8 +362,9 @@ const UpcomingDates = ({
           finalResult = matcherResult ?? fallbackResult;
         } else {
           finalResult =
-            getDisplayInfoFromCohortSlug(cohort.slug)?.default_course?.toLowerCase() ===
-            normalizedDefaultCourse;
+            getDisplayInfoFromCohortSlug(
+              cohort.slug
+            )?.default_course?.toLowerCase() === normalizedDefaultCourse;
         }
 
         console.log("🔍 Course Matcher Results:", {

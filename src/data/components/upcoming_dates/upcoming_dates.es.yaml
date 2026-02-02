@@ -19,6 +19,10 @@ syllabus_alias:
     course_slug: curso-datascience-machine-learning 
     name: Data Science
     duration_weeks: 16 semanas
+    slug_variants:
+      - ds
+      - datascience
+      - ml
     
   - default_course: cybersecurity
     course_slug: curso-ciberseguridad
