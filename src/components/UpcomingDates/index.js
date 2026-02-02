@@ -167,6 +167,7 @@ const UpcomingDates = ({
           name: alias.name,
           duration_weeks: alias.duration_weeks,
           course_slug: alias.course_slug,
+          default_course: alias.default_course,
         }
       : null;
   };
@@ -205,36 +206,38 @@ const UpcomingDates = ({
         location ||
         session?.academyAliasDictionary?.[academy?.value];
 
-      // Normalize course slugs for API and matching consistency
+      // Only pass academy to API when it is a real academy slug (from locations), not a region value (usa, europe, latam)
+      const validAcademySlugs = (locations || [])
+        .map(({ node }) => node?.breathecode_location_slug)
+        .filter(Boolean);
+      const isRealAcademySlug =
+        academySlug && validAcademySlugs.includes(academySlug);
+
+      // Normalize course slugs for client-side matching consistency (API is called without syllabus_slug_like)
       const normalizedDefaultCourse = (() => {
         const raw = (defaultCourse || "").toLowerCase();
-        // Map known aliases to canonical slugs
         const aliasMap = {
           cybersecurity: "cyber-security",
         };
         return aliasMap[raw] || raw;
       })();
 
+      const requestParams = {
+        ...(defaultCourse && isRealAcademySlug && { academy: academySlug }),
+        limit: 50,
+      };
       console.log("🔍 API Debug - Request Parameters:", {
         defaultCourse,
         academySlug,
         apiUrl: "getCohorts",
-        requestParams: {
-          academy: academySlug,
-          limit: 10,
-          syllabus_slug_like: normalizedDefaultCourse || undefined,
-        },
+        requestParams,
       });
 
-      const response = await getCohorts({
-        academy: academySlug,
-        limit: 10,
-        syllabus_slug_like: normalizedDefaultCourse || undefined,
-      });
+      const response = await getCohorts(requestParams);
 
       console.log("📡 API Debug - Raw Response:", {
         response,
-        resultsCount: response?.results?.length || 0,
+        resultsCount: response?.results?.length ?? 0,
         hasResults: !!response?.results,
       });
 
@@ -244,7 +247,6 @@ const UpcomingDates = ({
         return;
       }
 
-      // Add detailed cohort analysis
       if (response?.results) {
         console.log("📊 API Debug - Detailed Cohort Analysis:", {
           defaultCourse,
@@ -267,21 +269,22 @@ const UpcomingDates = ({
           node.breathecode_location_slug === academy?.value
       );
 
-      // Helper function to determine region from academy slug
-      const getRegionFromAcademy = (academySlug) => {
-        const regionDetectors = {
-          europe: () =>
-            academySlug?.includes("spain") || academySlug === "madrid-spain",
-          latam: () => academySlug === "online",
-          usa: () =>
-            academySlug?.includes("miami") || academySlug?.includes("usa"),
-        };
-
-        return (
-          Object.keys(regionDetectors).find((region) =>
-            regionDetectors[region]()
-          ) || null
+      // Derive region from locations (meta_info.region) and normalize to dropdown values (usa, europe, latam)
+      const getRegionFromLocations = (slug, locationEdges) => {
+        if (!slug || !Array.isArray(locationEdges)) return null;
+        // API uses academy "online" for LATAM remote cohorts; location YAML has online as usa-canada
+        if (slug === "online") return "latam";
+        const loc = locationEdges.find(
+          ({ node }) => node?.breathecode_location_slug === slug
         );
+        const region = loc?.node?.meta_info?.region;
+        if (!region) return null;
+        const normalized = String(region).toLowerCase();
+        if (normalized.includes("usa") || normalized.includes("canada"))
+          return "usa";
+        if (normalized.includes("europe")) return "europe";
+        if (normalized.includes("latam")) return "latam";
+        return null;
       };
 
       const cohorts =
@@ -299,7 +302,10 @@ const UpcomingDates = ({
           }
 
           if (selectedRegion?.value) {
-            const cohortRegion = getRegionFromAcademy(elm.academy?.slug);
+            const cohortRegion = getRegionFromLocations(
+              elm.academy?.slug,
+              locations
+            );
             return cohortRegion === selectedRegion.value;
           }
 
@@ -349,10 +355,16 @@ const UpcomingDates = ({
         const fallbackResult = syllabusSlug?.includes(
           normalizedDefaultCourse || ""
         );
-        const finalResult =
-          !normalizedDefaultCourse ||
-          !syllabusSlug ||
-          (matcherResult ?? fallbackResult);
+        let finalResult;
+        if (!normalizedDefaultCourse) {
+          finalResult = true;
+        } else if (syllabusSlug) {
+          finalResult = matcherResult ?? fallbackResult;
+        } else {
+          finalResult =
+            getDisplayInfoFromCohortSlug(cohort.slug)?.default_course?.toLowerCase() ===
+            normalizedDefaultCourse;
+        }
 
         console.log("🔍 Course Matcher Results:", {
           cohortSlug: cohort.slug,
