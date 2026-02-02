@@ -14,7 +14,7 @@ navbar:
         - title: "AI Engineering"
           level: " "
           icon: "fullstack_2"
-          paragraph: "Become a Full Stack developer using AI tools like Cursor and Vercel v0. Master in-demand AI skills and land a job as a developer."
+          paragraph: "Build complete AI-native systems. Transform a real business case into a fully automated operation using Agents, RAG, and production-grade software."
           buttons:
             - text: "View program"
               link: "/us/coding-bootcamps/ai-engineering"

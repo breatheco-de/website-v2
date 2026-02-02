@@ -24,10 +24,7 @@ const mustHaveAcademies = (val) => {
     throw Error(
       `academies property should be an array and its a ${typeof val}`
     );
-  else if (val.length == 0)
-    throw Error(
-      "Pricing plan has no academies assigned, comment the plan instead of leaving the academies array empty"
-    );
+  // Empty academies array is allowed for plans that are kept in file but inactive (e.g. region-specific courses with USA-only plans).
 };
 const validateEmptyPlan = (val) => {
   if (val.slug == undefined) throw Error("Pricing plan missing slug");

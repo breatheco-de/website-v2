@@ -41,6 +41,8 @@ footer:
     items:
       - name: "Full Stack with AI"
         link: "/us/coding-bootcamps/part-time-full-stack-developer"
+      - name: "AI Engineering"
+        link: "/us/coding-bootcamps/ai-engineering"
       - name: "Data Science and Machine Learning with AI"
         link: "/us/coding-bootcamps/datascience-machine-learning"
       - name: "Cybersecurity"

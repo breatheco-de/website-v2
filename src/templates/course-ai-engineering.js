@@ -306,11 +306,6 @@ const Program = ({ data, pageContext, yml }) => {
         </Div>
       )}
 
-      {/* 7. Job Guarantee Small */}
-      <JobGuaranteeSmall
-        content={data.allJobGuaranteeSmallYaml.edges[0].node}
-      />
-
       {/* 8. How It Works - Iconogram */}
       {courseDetails.how_it_works && (
         <Iconogram
@@ -325,6 +320,11 @@ const Program = ({ data, pageContext, yml }) => {
       {/* 9. Scholarship Success Cases */}
       <ScholarshipSuccessCases
         content={data.allScholarshipSuccessCasesYaml.edges[0].node}
+      />
+      
+      {/* 7. Job Guarantee Small */}
+      <JobGuaranteeSmall
+        content={data.allJobGuaranteeSmallYaml.edges[0].node}
       />
 
       {/* 10. Payment Component */}

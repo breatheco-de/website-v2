@@ -5,8 +5,8 @@ full_time:
     recomended: "★ Best Deal!"
     recommended_color: "lightGreen"
     scholarship: "Pay upfront"
-    description: "Regular tuition is $14,999. Or spread interest-free over 6 months."
-    job_guarantee_description: "Regular tuition is $14,999. Or spread interest-free over 6 months."
+    description: "Pay upfront and receive a 10% discount, or spread payments interest-free over 6 months."
+    job_guarantee_description: "Pay upfront and receive a 10% discount, or spread payments interest-free over 6 months."
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% OFF"
@@ -69,7 +69,7 @@ full_time:
 ## España & Europe
 
   - slug: 'spain-upfront-ai-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     description: "Get a better price"
@@ -83,7 +83,7 @@ full_time:
       - "/images/ethereum.png"    
 
   - slug: 'spain-scholarships-ai-ft'
-    academies: ['barcelona-spain','madrid-spain', 'malaga-spain', 'valencia-spain']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Scholarships Available"
@@ -101,7 +101,7 @@ full_time:
 ## Chile
 
   - slug: 'chile-contado-ai-ft'
-    academies: ['santiago-chile']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     description: "Pay upfront and get 20% OFF!"
@@ -115,7 +115,7 @@ full_time:
       - "/images/visa-mastercard.png"
 
   - slug: 'chile-ai-ft'
-    academies: ['santiago-chile']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Payment Plans & Loans"
@@ -134,8 +134,8 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pay upfront"
-    description: "Regular tuition is 14,999. Get 10% off when you pay upfront."
-    job_guarantee_description: "Regular tuition is $14,999. Or spread interest-free over 6 months."
+    description: "Pay upfront and receive a 10% discount, or spread payments interest-free over 6 months."
+    job_guarantee_description: "Pay upfront and receive a 10% discount, or spread payments interest-free over 6 months."
     price: "$14,999"
     original_price: "$14,999"
     offer: "10% OFF"
@@ -196,7 +196,7 @@ part_time:
 ##  EUROPE Part-time
 
   - slug: 'north-europe-upfront-ai-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     description: "And get a discount"
@@ -212,7 +212,7 @@ part_time:
       - "/images/ethereum.png"    
 
   - slug: 'north-europe-scholarships-ai-pt'
-    academies: ['berlin-germany','dublin-ireland', 'europe','hamburg-germany','munich-germany']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Payment Plans & Loans. From €150* per month"
@@ -227,7 +227,7 @@ part_time:
       - "/images/bcas.png"
                       
   - slug: 'south-europe-upfront-ai-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     description: "And get a discount"
@@ -243,7 +243,7 @@ part_time:
       - "/images/ethereum.png"
 
   - slug: 'south-europe-scholarships-ai-pt'
-    academies: ['lisbon-portugal','milan-italy','rome-italy']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Payment Plans & Loans. From €150* per month"
@@ -260,7 +260,7 @@ part_time:
 ## Spain 
 
   - slug: 'spain-upfront-ai-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     description: "And get a discount"
@@ -276,7 +276,7 @@ part_time:
       - "/images/ethereum.png"
 
   - slug: 'spain-scholarships-ai-pt'
-    academies: ['barcelona-spain', 'madrid-spain', 'malaga-spain', 'valencia-spain']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "Payment Plans & Loans. From €150* per month"
@@ -296,7 +296,7 @@ part_time:
 ## Chile part-time
 
   - slug: 'chile-geekforce-ai-pt'
-    academies: ['santiago-chile']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "AI Engineering + Career Support"
     description: "Pay upfront and get a discount"
@@ -311,7 +311,7 @@ part_time:
       - "/images/flevo-new.png"
 
   - slug: 'chile-solo-ai-pt'
-    academies: ['santiago-chile']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "AI Engineering"
@@ -325,7 +325,7 @@ part_time:
       - "/images/flevo-new.png"
 
   - slug: 'chile-ai-pt'
-    academies: ['santiago-chile']
+    academies: []
     recomended: "Pay in 6 to 18 months"
     recommended_color: "blue"
     scholarship: "Payment Plans & Loans"
@@ -341,7 +341,7 @@ part_time:
 ## LATAM  
 
   - slug: 'latam-trabajo-garantizado-ai-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Job Guarantee"
     description: "Get hired within 9 months of graduation or your money back"
@@ -357,7 +357,7 @@ part_time:
       - "/images/visa-mastercard.png"
 
   - slug: 'latam-apoyo-profesional-ai-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'caracas-venezuela', 'bogota-colombia']
+    academies: []
     recomended: "Get career support"
     recommended_color: "blue"
     scholarship: "Career Support Only"
@@ -372,7 +372,7 @@ part_time:
       - "/images/visa-mastercard.png"
 
   - slug: 'latam-program-only-ai-pt'
-    academies: ['buenosaires-argentina', 'costa-rica', 'lapaz-bolivia', 'lima-peru', 'mexicocity-mexico', 'montevideo-uruguay', 'panamacity-panama', 'quito-ecuador', 'bogota-colombia', 'caracas-venezuela']
+    academies: []
     recomended: "Accessible payment plan"
     recommended_color: "yellow"
     scholarship: "AI Engineering Program Only"
@@ -389,7 +389,7 @@ part_time:
 ## Venezuela
 
   - slug: 'venezuela-scholarship-ai-pt'
-    academies: ['']
+    academies: []
     recomended: "★ Best Deal!"
     scholarship: "Pay upfront"
     description: "Pay early and $250 off"

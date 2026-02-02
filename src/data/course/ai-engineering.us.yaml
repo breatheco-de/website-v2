@@ -21,7 +21,7 @@ header:
   title: "AI Engineering"
   image: "../../../static/images/bg/program-bg.png"
   image_alt: "ai-engineering-bootcamp"
-  paragraph: 'Launch your AI-driven career in 24 weeks with personalized 1:1 mentorship and expert guidance. Become the professional companies can’t wait to hire.'
+  paragraph: 'Become the software engineer companies are actively hiring for. Learn to design, build, and deploy complete AI systems used in real-world production.'
 
 button:
   syllabus_heading: "Download Syllabus"
@@ -174,7 +174,7 @@ milestones:
       title: "Real-Time Systems"
       content: "Streaming, sockets, pub/sub. Enable real-time interactions for data, customers, AI, or employees."
     - id: "capstone"
-      title: "Capstone — Full AI‑Transformed Company"
+      title: "Capstone: Full AI‑Transformed Company"
       content: "Students deliver the complete transformation of their company:"
       bullets:
         items:
