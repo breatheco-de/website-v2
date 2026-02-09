@@ -22,7 +22,6 @@ import ScholarshipSuccessCases from "../components/ScholarshipSuccessCases/index
 import Milestones from "../components/Milestones/index.js";
 import StarRating from "../components/StarRating/index.js";
 import ProgramDetails from "../components/ProgramDetails/index.js";
-import ProgramDetailsMobile from "../components/ProgramDetailsMobile/index.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const Program = ({ data, pageContext, yml }) => {
@@ -217,10 +216,6 @@ const Program = ({ data, pageContext, yml }) => {
         details={courseDetails.details}
         lang={pageContext.lang}
         withoutAnimation={true}
-      />
-      <ProgramDetailsMobile
-        details={courseDetails.details}
-        lang={pageContext.lang}
       />
 
       {/* 6. Milestones Component */}

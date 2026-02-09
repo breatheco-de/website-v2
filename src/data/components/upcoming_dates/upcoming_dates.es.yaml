@@ -42,7 +42,9 @@ syllabus_alias:
     course_slug: bootcamp-ingenieria-ia
     name: Ingeniería en IA
     duration_weeks: 20 semanas
-    
+    slug_variants:
+      - ai-engineer
+
 email_form_content:
   heading: Indicanos tu mail para avisarte cuando haya una fecha disponible para este campus
   button_text: Avisenme cuando haya una fecha
