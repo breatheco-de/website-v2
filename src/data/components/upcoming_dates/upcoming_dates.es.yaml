@@ -41,7 +41,7 @@ syllabus_alias:
   - default_course: ai-engineering
     course_slug: bootcamp-ingenieria-ia
     name: Ingeniería en IA
-    duration_weeks: 20 semanas
+    duration_weeks: 24 semanas
     slug_variants:
       - ai-engineer
 

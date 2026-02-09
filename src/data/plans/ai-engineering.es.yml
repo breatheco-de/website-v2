@@ -4,8 +4,8 @@ full_time:
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     recomended: "★ ¡Mejor precio!"
     scholarship: "Pago completo"
-    description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
-    job_guarantee_description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $14,999. La matrícula regular es de $14,999. Paga por adelantado y obtén un 10% de descuento, o distribuye los pagos sin intereses en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $14,999. La matrícula regular es de $14,999. Paga por adelantado y obtén un 10% de descuento, o distribuye los pagos sin intereses en 6 meses."
     price: "$13,499"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
@@ -132,14 +132,14 @@ part_time:
     recommended_color: "lightGreen"
     academies: ['atlanta-usa', 'austin-usa', 'chicago-usa', 'downtown-miami', 'houston-usa', 'losangeles-usa', 'newyork-usa', 'orlando', 'online', 'toronto-canada', 'tampa-usa', 'dallas-usa']
     scholarship: "Pago completo"
-    description: "La matrícula regular es de $14,999. Obtén un 10% de descuento cuando pagas por adelantado."
-    job_guarantee_description: "La matrícula regular es de $14,999. O divídela sin intereses hasta en 6 meses."
+    description: "La matrícula regular es de $14,999. Paga por adelantado y obtén un 10% de descuento, o distribuye los pagos sin intereses en 6 meses."
+    job_guarantee_description: "La matrícula regular es de $14,999. Paga por adelantado y obtén un 10% de descuento, o distribuye los pagos sin intereses en 6 meses."
     price: "$14,999"
     original_price: "$14,999"
     offer: "10% DE DESCUENTO"
     bullets:
       - Paga por adelantado y ahorra 10%
-      - La matrícula regular es de $ 10,999 y puede ser financiada sin intereses hasta 6 meses.
+      - La matrícula regular es de $ 14,999 y puede ser financiada sin intereses hasta 6 meses.
     icons:
       - "/images/edly.png"
       - "/images/ascent_logo.png"
