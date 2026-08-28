@@ -4,7 +4,7 @@
 - This website was built using Gatsby.js and Styled Components.
 - All the website information is stored in [YML files inside ./src/data](https://github.com/4GeeksAcademy/website-v2/tree/master/src/data).
 
-# Recomended Readings before understanding the website:
+# Recommended Readings before understanding the website:
 
 - Gatsby.js
 - Styled Components
