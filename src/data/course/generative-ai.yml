@@ -1,0 +1,263 @@
+meta_info:
+  slug: generative-ai-developer-course
+  title: "Generative AI Developer Course"
+  description: "Develop advanced skills in generative AI and learn to apply language models and machine learning techniques in real projects. No prior knowledge required."
+  bc_slug: "generative-ai-developer"
+  template: "course-generative-ai-developer"
+  image: "/images/og-preview/generative-ai-bg-en.jpg"
+  visibility: "visible"
+  keywords: ""
+  show_in_apply: true
+  redirects: ["/en/generative-ai-developer"]
+  related_clusters: ["trends-and-tech"]
+
+apply_form:
+  label: Generative AI Developer
+
+seo_title: "Generative AI Developer Course"
+header:
+  title: "Become a Generative AI Developer"
+  paragraph: "Learn to create and apply generative AI models in real projects and take your skills to the next level!"
+  image: "../../../static/images/bg/circles.jpg"
+  image_alt: "circles"
+
+button:
+  syllabus_heading: "Download Course Details"
+  syllabus_btn_label: "Instant Download"
+  syllabus_motivation: "In 2 minutes, you will receive a PDF in your inbox with detailed information about our methodology, technologies, scholarships, financing, and course information."
+  apply_button_link: "/en/apply"
+
+course_instructors:
+  header:
+    title: "Meet Our Instructors"
+    paragraph: "All our instructors are qualified teachers with proven expertise in technical, teorical and practical skills"
+
+  instructors:
+    - name: "Charly Chacon"
+      sub_title: ""
+      degree: "Fullstack AI Developer"
+      image: "../../../static/images/instructors/charly.jpeg"
+      bio: | 
+        I have been passionate about science, mathematics, and teaching my friends since I was a child.
+
+        As I grew up, I studied Biology and later completed a fullstack programming bootcamp. Programming came easily to me due to my love for numbers and logic, and gradually, I learned many more technologies.
+
+        Today, I focus on developing applications with Generative Artificial Intelligence, teaching, making YouTube videos, and I have many ideas to show the magic of computing. With dedication and effort, we can bring all our ideas to life.
+        
+        My name is Charly, and if you are passionate about the world of technology, and specifically Artificial Intelligence, get ready, because this technology is here to stay. My goal is to teach you everything I know about it, from a technical, theoretical, and practical standpoint. Are you ready?
+      linkedin: "https://www.linkedin.com/in/charlytoc/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+
+badges:
+  paragraph: "Thanks to a focus on programming, our programs have been awarded as TOP in <a href='/en/awards'>Spain, USA, and other countries</a>. Our certificates are endorsed by the Florida Department of Education."
+
+upcoming:
+  no_dates_message: "There are currently no upcoming dates for this program"
+  actionMessage: "Notify me of available dates"
+
+overlaped:
+  heading: "Unlock Your Potential with Generative AI"
+  paragraph: "Generative AI is revolutionizing industries by enabling the creation of innovative solutions and automating complex tasks. Embrace this change and become a pioneer in the field. Our course will equip you with the skills to harness the power of AI, making you an indispensable asset in any industry."
+  button:
+    text: "MORE INFORMATION"
+    color: "blue"  
+    link: "/"
+  image:
+    src: "/images/landing/three-people-reloaded.webp"  
+
+details:
+  about:
+    title: "About this program"
+    sub_title: |
+      This Generative AI Developer course is designed for those looking to develop advanced skills in generative AI and apply them in real projects. Over sixteen weeks, participants will gain a comprehensive understanding of generative AI and its practical applications in various industries.
+      The course covers essential concepts such as model finetuning, vector and relational databases, and advanced semantic search techniques. Participants will learn to train and adjust language models, develop full-stack applications with LLMs, using third-party services or open source models, how to deploy applications and build stable and secure arquitectures for AI applications. 
+        
+    list:
+      - label: "Duration"
+        content:  "16 weeks"
+        icon: "calendar"
+      - label: "Classes"
+        content: "2 Classes per week"
+        icon: "book"
+      - label: "Class Size"
+        content: "12 people max"
+        icon: "laptop"
+      - label: "Certificate"
+        content: "Our certificates are recognized by multiple institutions."
+        icon: "certificate"
+      - label: "Requirements"
+        content: "No prior experience needed"
+        icon: "contract-checked"
+
+  heading: "PROGRAM DETAILS"
+  weeks: 16
+  facts:
+    - label: "Duration"
+      value: "16 weeks"
+    - label: "Commitment"
+      value: "2 live sessions each week, each session 3 hours, totaling 96 hours"
+    - label: "Certificate"
+      content: "Our certificates are recognized by multiple institutions."
+      link_text: "See example"
+      link: "https://certificate.4geeks.com/44c61b294a248f91088f5355aea09606126795e3"
+      icon: "certificate"
+    - label: "Schedule"
+      value: "Online / Remote"
+    - label: "Class Size"
+      value: "Up to 14 people"
+    - label: "Total Hours"
+      value: "96"
+  sub_heading: "16-week course for professionals who want to develop advanced skills in generative AI."
+  left_labels:
+    description: "DESCRIPTION:"
+    projects: "PROJECTS:"
+    duration: "DURATION:"
+    skills: "Skills / Weeks:"
+  details_modules:
+    - module_name: "Fundamentals of Artificial Intelligence"
+      title: "Section 1: Fundamentals of Artificial Intelligence"
+      description: "Learn the necessary concepts of Artificial Intelligence to understand the syllabus and become familiar with them. Theoretically understand the functioning and training of an AI model."
+      projects: ""
+      slug: "fundamentals-of-artificial-intelligence"
+      duration: "4 weeks"
+      step: 1
+    - module_name: "Tools and Generation Practices"
+      title: "Section 2: Tools and Generation Practices"
+      description: "Learn about the tools used during the course and become familiar with the work environment, obtain API KEYs if necessary. Familiarize yourself with the most important APIs and libraries for developing AI apps and generate each type of data needed during the course."
+      projects: ""
+      slug: "tools-and-generation-practices"
+      duration: "4 weeks"
+      step: 2
+    - module_name: "AI Application Development"
+      title: "Section 3: AI Application Development"
+      description: "Develop various AI applications and understand their architecture, challenges, limitations, and best practices."
+      projects: "Develop a chatbot using Node and React. Create a local application capable of searching documents, opening them, and answering questions about them."
+      slug: "ai-application-development"
+      duration: "4 weeks"
+      step: 3
+    - module_name: "Advanced Techniques and Deployment"
+      title: "Section 4: Advanced Techniques and Deployment"
+      description: "Use advanced techniques to build fully contextualized applications and improve AI generation. Understand the different ways to deploy an AI application, options, and recommendations."
+      projects: "Complete a final fullstack project capable of generating at least two different types of data, and receiving inputs in the form of text, audio, and images. Additionally, the application must have at least one associated function that the AI can call and manage memory appropriately."
+      slug: "advanced-techniques-and-deployment"
+      duration: "4 weeks"
+      step: 4
+
+syllabus:
+  heading: Download all the information about this program
+  button_label: Download
+
+potential_companies:
+  tagline: "Train to stand out in the most demanding companies"
+  sub_heading: "Take a leap in your career and work at the best companies"
+  companies:
+    - name: "Facebook"
+      image: "../../../static/images/partner/meta-logo.png"
+      alt: ""
+    - name: "Google"
+      image: "../../../static/images/partner/google.png"
+      alt: ""
+    - name: "Microsoft"
+      image: "../../../static/images/partner/microsoft.png"
+      alt: ""
+    - name: "Apple"
+      image: "../../../static/images/partner/apple.png"
+      alt: ""
+    - name: "Salesforce"
+      image: "../../../static/images/partner/salesforce.png"
+      alt: ""
+    - name: "Oracle"
+      image: "../../../static/images/partner/oracle.png"
+      alt: ""
+    - name: "AirBnB"
+      image: "../../../static/images/partner/airbnb.png"
+      alt: ""
+    - name: "Uber"
+      image: "../../../static/images/partner/uber.png"
+      alt: ""
+
+geeks_vs_others:
+  heading: "What makes us so successful?"
+  sub_heading: ""
+  sub_heading_link: ""
+
+geek_data:
+  heading: To get hired by Fortune 500 companies!
+  geek_pal:
+    - One teacher for every seven students (1:7).
+    - Unlimited 1-1 tutoring sessions on demand, in person or online.
+    - Thousands of interactive and self-assessed exercises.
+    - Video solutions for instant feedback.
+    - Online support chat 12 hours a day.
+    - Online streaming of classes.
+    - Class recordings for later review.
+  geek_force:
+    - CV and LinkedIn building.
+    - Building your Github profile and portfolio from day 1.
+    - Career Week for exclusive dedication to your professional profile.
+    - Interview simulation preparation.
+    - Personalized interview preparation sessions for specific jobs.
+    - Personal branding training.
+    - Programming practices and exercises after graduation.
+    - WEEKLY coaching until you get a job.
+
+prices:
+  heading: "PRICES AND PAYMENTS"
+  sub_heading: ""
+
+alumni:
+  heading: "Meet alumni and their projects"
+  sub_heading: "Meet people who have already graduated and some of the projects you will be building during the program"
+
+faq:
+  title: "Frequently Asked Questions"
+  read_more: "See more questions"
+  link: "/faq"
+
+two_columns:
+  proportions: [6, 6]
+  image:
+    style: '{"backgroundSize": "contain", "background-position": "center"}'
+    src: "../../images/landing/generative-ai-icons.webp"
+    shadow: false
+  heading:
+    text: "Expand your capabilities and increase your efficiency!"
+    font_size: ["30px", "30px", "30px", "26px", "24px"]
+  sub_heading:
+    text: |-
+      In the course, you will learn to make the most of text-based generative models like ChatGPT, Gemini, Perplexity, and Claude.
+
+      Additionally, you will explore image generation tools like Midjourney, Stable Diffusion, and Open source colabs. 
+      You will also dive into the world of AI applied to video with Stable Video, and in the field of audio with Whisper and ElevenLabs. 
+      Get ready to master these powerful AI tools and take your skills to the next level!
+    font_size: ["16px", "16px", "16px", "16px", "16px"]
+  button:
+    text: "Apply to the program"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+
+two_columns_video:
+  proportions: [6, 6]
+  image:
+    style: '{"border" : "3px solid black", "backgroundSize": "contain" }'
+    src: "/static/images/landing/generative-ai-for-professionals.jpg"
+    shadow: true  
+  video: "https://www.youtube.com/watch?v=N_oJOAfge80"
+  heading:
+    text: "Generative AI Developer Program for Professionals"
+    font_size: ["40px", "34px", "34px", "25px", "20px"]
+  sub_heading:
+    style: '{}'
+    text: |- 
+      The Generative AI Developer Program for Professionals at 4Geeks Academy offers you the unique opportunity to develop specialized skills in generative AI applied to professional contexts.
+    font_size: ["16px"]
+  button:
+    text: "Apply to the program"
+    color: "white"
+    background: "black"
+    path: "#prices_and_payment"
+  bullets:
+    items: 
+    - text: "Master advanced AI techniques to solve complex problems in business environments."
+    - text: "Learn to implement AI solutions that improve operational efficiency and decision-making."
+    - text: "Explore real case studies and practical examples of successful AI implementation in various industries."
