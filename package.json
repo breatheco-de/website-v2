@@ -130,7 +130,7 @@
     "cypress": "^8.0.0",
     "cypress-terminal-report": "^3.2.2",
     "dotenv": "^8.2.0",
-    "eslint": "^7.2.0",
+    "eslint": "^9.26.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.18.2",
